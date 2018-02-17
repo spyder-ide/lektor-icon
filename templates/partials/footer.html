@@ -1,0 +1,28 @@
+<div id="fh5co-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+	{{ config.THEME_SETTINGS.footer_note | safe }}
+      </div>
+      <div class="col-md-6">
+	<ul class="fh5co-social">
+	  {% if config.THEME_SETTINGS.footer_github %}
+	  <li><a href="config.THEME_SETTINGS.footer_github"><i class="icon-github"></i></a></li>
+	  {% endif %}
+	  {% if config.THEME_SETTINGS.footer_twitter %}
+	  <li><a href="{{ config.THEME_SETTINGS.footer_twitter }}"><i class="icon-twitter"></i></a></li>
+	  {% endif %}
+	  {% if config.THEME_SETTINGS.footer_facebook %}
+	  <li><a href="{{ config.THEME_SETTINGS.footer_facebook }}"><i class="icon-facebook"></i></a></li>
+	  {% endif %}
+	  {% if config.THEME_SETTINGS.footer_linkedin %}
+	  <li><a href="{{ config.THEME_SETTINGS.footer_linkedin }}"><i class="icon-linkedin"></i></a></li>
+	  {% endif %}
+	  {% if config.THEME_SETTINGS.footer_instagram %}
+	  <li><a href="{{ config.THEME_SETTINGS.footer_instagram }}"><i class="icon-instagram"></i></a></li>
+	  {% endif %}
+	</ul>
+      </div>
+    </div>
+  </div>
+</div>

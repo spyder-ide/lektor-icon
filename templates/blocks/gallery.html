@@ -1,0 +1,15 @@
+<div id="fh5co-gallery">
+  {% for work in this.works.blocks %}
+  <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ .img | absURL }})">
+    <div class="fh5co-overlay"></div>
+    <div class="fh5co-copy">
+      <div class="fh5co-copy-inner">
+	<h2>{{ work.title }}</h2>
+	{% if work.subtitle %}
+	<h3>{{ work..subtitle }}</h3>
+	{% endif %}
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div> <!-- END fh5co-gallery -->

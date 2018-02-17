@@ -1,0 +1,56 @@
+<div id="fh5co-about" data-section="mission">
+  <div class="fh5co-2col">
+    
+    <div class="fh5co-2col-inner left">
+      
+      <div class="fh5co-tabs-container">
+	<ul class="fh5co-tabs fh5co-three">
+	  {% for service in this.items.blocks %}
+		{% if service.weight == 1 %}
+			<li class="active">
+		{% else %}
+			<li>
+		{% endif %}
+	    <a href="#" data-tab="{{ service.name }}">{{ service.title }}</a>
+	  </li>
+	  {% endfor %}
+	</ul>
+
+	{% for service in this.items.blocks %}
+	{% if service.weight == 1 %}
+	<div class="fh5co-tab-content active" data-tab-content="{{ service.name }}">
+	{% else %}
+	<div class="fh5co-tab-content" data-tab-content="{{ service.name }}">
+	{% endif %}
+	  <h2>{{ service.subtitle }}</h2>
+	  {{ service.description }}
+	</div>
+	{% endfor %}
+
+
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <div class="fh5co-2col fh5co-text">
+    <div class="fh5co-grid">
+      {% if config.THEME_SETTINGS.mission_images_enable %}
+				{% if this.image1 %}
+				<div class="fh5co-grid-item" style="background-image:url({{this.image1 }});"></div>
+				{% endif %}
+				{% if this.image2 %}
+				<div class="fh5co-grid-item" style="background-image:url({{this.image2}})"></div>
+				{% endif %} 
+				{% if this.image3 %}
+				<div class="fh5co-grid-item" style="background-image:url({{this.image3}})"></div>
+				{% endif %}
+				{% if this.image4 %}
+				<div class="fh5co-grid-item" style="background-image:url({{this.image4}})"></div>
+				{% endif %}
+      {% endif %}
+      
+    </div>
+  </div>
+</div> <!-- END fh5co-about -->

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    {% include "partials/header.html" %}
+  </head>
+  <body>
+
+    <!-- Loader -->
+    <div class="fh5co-loader"></div>
+    <div class="fh5co-page">
+      <div id="fh5co-container">
+	
+	{% include "partials/nav.html" %}
+
+	{% include "partials/hero.html" %}
+	
+	{% if config.THEME_SETTINGS.mission_enable %}
+	{{ this.mission }}
+	{% endif %}
+	
+	{% if config.THEME_SETTINGS.services_enable %}
+	{{ this.services }}
+	{% endif %}
+	
+	{% if config.THEME_SETTINGS.work_enable %}
+	{{ this.work }}
+	{% endif %}
+	
+	{% if config.THEME_SETTINGS.team_enable %}
+	{{ this.team }}
+	{% endif %}
+
+	{% if config.THEME_SETTINGS.footer_enable %}
+	{% include "partials/footer.html" %}
+	{% endif %}
+      
+      </div>
+    </div>
+    
+    {% include "partials/js.html" %}
+    
+  </body>
+</html>

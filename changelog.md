@@ -1,5 +1,9 @@
 # Changelog
 
+## 2018-20-02
+
+- Port the theme to Lektor (@dalthviz)
+
 ## 2017-14-11
 
 - Contact links were fixed [https://github.com/SteveLane/hugo-icon/issues/3](https://github.com/SteveLane/hugo-icon/issues/3) (@MartinWillitts)

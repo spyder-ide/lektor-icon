@@ -1,0 +1,28 @@
+<div class="js-sticky">
+  <div class="fh5co-main-nav navbar fixed-top">
+    <div class="container">
+      <div class="fh5co-menu-1">
+
+	<a href="#" data-nav-section="home">Home</a>
+	{% if config.THEME_SETTINGS.mission_enable %}
+	<a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
+	{% endif %}
+
+	{% if config.THEME_SETTINGS.services_enable %}
+	<a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.nav_services }}</a>
+	{% endif %}
+
+	{% if config.THEME_SETTINGS.team_enable %}
+	<a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
+	{% endif %}
+
+	<button onclick="location.href='/docs';">Documentation</button>
+	<button onclick="location.href='/blog';">Blog</button>
+	<button onclick="location.href='/community';">Community</button>
+
+      </div>
+		</div>
+
+	</div>
+	
+</div>

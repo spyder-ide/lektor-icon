@@ -1,0 +1,38 @@
+<div id="fh5co-team" data-section="team">
+  <div class="container">
+    <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+      <h2>{{ config.THEME_SETTINGS.team_title }}</h2>
+      <p>{{ config.THEME_SETTINGS.team_description }}</p>
+    </div>
+    {% for member in this.members %}
+    <div class="col-md-4">
+      <div class="person">
+	<img src="{{ .img | absURL }}" alt="" class="img-responsive">
+	<h3>{{ member.name }}</h3>
+	<h4>{{ member.position }}</h4>
+	<p>{{ member.description }}</p>
+	<ul class="social">
+	  {% if member.facebook %}
+	  <li><a href="{{ member.facebook }}"><i class="icon-facebook"></i></a></li>
+	  {% endif %}
+	  {% if member.twitter %}
+	  <li><a href="{{ member.twitter }}"><i class="icon-twitter"></i></a></li>
+	  {% endif %}
+	  {% if member.dribbble %}
+	  <li><a href="{{ member.dribble }}"><i class="icon-dribbble"></i></a></li>
+	  {% endif %}
+	  {% if member.instagram %}
+	  <li><a href="{{ member.instagram }}"><i class="icon-instagram"></i></a></li>
+	  {% endif %}
+	  {% if member.github %}
+	  <li><a href="{{ member.github }}"><i class="icon-github"></i></a></li>
+	  {% endif %}
+	  {% if member.linkedin %}
+	  <li><a href="{{ member.linkedin }}"><i class="icon-linkedin"></i></a></li>
+	  {% endif %}
+	</ul>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div> <!-- END fh5co-team -->
