@@ -7,7 +7,7 @@
     {% for member in this.members.blocks %}
     <div class="col-md-4">
       <div class="person">
-	<img src="{{ .img | absURL }}" alt="" class="img-responsive">
+	<img src="{{ member.image }}" alt="" class="img-responsive">
 	<h3>{{ member.name }}</h3>
 	<h4>{{ member.position }}</h4>
 	<p>{{ member.description }}</p>
