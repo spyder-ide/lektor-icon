@@ -16,10 +16,11 @@
 	<a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
 	{% endif %}
 
-	<button onclick="location.href='/docs';" class="btn-link">Documentation</button>
-	<button onclick="location.href='/blog';" class="btn-link">Blog</button>
-	<button onclick="location.href='/community';" class="btn-link">Community</button>
-
+	{% if config.THEME_SETTINGS.extension_nav %}
+	<button onclick="location.href='{{config.THEME_SETTINGS.ext_1_ref}}';" class="btn-link">{{config.THEME_SETTINGS.ext_1_title}}</button>
+	<button onclick="location.href='{{config.THEME_SETTINGS.ext_2_ref}}';" class="btn-link">{{config.THEME_SETTINGS.ext_2_title}}</button>
+	<button onclick="location.href='{{config.THEME_SETTINGS.ext_3_ref}}';" class="btn-link">{{{{config.THEME_SETTINGS.ext_3_title}}}}</button>
+	{% endif %}
       </div>
 		</div>
 
