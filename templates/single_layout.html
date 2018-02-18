@@ -18,23 +18,23 @@
 
 	{% include "partials/hero.html" %}
 	
-	{% if config.THEME_SETTINGS.mission_enable == true %}
+	{% if config.THEME_SETTINGS.mission_enable %}
 	{{ this.mission }}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.services_enable == true %}
+	{% if config.THEME_SETTINGS.services_enable %}
 	{{ this.services }}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.work_enable == true %}
+	{% if config.THEME_SETTINGS.work_enable %}
 	{{ this.work }}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.team_enable == true %}
+	{% if config.THEME_SETTINGS.team_enable %}
 	{{ this.team }}
 	{% endif %}
 
-	{% if config.THEME_SETTINGS.footer_enable == true %}
+	{% if config.THEME_SETTINGS.footer_enable %}
 	{% include "partials/footer.html" %}
 	{% endif %}
       
