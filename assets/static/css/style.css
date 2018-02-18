@@ -18,13 +18,13 @@ body.fh5co-overflow {
 }
 
 a {
-  color: #69c2c8;
+  color: #ce4333;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:focus, a:active {
-  color: #3da1a7;
+  color: #ce4333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,40 +65,40 @@ p {
 }
 
 .btn-primary {
-  background: #69c2c8;
+  background: #ce4333;
   color: #fff;
-  border: 2px solid #69c2c8;
+  border: 2px solid #ce4333;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #56bac1 !important;
-  border-color: #56bac1 !important;
+  background: #ce4333 !important;
+  border-color: #ce4333 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #69c2c8;
-  border: 2px solid #69c2c8;
+  color: #ce4333;
+  border: 2px solid #ce4333;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #69c2c8;
+  background: #ce4333;
   color: #fff;
 }
 
 .btn-success {
-  background: #58ca7e;
+  background: #ce4333;
   color: #fff;
-  border: 2px solid #58ca7e;
+  border: 2px solid #ce4333;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active {
-  background: #45c46f !important;
-  border-color: #45c46f !important;
+  background: #ce4333 !important;
+  border-color: #ce4333 !important;
 }
 .btn-success.btn-outline {
   background: transparent;
-  color: #58ca7e;
-  border: 2px solid #58ca7e;
+  color: #ce4333;
+  border: 2px solid #ce4333;
 }
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
-  background: #58ca7e;
+  background: #ce4333;
   color: #fff;
 }
 
@@ -470,8 +470,8 @@ p {
   outline: none;
 }
 .fh5co-tabs-container .fh5co-tabs li.active a {
-  color: #69c2c8;
-  border-bottom: 1px solid #69c2c8;
+  color: #ce4333;
+  border-bottom: 1px solid #ce4333;
 }
 @media screen and (max-width: 480px) {
   .fh5co-tabs-container .fh5co-tabs li {
@@ -566,7 +566,7 @@ p {
   float: left;
   width: 90px;
   height: 90px;
-  background: #69c2c8;
+  background: #ce4333;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -588,7 +588,7 @@ p {
   line-height: 40px;
 }
 #fh5co-services .fh5co-video a:hover {
-  background: #57D131;
+  background: #ce4333;
 }
 #fh5co-services .fh5co-video a:hover, #fh5co-services .fh5co-video a:focus, #fh5co-services .fh5co-video a:active {
   text-decoration: none;
@@ -622,14 +622,14 @@ p {
 }
 #fh5co-services .service .icon i {
   font-size: 40px;
-  color: #57D131;
+  color: #ce4333;
 }
 #fh5co-services .service h3 {
   text-align: center;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  color: #368f95;
+  color: #ce4333;
 }
 #fh5co-services .service:hover, #fh5co-services .service:focus {
   border: 1px solid #e6e6e6;
@@ -653,7 +653,7 @@ p {
   left: 0;
   top: .15em;
   font-size: 23px;
-  color: #57D131;
+  color: #ce4333;
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -800,7 +800,7 @@ p {
   right: 0;
   left: 0;
   z-index: 0;
-  background: #69c2c8;
+  background: #ce4333;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.1s;
