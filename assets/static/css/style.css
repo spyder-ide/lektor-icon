@@ -1180,4 +1180,10 @@ p {
   background: url(../images/Preloader_2.gif) center no-repeat #fff;
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 /*# sourceMappingURL=style.css.map */
