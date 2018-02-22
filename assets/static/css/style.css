@@ -777,6 +777,7 @@ p {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  border-style: solid;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
