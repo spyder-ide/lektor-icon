@@ -540,7 +540,7 @@ p {
 
 #fh5co-services {
   position: relative;
-  padding: 7em 0;
+  padding: 7em 0 0;
 }
 @media screen and (max-width: 768px) {
   #fh5co-services {

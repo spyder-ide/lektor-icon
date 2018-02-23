@@ -100,7 +100,7 @@
 			    		'width' : '100%',
 			    		'z-index' : 99999
 			    	}).addClass('fh5co-shadow');;
-
+					$('.js-sticky').sticky({topSpacing:0});
 			}
 
 		}, {

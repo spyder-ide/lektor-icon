@@ -6,6 +6,7 @@
 </div> 
 <div id="fh5co-gallery">
   {% for work in this.works.blocks %}
+  <h3><a href="{{ work.url }}">{{ work.title }}</a></h3>
   <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work.image }})">
     <div class="fh5co-overlay"></div>
     <div class="fh5co-copy">

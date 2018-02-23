@@ -1,9 +1,12 @@
 <div id="fh5co-about" data-section="mission">
-  <div class="fh5co-2col">
-    
-    <div class="fh5co-2col-inner left">
-      
-      <div class="fh5co-tabs-container">
+	{% if config.THEME_SETTINGS.mission_images_enable %}
+	<div class="fh5co-2col">
+			<div class="fh5co-2col-inner left">    
+		{% else %}
+	<div>
+			<div class="center">
+		{% endif %}
+		<div class="fh5co-tabs-container">
 	<ul class="fh5co-tabs fh5co-three">
 	  {% for service in this.items.blocks %}
 		{% if service.weight == 1 %}
@@ -34,9 +37,9 @@
     
   </div>
   
+	{% if config.THEME_SETTINGS.mission_images_enable %}
   <div class="fh5co-2col fh5co-text">
     <div class="fh5co-grid">
-      {% if config.THEME_SETTINGS.mission_images_enable %}
 				{% if this.image1 %}
 				<div class="fh5co-grid-item" style="background-image:url({{this.image1 }});"></div>
 				{% endif %}
@@ -49,8 +52,8 @@
 				{% if this.image4 %}
 				<div class="fh5co-grid-item" style="background-image:url({{this.image4}})"></div>
 				{% endif %}
-      {% endif %}
       
     </div>
-  </div>
+	</div>	
+	{% endif %}
 </div> <!-- END fh5co-about -->
