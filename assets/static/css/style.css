@@ -779,6 +779,24 @@ p {
   transition: 0.5s;
   border-style: solid;
 }
+#fh5co-gallery .fh5co-item-link {
+  display: block;
+  position: relative;
+  width: 25%;
+  z-index: 2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  float: left;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#fh5co-gallery h3{
+  text-align: center;
+  align-content: center;
+}
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
     height: 200px;
