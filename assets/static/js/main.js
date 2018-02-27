@@ -100,19 +100,10 @@
 			    		'width' : '100%',
 			    		'z-index' : 99999
 			    	}).addClass('fh5co-shadow');;
-					$('.js-sticky').sticky({topSpacing:0});
 			}
 
 		}, {
 	  		offset: '0px'
-		});
-
-		$('.js-sticky').waypoint(function(direction) {
-		  	if (direction === 'up') {
-		    	$section.attr('style', '').removeClass('fh5co-shadow');
-		  	}
-		}, {
-		  	offset: function() { return -$(this.element).height() + 69; }
 		});
 
 	};
