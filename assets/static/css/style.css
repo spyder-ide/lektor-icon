@@ -697,7 +697,6 @@ p {
 #fh5co-team {
   clear: both;
   padding: 7em 0;
-  background: #E8ECF1;
 }
 @media screen and (max-width: 768px) {
   #fh5co-team {
@@ -763,7 +762,13 @@ p {
   clear: both;
   float: left;
   width: 100%;
+  background: #E8ECF1;
 }
+
+#fh5co-gallery-header{
+  background: #E8ECF1;
+}
+
 #fh5co-gallery .fh5co-item {
   display: block;
   position: relative;
