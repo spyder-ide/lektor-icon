@@ -5,6 +5,28 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* small screen portrait */
+
+@media (max-width: 321px) {
+
+  .pull-right { 
+    float: none!important; 
+  }
+
+}
+
+
+/* small screen lanscape */
+
+@media (max-width: 800px) {
+
+  .pull-right {
+    float: none!important; 
+  }
+
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 18px;

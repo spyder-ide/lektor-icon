@@ -1,33 +1,40 @@
 <div class="js-sticky">
-  <div class="fh5co-main-nav navbar fixed-top">
-    <div class="container">
-      <div class="fh5co-menu-1">
-
-	<a href="#" data-nav-section="home">Home</a>
-	{% if config.THEME_SETTINGS.mission_enable %}
-	<a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
-	{% endif %}
-
-	{% if config.THEME_SETTINGS.services_enable %}
-	<a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.nav_services }}</a>
-	{% endif %}
-	
-	{% if config.THEME_SETTINGS.work_enable %}
-	<a href="#" data-nav-section="gallery">{{ config.THEME_SETTINGS.nav_work }}</a>
-	{% endif %}
-
-	{% if config.THEME_SETTINGS.team_enable %}
-	<a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
-	{% endif %}
-
-	{% if config.THEME_SETTINGS.extension_nav %}
-	<button onclick="location.href='{{config.THEME_SETTINGS.ext_1_ref}}';" class="btn-link" style="color:#b74133;">{{config.THEME_SETTINGS.ext_1_title}}</button>
-	<button onclick="location.href='{{config.THEME_SETTINGS.ext_2_ref}}';" class="btn-link" style="color:#b74133;">{{config.THEME_SETTINGS.ext_2_title}}</button>
-	<button onclick="location.href='{{config.THEME_SETTINGS.ext_3_ref}}';" class="btn-link" style="color:#b74133;">{{config.THEME_SETTINGS.ext_3_title}}</button>
-	{% endif %}
-      </div>
+	<div class="fh5co-main-nav navbar fixed-top">
+	  <div class="container">
+		<div class="fh5co-menu-1">
+  
+	  <a href="#" data-nav-section="home">Home</a>
+	  {% if config.THEME_SETTINGS.mission_enable %}
+	  <a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
+	  {% endif %}
+  
+	  {% if config.THEME_SETTINGS.services_enable %}
+	  <a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.nav_services }}</a>
+	  {% endif %}
+	  
+	  {% if config.THEME_SETTINGS.work_enable %}
+	  <a href="#" data-nav-section="gallery">{{ config.THEME_SETTINGS.nav_work }}</a>
+	  {% endif %}
+  
+	  {% if config.THEME_SETTINGS.team_enable %}
+	  <a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
+	  {% endif %}
+  
+	  {% if config.THEME_SETTINGS.extension_nav %}
+		  {% if config.THEME_SETTINGS.ext_3_ref %}
+		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_3_ref}}';">{{config.THEME_SETTINGS.ext_3_title}}</a>
+		  {% endif %}
+		  {% if config.THEME_SETTINGS.ext_2_ref %}
+		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_2_ref}}';">{{config.THEME_SETTINGS.ext_2_title}}</a>
+		  {% endif %}
+		  {% if config.THEME_SETTINGS.ext_1_ref %}
+		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_1_ref}}';">{{config.THEME_SETTINGS.ext_1_title}}</a>
+		  {% endif %}
+	  {% endif %}
 		</div>
-
-	</div>
-	
-</div>
+		  </div>
+  
+	  </div>
+	  
+  </div>
+  
