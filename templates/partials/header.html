@@ -36,3 +36,7 @@
 <link rel="stylesheet" href="{{ '/static/css/bootstrap.css'|asseturl }}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+
+{%if config.THEME_SETTINGS.other_css %}
+	<link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}">
+{% endif %}
