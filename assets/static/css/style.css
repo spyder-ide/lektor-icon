@@ -1267,9 +1267,11 @@ p {
   }
 }
 
-.row{
+.header-row{  
+  background: #E8ECF1;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 1em;
 }
 
 .row-padded {
