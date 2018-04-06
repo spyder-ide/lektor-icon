@@ -6,7 +6,7 @@
 </div> 
 <div id="fh5co-gallery">
   {% for work in this.works.blocks %}
-  <h3><a href="{{ work.url }}" class="fh5co-item-link">{{ work.title }}</a></h3>
+  <h3><a href="{{ work.url }}" class="">{{ work.title }}</a></h3>
   {% endfor %}
   </div>
 <div id="fh5co-gallery">
@@ -15,9 +15,9 @@
     <div class="fh5co-overlay"></div>
     <div class="fh5co-copy">
       <div class="fh5co-copy-inner">
-	<h3>{{ work.title }}</h1>
+	<h2>{{ work.title }}</h1>
 	{% if work.subtitle %}
-	<h4>{{ work.subtitle }}</h2>
+	<h3>{{ work.subtitle }}</h2>
 	{% endif %}
       </div>
     </div>
