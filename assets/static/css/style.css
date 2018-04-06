@@ -273,6 +273,7 @@ p {
   float: absolute;
   background: #fff;
   font-family: Cinzel;
+  font-size: 11px;
 }
 .fh5co-main-nav.fh5co-shadow {
   -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
@@ -759,7 +760,7 @@ p {
   margin-bottom: 30px;
 }
 .fh5co-heading h2 {
-  font-size: 14px;
+  font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
   text-transform: uppercase;
