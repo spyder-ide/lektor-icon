@@ -226,9 +226,9 @@
 			        	scrollTop: $('div[data-section="' + section + '"]').offset().top - topVal
 			    	}, 500, 'easeInOutExpo');	
 			    	
+		   			event.preventDefault();
 			   }
 
-		    event.preventDefault();
 
 		    // return false;
 		});

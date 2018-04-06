@@ -8,7 +8,7 @@
 				<ul class='dropdown menu' data-dropdown-menu>
 					<li id='menu-logo'>
 						<p></p>
-						<a href='{{ '/'|url }}' onclick='location.href='{{'/'|url}}';'>
+						<a href='{{ '/'|url }}'>
 							<img src='{{ '/static/images/spyder-logo.svg' | url}}'>
 							<span>
 								<span id='logo-text'>Spyder {% block section %}{% endblock %}</span>                  
@@ -38,13 +38,13 @@
   
 	  {% if config.THEME_SETTINGS.extension_nav %}
 		  {% if config.THEME_SETTINGS.ext_3_ref %}
-		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_3_ref}}';">{{config.THEME_SETTINGS.ext_3_title}}</a>
+		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
 		  {% endif %}
 		  {% if config.THEME_SETTINGS.ext_2_ref %}
-		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_2_ref}}';">{{config.THEME_SETTINGS.ext_2_title}}</a>
+		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_2_ref | url}}" >{{config.THEME_SETTINGS.ext_2_title}}</a>
 		  {% endif %}
 		  {% if config.THEME_SETTINGS.ext_1_ref %}
-		  <a class="pull-right" href="" onclick="location.href='{{config.THEME_SETTINGS.ext_1_ref}}';">{{config.THEME_SETTINGS.ext_1_title}}</a>
+		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
 		  {% endif %}
 	  {% endif %}
 		</div>
