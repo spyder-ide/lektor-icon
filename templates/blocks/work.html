@@ -1,12 +1,14 @@
 <div id="fh5co-gallery-header" class="row" data-section="gallery">
-  <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+  <div class="text-center fh5co-heading">
     <h2>{{ this.title }}</h2>
     <p>{{ this.description }}</p>
   </div>
 </div> 
-<div id="fh5co-gallery" class="header-row">
+<div id="fh5co-gallery" class="row">
   {% for work in this.works.blocks %}
-  <a href="{{ work.url }}" class=""><h3>{{ work.title }}</h3></a>
+  <div class="">
+    <a href="{{ work.url }}" class=""><h3>{{ work.title }}</h3></a>
+  </div>
   {% endfor %}
   </div>
 <div id="fh5co-gallery">
