@@ -1267,6 +1267,11 @@ p {
   }
 }
 
+.row{
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .row-padded {
   padding-bottom: 40px;
 }
