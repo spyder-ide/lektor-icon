@@ -47,6 +47,10 @@
 		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
 		  {% endif %}
 	  {% endif %}
+
+	  {% if config.THEME_SETTINGS.donate_nav %}
+	  	<a class="pull-right" href="#" data-nav-section="donate">{{config.THEME_SETTINGS.donate_nav}}</a>
+	  {% endif %}
 		</div>
 		  </div>
   
