@@ -23,7 +23,11 @@
 	  {% if config.THEME_SETTINGS.mission_enable %}
 	  <a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
 	  {% endif %}
-  
+
+	  {% if config.THEME_SETTINGS.mission_2_nav %}
+	  <a href="#" data-nav-section="{{config.THEME_SETTINGS.mission_2_nav}}">{{ config.THEME_SETTINGS.mission_2_nav }}</a>
+	  {% endif %}
+	    
 	  {% if config.THEME_SETTINGS.services_enable %}
 	  <a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.nav_services }}</a>
 	  {% endif %}
