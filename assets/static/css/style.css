@@ -851,6 +851,7 @@ p {
   float: left;
   width: 100%;
   background: #E8ECF1;
+  margin-bottom: 30px;
 }
 
 #fh5co-gallery-header{
@@ -1087,7 +1088,7 @@ p {
   transition: 0.5s;
 }
 
-#fh5co-container, .fh5co-nav-toggle, #fh5co-footer {
+#fh5co-container, .fh5co-nav-toggle {
   z-index: 2;
   position: relative;
 }

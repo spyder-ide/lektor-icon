@@ -1,26 +1,26 @@
-<div id="fh5co-gallery-header" class="row" data-section="gallery">
-  <div class="text-center fh5co-heading">
-    <h2>{{ this.title }}</h2>
-    <p>{{ this.description }}</p>
-  </div>
-</div> 
 <div id="fh5co-gallery">
-  {% for work in this.works.blocks %}
-    <a href="{{ work.url }}" class="fh5co-item-link"><h3>{{ work.title }}</h3></a>
-  {% endfor %}
-  </div>
-<div id="fh5co-gallery">
-  {% for work in this.works.blocks %}
-  <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work.image }})">
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-	<h2>{{ work.title }}</h1>
-	{% if work.subtitle %}
-	<h3>{{ work.subtitle }}</h2>
-	{% endif %}
+  <div id="fh5co-gallery-header" class="row" data-section="gallery">
+      <div class="text-center fh5co-heading">
+        <h2>{{ this.title }}</h2>
+        <p>{{ this.description }}</p>
       </div>
+    </div>       
+  <div>
+    {% for work in this.works.blocks %}
+        <a href="{{ work.url }}" class="fh5co-item-link"><h3>{{ work.title }}</h3></a>
+    {% endfor %}
+  </div>
+{% for work in this.works.blocks %}
+<a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work.image }})">
+  <div class="fh5co-overlay"></div>
+  <div class="fh5co-copy">
+    <div class="fh5co-copy-inner">
+<h2>{{ work.title }}</h2>
+{% if work.subtitle %}
+<h3>{{ work.subtitle }}</h3>
+{% endif %}
     </div>
-  </a>
-  {% endfor %}
+  </div>
+</a>
+{% endfor %}
 </div> <!-- END fh5co-gallery -->
