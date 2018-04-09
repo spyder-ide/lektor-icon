@@ -356,7 +356,6 @@ p {
 .fh5co-heading .sub-heading {
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading .sub-heading {
@@ -872,6 +871,7 @@ p {
   -o-transition: 0.5s;
   transition: 0.5s;
   border-style: solid;
+  font-size: 18px;
 }
 #fh5co-gallery .fh5co-item-link {
   display: block;
