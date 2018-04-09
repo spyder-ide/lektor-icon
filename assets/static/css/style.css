@@ -1013,6 +1013,7 @@ p {
 }
 
 #fh5co-footer {
+  clear: both;
   padding: 3em 0;
   background: #E8ECF1;
   -webkit-box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
