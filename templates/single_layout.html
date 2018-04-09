@@ -19,9 +19,9 @@
 	{% include "partials/hero.html" %}
 	
 	{% if config.THEME_SETTINGS.mission_enable %}
-	{% for mission in this.mission.blocks%}
-	{{ this.mission }}
-	{% endfor %}
+		{% for mission in this.mission.blocks%}
+			{{ mission }}
+		{% endfor %}
 	{% endif %}
 	
 	{% if config.THEME_SETTINGS.services_enable %}
