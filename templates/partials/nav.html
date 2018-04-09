@@ -39,7 +39,11 @@
 	  {% if config.THEME_SETTINGS.team_enable %}
 	  <a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
 	  {% endif %}
-  
+	  
+	  {% if config.THEME_SETTINGS.donate_nav %}
+	  <a href="#" data-nav-section="donate">{{config.THEME_SETTINGS.donate_nav}}</a>
+  	  {% endif %}
+
 	  {% if config.THEME_SETTINGS.extension_nav %}
 		  {% if config.THEME_SETTINGS.ext_3_ref %}
 		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
@@ -52,9 +56,7 @@
 		  {% endif %}
 	  {% endif %}
 
-	  {% if config.THEME_SETTINGS.donate_nav %}
-	  	<a class="pull-right" href="#" data-nav-section="donate">{{config.THEME_SETTINGS.donate_nav}}</a>
-	  {% endif %}
+	  
 		</div>
 		  </div>
   
