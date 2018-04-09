@@ -890,6 +890,7 @@ p {
 #fh5co-gallery h3{
   text-align: center;
   align-content: center;
+  font-size: medium;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
