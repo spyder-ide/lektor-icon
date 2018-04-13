@@ -636,6 +636,11 @@ p {
   position: relative;
   margin-top: 30px;
 }
+
+.center-text {
+  margin-left: 7.5em;
+  margin-right: 7.5em;
+}
   
 #fh5co-services {
   position: relative;
