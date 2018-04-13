@@ -518,20 +518,17 @@ p {
 .fh5co-tabs-container .fh5co-tabs {
   padding: 0;
   margin: 0 0 30px 0;
-  display:inline-block;
+  float: left;
   width: 100%;
 }
 .fh5co-tabs-container .fh5co-tabs.fh5co-two li {
   width: 50%;
-  float: left;
 }
 .fh5co-tabs-container .fh5co-tabs.fh5co-three li {
   width: 33.33%;
-  float: left;
 }
 .fh5co-tabs-container .fh5co-tabs.fh5co-four li {
   width: 25%;
-  float: left;
 }
 .fh5co-tabs-container .fh5co-tabs li {
   padding: 0;
@@ -597,7 +594,7 @@ p {
   margin-bottom: 30px;
   background: #ffffff;
 }
-
+  
 .gototop {
   position: fixed;
   bottom: 20px;
@@ -637,14 +634,19 @@ p {
 
 #fh5co-download {
   position: relative;
-  margin-top: 2em;
+  margin-top: 30px;
 }
-
+  
 #fh5co-services {
   position: relative;
+  padding: 7em 0 0;
   margin-top: 2em;
 }
-
+@media screen and (max-width: 768px) {
+  #fh5co-services {
+    padding: 5em 0 3em 0;
+  }
+}
 #fh5co-services .fh5co-video {
   position: absolute;
   top: 0;
@@ -703,7 +705,7 @@ p {
   padding-right: 10px;
   margin-bottom: 40px;
   padding: 40px 20px 20px 20px;
-  background:  #E8ECF1;
+  background: #fff;
   border: 1px solid transparent;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
