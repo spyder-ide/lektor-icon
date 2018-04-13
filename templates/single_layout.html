@@ -24,6 +24,10 @@
 		{% endfor %}
 	{% endif %}
 	
+	{% if config.THEME_SETTINGS.download_enable %}
+	{{ this.download }}
+	{% endif %}
+
 	{% if config.THEME_SETTINGS.services_enable %}
 	{{ this.services }}
 	{% endif %}
