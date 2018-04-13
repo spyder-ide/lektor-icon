@@ -877,6 +877,7 @@ p {
 
 #fh5co-gallery-header{
   background: #E8ECF1;
+  margin-top: 30px;
 }
 
 #fh5co-gallery .fh5co-item {
@@ -912,7 +913,8 @@ p {
 #fh5co-gallery h3{
   text-align: center;
   align-content: center;
-  font-size: medium;
+  font-size: 23px;
+  font-family: Cinzel;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
