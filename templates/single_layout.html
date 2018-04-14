@@ -42,10 +42,13 @@
 	{{ this.team }}
 	{% endif %}
 
+	{% if config.THEME_SETTINGS.donate_enable %}
+	{% include "partials/donate.html" %}
+	{% endif %}
+
 	{% if config.THEME_SETTINGS.footer_enable %}
 	{% include "partials/footer.html" %}
-	{% endif %}
-      
+	{% endif %}      
       </div>
     </div>
     

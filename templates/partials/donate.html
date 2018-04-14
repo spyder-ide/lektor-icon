@@ -1,0 +1,16 @@
+<div id="fh5co-donate" data-section="donate">         
+    <div class="container">
+            <div class="row">
+                    <h1>{{this.donate_message}}</h1>
+            </div>  
+            {%if config.THEME_SETTINGS.opencollective %}
+            <div class="row">
+                <a href="https://opencollective.com/{{config.THEME_SETTINGS.opencollective}}/donate" target="_blank">
+                    <img src="../static/images/collective.png" width=300 class="center" />
+                </a>
+            </div>
+            </br>
+            {% endif %}         
+    </div>
+</div>
+      
