@@ -897,6 +897,7 @@ p {
   -o-transition: 0.5s;
   transition: 0.5s;
   border-style: solid;
+  border-width: 1px;
   font-size: 18px;
 }
 #fh5co-gallery .fh5co-item-link {
@@ -1041,7 +1042,7 @@ p {
 #fh5co-footer {
   clear: both;
   padding: 3em 0;
-  background: #E8ECF1;
+  background: rgb(255, 255, 255);
   -webkit-box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.12);
