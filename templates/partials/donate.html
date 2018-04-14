@@ -1,8 +1,9 @@
 <div id="fh5co-donate" data-section="donate">         
     <div class="container">
-            <div class="row">
-                    <h1>{{config.THEME_SETTINGS.donate_message}}</h1>
-            </div>  
+            <div class="text-center fh5co-heading">
+                <h2>{{config.THEME_SETTINGS.donate_name}}</h2>
+                <p>{{ config.THEME_SETTINGS.donate_description }}</p>
+            </div>
             {%if config.THEME_SETTINGS.opencollective %}
             <div class="row">
                 <a href="https://opencollective.com/{{config.THEME_SETTINGS.opencollective}}/donate" target="_blank">
