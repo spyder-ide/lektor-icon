@@ -25,7 +25,9 @@
 	{% endif %}
 	
 	{% if config.THEME_SETTINGS.download_enable %}
-	{{ this.download }}
+		{% for download in this.download.blocks%}
+			{{ download }}
+		{% endfor %}
 	{% endif %}
 
 	{% if config.THEME_SETTINGS.services_enable %}
