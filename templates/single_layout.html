@@ -24,9 +24,9 @@
 		{% endfor %}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.download_enable %}
-		{% for download in this.download.blocks%}
-			{{ download }}
+	{% if config.THEME_SETTINGS.overview_enable %}
+		{% for overview in this.overview.blocks%}
+			{{ overview }}
 		{% endfor %}
 	{% endif %}
 
@@ -40,6 +40,12 @@
 	
 	{% if config.THEME_SETTINGS.team_enable %}
 	{{ this.team }}
+	{% endif %}
+
+	{% if config.THEME_SETTINGS.download_enable %}
+		{% for download in this.download.blocks%}
+			{{ download }}
+		{% endfor %}
 	{% endif %}
 
 	{% if config.THEME_SETTINGS.donate_enable %}
