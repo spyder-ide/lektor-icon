@@ -910,7 +910,7 @@ p {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  color: #ce4333;
+  color: #ee1c24;
 }
 
 #fh5co-gallery h3{
@@ -918,7 +918,7 @@ p {
   align-content: center;
   font-size: 1.4em;
   font-family: Raleway, Arial, sans-serif;
-  color: #ce4333;
+  color: #ee1c24;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
