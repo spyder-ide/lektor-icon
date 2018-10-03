@@ -2,23 +2,27 @@
 	<div class="fh5co-main-nav navbar fixed-top">
 		<div class="container">
 		<div class="fh5co-menu-1">
-		
-			{%if config.THEME_SETTINGS.spyder_nav_content %}
+
+			{% if config.THEME_SETTINGS.nav_logo_enable and (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
 			<div class='pull-left'>
 				<ul class='dropdown menu' data-dropdown-menu>
 					<li id='menu-logo'>
 						<p></p>
 						<a href='{{ '/'|url }}'>
-							<img src='{{ '/static/images/spyder-logo.svg' | url}}'>
+							{% if config.THEME_SETTINGS.nav_logo_path %}
+							<img src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
+							{% endif %}
+							{% if config.THEME_SETTINGS.nav_logo_text %}
 							<span>
-								<span id='logo-text'><big>S</big>pyder {% block section %}{% endblock %}</span>                  
+								<span id='logo-text'>{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
 							</span>
+							{% endif %}
 						</a>
 						<p></p>
 					</li>
 				</ul>
 			</div>
-		{% endif %}
+			{% endif %}
 	  <a href="#" data-nav-section="home">Home</a>
 	  {% if config.THEME_SETTINGS.mission_enable %}
 	  <a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
