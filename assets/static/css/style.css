@@ -1343,8 +1343,12 @@ p {
 }
 
 .pipe-red{
-  color: red;
+  color: #ee1c24;
   font-weight: bold;
+}
+
+.fh5co-heading h2::after {
+  background: #ee1c24;
 }
 
 /*# sourceMappingURL=style.css.map */
