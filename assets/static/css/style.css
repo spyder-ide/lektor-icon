@@ -1351,4 +1351,56 @@ p {
   background: #ee1c24;
 }
 
+#menu-logo a {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#menu-logo span {
+  display: inline-block;
+  color: #333;
+  vertical-align: middle;
+}
+
+#menu-logo span #logo-text {
+  font-size: 2em;
+}
+
+#menu-logo img {
+  width: 3.7em;
+  vertical-align: middle;
+}
+
+#menu-logo > p {
+  margin-bottom: 1rem;
+}
+
+.fh5co-main-nav .fh5co-menu-1 .dropdown {
+  list-style-type: none;
+}
+
+#fh5co-footer {
+  padding: 0.9em 0;
+  color: white;
+}
+
+#fh5co-footer .container .row .text-center {
+  margin-bottom: 0.7em;
+}
+
+#fh5co-footer .container .row .text-center p small {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#fh5co-footer .container .row .text-center p {
+  font-size: 13px;
+  line-height: 1.2em;
+}
+
+#fh5co-footer a, #fh5co-footer a:focus {
+  color: white;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=style.css.map */
