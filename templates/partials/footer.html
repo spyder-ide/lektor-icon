@@ -1,37 +1,31 @@
 <div id="fh5co-footer" >
 	<div class="container">
+	{% if config.THEME_SETTINGS.footer_links %}
 	  <div class="row">
 		<div class="text-center">
-				  <p><small>
-					  Connect with us on: 
-				   {% if config.THEME_SETTINGS.footer_github %}
-					  <a href="{{ config.THEME_SETTINGS.footer_github }}">Github</a>
-				   {% endif %}
-				   {% if config.THEME_SETTINGS.footer_twitter %}
-				   <span class="pipe-red">|</span> <a href="{{ config.THEME_SETTINGS.footer_twitter }}">Twitter</a>
-				   {% endif %}
-				   {% if config.THEME_SETTINGS.footer_facebook %}
-				   <span class="pipe-red">|</span> <a href="{{ config.THEME_SETTINGS.footer_facebook }}">Facebook</a>
-				   {% endif %}
-				   {% if config.THEME_SETTINGS.footer_linkedin %}
-				   <span class="pipe-red">|</span> <a href="{{ config.THEME_SETTINGS.footer_linkedin }}">LinkedIn</a>
-				   {% endif %}
-				   {% if config.THEME_SETTINGS.footer_instagram %}
-				   <span class="pipe-red">|</span> <a href="{{ config.THEME_SETTINGS.footer_instagram }}">Instagram</a>
-				   {% endif %}
-				   {% if config.THEME_SETTINGS.footer_google %}
-				   <span class="pipe-red">|</span> <a href="{{ config.THEME_SETTINGS.footer_google }}">Google Groups</a>
-				   {% endif %}
-		   
-				  </small></p>
-			  </div>
-		  </div>
+			<p><small>
+			  Connect with us on:
+			  {% for footer_link in config.THEME_SETTINGS.footer_links.split(", ") %}
+			  {% if loop.index > 1 %}
+			  <span class="pipe-red">|</span>
+			  {% endif %}
+    		  <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(": ")[0] }} </a>
+			  {% endfor %}
+			</small></p>
+		</div>
+	  </div>
+    {% endif %}
 		  
-		  <div class="row">
-		    <div class="text-center">
-		      <p>{{ config.THEME_SETTINGS.footer_copyright_statement | safe }}<br><a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank">Template</a> designed by <a href='https://freehtml5.co/' target='_blank'>FreeHTML5.co</a> <br>Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a> <span class="pipe-red">|</span> Lektor port by <a href='https://github.com/dalthviz/' target='_blank'>Dalthviz</a> and <a href='https://www.spyder-ide.org/' target='_blank'>Spyder</a></p>
-			  </div>
+		<div class="row">
+		  <div class="text-center">
+		    <p>
+		    {% if config.THEME_SETTINGS.footer_copyright_statement %}
+		    {{ config.THEME_SETTINGS.footer_copyright_statement | safe }}<br>
+		    {% endif %}
+		    <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank">Template</a> designed by <a href='https://freehtml5.co/' target='_blank'>FreeHTML5.co</a>
+		    <br>Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a> <span class="pipe-red">|</span> Lektor port by <a href='https://github.com/dalthviz/' target='_blank'>Dalthviz</a> and <a href='https://www.spyder-ide.org/' target='_blank'>Spyder</a>
+		    </p>
 		  </div>
+    	</div>
 	</div>
-  </div>
-  
+</div>
