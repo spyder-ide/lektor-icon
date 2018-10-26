@@ -24,31 +24,31 @@
 			</div>
 			{% endif %}
 	  <a href="#" data-nav-section="home">Home</a>
-	  {% if config.THEME_SETTINGS.mission_enable %}
-	  <a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.nav_mission }}</a>
+	  {% if config.THEME_SETTINGS.overview_enable %}
+	  <a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.overview_nav }}</a>
 	  {% endif %}
 
 	  {% if config.THEME_SETTINGS.services_enable %}
-	  <a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.nav_services }}</a>
+	  <a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.services_nav }}</a>
 	  {% endif %}
 	  
 	  {% if config.THEME_SETTINGS.work_enable %}
-	  <a href="#" data-nav-section="gallery">{{ config.THEME_SETTINGS.nav_work }}</a>
+	  <a href="#" data-nav-section="gallery">{{ config.THEME_SETTINGS.work_nav }}</a>
 	  {% endif %}
   
 	  {% if config.THEME_SETTINGS.team_enable %}
-	  <a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.nav_team }}</a>
+	  <a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.team_nav }}</a>
 	  {% endif %}
 	  
-	  {% if config.THEME_SETTINGS.mission_2_nav %}
-	  <a href="#" data-nav-section="{{config.THEME_SETTINGS.mission_2_nav}}">{{ config.THEME_SETTINGS.mission_2_nav }}</a>
+	  {% if config.THEME_SETTINGS.download_nav %}
+	  <a href="#" data-nav-section="{{config.THEME_SETTINGS.download_nav}}">{{ config.THEME_SETTINGS.download_nav }}</a>
 	  {% endif %}
 
 	  {% if config.THEME_SETTINGS.donate_nav %}
 	  <a href="#" data-nav-section="donate">{{config.THEME_SETTINGS.donate_nav}}</a>
   	  {% endif %}
 
-	  {% if config.THEME_SETTINGS.extension_nav %}
+	  {% if config.THEME_SETTINGS.nav_extension %}
 		  {% if config.THEME_SETTINGS.ext_3_ref %}
 		  <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
 		  {% endif %}
