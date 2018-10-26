@@ -1,5 +1,5 @@
 <div id="fh5co-about" data-section="{{this.section}}">
-	{% if config.THEME_SETTINGS.mission_images_enable %}
+	{% if config.THEME_SETTINGS.mission_images_enable and config.THEME_SETTINGS.mission_images_enable.lower() not in ["false", "f", "no", "n"] %}
 	<div class="fh5co-2col">
 			<div class="fh5co-2col-inner left">    
 		{% else %}
@@ -37,7 +37,7 @@
     
   </div>
   
-	{% if config.THEME_SETTINGS.mission_images_enable %}
+	{% if config.THEME_SETTINGS.mission_images_enable and config.THEME_SETTINGS.mission_images_enable.lower() not in ["false", "f", "no", "n"] %}
   <div class="fh5co-2col fh5co-text">
     <div class="fh5co-grid">
 				{% if this.image1 %}

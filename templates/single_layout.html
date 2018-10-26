@@ -18,41 +18,41 @@
 
 	{% include "partials/hero.html" %}
 	
-	{% if config.THEME_SETTINGS.mission_enable %}
+	{% if config.THEME_SETTINGS.mission_enable and config.THEME_SETTINGS.mission_enable.lower() not in ["false", "f", "no", "n"] %}
 		{% for mission in this.mission.blocks%}
 			{{ mission }}
 		{% endfor %}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.overview_enable %}
+	{% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] %}
 		{% for overview in this.overview.blocks%}
 			{{ overview }}
 		{% endfor %}
 	{% endif %}
 
-	{% if config.THEME_SETTINGS.services_enable %}
+	{% if config.THEME_SETTINGS.services_enable and config.THEME_SETTINGS.services_enable.lower() not in ["false", "f", "no", "n"] %}
 	{{ this.services }}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.work_enable %}
+	{% if config.THEME_SETTINGS.work_enable and config.THEME_SETTINGS.work_enable.lower() not in ["false", "f", "no", "n"] %}
 	{{ this.work }}
 	{% endif %}
 	
-	{% if config.THEME_SETTINGS.team_enable %}
+	{% if config.THEME_SETTINGS.team_enable and config.THEME_SETTINGS.team_enable.lower() not in ["false", "f", "no", "n"] %}
 	{{ this.team }}
 	{% endif %}
 
-	{% if config.THEME_SETTINGS.download_enable %}
+	{% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] %}
 		{% for download in this.download.blocks%}
 			{{ download }}
 		{% endfor %}
 	{% endif %}
 
-	{% if config.THEME_SETTINGS.donate_enable %}
+	{% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] %}
 	{% include "partials/donate.html" %}
 	{% endif %}
 
-	{% if config.THEME_SETTINGS.footer_enable %}
+	{% if config.THEME_SETTINGS.footer_enable and config.THEME_SETTINGS.footer_enable.lower() not in ["false", "f", "no", "n"] %}
 	{% include "partials/footer.html" %}
 	{% endif %}      
       </div>
