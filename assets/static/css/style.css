@@ -1,3 +1,7 @@
+html {
+    font-size: 100%
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -10,8 +14,8 @@
 
 @media (max-width: 321px) {
 
-  .pull-right { 
-    float: none!important; 
+  .pull-right {
+    float: none!important;
   }
 
 }
@@ -22,7 +26,7 @@
 @media (max-width: 800px) {
 
   .pull-right {
-    float: none!important; 
+    float: none!important;
   }
 
 }
@@ -589,7 +593,7 @@ p {
   margin-bottom: 30px;
   background: #ffffff;
 }
-  
+
 .gototop {
   position: fixed;
   bottom: 20px;
@@ -1297,7 +1301,7 @@ p {
   }
 }
 
-.header-row{  
+.header-row{
   background: #E8ECF1;
   margin-right: auto;
   margin-left: auto;
@@ -1402,5 +1406,238 @@ p {
   color: white;
   font-weight: bold;
 }
+
+.blog-column {
+    padding: 0;
+}
+
+.blog-banner {
+    background-color: #450200;
+    height: 10rem;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+.blog-banner .banner-text {
+    color: #333;
+    margin-right: 2rem;
+    color: #fff;
+}
+
+.blog-banner .banner-text span {
+    display: block;
+}
+
+.blog-banner .banner-text .banner-big-text {
+    font-size: 5rem;
+}
+
+.blog-banner .banner-text .banner-small-text {
+    font-size: 2rem;
+    margin-top: -2rem;
+    margin-right: 5rem;
+}
+
+.blog-body {
+    padding: .625rem;
+    border-right: .25rem solid #450200;
+}
+
+@media print,
+screen and (min-width:40em) {
+    .blog-body {
+        padding: 2rem 4rem;
+    }
+}
+
+.sidebar-blog {
+    padding: 2rem;
+}
+
+.sidebar-blog h3 {
+    color: #450200;
+    text-align: center;
+}
+
+.sidebar-blog .colaborators {
+    margin-top: 20rem;
+}
+
+.blog-post {
+    margin-bottom: 2rem;
+    font-family: Raleway;
+    color: rgb(78, 78, 78);
+}
+
+.blog-post img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+.blog-post p {
+    margin-bottom: 1.4rem;
+    font-size: inherit;
+    line-height: 1.57;
+    text-rendering: optimizeLegibility;
+}
+
+.blog-post p img {
+    margin-top: 20px;
+}
+
+.blog-post a {
+    line-height: inherit;
+    color: #ee1c24;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px dotted #ee1c24;
+}
+
+.blog-post h1 a,
+.blog-post h2 a,
+.blog-post h3 a {
+    text-decoration: none;
+    border: 0;
+}
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+    text-align: left;
+    color: #000000;
+    font-family: Amiri;
+}
+
+.blog-post h1 {
+    margin-bottom: 25px;
+    font-size: 2.4em;
+}
+
+.blog-post h2 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.blog-post .blog-index-header .row h1,
+.blog-post .blog-index-header .row h2,
+.blog-post .blog-index-header .row h3 {
+    text-align: left;
+    color: #000000;
+    font-family: Amiri;
+}
+
+.blog-post .blog-index-header .row h1 {
+    margin-bottom: 20px;
+}
+
+.blog-post .blog-index-header .row h2 {
+    margin-bottom: 15px;
+}
+
+.blog-post .blog-index-header .row h3 {
+    margin-bottom: 10px;
+}
+
+.author-img {
+    width: 3.5rem;
+    border-radius: 2.5rem;
+    border: .35rem;
+    padding: .23rem;
+}
+
+.meta-blog-author,
+.meta-blog-date,
+.meta-blog-index {
+    color: #000000;
+    font-size: .9em;
+}
+
+.blog-index-header {
+    width: 90%;
+    margin: 0;
+}
+
+.meta-blog-index .author {
+    text-align: center;
+}
+
+.meta-blog-date {
+    text-align: right;
+}
+
+.meta-blog-author img {
+    display: block;
+}
+
+.blog-pagination .next,
+.blog-pagination .previous {
+    text-align: center;
+}
+
+.blog-post .column, .blog-pagination .columns {
+    float: left;
+}
+
+.blog-post .row, .blog-pagination {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-pagination .small-6 {
+    width: 50%;
+}
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1rem;
+    padding: .85em 1em;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: background-color .25s ease-out, color .25s ease-out;
+    font-size: .9em;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ee1c24da;
+    color: #fefefe
+}
+
+[data-whatinput=mouse] .button {
+    outline: 0
+}
+
+.button:focus,
+.button:hover {
+    background-color: #3b0200;
+    color: #fefefe
+}
+
+.button.disabled,
+.button[disabled] {
+    opacity: .25;
+    cursor: not-allowed
+}
+
+.button.disabled:focus,
+.button.disabled:hover,
+.button[disabled]:focus,
+.button[disabled]:hover {
+    background-color: #450200;
+    color: #fefefe
+}
+
 
 /*# sourceMappingURL=style.css.map */

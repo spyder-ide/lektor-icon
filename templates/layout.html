@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.description }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by interadata" />
+     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
+     <meta name="author" content="FREEHTML5.CO / Hugo port " />
+   -->
+  <meta name="author" content="{{ config.THEME_SETTINGS.author }}">
+  <meta name="description" content="{{ config.THEME_SETTINGS.description }}">
+  <meta http-equiv="content-language" content="{{ config.THEME_SETTINGS.content_lang }}">
+  <link rel="icon" href="{{ '/static/images/favicon.png' | url }}" type="image/png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        http://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        http://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane-->
+  <!-- Website:        https://interadata.io/ -->
+      
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{{ '/static/css/animate.css'|asseturl }}">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="{{ '/static/css/icomoon.css'|asseturl }}">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="{{ '/static/css/simple-line-icons.css'|asseturl }}">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css'|asseturl }}">
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="{{ '/static/css/bootstrap.css'|asseturl }}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+
+  {%if config.THEME_SETTINGS.other_css %}
+  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}">
+  {% endif %}
+</head>
+
+<body>
+
+<!-- Loader -->
+<div class="fh5co-loader"></div>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            {% if (config.THEME_SETTINGS.nav_logo_enable and config.THEME_SETTINGS.nav_logo_enable.lower() not in ["false", "f", "no", "n"]) and (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='{{ '/'|url }}'>
+                    {% if config.THEME_SETTINGS.nav_logo_path %}
+                    <img src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
+                    {% endif %}
+                    {% if config.THEME_SETTINGS.nav_logo_text %}
+                    <span>
+                      <span id='logo-text'>{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
+                    </span>
+                    {% endif %}
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            {% endif %}
+            
+            {% block nav_main %}{% endblock %}
+
+            {% if config.THEME_SETTINGS.nav_extension_enable and config.THEME_SETTINGS.nav_extension_enable.lower() not in ["false", "f", "no", "n"] %}
+              {% if config.THEME_SETTINGS.ext_3_ref and config.THEME_SETTINGS.ext_3_title %}
+              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
+              {% endif %}
+              {% if config.THEME_SETTINGS.ext_2_ref and config.THEME_SETTINGS.ext_2_title %}
+              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_2_ref | url}}" >{{config.THEME_SETTINGS.ext_2_title}}</a>
+              {% endif %}
+              {% if config.THEME_SETTINGS.ext_1_ref and config.THEME_SETTINGS.ext_1_title %}
+              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {% block body %}{% endblock %}
+    
+    {% if config.THEME_SETTINGS.footer_enable and config.THEME_SETTINGS.footer_enable.lower() not in ["false", "f", "no", "n"] %}
+    <div id="fh5co-footer">
+      <div class="container">
+      {% if config.THEME_SETTINGS.footer_links %}
+        <div class="row">
+          <div class="text-center">
+            <p><small>
+              Connect with us on:
+              {% for footer_link in config.THEME_SETTINGS.footer_links.split(", ") %}
+              {% if loop.index > 1 %}
+              <span class="pipe-red">|</span>
+              {% endif %}
+              <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(": ")[0] }} </a>
+              {% endfor %}
+            </small></p>
+          </div>
+        </div>
+        {% endif %}
+        <div class="row">
+          <div class="text-center">
+            <p>
+              {% if config.THEME_SETTINGS.footer_copyright_statement %}
+              {{ config.THEME_SETTINGS.footer_copyright_statement | safe }}<br>
+              {% endif %}
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank">Template</a> designed by <a href='https://freehtml5.co/' target='_blank'>FreeHTML5.co</a>
+              <br>Hugo port by <a href='https://github.com/SteveLane/' target='_blank'>SteveLane</a> <span class="pipe-red">|</span> Lektor port by <a href='https://github.com/dalthviz/' target='_blank'>Dalthviz</a> and <a href='https://www.spyder-ide.org/' target='_blank'>Spyder</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+  {% include "partials/js.html" %}
+  <!-- <script type=text/javascript src="{{ '/static/js/app.js'|asseturl }}" charset="utf-8"></script> -->
+</body>
+</html>
