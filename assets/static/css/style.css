@@ -806,6 +806,7 @@ p {
 }
 #fh5co-team .person {
   padding: 30px;
+  margin-bottom: 5px;
   text-align: center;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -868,6 +869,10 @@ p {
   padding-top: 1em;
 }
 
+#fh5co-gallery .gallery-title-spacer {
+  padding-top: 2.5em;
+}
+
 #fh5co-gallery .fh5co-item {
   display: block;
   position: relative;
@@ -884,6 +889,7 @@ p {
   border-style: solid;
   border-width: 1px;
   font-size: 18px;
+  margin-top: 1em;
 }
 #fh5co-gallery .fh5co-item-link {
   display: block;
@@ -900,12 +906,16 @@ p {
   color: #ee1c24;
 }
 
-#fh5co-gallery h3 {
+#fh5co-gallery .fh5co-item h3 {
+  position: relative;
+  top: -1.5em;
   text-align: center;
   align-content: center;
   font-size: 1.4em;
   font-family: Raleway, Arial, sans-serif;
   color: #ee1c24;
+  z-index: 5;
+  margin: 0;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
@@ -938,7 +948,11 @@ p {
 }
 #fh5co-gallery .fh5co-item .fh5co-copy {
   z-index: 3;
-  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
   height: 300px;
   display: table;
   text-align: center;
@@ -960,48 +974,57 @@ p {
     height: 200px;
   }
 }
-#fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h3 {
+#fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h3 {
   margin: 0;
   padding: 0;
   color: #fff;
   opacity: 0;
   visibility: hidden;
   position: relative;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h2 {
   top: -10px;
   font-size: 20px;
   margin-bottom: 10px;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  position: relative;
 }
 #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h3 {
+  top: 0px;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-  position: relative;
-  bottom: -10px;
 }
-#fh5co-gallery .fh5co-item:hover, #fh5co-gallery .fh5co-item:focus, #fh5co-gallery .fh5co-item:active {
+#fh5co-gallery .fh5co-item:hover,
+#fh5co-gallery .fh5co-item:focus,
+#fh5co-gallery .fh5co-item:active {
   background-size: cover;
   text-decoration: none;
 }
-#fh5co-gallery .fh5co-item:hover .fh5co-overlay, #fh5co-gallery .fh5co-item:focus .fh5co-overlay, #fh5co-gallery .fh5co-item:active .fh5co-overlay {
+#fh5co-gallery .fh5co-item:hover .fh5co-overlay,
+#fh5co-gallery .fh5co-item:focus .fh5co-overlay,
+#fh5co-gallery .fh5co-item:active .fh5co-overlay {
   opacity: .8;
   visibility: visible;
 }
-#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h3, #fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h3, #fh5co-gallery .fh5co-item:active .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item:active .fh5co-copy-inner h3 {
+#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h3,
+#fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h3,
+#fh5co-gallery .fh5co-item:active .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item:active .fh5co-copy-inner h3 {
   opacity: 1;
   visibility: visible;
 }
-#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h2, #fh5co-gallery .fh5co-item:active .fh5co-copy-inner h2 {
+#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h2,
+#fh5co-gallery .fh5co-item:active .fh5co-copy-inner h2 {
   top: 0;
 }
-#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h3, #fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h3, #fh5co-gallery .fh5co-item:active .fh5co-copy-inner h3 {
+#fh5co-gallery .fh5co-item:hover .fh5co-copy-inner h3,
+#fh5co-gallery .fh5co-item:focus .fh5co-copy-inner h3,
+#fh5co-gallery .fh5co-item:active .fh5co-copy-inner h3 {
   bottom: 0;
 }
 
