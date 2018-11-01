@@ -1480,7 +1480,9 @@ screen and (min-width:40em) {
     height: auto;
 }
 
-.blog-post p {
+.blog-post p,
+.blog-post ul,
+.blog-post ol {
     margin-bottom: 1.4rem;
     font-size: inherit;
     line-height: 1.57;
@@ -1639,5 +1641,9 @@ screen and (min-width:40em) {
     color: #fefefe
 }
 
+#fh5co-about-white {
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
 
 /*# sourceMappingURL=style.css.map */
