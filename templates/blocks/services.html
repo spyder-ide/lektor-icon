@@ -5,9 +5,11 @@
   <div class="container">
     <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
       <h2>{{ this.title }}</h2>
+      {% if this.description %}
       <p>{{ this.description }}</p>
+      {% endif %}
     </div>
-    
+
     {% for service in this.services.blocks %}
     <div class="col-md-4">
       <div class="service">
@@ -17,6 +19,6 @@
       </div>
     </div>
     {% endfor %}
-    
+
   </div>
  </div> <!-- END fh5co-services -->

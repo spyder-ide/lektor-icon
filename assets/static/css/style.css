@@ -371,7 +371,6 @@ p {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
-  background: #E8ECF1;
   width: 100%;
 }
 #fh5co-about .fh5co-2col {
@@ -631,25 +630,25 @@ p {
   outline: none;
 }
 
-#fh5co-mission {
+#fh5co-mission,
+#fh5co-download,
+#fh5co-donate,
+#fh5co-team,
+#fh5co-services,
+#fh5co-gallery {
   position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  clear: both;
+}
+
+#fh5co-mission,
+#fh5co-download,
+#fh5co-about,
+#fh5co-gallery {
   background: #E8ECF1;
 }
 
-#fh5co-download {
-  position: relative;
-  padding-top: 30px;
-  clear: both;
-  padding-bottom: 10px;
-}
-
-#fh5co-services {
-  position: relative;
-  padding: 3em 0 0;
-  margin-top: 2em;
-}
 @media screen and (max-width: 768px) {
   #fh5co-services {
     padding: 5em 0 3em 0;
@@ -714,7 +713,6 @@ p {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 40px;
   padding: 40px 15px 20px 15px;
   background: #fff;
   border: 1px solid transparent;
@@ -777,7 +775,7 @@ p {
 }
 
 .fh5co-heading {
-  margin-bottom: 30px;
+  margin-bottom: 1em;
 }
 .fh5co-heading h2 {
   font-size: 2.1em;
@@ -801,10 +799,6 @@ p {
   font-size: 18px;
 }
 
-#fh5co-team {
-  clear: both;
-  padding: 7em 0;
-}
 @media screen and (max-width: 768px) {
   #fh5co-team {
     padding: 3em 0;
@@ -812,7 +806,6 @@ p {
 }
 #fh5co-team .person {
   padding: 30px;
-  margin-bottom: 30px;
   text-align: center;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -824,7 +817,7 @@ p {
   background: #fff;
 }
 #fh5co-team .person img {
-  width: 100px;
+  width: 50%;
   margin: 0 auto 30px auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -866,23 +859,13 @@ p {
 }
 
 #fh5co-gallery {
-  clear: both;
   float: left;
+  padding-bottom: 0;
   width: 100%;
-  background: #E8ECF1;
-  margin-bottom: 30px;
 }
 
-#fh5co-gallery-header{
-  background: #E8ECF1;
-  margin-top: 30px;
-}
-
-#fh5co-donate{
-  background: #E8ECF1;
-  padding-top: 30px;
-  clear: both;
-  padding-bottom: 30px;
+#fh5co-gallery .gallery-item-headers {
+  padding-top: 1em;
 }
 
 #fh5co-gallery .fh5co-item {
@@ -917,7 +900,7 @@ p {
   color: #ee1c24;
 }
 
-#fh5co-gallery h3{
+#fh5co-gallery h3 {
   text-align: center;
   align-content: center;
   font-size: 1.4em;
@@ -1301,7 +1284,7 @@ p {
   }
 }
 
-.header-row{
+.header-row {
   background: #E8ECF1;
   margin-right: auto;
   margin-left: auto;
@@ -1334,7 +1317,7 @@ p {
   background: url(../images/Preloader_2.gif) center no-repeat #fff;
 }
 
-.center {
+.center, #fh5co-donate .container {
   display: block;
   margin-left: auto;
   margin-right: auto;
