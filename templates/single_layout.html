@@ -4,31 +4,31 @@
 
 {% block nav_main %}
 {% if config.THEME_SETTINGS.nav_home_enable and config.THEME_SETTINGS.nav_home_enable.lower() not in ["false", "f", "no", "n"] %}
-<a href="#" data-nav-section="home">Home</a>
+<a href="#fh5co-home" data-nav-section="home">Home</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.overview_nav %}
-<a href="#" data-nav-section="mission">{{ config.THEME_SETTINGS.overview_nav }}</a>
+<a href="#fh5co-mission" data-nav-section="mission">{{ config.THEME_SETTINGS.overview_nav }}</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.services_enable and config.THEME_SETTINGS.services_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.services_nav %}
-<a href="#" data-nav-section="services">{{ config.THEME_SETTINGS.services_nav }}</a>
+<a href="#fh5co-services" data-nav-section="services">{{ config.THEME_SETTINGS.services_nav }}</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.work_enable and config.THEME_SETTINGS.work_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.work_nav %}
-<a href="#" data-nav-section="gallery">{{ config.THEME_SETTINGS.work_nav }}</a>
+<a href="#fh5co-gallery" data-nav-section="gallery">{{ config.THEME_SETTINGS.work_nav }}</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.team_enable and config.THEME_SETTINGS.team_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.team_nav %}
-<a href="#" data-nav-section="team">{{ config.THEME_SETTINGS.team_nav }}</a>
+<a href="#fh5co-team" data-nav-section="team">{{ config.THEME_SETTINGS.team_nav }}</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.download_nav %}
-<a href="#" data-nav-section="download">{{ config.THEME_SETTINGS.download_nav }}</a>
+<a href="#fh5co-download" data-nav-section="download">{{ config.THEME_SETTINGS.download_nav }}</a>
 {% endif %}
 
 {% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.donate_nav %}
-<a href="#" data-nav-section="donate">{{ config.THEME_SETTINGS.donate_nav }}</a>
+<a href="#fh5co-donate" data-nav-section="donate">{{ config.THEME_SETTINGS.donate_nav }}</a>
 {% endif %}
 {% endblock %}
 
