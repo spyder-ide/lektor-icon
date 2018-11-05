@@ -921,7 +921,7 @@ img {
 }
 
 #fh5co-gallery .gallery-title-spacer {
-  padding-top: 2.5em;
+  padding-top: 0.5em;
 }
 
 #fh5co-gallery .fh5co-item {
@@ -940,7 +940,7 @@ img {
   border-style: solid;
   border-width: 1px;
   font-size: 18px;
-  margin-top: 1em;
+  margin-top: 4em;
 }
 #fh5co-gallery .fh5co-item-link {
   display: block;
@@ -959,7 +959,7 @@ img {
 
 #fh5co-gallery .fh5co-item h3 {
   position: relative;
-  top: -1.5em;
+  top: -1.4em;
   text-align: center;
   align-content: center;
   font-size: 1.4em;
@@ -968,17 +968,17 @@ img {
   z-index: 5;
   margin: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1900x) {
   #fh5co-gallery .fh5co-item {
     height: 200px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
     width: 50%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   #fh5co-gallery .fh5co-item {
     width: 100%;
   }
@@ -1020,11 +1020,7 @@ img {
   display: table-cell;
   vertical-align: middle;
 }
-@media screen and (max-width: 1200px) {
-  #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner {
-    height: 200px;
-  }
-}
+
 #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h2,
 #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner h3 {
   margin: 0;
@@ -1530,6 +1526,48 @@ ul ul {
 }
 
 
+/* Columns and layout */
+
+.text-center {
+  text-align: center;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: right;
+}
+
+.row {
+  max-width: 100rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row:after,
+.row:before {
+  display: table;
+  content: ' ';
+}
+
+.row:after {
+  clear: both;
+}
+
+.small-1 {
+  width: 8.33333%;
+}
+
+.small-6 {
+  width: 50%;
+}
+
+
 /* Verbatim styling */
 
 figure {
@@ -1607,48 +1645,6 @@ html [type=button] {
 -moz-appearance: none;
 appearance: none;
 border-radius: 0;
-}
-
-
-/* Columns and layout */
-
-.text-center {
-  text-align: center;
-}
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-}
-
-.column:last-child:not(:first-child),
-.columns:last-child:not(:first-child) {
-  float: right;
-}
-
-.row {
-  max-width: 100rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.row:after,
-.row:before {
-  display: table;
-  content: ' ';
-}
-
-.row:after {
-  clear: both;
-}
-
-.small-1 {
-  width: 8.33333%;
-}
-
-.small-6 {
-  width: 50%;
 }
 
 
