@@ -55,8 +55,8 @@
 
 <body>
 
-<!-- Loader -->
-<div class="fh5co-loader"></div>
+{% block loader %}
+{% endblock %}
 <div class="fh5co-page">
   <div id="fh5co-container">
     <div class="js-sticky">
@@ -147,7 +147,22 @@
     {% endif %}
   </div>
 </div>
-  {% include "partials/js.html" %}
-  <!-- <script type=text/javascript src="{{ '/static/js/app.js'|asseturl }}" charset="utf-8"></script> -->
+{% if config.THEME_SETTINGS.gitter_room %}
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+  room: '{{ config.THEME_SETTINGS.gitter_room }}',
+  activationElement: '#open_chat',
+  };
+</script>
+<a href="https://gitter.im/{{ config.THEME_SETTINGS.gitter_room }}" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+{% endif %}
+<!-- jQuery -->
+<script src="{{ '/static/js/jquery.min.js'|asseturl }}"></script>
+<!-- Waypoints -->
+<script src="{{ '/static/js/jquery.waypoints.min.js'|asseturl }}"></script>
+{% block scripts %}
+{% endblock %}
+<!-- <script type=text/javascript src="{{ '/static/js/app.js'|asseturl }}" charset="utf-8"></script> -->
 </body>
 </html>

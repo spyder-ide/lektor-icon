@@ -2,6 +2,13 @@
 
 {% block title %}Home{% endblock %}
 
+{% block loader %}
+{% if config.THEME_SETTINGS.loader_enable and config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
+<div class="fh5co-loader"></div>
+{% endif %}
+{% endblock %}
+
+
 {% block nav_main %}
 {% if config.THEME_SETTINGS.nav_home_enable and config.THEME_SETTINGS.nav_home_enable.lower() not in ["false", "f", "no", "n"] %}
 <a href="#fh5co-home" data-nav-section="home">Home</a>
@@ -68,4 +75,18 @@
 {% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] %}
 {% include "partials/donate.html" %}
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<!-- jQuery Easing -->
+<script src="{{ '/static/js/jquery.easing.1.3.js'|asseturl }}"></script>
+<!-- Bootstrap -->
+<script src="{{ '/static/js/bootstrap.min.js'|asseturl }}"></script>
+<!-- Stellar Parallax -->
+<script src="{{ '/static/js/jquery.stellar.min.js'|asseturl }}"></script>
+<!-- Magnific Popup -->
+<script src="{{ '/static/js/jquery.magnific-popup.min.js'|asseturl }}"></script>
+<script src="{{ '/static/js/magnific-popup-options.js'|asseturl }}"></script>
+<!-- Main JS -->
+<script src="{{ '/static/js/main.js'|asseturl }}"></script>
 {% endblock %}
