@@ -2,6 +2,11 @@
 
 {% block title %}Home{% endblock %}
 
+{% block stylesheets %}
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{{ '/static/css/magnific-popup.css'|asseturl }}">
+{% endblock %}
+
 {% block loader %}
 {% if config.THEME_SETTINGS.loader_enable and config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
 <div class="fh5co-loader"></div>

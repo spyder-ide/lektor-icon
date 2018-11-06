@@ -30,25 +30,16 @@
 
   <!-- HUGO TEMPLATE PORTED BY SteveLane-->
   <!-- Website:        https://interadata.io/ -->
-      
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="{{ '/static/css/animate.css'|asseturl }}">
-  <!-- Icomoon Icon Fonts-->
-  <link rel="stylesheet" href="{{ '/static/css/icomoon.css'|asseturl }}">
-  <!-- Simple Line Icons -->
-  <link rel="stylesheet" href="{{ '/static/css/simple-line-icons.css'|asseturl }}">
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css'|asseturl }}">
+
+  {% block stylesheets %}
+  {% endblock %}
   <!-- Google fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
-  <!-- Bootstrap  -->
-  <link rel="stylesheet" href="{{ '/static/css/bootstrap.css'|asseturl }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
-
-  {%if config.THEME_SETTINGS.other_css %}
+  {% if config.THEME_SETTINGS.other_css %}
   <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}">
   {% endif %}
 </head>
