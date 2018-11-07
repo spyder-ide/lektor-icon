@@ -1,24 +1,16 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
+<html lang="{{ config.THEME_SETTINGS.content_lang }}">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.description }}</title>
+  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.title }}</title>
+  <meta name="author" content="{{ config.THEME_SETTINGS.author }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="description" content="{{ config.THEME_SETTINGS.description }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--     <meta name="description" content="Free HTML5 Template by FREEHTML5.CO - Hugo port by interadata" />
-     <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive, hugo, static site" />
-     <meta name="author" content="FREEHTML5.CO / Hugo port " />
-   -->
-  <meta name="author" content="{{ config.THEME_SETTINGS.author }}">
-  <meta name="description" content="{{ config.THEME_SETTINGS.description }}">
-  <meta http-equiv="content-language" content="{{ config.THEME_SETTINGS.content_lang }}">
   <link rel="icon" href="{{ '/static/images/favicon.png' | url }}" type="image/png">
-  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- FREE HTML5 TEMPLATE  -->
   <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
@@ -34,13 +26,13 @@
   {% block stylesheets %}
   {% endblock %}
   <!-- Google fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}">
+  <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}" type="text/css">
   {% if config.THEME_SETTINGS.other_css %}
-  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}">
+  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}" type="text/css">
   {% endif %}
 </head>
 
@@ -116,16 +108,16 @@
         <div class="row">
           <div class="text-center">
             <p>
-              {% if config.THEME_SETTINGS.footer_copyright_statement %}
-              {{ config.THEME_SETTINGS.footer_copyright_statement | safe }}
+              {% if config.THEME_SETTINGS.copyright %}
+              {{ config.THEME_SETTINGS.copyright | safe }}
               {% endif %}
-              {% if config.THEME_SETTINGS.footer_copyright_statement and config.THEME_SETTINGS.footer_license_name %}
+              {% if config.THEME_SETTINGS.copyright and config.THEME_SETTINGS.footer_license_name %}
               <span class="pipe-red"> | </span>
               {% endif %}
               {% if config.THEME_SETTINGS.footer_license_name %}
               Licensed <a href="{{ config.THEME_SETTINGS.footer_license_link }}" target="_blank">{{ config.THEME_SETTINGS.footer_license_name }}</a>
               {% endif %}
-              {% if config.THEME_SETTINGS.footer_copyright_statement or config.THEME_SETTINGS.footer_license_name %}
+              {% if config.THEME_SETTINGS.copyright or config.THEME_SETTINGS.footer_license_name %}
               <br>
               {% endif %}
               <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank">Template</a> designed by <a href='https://freehtml5.co/' target='_blank'>FreeHTML5.co</a>  <span class="pipe-red"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC-BY 3.0</a>
@@ -139,21 +131,21 @@
   </div>
 </div>
 {% if config.THEME_SETTINGS.gitter_room %}
-<script>
+<script type="application/javascript">
   ((window.gitter = {}).chat = {}).options = {
   room: '{{ config.THEME_SETTINGS.gitter_room }}',
   activationElement: '#open_chat',
   };
 </script>
 <a href="https://gitter.im/{{ config.THEME_SETTINGS.gitter_room }}" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
-<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+<script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
 {% endif %}
 <!-- jQuery -->
-<script src="{{ '/static/js/jquery.min.js'|asseturl }}"></script>
+<script src="{{ '/static/js/jquery.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
-<script src="{{ '/static/js/jquery.waypoints.min.js'|asseturl }}"></script>
+<script src="{{ '/static/js/jquery.waypoints.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% block scripts %}
 {% endblock %}
-<!-- <script type=text/javascript src="{{ '/static/js/app.js'|asseturl }}" charset="utf-8"></script> -->
+<!-- <script src="{{ '/static/js/app.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>
