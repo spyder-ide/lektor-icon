@@ -8,7 +8,7 @@
 		var sticky = $('.js-sticky');
 
 		sticky.css('height', sticky.height());
-		$(window).resize(function(){
+		$(window).on('resize', function(){
 			sticky.css('height', sticky.height());
 		});
 

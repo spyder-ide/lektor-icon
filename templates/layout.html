@@ -171,11 +171,12 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
 <script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
 {% endif %}
 <!-- jQuery -->
-<script src="{{ '/static/js/jquery.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery-3.3.1.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
 <script src="{{ '/static/js/jquery.waypoints.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% block scripts %}
 {% endblock %}
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
 <!-- <script src="{{ '/static/js/app.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>
