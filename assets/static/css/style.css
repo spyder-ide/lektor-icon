@@ -960,7 +960,7 @@ img {
   margin-bottom: 20px;
   position: relative;
 }
-.fh5co-heading h2:after {
+.fh5co-heading h2:after, .rule-under-heading {
   position: absolute;
   content: "";
   width: 50px;
@@ -968,7 +968,7 @@ img {
   bottom: 0;
   left: 50%;
   margin-left: -25px;
-  background: #cccccc;
+  background: #ee1c24;
 }
 .fh5co-heading p {
   font-size: 18px;
@@ -2188,6 +2188,59 @@ border-radius: 0;
   font-weight: bold;
 }
 
-.fh5co-heading h2::after {
-  background: #ee1c24;
+
+/* Generic page styling */
+
+.page-content-container {
+  background: #ffffff;
+  overflow: auto;
+}
+
+.page-content {
+  margin-top: 3em;
+  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  width: 75%;
+}
+
+.page-content .text-center {
+  margin-bottom: 2em;
+}
+
+.page-content .center {
+  width: 100%;
+}
+
+.page-content .rule-under-heading {
+  position: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* 404 Error page styling */
+
+#error-page.page-content-container {
+  background: #e8ecf1;
+}
+
+#error-page .page-content {
+  margin-top: 5em;
+  margin-bottom: 6em;
+}
+
+#error-page .fh5co-heading {
+  margin-bottom: 3em;
+}
+
+#error-page .center p {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+#error-page .center img {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }

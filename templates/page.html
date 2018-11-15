@@ -1,8 +1,21 @@
 {% extends "layout.html" %}
-{% block title %}{{ this.title }}{% endblock %}
+{% block title %}{{ this.short_title }}{% endblock %}
 {% block body %}
-  <h2 class="center">{{ this.title }}</h2>
-  <div class="center">
-  {{ this.body }}
+<div id="{% block pageid %}generic-page{% endblock %}" class="page-content-container">
+  <div class="page-content">
+    <div class="text-center fh5co-heading">
+      <h1>
+        {{ this.full_title }}
+      </h1>
+      <div class="rule-under-heading"></div>
+    </div>
+    <div class="center">
+      {% block pagebody %}
+      <p>
+        {{ this.body }}
+      </p>
+      {% endblock %}
+    </div>
   </div>
+</div>
 {% endblock %}
