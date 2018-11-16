@@ -8,8 +8,8 @@
     <div class="col-md-4">
       <div class="person">
 	<img alt="{{ member.name | striptags | striptags }} photo" src="{{ member.image }}" class="img-responsive">
-	<h4>{{ member.name }}</h4>
-	<h5>{{ member.position }}</h5>
+	<h3>{{ member.name }}</h3>
+	<h4>{{ member.position }}</h4>
 	<p>{{ member.description }}</p>
 	<ul class="social">
 		{% if member.facebook.url != '' %}

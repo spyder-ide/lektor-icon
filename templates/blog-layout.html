@@ -2,9 +2,13 @@
 {% block section %}<span class="pipe-colored">|</span> Blog{% endblock %}
 {% block body %}
   <div id="fh5co-about-white" data-section="Blog">
+    {% block blogmaintitle %}
+    <div id="blog-main-title" class="text-center fh5co-heading">
+      <h1>Recent Posts</h1>
+    </div>
+    {% endblock %}
     <div class="center">
       {% block blogbody %}
       {% endblock %}
     </div>
-  </div>
 {% endblock %}
