@@ -184,7 +184,7 @@
 
 
 
-	// Document on load.
+	// Document on load
 	$(function(){
 		setHeroHeight();
 		loaderPage();
