@@ -1924,24 +1924,21 @@ border-radius: 0;
   padding-top: 0;
 }
 
-#menu-logo span {
+#menu-logo .logo-text-container {
   display: inline-block;
   color: #333;
   vertical-align: middle;
 }
 
-#menu-logo span span {
-  display: block
-}
-
-#menu-logo span .logo-text {
-  font-size: 2em;
+#menu-logo .logo-text {
+  display: block;
+  font-size: 2.4em;
   font-family: Candara;
   margin-top: 2px;
 }
 
-#menu-logo span #logo-small-text {
-  font-size: .7em;
+#menu-logo .logo-text .small-caps {
+  font-size: 80%;
 }
 
 #menu-logo img {

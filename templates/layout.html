@@ -88,7 +88,7 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
                     <img alt="{{ config.THEME_SETTINGS.title }} Logo" src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
                     {% endif %}
                     {% if config.THEME_SETTINGS.nav_logo_text %}
-                    <span>
+                    <span class="logo-text-container">
                       <span class="logo-text">{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
                     </span>
                     {% endif %}
