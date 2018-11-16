@@ -10,7 +10,7 @@ See this [docs here](https://www.getlektor.com/docs/themes/)
 
 ## Credits
 
-Credit for this theme goes fully to [https://freehtml5.co/](https://freehtml5.co/), which is licensed under a [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) license. If you use this Hugo port, please consider the terms of that license and make proper attribution to [https://freehtml5.co/](https://freehtml5.co/). 
+Credit for this theme goes fully to [https://freehtml5.co/](https://freehtml5.co/), which is licensed under a [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) license. If you use this Hugo port, please consider the terms of that license and make proper attribution to [https://freehtml5.co/](https://freehtml5.co/).
 
 Also to Steve Lane how make the port to Hugo the Icon theme by the [MIT License](LICENSE.md)
 

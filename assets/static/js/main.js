@@ -1,6 +1,6 @@
 ;(function () {
 
-	'use strict';
+    'use strict';
 
 
     // Offcanvas layout for "hamburger" mobile menu
@@ -19,76 +19,76 @@
 
 
     // Top navbar stickiness
-	var mainMenuSticky = function() {
+    var mainMenuSticky = function() {
 
-		var sticky = $('.js-sticky');
-		var $section = $('.fh5co-main-nav');
+        var sticky = $('.js-sticky');
+        var $section = $('.fh5co-main-nav');
 
-		sticky.css('height', sticky.height());
-		$(window).on('resize', function(){
-			sticky.css('height',  $section.height());
-		});
+        sticky.css('height', sticky.height());
+        $(window).on('resize', function(){
+            sticky.css('height',  $section.height());
+        });
 
-		$section.waypoint(function(direction) {
+        $section.waypoint(function(direction) {
 
-		  	if (direction === 'down') {
+            if (direction === 'down') {
 
-			    	$section.css({
-			    		'position' : 'fixed',
-			    		'top' : 0,
-			    		'width' : '100%',
-			    		'z-index' : 99999
-			    	}).addClass('fh5co-shadow');;
-			}
-		}, {
-	  		offset: '0px'
-		});
-	};
+                    $section.css({
+                        'position' : 'fixed',
+                        'top' : 0,
+                        'width' : '100%',
+                        'z-index' : 99999
+                    }).addClass('fh5co-shadow');;
+            }
+        }, {
+            offset: '0px'
+        });
+    };
 
 
     // Mobile "burger" menu
-	var burgerMenu = function() {
+    var burgerMenu = function() {
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
+        $('body').on('click', '.js-fh5co-nav-toggle', function(event){
 
-			var $this = $(this);
+            var $this = $(this);
 
-			if( $('body').hasClass('offcanvas-visible') ) {
-				$('body').removeClass('offcanvas-visible fh5co-overflow');
-				$this.removeClass('active');
-			} else {
-				$('body').addClass('offcanvas-visible fh5co-overflow');
-				$this.addClass('active');
-			}
-			event.preventDefault();
-		});
-	};
+            if( $('body').hasClass('offcanvas-visible') ) {
+                $('body').removeClass('offcanvas-visible fh5co-overflow');
+                $this.removeClass('active');
+            } else {
+                $('body').addClass('offcanvas-visible fh5co-overflow');
+                $this.addClass('active');
+            }
+            event.preventDefault();
+        });
+    };
 
 
     // Click outside of offcanvas sidebar to close it
-	var mobileMenuOutsideClick = function() {
+    var mobileMenuOutsideClick = function() {
 
-		$(document).on('click', function (e) {
-	    var container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(document).on('click', function (e) {
+        var container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
+        if (!container.is(e.target) && container.has(e.target).length === 0) {
 
-	    	if ( $('body').hasClass('offcanvas-visible') ) {
+            if ( $('body').hasClass('offcanvas-visible') ) {
 
-    			$('body').removeClass('offcanvas-visible');
-    			$('.js-fh5co-nav-toggle').removeClass('active');
-	    	}
-	    }
-		});
-	};
+                $('body').removeClass('offcanvas-visible');
+                $('.js-fh5co-nav-toggle').removeClass('active');
+            }
+        }
+        });
+    };
 
 
 
-	// Document on load
-	$(function(){
+    // Document on load
+    $(function(){
         offcanvasMenu();
-		mainMenuSticky();
+        mainMenuSticky();
         burgerMenu();
         mobileMenuOutsideClick();
-	});
+    });
 
 }());

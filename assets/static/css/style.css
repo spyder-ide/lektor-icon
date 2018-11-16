@@ -20,39 +20,39 @@ html {
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-play2:before {
-	content: "\f04b";
+  content: "\f04b";
 }
 .icon-facebook:before {
-	content: "\f09a";
+  content: "\f09a";
 }
 .icon-twitter:before {
-	content: "\f099";
+  content: "\f099";
 }
 .icon-dribbble:before {
-	content: "\f17d";
+  content: "\f17d";
 }
 .icon-instagram:before {
-	content: "\f16d";
+  content: "\f16d";
 }
 .icon-github:before {
-	content: "\f09b";
+  content: "\f09b";
 }
 .icon-linkedin:before {
-	content: "\f0e1";
+  content: "\f0e1";
 }
 
 .pull-left {

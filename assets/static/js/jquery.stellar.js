@@ -371,7 +371,7 @@
 			$backgroundElements = this.$element.find('[data-stellar-background-ratio]');
 
 			if (this.$element.data('stellar-background-ratio')) {
-                $backgroundElements = $backgroundElements.add(this.$element);
+				$backgroundElements = $backgroundElements.add(this.$element);
 			}
 
 			$backgroundElements.each(function() {
@@ -412,7 +412,7 @@
 
 				offsetLeft = $this.offset().left - marginLeft - scrollLeft;
 				offsetTop = $this.offset().top - marginTop - scrollTop;
-				
+
 				// Calculate the offset parent
 				$this.parents().each(function() {
 					var $this = $(this);
@@ -610,7 +610,7 @@
 					ticking = true;
 				}
 			};
-			
+
 			this.$scrollElement.on('scroll.' + this.name, requestTick);
 			requestTick();
 		},
