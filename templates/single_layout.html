@@ -4,7 +4,7 @@
 
 {% block stylesheets %}
 <!-- Magnific Popup -->
-<link rel="stylesheet" href="{{ '/static/css/magnific-popup.css'|asseturl }}" type="text/css">
+<link rel="stylesheet" href="{{ '/static/css/magnific-popup.css' | asseturl }}" type="text/css">
 {% endblock %}
 
 {% block loader %}
@@ -48,13 +48,13 @@
 {% include "partials/hero.html" %}
 
 {% if config.THEME_SETTINGS.mission_enable and config.THEME_SETTINGS.mission_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for mission in this.mission.blocks%}
+{% for mission in this.mission.blocks %}
 {{ mission }}
 {% endfor %}
 {% endif %}
 
 {% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for overview in this.overview.blocks%}
+{% for overview in this.overview.blocks %}
 {{ overview }}
 {% endfor %}
 {% endif %}
@@ -72,7 +72,7 @@
 {% endif %}
 
 {% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for download in this.download.blocks%}
+{% for download in this.download.blocks %}
 {{ download }}
 {% endfor %}
 {% endif %}
@@ -84,12 +84,12 @@
 
 {% block scripts %}
 <!-- jQuery Easing -->
-<script src="{{ '/static/js/jquery.easing.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery.easing.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Stellar Parallax -->
-<script src="{{ '/static/js/jquery.stellar.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery.stellar.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Magnific Popup -->
-<script src="{{ '/static/js/jquery.magnific-popup.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
-<script src="{{ '/static/js/magnific-popup-options.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery.magnific-popup.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/magnific-popup-options.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Main JS -->
-<script src="{{ '/static/js/main-singlelayout.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/main-singlelayout.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% endblock %}

@@ -18,7 +18,7 @@ frame-src 'self' http: https:;
 img-src 'self' http: https:;
 plugin-types application/pdf;
 {% if config.THEME_SETTINGS.content_security_policy_script_src %}
-script-src {{config.THEME_SETTINGS.content_security_policy_script_src }};
+script-src {{ config.THEME_SETTINGS.content_security_policy_script_src }};
 {% else %}
 script-src 'self' https://gitter.im https://*.gitter.im https://disqus.com https://*.disqus.com https://*.disquscdn.com 'unsafe-inline';
 {% endif %}
@@ -62,9 +62,9 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{{ '/static/css/style.css'|asseturl }}" type="text/css">
+  <link rel="stylesheet" href="{{ '/static/css/style.css' | asseturl }}" type="text/css">
   {% if config.THEME_SETTINGS.other_css %}
-  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css |asseturl }}" type="text/css">
+  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css | asseturl }}" type="text/css">
   {% endif %}
 </head>
 
@@ -83,9 +83,9 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
               <ul class='dropdown menu' data-dropdown-menu>
                 <li id='menu-logo'>
                   <p></p>
-                    <a href='{{ '/'|url }}'>
+                    <a href='{{ '/' | url }}'>
                     {% if config.THEME_SETTINGS.nav_logo_path %}
-                    <img alt="{{ config.THEME_SETTINGS.title }} Logo" src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
+                    <img alt="{{ config.THEME_SETTINGS.title }} Logo" src='{{ config.THEME_SETTINGS.nav_logo_path | url }}'>
                     {% endif %}
                     {% if config.THEME_SETTINGS.nav_logo_text %}
                     <span class="logo-text-container">
@@ -103,13 +103,13 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
 
             {% if config.THEME_SETTINGS.nav_extension_enable and config.THEME_SETTINGS.nav_extension_enable.lower() not in ["false", "f", "no", "n"] %}
             {% if config.THEME_SETTINGS.ext_3_ref and config.THEME_SETTINGS.ext_3_title %}
-            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
+            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_3_ref | url }}">{{ config.THEME_SETTINGS.ext_3_title }}</a>
             {% endif %}
             {% if config.THEME_SETTINGS.ext_2_ref and config.THEME_SETTINGS.ext_2_title %}
-            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_2_ref | url}}" >{{config.THEME_SETTINGS.ext_2_title}}</a>
+            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_2_ref | url }}" >{{ config.THEME_SETTINGS.ext_2_title }}</a>
             {% endif %}
             {% if config.THEME_SETTINGS.ext_1_ref and config.THEME_SETTINGS.ext_1_title %}
-            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
+            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_1_ref | url }}" >{{ config.THEME_SETTINGS.ext_1_title }}</a>
             {% endif %}
             {% endif %}
           </div>
@@ -173,11 +173,11 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
 <script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
 {% endif %}
 <!-- jQuery -->
-<script src="{{ '/static/js/jquery-3.3.1.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery-3.3.1.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
-<script src="{{ '/static/js/jquery.waypoints.min.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery.waypoints.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Main JS -->
-<script src="{{ '/static/js/main.js'|asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/main.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% block scripts %}
 {% endblock %}
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->

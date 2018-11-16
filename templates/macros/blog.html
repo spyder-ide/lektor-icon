@@ -5,7 +5,7 @@
   <div class="blog-index-header">
     <div class="row">
       <div class="column small-1 meta-blog-author">
-        <img alt="{{ author.name | striptags | striptags}} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
+        <img alt="{{ author.name | striptags | striptags }} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
       </div>
       <div class="meta-blog-index">
         <p>
@@ -15,20 +15,20 @@
       </div>
     </div>
     <div class="row">
-      <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
+      <h2><a href="{{ post | url }}">{{ post.title }}</a></h2>
     </div>
   </div>
   <p>
     {{ post.summary }}
   </p>
   <p class="pull-right">
-    <a href="{{ post|url }}">Read more...</a>
+    <a href="{{ post | url }}">Read more...</a>
   </p>
   <br>
   {% else %}
   <div class="row">
     <div class="meta-blog-author column small-1">
-      <img alt="{{ author.name | striptags | striptags}} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
+      <img alt="{{ author.name | striptags | striptags }} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
     </div>
     <div class="meta-blog-index">
       <p>
