@@ -129,7 +129,7 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
               Connect with us on:
               {% for footer_link in config.THEME_SETTINGS.footer_links.split(", ") %}
               {% if loop.index > 1 %}
-              <span class="pipe-red">|</span>
+              <span class="pipe-colored">|</span>
               {% endif %}
               <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(": ")[0] }} </a>
               {% endfor %}
@@ -144,7 +144,7 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
               {{ config.THEME_SETTINGS.copyright | safe }}
               {% endif %}
               {% if config.THEME_SETTINGS.copyright and config.THEME_SETTINGS.footer_license_name %}
-              <span class="pipe-red"> | </span>
+              <span class="pipe-colored"> | </span>
               {% endif %}
               {% if config.THEME_SETTINGS.footer_license_name %}
               Licensed <a href="{{ config.THEME_SETTINGS.footer_license_link }}" target="_blank" rel="noopener noreferrer">{{ config.THEME_SETTINGS.footer_license_name }}</a>
@@ -152,8 +152,8 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
               {% if config.THEME_SETTINGS.copyright or config.THEME_SETTINGS.footer_license_name %}
               <br>
               {% endif %}
-              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> designed by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>  <span class="pipe-red"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC-BY 3.0</a>
-              <br>Hugo port by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-red">|</span> Lektor port by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> designed by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>  <span class="pipe-colored"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC-BY 3.0</a>
+              <br>Hugo port by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> Lektor port by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
             </p>
           </div>
         </div>
