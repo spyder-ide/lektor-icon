@@ -385,7 +385,7 @@ img {
 .form-control:active, .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #69c2c8;
+  border-color: #ee1c24;
 }
 
 .fh5co-page {
@@ -431,7 +431,7 @@ img {
 #fh5co-home .fh5co-copy-inner h2 {
   font-size: 20px;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.9;
   color: rgba(255, 255, 255, 0.7);
 }
 #fh5co-home .fh5co-copy-inner a {
@@ -1095,6 +1095,11 @@ img {
   }
 }
 @media screen and (max-width: 1200px) {
+  #fh5co-gallery .fh5co-item .fh5co-copy {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
     width: 50%;
   }
@@ -1129,11 +1134,6 @@ img {
   display: table;
   text-align: center;
   width: 100%;
-}
-@media screen and (max-width: 1200px) {
-  #fh5co-gallery .fh5co-item .fh5co-copy {
-    height: 200px;
-  }
 }
 #fh5co-gallery .fh5co-item .fh5co-copy > .fh5co-copy-inner {
   width: 100%;
@@ -1214,7 +1214,7 @@ img {
   border-radius: 0;
 }
 #fh5co-contact .form-control:active, #fh5co-contact .form-control:focus {
-  border-bottom: 1px solid #69c2c8;
+  border-bottom: 1px solid #ee1c24;
 }
 
 #fh5co-footer {
@@ -1327,10 +1327,10 @@ img {
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
-  color: #69c2c8;
+  color: #ee1c24;
 }
 #fh5co-offcanvas a.active {
-  color: #69c2c8;
+  color: #ee1c24;
 }
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
@@ -1707,14 +1707,16 @@ ul ul {
 
 @media only screen and (max-width: 1200px) {
   #fh5co-mission .center,
-  #fh5co-download .center {
+  #fh5co-download .center,
+  #blog-center {
     width: 65%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #fh5co-mission .center,
-  #fh5co-download .center {
+  #fh5co-download .center,
+  #blog-center {
     width: 80%;
   }
 }
@@ -2082,8 +2084,19 @@ border-radius: 0;
   text-align: right;
 }
 
+.meta-blog-author {
+  margin-right: 0.5em;
+}
+
+.author-img,
 .meta-blog-author img {
   display: block;
+  height: 56px;
+  width: 56px;
+  max-height: 56px;
+  max-width: 56px;
+  min-height: 56px;
+  min-width: 56px;
 }
 
 .blog-pagination {
