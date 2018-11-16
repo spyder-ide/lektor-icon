@@ -98,31 +98,31 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
               </ul>
             </div>
             {% endif %}
-            
+
             {% block nav_main %}{% endblock %}
 
             {% if config.THEME_SETTINGS.nav_extension_enable and config.THEME_SETTINGS.nav_extension_enable.lower() not in ["false", "f", "no", "n"] %}
-              {% if config.THEME_SETTINGS.ext_3_ref and config.THEME_SETTINGS.ext_3_title %}
-              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
-              {% endif %}
-              {% if config.THEME_SETTINGS.ext_2_ref and config.THEME_SETTINGS.ext_2_title %}
-              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_2_ref | url}}" >{{config.THEME_SETTINGS.ext_2_title}}</a>
-              {% endif %}
-              {% if config.THEME_SETTINGS.ext_1_ref and config.THEME_SETTINGS.ext_1_title %}
-              <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
-              {% endif %}
+            {% if config.THEME_SETTINGS.ext_3_ref and config.THEME_SETTINGS.ext_3_title %}
+            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_3_ref | url}}">{{config.THEME_SETTINGS.ext_3_title}}</a>
+            {% endif %}
+            {% if config.THEME_SETTINGS.ext_2_ref and config.THEME_SETTINGS.ext_2_title %}
+            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_2_ref | url}}" >{{config.THEME_SETTINGS.ext_2_title}}</a>
+            {% endif %}
+            {% if config.THEME_SETTINGS.ext_1_ref and config.THEME_SETTINGS.ext_1_title %}
+            <a class="pull-right" href="{{config.THEME_SETTINGS.ext_1_ref | url}}" >{{config.THEME_SETTINGS.ext_1_title}}</a>
+            {% endif %}
             {% endif %}
           </div>
         </div>
       </div>
     </div>
-    
+
     {% block body %}{% endblock %}
-    
+
     {% if config.THEME_SETTINGS.footer_enable and config.THEME_SETTINGS.footer_enable.lower() not in ["false", "f", "no", "n"] %}
     <div id="fh5co-footer">
       <div class="container">
-      {% if config.THEME_SETTINGS.footer_links %}
+        {% if config.THEME_SETTINGS.footer_links %}
         <div class="row">
           <div class="text-center">
             <p><small>

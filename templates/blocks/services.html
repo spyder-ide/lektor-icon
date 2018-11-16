@@ -1,6 +1,7 @@
 <div id="fh5co-services" data-section="services">
   {% if config.THEME_SETTINGS.services_video_url %}
-  <div class="fh5co-video"><a href="{{config.THEME_SETTINGS.services_video_url }}" class="popup-vimeo"><i class="icon-play2"></i></a> <span>Watch video</span></div>
+  <div class="fh5co-video"><a href="{{config.THEME_SETTINGS.services_video_url }}" class="popup-vimeo"><i class="icon-play2"></i></a> <span>Watch video</span>
+  </div>
   {% endif %}
   <div class="container">
     <div class="text-center fh5co-heading">
@@ -13,12 +14,11 @@
     {% for service in this.services.blocks %}
     <div class="col-md-4">
       <div class="service">
-  <div class="icon"><img alt="{{ service.title | striptags | striptags }} image" class="img-responsive center" height="100" width="100" src="{{ service.icon }}"/></div>
-	<h3>{{ service.title }}</h3>
-	{{ service.description }}
+        <div class="icon"><img alt="{{ service.title | striptags | striptags }} image" class="img-responsive center" height="100" width="100" src="{{ service.icon }}"/></div>
+        <h3>{{ service.title }}</h3>
+        {{ service.description }}
       </div>
     </div>
     {% endfor %}
-
   </div>
- </div> <!-- END fh5co-services -->
+</div> <!-- END fh5co-services -->

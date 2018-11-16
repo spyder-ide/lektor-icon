@@ -48,15 +48,15 @@
 {% include "partials/hero.html" %}
 
 {% if config.THEME_SETTINGS.mission_enable and config.THEME_SETTINGS.mission_enable.lower() not in ["false", "f", "no", "n"] %}
-    {% for mission in this.mission.blocks%}
-        {{ mission }}
-    {% endfor %}
+{% for mission in this.mission.blocks%}
+{{ mission }}
+{% endfor %}
 {% endif %}
 
 {% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] %}
-    {% for overview in this.overview.blocks%}
-        {{ overview }}
-    {% endfor %}
+{% for overview in this.overview.blocks%}
+{{ overview }}
+{% endfor %}
 {% endif %}
 
 {% if config.THEME_SETTINGS.services_enable and config.THEME_SETTINGS.services_enable.lower() not in ["false", "f", "no", "n"] %}
@@ -72,9 +72,9 @@
 {% endif %}
 
 {% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] %}
-    {% for download in this.download.blocks%}
-        {{ download }}
-    {% endfor %}
+{% for download in this.download.blocks%}
+{{ download }}
+{% endfor %}
 {% endif %}
 
 {% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] %}

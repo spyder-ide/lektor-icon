@@ -7,30 +7,30 @@
     {% for member in this.members.blocks %}
     <div class="col-md-4">
       <div class="person">
-	<img alt="{{ member.name | striptags | striptags }} photo" src="{{ member.image }}" class="img-responsive">
-	<h3>{{ member.name }}</h3>
-	<h4>{{ member.position }}</h4>
-	<p>{{ member.description }}</p>
-	<ul class="social">
-		{% if member.facebook.url != '' %}
-	  <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
-	  {% endif %}
-	  {% if member.twitter.url != '' %}
-	  <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-	  {% endif %}
-	  {% if member.dribble.url != '' %}
-	  <li><a href="{{ member.dribble }}" aria-label="Dribble"><i class="icon-dribbble"></i></a></li>
-	  {% endif %}
-	  {% if member.instagram.url != '' %}
-	  <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
-	  {% endif %}
-	  {% if member.github.url != '' %}
-	  <li><a href="{{ member.github }}" aria-label="Github"><i class="icon-github"></i></a></li>
-	  {% endif %}
-	  {% if member.linkedin.url != '' %}
-	  <li><a href="{{ member.linkedin }}" aria-label="Linkedin"><i class="icon-linkedin"></i></a></li>
-	  {% endif %}
-	</ul>
+        <img alt="{{ member.name | striptags | striptags }} photo" src="{{ member.image }}" class="img-responsive">
+        <h3>{{ member.name }}</h3>
+        <h4>{{ member.position }}</h4>
+        <p>{{ member.description }}</p>
+        <ul class="social">
+          {% if member.facebook.url != '' %}
+          <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
+          {% endif %}
+          {% if member.twitter.url != '' %}
+          <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+          {% endif %}
+          {% if member.dribble.url != '' %}
+          <li><a href="{{ member.dribble }}" aria-label="Dribble"><i class="icon-dribbble"></i></a></li>
+          {% endif %}
+          {% if member.instagram.url != '' %}
+          <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
+          {% endif %}
+          {% if member.github.url != '' %}
+          <li><a href="{{ member.github }}" aria-label="Github"><i class="icon-github"></i></a></li>
+          {% endif %}
+          {% if member.linkedin.url != '' %}
+          <li><a href="{{ member.linkedin }}" aria-label="Linkedin"><i class="icon-linkedin"></i></a></li>
+          {% endif %}
+        </ul>
       </div>
     </div>
     {% endfor %}

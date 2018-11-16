@@ -1,17 +1,16 @@
-<div id="fh5co-donate" data-section="donate">         
-    <div class="container">
-            <div class="text-center fh5co-heading">
-                <h2>{{ config.THEME_SETTINGS.donate_name }}</h2>
-                {{ config.THEME_SETTINGS.donate_description | markdown }}
-            </div>
-            {%if config.THEME_SETTINGS.opencollective_project_name %}
-            <div class="row">
-                <a href="https://opencollective.com/{{config.THEME_SETTINGS.opencollective_project_name}}/donate" target="_blank" rel="noopener noreferrer">
-                    <img alt="OpenCollective Logo" src="../static/images/collective.svg" class="center donate" />
-                </a>
-            </div>
-            <br>
-            {% endif %}         
+<div id="fh5co-donate" data-section="donate">
+  <div class="container">
+    <div class="text-center fh5co-heading">
+      <h2>{{ config.THEME_SETTINGS.donate_name }}</h2>
+      {{ config.THEME_SETTINGS.donate_description | markdown }}
     </div>
+    {%if config.THEME_SETTINGS.opencollective_project_name %}
+    <div class="row">
+      <a href="https://opencollective.com/{{config.THEME_SETTINGS.opencollective_project_name}}/donate" target="_blank" rel="noopener noreferrer">
+          <img alt="OpenCollective Logo" src="../static/images/collective.svg" class="center donate" />
+      </a>
+    </div>
+    <br>
+    {% endif %}
+  </div>
 </div>
-      
