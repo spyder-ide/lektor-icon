@@ -951,6 +951,9 @@ img {
 
 .fh5co-heading {
   margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 .fh5co-heading h2 {
   font-size: 2.1em;
@@ -1092,9 +1095,9 @@ img {
   z-index: 5;
   margin: 0;
 }
-@media screen and (max-width: 1900x) {
+@media screen and (min-width: 2400px) {
   #fh5co-gallery .fh5co-item {
-    height: 200px;
+    height: 450px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1711,6 +1714,21 @@ ul ul {
   width: 50%;
 }
 
+@media only screen and (max-width: 1200px) {
+  #fh5co-mission .center,
+  #fh5co-download .center {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #fh5co-mission .center,
+  #fh5co-download .center {
+    width: 80%;
+  }
+}
+
+
 
 /* Verbatim styling */
 
@@ -2167,8 +2185,7 @@ border-radius: 0;
 
 /* Specific feature additions */
 
-.center,
-#fh5co-donate .container {
+.center {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -2242,7 +2259,6 @@ border-radius: 0;
     -2px 2px 0 #000,
      2px 2px 0 #000;
 }
-
 
 #error-page .center p {
   text-align: center;
