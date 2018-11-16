@@ -8,7 +8,7 @@ style="background-image: url({{ config.THEME_SETTINGS.hero_img | asseturl}});" d
           <h1>{{ config.THEME_SETTINGS.hero_title }}</h1>
           {% endif %}
           {% if config.THEME_SETTINGS.hero_description %}
-          <h2>{{ config.THEME_SETTINGS.hero_description | markdown }}</h2>
+          <h2>{{ config.THEME_SETTINGS.hero_description | safe }}</h2>
           {% endif %}
         </div>
       </div>
