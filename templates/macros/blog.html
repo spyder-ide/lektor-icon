@@ -5,7 +5,7 @@
     <div class="blog-index-header">
     <div class="row">
       <div class="column small-1">
-        <img class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" alt="{{ author.name }}" />
+        <img alt="{{ author.name | striptags | striptags}} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
       </div>
         <div class="meta-blog-index">
             <p>
@@ -29,7 +29,7 @@
   {% else %}
   <div class="row">
     <div class="meta-blog-author column small-1">
-        <img class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" alt="{{ author.name }}" />
+        <img alt="{{ author.name | striptags | striptags}} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}" />
     </div>
     <div class="meta-blog-index">
         <p>

@@ -34,12 +34,6 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
   <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
   <meta name="referrer" content="same-origin">
-  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.title }}</title>
-  <meta name="author" content="{{ config.THEME_SETTINGS.author }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="description" content="{{ config.THEME_SETTINGS.description }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- FREE HTML5 TEMPLATE  -->
   <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
@@ -51,6 +45,14 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
 
   <!-- HUGO TEMPLATE PORTED BY SteveLane-->
   <!-- Website:        https://interadata.io/ -->
+
+  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.title }}</title>
+  <meta name="author" content="{{ config.THEME_SETTINGS.author }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="description" content="{{ config.THEME_SETTINGS.description }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <meta name="theme-color" content="#ee1c24">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="{{ '/static/images/favicon.png' | asseturl }}" type="image/png">
   {% block stylesheets %}
@@ -83,11 +85,11 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
                   <p></p>
                     <a href='{{ '/'|url }}'>
                     {% if config.THEME_SETTINGS.nav_logo_path %}
-                    <img src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
+                    <img alt="{{ config.THEME_SETTINGS.title }} Logo" src='{{ config.THEME_SETTINGS.nav_logo_path | url}}'>
                     {% endif %}
                     {% if config.THEME_SETTINGS.nav_logo_text %}
                     <span>
-                      <span id='logo-text'>{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
+                      <span class="logo-text">{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
                     </span>
                     {% endif %}
                   </a>
