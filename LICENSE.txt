@@ -1,6 +1,21 @@
-MIT License
+Original standalone HTML5 theme:
+
+Copyright (c) 2016 Free HTML5 Template <https://FreeHTML5.co>
+
+Released under the Creative Commons Attribution 3.0 license; see NOTICE.txt or
+<https://creativecommons.org/licenses/by/3.0/>
+
+-------------------------------------------------------------------------------
+
+Subsequent additions, porting and major modifications:
 
 Copyright (c) 2017 Steve Lane
+
+Copyright (c) 2018 Daniel Althviz
+
+Copyright (c) 2018- Lektor-Icon Contributors (see AUTHORS.txt)
+
+Released under the MIT (Expat) license:
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +34,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+Bundled assets:
+
+Released under MIT and other compatible licenses; see NOTICE.txt or online at:
+<https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt>

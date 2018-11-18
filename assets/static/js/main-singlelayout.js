@@ -1,3 +1,21 @@
+/*
+Lektor-Icon Theme
+Copyright (c) 2016- Lektor-Icon Contributors
+
+Original standalone HTML5 theme distributed under the terms of the
+Creative Commons Attribution 3.0 license -->
+https://creativecommons.org/licenses/by/3.0/
+
+Additions, modifications and porting released under the terms of the
+MIT (Expat) License: https://opensource.org/licenses/MIT
+See the LICENSE.txt file for more details
+https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt
+
+For information on the included third-party assets, see NOTICE.txt
+https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
+*/
+
+
 ;(function () {
 
     'use strict';
