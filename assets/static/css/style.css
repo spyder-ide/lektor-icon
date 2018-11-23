@@ -2332,26 +2332,25 @@ border-radius: 0;
 
 #error-page.page-content-container {
   background: #e8ecf1;
+  background-color: #e8ecf1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 720px;
+  padding-top: 4em;
 }
 
 #error-page .page-content {
+  background: rgba(232, 236, 241, 0.5);
+  border-radius: 50px;
   margin-top: 5em;
   margin-bottom: 6em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 #error-page .fh5co-heading {
   margin-bottom: 3em;
-}
-
-#error-page .fh5co-heading h1 {
-  color: white;
-  font-family: Impact, Raleway, "DejaVu Sans", "Open Sans", "Liberation Sans", Helvetica, Arial, sans-serif;
-  font-size: 4em;
-  text-shadow:
-   -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-     2px 2px 0 #000;
 }
 
 #error-page .center p {
