@@ -1,14 +1,17 @@
-# Icon Theme
+# Lektor-Icon Theme
 
 *Copyright © 2016-2018 Lektor-Icon Contributors and others (see AUTHORS.txt)*
 
-This theme is a Lektor port of a Hugo port of the icon theme by [https://freehtml5.co/](https://freehtml5.co/icon-free-website-template-using-bootstrap/). It is a single-page, responsive theme, with sections for describing your business mission, services, a gallery, your team and a contact form.
+This a version of the [FreeHTML5](https://freehtml5.co/) ["Icon" theme](https://freehtml5.co/](https://freehtml5.co/icon-free-website-template-using-bootstrap/) for Lektor by [Daniel Althviz](https://dalthviz.github.io/) and the [Spyder](https://www.spyder-ide.org/) organization, originally based on the [Hugo port](https://github.com/SteveLane/hugo-icon) by Steve Lane.
+The core template is a single-page, responsive layout, with sections for describing your organization and its mission, services, a gallery, your team and how visitors can download your software or donate to your cause.
+Also features additions including a built-in blog, generic page template, custom error page, common navbar, Gitter, Disqus and OpenCollective integration, heavy customizability, numerous fixes and improvements, and re-written for speed, extensibility, responsiveness and standards conformance.
 
-So this is a intent to port the [Hugo Icon of Steve Lane](https://github.com/SteveLane/hugo-icon)
 
 ## Installation
 
-See this [docs here](https://www.getlektor.com/docs/themes/)
+See the [Lektor theme docs](https://www.getlektor.com/docs/themes/).
+We recommend installing Lektor-Icon as a Git submodule, as we often update and improve it from time to time.
+
 
 ## Credits
 
@@ -22,4 +25,4 @@ It is used for the [official website](https://www.spyder-ide.org/) of Spyder, th
 
 ## Changelog
 
-A changelog for the initial port to Hugo by @SteveLane is [here](changelog.md); if you fork this theme and make changes, please list them. It includes the changes after porting it to lektor.
+A changelog for this theme since the initial port to Hugo by @SteveLane is [here](https://github.com/spyder-ide/lektor-icon/blob/master/changelog.md); if you fork this theme and make changes, please list them.
