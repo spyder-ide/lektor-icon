@@ -21,18 +21,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     'use strict';
 
 
-    // iPad and iPod detection—not really necessary or wise
-    var isiPad = function(){
-        return (navigator.platform.indexOf("iPad") == -1);
-    };
-
-    var isiPhone = function(){
-        return (
-            (navigator.platform.indexOf("iPhone") == -1) ||
-            (navigator.platform.indexOf("iPod") == -1)
-        );
-    };
-
     var heroHeight = function() {
         if ($(window).width() >= 752) {
             $('.js-fullheight-home').css('height', $(window).height() - $('.js-sticky').height());
@@ -68,13 +56,11 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
     var gridAutoHeight = function() {
-        if (!isiPhone() || !isiPad()) {
-            $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
-        }
+
+        $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
+
         $(window).on('resize', function(){
-            if (!isiPhone() && !isiPad()) {
-                $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
-            }
+            $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
         });
     }
 
@@ -207,15 +193,14 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         setHeroHeight();
         loaderPage();
         fh5coTabs();
-        // gridAutoHeight();
+        gridAutoHeight();
 
         // sliderSayings();
         parallax();
-        // burgerMenu();
         scrolledWindow();
+        goToTop();
         clickMenu();
         navigationSection();
-        goToTop();
     });
 
 }());
