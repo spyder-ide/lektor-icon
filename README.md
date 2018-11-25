@@ -13,6 +13,21 @@ See the [Lektor theme docs](https://www.getlektor.com/docs/themes/).
 We recommend installing Lektor-Icon as a Git submodule, as we often update and improve it from time to time.
 
 
+## Browser Support
+
+This theme has been tested for full functionality and consistent layout across late-2018 of the "big three" modern desktop browsers, Firefox, Chrome and Edge, as well as the legacy Internet Explorer 11.
+Aside from a modest number of progressive enhancements, it should render fully correctly in desktop and mobile versions of Chrome (and Blink-based Opera versions) Firefox, Edge and Safari from at least 2015-onwards, Android browser >4.4 and onwards as well as Internet Explorer 11.
+It should degrade relatively gracefully with all core functionality and layout intact on Internet Explorer 10, Android browser 4.4, earlier versions of Edge and 2012-2013+ releases of Firefox, Chrome and Safari.
+
+
+## Technical Notes
+
+Lektor-Icon has been updated with the latest (as of November 2018) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
+The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
+Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.
+Potentially burdensome restrictions have been been avoided by default, while allowing further user configuration of the CSP and other headers through the theme options.
+
+
 ## Credits
 
 The original [plain HTML5 template](https://freehtml5.co/](https://freehtml5.co/icon-free-website-template-using-bootstrap/) which was the basis for Hugo-Icon, and in turn Lektor-Icon was created by [FreeHTML5.co](https://freehtml5.co/) and released under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license.

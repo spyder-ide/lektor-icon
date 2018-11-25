@@ -21,6 +21,12 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     'use strict';
 
 
+    var isMSIE = function() {
+        var is_ie = /MSIE|Trident/.test(window.navigator.userAgent);
+        return is_ie;
+    }
+
+
     var heroHeight = function() {
         if ($(window).width() >= 752) {
             $('.js-fullheight-home').css('height', $(window).height() - $('.js-sticky').height());
@@ -80,7 +86,8 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     // Parallax
     var parallax = function() {
 
-        $(window).stellar({horizontalScrolling: false, verticalOffset: (51 + $('.fh5co-main-nav').height()), responsive: false});
+        var vertical_offset_const = !isMSIE() * 51
+        $(window).stellar({horizontalScrolling: false, verticalOffset: (vertical_offset_const + $('.fh5co-main-nav').height()), responsive: false});
     };
 
 
