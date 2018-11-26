@@ -105,7 +105,7 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
                   <p></p>
                     <a href='{{ '/' | url }}'>
                     {% if config.THEME_SETTINGS.nav_logo_path %}
-                    <img alt="Site Logo" src='{{ config.THEME_SETTINGS.nav_logo_path | url }}'>
+                    <img alt="Site Logo" src="{{ config.THEME_SETTINGS.nav_logo_path | asseturl }}">
                     {% endif %}
                     {% if config.THEME_SETTINGS.nav_logo_text %}
                     <span class="logo-text-container">

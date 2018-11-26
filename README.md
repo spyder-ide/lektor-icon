@@ -22,6 +22,10 @@ It should degrade relatively gracefully with all core functionality and layout i
 
 ## Technical Notes
 
+Most images, except for static assets like the site's logo and favicon, are automatically resized in HTML or CSS for optimal display and efficiency on a variety of platforms.
+Browsers that don't support responsive images will gracefully degrade to a reasonable default image (generally sized for 1080p desktops and larger non-Retina mobile devices).
+Therefore, there is no harm in providing the highest reasonable resolution available for each image (nominally ~3840 px width for full-page backgrounds, ~1280px for other images) and the theme will automatically resize the images and, in many cases, send a version specifically optimized for the reader's screen size.
+
 Lektor-Icon has been updated with the latest (as of November 2018) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
 The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
 Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.

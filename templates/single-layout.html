@@ -5,6 +5,24 @@
 {% block stylesheets %}
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css' | asseturl }}" type="text/css">
+<style>
+  {% if this.hero.blocks[0].image %}
+  {% set hero_img_file = this.attachments.get(this.hero.blocks[0].image) %}
+  #fh5co-home {
+    background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
+  }
+  @media ((min-device-width: 1921px) or ((min-device-width: 1281px) and (min-resolution: 102dpi)) or ((min-device-width: 961px) and (min-resolution: 152dpi))) {
+    #fh5co-home {
+      background-image: url("{{ hero_img_file.thumbnail(width=3840) | url }}")
+    }
+  }
+  @media ((max-device-width: 768px) and (((max-resolution: 100dpi) and (max-device-height: 1400px)) or ((max-device-height: 1050px) and (max-resolution: 150dpi)) or (max-device-height: 700px))) {
+    #fh5co-home {
+      background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
+    }
+  }
+  {% endif %}
+</style>
 {% endblock %}
 
 {% block loader %}
@@ -45,7 +63,9 @@
 {% endblock %}
 
 {% block body %}
-{% include "partials/hero.html" %}
+{% for hero in this.hero.blocks %}
+{{ hero }}
+{% endfor %}
 
 {% if config.THEME_SETTINGS.mission_enable and config.THEME_SETTINGS.mission_enable.lower() not in ["false", "f", "no", "n"] %}
 {% for mission in this.mission.blocks %}

@@ -21,6 +21,17 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     'use strict';
 
 
+    // Fullsize Error Page Background
+    var fullHeight = function() {
+        $('#error-page').css('height', $(window).height() - $('.js-sticky').height() - $('#fh5co-footer').outerHeight());
+    };
+
+    var setFullHeight = function() {
+        fullHeight();
+        $(window).on('resize', fullHeight);
+    };
+
+
     // Offcanvas layout for "hamburger" mobile menu
     var offcanvasMenu = function() {
         $('body').prepend('<div id="fh5co-offcanvas" />');
@@ -105,6 +116,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     $(function(){
         offcanvasMenu();
         mainMenuSticky();
+        setFullHeight();
         burgerMenu();
         mobileMenuOutsideClick();
     });

@@ -9,10 +9,11 @@
   <div class="gallery-title-spacer"></div>
   {% endif %}
   {% for work in this.works.blocks %}
+  {% set work_img_file = record.attachments.get(work.image) %}
   {% if work.direct_link %}
-  <a href="{{ work.url }}" class="fh5co-item" style="background-image: url({{ work.image }})">
+  <a href="{{ work.url }}" class="fh5co-item" style="background-image: url({{ work_img_file.thumbnail(width=1024) | url }})">
   {% else %}
-  <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work.image }})">
+  <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work_img_file.thumbnail(width=1024) | url }})">
   {% endif %}
     {% if this.show_titles %}
     <h3>{{ work.title }}</h3>

@@ -2021,14 +2021,14 @@ border-radius: 0;
 }
 
 .meta-blog-author {
-  margin-right: 0.5em;
+  margin-right: 0.2em;
+  height: 56px;
+  width: 56px;
 }
 
 .author-img,
 .meta-blog-author img {
   display: block;
-  height: 56px;
-  width: 56px;
   max-height: 56px;
   max-width: 56px;
   min-height: 56px;
@@ -2190,13 +2190,13 @@ border-radius: 0;
 
 /* 404 Error page styling */
 
-#error-page.page-content-container {
-  background: #e8ecf1;
+#error-page {
   background-color: #e8ecf1;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 720px;
+  min-height: 480px;
+  overflow: hidden;
   padding-top: 4em;
 }
 
