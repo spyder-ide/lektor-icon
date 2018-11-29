@@ -1,4 +1,5 @@
 /* Magnific Popup CSS */
+
 .mfp-bg {
   top: 0;
   left: 0;
@@ -198,7 +199,7 @@ button::-moz-focus-inner {
     margin-left: 31px; }
   .mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
     margin-left: 25px;
-    border-right: 27px solid #3f3f3f; }
+    border-right: 27px solid #404040; }
 
 .mfp-arrow-right {
   right: 0; }
@@ -206,7 +207,7 @@ button::-moz-focus-inner {
     border-left: 17px solid white;
     margin-left: 39px; }
   .mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
-    border-left: 27px solid #3f3f3f; }
+    border-left: 27px solid #404040; }
 
 .mfp-iframe-holder {
   padding-top: 40px;
@@ -259,7 +260,7 @@ img.mfp-img {
     height: auto;
     z-index: -1;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-    background: #444444; }
+    background: #404040; }
   .mfp-figure small {
     color: #bdbdbd;
     display: block;
@@ -279,7 +280,7 @@ img.mfp-img {
 .mfp-title {
   text-align: left;
   line-height: 18px;
-  color: #f3f3f3;
+  color: #f5f5f5;
   word-wrap: break-word;
   padding-right: 36px; }
 
