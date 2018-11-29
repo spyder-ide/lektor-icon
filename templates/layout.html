@@ -71,10 +71,28 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
   <meta name="description" content="{{ config.THEME_SETTINGS.description }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
   <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="theme-color" content="#ee1c24">
+  {% if config.THEME_SETTINGS.theme_accent_color %}
+  <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color }}">
+  {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" href="{{ '/static/images/favicon.png' | asseturl }}" type="image/png">
+  <style>
+    :root {
+      {% if config.THEME_SETTINGS.theme_accent_color %}
+      --theme-accent-color: {{ config.THEME_SETTINGS.theme_accent_color }};
+      {% else %}
+      --theme-accent-color: #ee1c24;
+      {% endif %}
+      {% if config.THEME_SETTINGS.theme_pipe_color %}
+      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_pipe_color }}
+      {% elif config.THEME_SETTINGS.theme_accent_color %}
+      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_accent_color }}
+      {% else %}
+      --theme-pipe-color: #ff4c52;
+      {% endif %}
+    }
+  </style>
   {% block stylesheets %}
   {% endblock %}
   <!-- Google fonts -->
