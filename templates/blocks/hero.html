@@ -3,11 +3,11 @@
     <div class="col-md-6">
       <div class="js-fullheight-home fh5co-copy">
         <div class="js-fullheight-home fh5co-copy-inner">
-          {% if config.THEME_SETTINGS.hero_title %}
-          <h1>{{ config.THEME_SETTINGS.hero_title }}</h1>
+          {% if this.title %}
+          <h1>{{ this.title }}</h1>
           {% endif %}
-          {% if config.THEME_SETTINGS.hero_description %}
-          <h2>{{ config.THEME_SETTINGS.hero_description | safe }}</h2>
+          {% if this.description %}
+          <h2>{{ this.description }}</h2>
           {% endif %}
         </div>
       </div>

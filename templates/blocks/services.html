@@ -1,6 +1,6 @@
 <div id="fh5co-services" data-section="services">
-  {% if config.THEME_SETTINGS.services_video_url %}
-  <div class="fh5co-video"><a href="{{ config.THEME_SETTINGS.services_video_url }}" class="popup-vimeo"><i class="icon-play2"></i></a> <span>Watch video</span>
+  {% if this.video_url %}
+  <div class="fh5co-video"><a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a> <span>Watch video</span>
   </div>
   {% endif %}
   <div class="container">

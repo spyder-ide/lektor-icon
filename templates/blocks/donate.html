@@ -1,8 +1,8 @@
 <div id="fh5co-donate" data-section="donate">
   <div class="container">
     <div class="text-center fh5co-heading">
-      <h2>{{ config.THEME_SETTINGS.donate_name }}</h2>
-      {{ config.THEME_SETTINGS.donate_description | markdown }}
+      <h2>{{ this.title }}</h2>
+      {{ this.description }}
     </div>
     {% if config.THEME_SETTINGS.opencollective_project_name %}
     <div class="row">

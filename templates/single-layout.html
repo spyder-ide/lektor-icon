@@ -37,69 +37,63 @@
 <a href="#fh5co-home" data-nav-section="home">Home</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.overview_nav %}
-<a href="#fh5co-mission" data-nav-section="mission">{{ config.THEME_SETTINGS.overview_nav }}</a>
+{% if this.overview and this.overview.blocks[0].nav_label %}
+<a href="#fh5co-mission" data-nav-section="mission">{{ this.overview.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.services_enable and config.THEME_SETTINGS.services_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.services_nav %}
-<a href="#fh5co-services" data-nav-section="services">{{ config.THEME_SETTINGS.services_nav }}</a>
+{% if this.services and this.services.blocks[0].nav_label %}
+<a href="#fh5co-services" data-nav-section="services">{{ this.services.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.work_enable and config.THEME_SETTINGS.work_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.work_nav %}
-<a href="#fh5co-gallery" data-nav-section="gallery">{{ config.THEME_SETTINGS.work_nav }}</a>
+{% if this.work and this.work.blocks[0].nav_label %}
+<a href="#fh5co-gallery" data-nav-section="gallery">{{ this.work.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.team_enable and config.THEME_SETTINGS.team_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.team_nav %}
-<a href="#fh5co-team" data-nav-section="team">{{ config.THEME_SETTINGS.team_nav }}</a>
+{% if this.team and this.team.blocks[0].nav_label %}
+<a href="#fh5co-team" data-nav-section="team">{{ this.team.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.download_nav %}
-<a href="#fh5co-download" data-nav-section="download">{{ config.THEME_SETTINGS.download_nav }}</a>
+{% if this.download and this.download.blocks[0].nav_label %}
+<a href="#fh5co-download" data-nav-section="download">{{ this.download.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] and config.THEME_SETTINGS.donate_nav %}
-<a href="#fh5co-donate" data-nav-section="donate">{{ config.THEME_SETTINGS.donate_nav }}</a>
+{% if this.donate and this.donate.blocks[0].nav_label %}
+<a href="#fh5co-donate" data-nav-section="donate">{{ this.donate.blocks[0].nav_label }}</a>
 {% endif %}
 {% endblock %}
 
 {% block body %}
-{% for hero in this.hero.blocks %}
-{{ hero }}
-{% endfor %}
 
-{% if config.THEME_SETTINGS.mission_enable and config.THEME_SETTINGS.mission_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for mission in this.mission.blocks %}
-{{ mission }}
-{% endfor %}
+{{ this.hero }}
+
+{% if this.mission %}
+{{ this.mission }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.overview_enable and config.THEME_SETTINGS.overview_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for overview in this.overview.blocks %}
-{{ overview }}
-{% endfor %}
+{% if this.overview %}
+{{ this.overview }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.services_enable and config.THEME_SETTINGS.services_enable.lower() not in ["false", "f", "no", "n"] %}
+{% if this.services %}
 {{ this.services }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.work_enable and config.THEME_SETTINGS.work_enable.lower() not in ["false", "f", "no", "n"] %}
+{% if this.work %}
 {{ this.work }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.team_enable and config.THEME_SETTINGS.team_enable.lower() not in ["false", "f", "no", "n"] %}
+{% if this.team %}
 {{ this.team }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.download_enable and config.THEME_SETTINGS.download_enable.lower() not in ["false", "f", "no", "n"] %}
-{% for download in this.download.blocks %}
-{{ download }}
-{% endfor %}
+{% if this.download %}
+{{ this.download }}
 {% endif %}
 
-{% if config.THEME_SETTINGS.donate_enable and config.THEME_SETTINGS.donate_enable.lower() not in ["false", "f", "no", "n"] %}
-{% include "partials/donate.html" %}
+{% if this.donate %}
+{{ this.donate }}
 {% endif %}
+
 {% endblock %}
 
 {% block scripts %}
