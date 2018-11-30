@@ -49,10 +49,21 @@
 
 {% block body %}
 
+{% if this.hero %}
 {{ this.hero }}
+{% endif %}
 
 {% if this.main_content %}
-{{ this.main_content }}
+{% for block in this.main_content.blocks %}
+{% if this.starting_block_bg == 'light' %}
+{% set current_section_bg = loop.cycle('light-bg-section', 'dark-bg-section') %}
+{% else %}
+{% set current_section_bg = loop.cycle('dark-bg-section', 'light-bg-section') %}
+{% endif %}
+<div id="section-{{ block.section_id }}" data-section="{{ block.section_id }}" class="{{ block._flowblock }}-section body-section {{ current_section_bg }}">
+{{ block }}
+</div> <!-- END {{ block._flowblock }}-section -->
+{% endfor %}
 {% endif %}
 
 {% endblock %}

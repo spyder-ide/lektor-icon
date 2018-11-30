@@ -1,29 +1,27 @@
-<div id="section-{{ this.section_id }}" data-section="{{ this.section_id }}" class="services-section body-section">
-  {% if this.video_url %}
-  <div class="fh5co-video"><a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a> <span>Watch video</span>
+{% if this.video_url %}
+<div class="fh5co-video"><a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a> <span>Watch video</span>
+</div>
+{% endif %}
+<div class="container">
+  <div class="text-center fh5co-heading">
+    <h2>{{ this.title }}</h2>
+    {% if this.description %}
+    {{ this.description }}
+    {% endif %}
   </div>
-  {% endif %}
-  <div class="container">
-    <div class="text-center fh5co-heading">
-      <h2>{{ this.title }}</h2>
-      {% if this.description %}
-      {{ this.description }}
-      {% endif %}
-    </div>
 
-    {% for service in this.services.blocks %}
-    <div class="col-md-4">
-      <div class="service">
-        {% if service.icon %}
-        {% set service_img_file = record.attachments.get(service.icon) %}
-        <div class="icon">
-            <img alt="{{ service.title | striptags | striptags }} photo" src="{{ service_img_file.thumbnail(width=640) | url }}" class="img-responsive center" srcset="{{ service_img_file.thumbnail(width=640) | url }} 1x, {{ service_img_file.thumbnail(width=1280) | url }} 2x">
-        </div>
-        {% endif %}
-        <h3>{{ service.title }}</h3>
-        {{ service.description }}
+  {% for service in this.services.blocks %}
+  <div class="col-md-4">
+    <div class="service">
+      {% if service.icon %}
+      {% set service_img_file = record.attachments.get(service.icon) %}
+      <div class="icon">
+          <img alt="{{ service.title | striptags | striptags }} photo" src="{{ service_img_file.thumbnail(width=640) | url }}" class="img-responsive center" srcset="{{ service_img_file.thumbnail(width=640) | url }} 1x, {{ service_img_file.thumbnail(width=1280) | url }} 2x">
       </div>
+      {% endif %}
+      <h3>{{ service.title }}</h3>
+      {{ service.description }}
     </div>
-    {% endfor %}
   </div>
-</div> <!-- END services-section -->
+  {% endfor %}
+</div>

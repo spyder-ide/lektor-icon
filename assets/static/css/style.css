@@ -776,8 +776,11 @@ img {
   clear: both;
 }
 
-.content-section,
-.gallery-section {
+.light-bg-section {
+  background: #ffffff;
+}
+
+.dark-bg-section {
   background: #e8ecf1;
 }
 

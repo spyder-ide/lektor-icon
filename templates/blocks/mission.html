@@ -1,54 +1,52 @@
-<div id="section-{{ this.section_id }}" data-section="{{ this.section_id }}" class="mission-section body-section">
-  {% if this.image1 or this.image2 or this.image3 or this.image4 %}
-  <div class="fh5co-2col">
-    <div class="fh5co-2col-inner left">
-  {% else %}
-  <div>
-    <div class="center">
-  {% endif %}
-      <div class="fh5co-tabs-container">
-        <ul class="fh5co-tabs">
-          {% for service in this.items.blocks %}
-          {% if service.weight == 1 %}
-          <li class="active">
-          {% else %}
-          <li>
-          {% endif %}
-            <a href="#" data-tab="{{ service.name }}">{{ service.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-
+{% if this.image1 or this.image2 or this.image3 or this.image4 %}
+<div class="fh5co-2col">
+  <div class="fh5co-2col-inner left">
+{% else %}
+<div>
+  <div class="center">
+{% endif %}
+    <div class="fh5co-tabs-container">
+      <ul class="fh5co-tabs">
         {% for service in this.items.blocks %}
         {% if service.weight == 1 %}
-        <div class="fh5co-tab-content active" data-tab-content="{{ service.name }}">
+        <li class="active">
         {% else %}
-        <div class="fh5co-tab-content" data-tab-content="{{ service.name }}">
+        <li>
         {% endif %}
-          <h2>{{ service.subtitle }}</h2>
-          {{ service.description }}
-        </div>
+          <a href="#" data-tab="{{ service.name }}">{{ service.title }}</a>
+        </li>
         {% endfor %}
-      </div>
-    </div>
-  </div>
+      </ul>
 
-  {% if this.image1 or this.image2 or this.image3 or this.image4 %}
-  <div class="fh5co-2col fh5co-text">
-    <div class="fh5co-grid">
-      {% if this.image1 %}
-      <div class="fh5co-grid-item" style="background-image:url({{ this.image1 }});"></div>
+      {% for service in this.items.blocks %}
+      {% if service.weight == 1 %}
+      <div class="fh5co-tab-content active" data-tab-content="{{ service.name }}">
+      {% else %}
+      <div class="fh5co-tab-content" data-tab-content="{{ service.name }}">
       {% endif %}
-      {% if this.image2 %}
-      <div class="fh5co-grid-item" style="background-image:url({{ this.image2 }})"></div>
-      {% endif %}
-      {% if this.image3 %}
-      <div class="fh5co-grid-item" style="background-image:url({{ this.image3 }})"></div>
-      {% endif %}
-      {% if this.image4 %}
-      <div class="fh5co-grid-item" style="background-image:url({{ this.image4 }})"></div>
-      {% endif %}
+        <h2>{{ service.subtitle }}</h2>
+        {{ service.description }}
+      </div>
+      {% endfor %}
     </div>
   </div>
-  {% endif %}
-</div> <!-- END mission-section -->
+</div>
+
+{% if this.image1 or this.image2 or this.image3 or this.image4 %}
+<div class="fh5co-2col fh5co-text">
+  <div class="fh5co-grid">
+    {% if this.image1 %}
+    <div class="fh5co-grid-item" style="background-image:url({{ this.image1 }});"></div>
+    {% endif %}
+    {% if this.image2 %}
+    <div class="fh5co-grid-item" style="background-image:url({{ this.image2 }})"></div>
+    {% endif %}
+    {% if this.image3 %}
+    <div class="fh5co-grid-item" style="background-image:url({{ this.image3 }})"></div>
+    {% endif %}
+    {% if this.image4 %}
+    <div class="fh5co-grid-item" style="background-image:url({{ this.image4 }})"></div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

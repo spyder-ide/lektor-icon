@@ -1,32 +1,30 @@
-<div id="section-{{ this.section_id }}" data-section="{{ this.section_id }}" class="gallery-section body-section">
-  <div id="fh5co-gallery-header" class="row">
-    <div class="text-center fh5co-heading">
-      <h2>{{ this.title }}</h2>
-      {{ this.description }}
+<div id="fh5co-gallery-header" class="row">
+  <div class="text-center fh5co-heading">
+    <h2>{{ this.title }}</h2>
+    {{ this.description }}
+  </div>
+</div>
+{% if this.show_titles %}
+<div class="gallery-title-spacer"></div>
+{% endif %}
+{% for gallery in this.gallery_items.blocks %}
+{% set gallery_img_file = record.attachments.get(gallery.image) %}
+{% if gallery.direct_link %}
+<a href="{{ gallery.url }}" class="fh5co-item" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
+{% else %}
+<a href="{{ gallery.image }}" class="fh5co-item image-popup" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
+{% endif %}
+  {% if this.show_titles %}
+  <h3>{{ gallery.title }}</h3>
+  {% endif %}
+  <div class="fh5co-overlay"></div>
+  <div class="fh5co-copy">
+    <div class="fh5co-copy-inner">
+      <h2>{{ gallery.title }}</h2>
+      {% if gallery.subtitle %}
+      <h3>{{ gallery.subtitle }}</h3>
+      {% endif %}
     </div>
   </div>
-  {% if this.show_titles %}
-  <div class="gallery-title-spacer"></div>
-  {% endif %}
-  {% for gallery in this.gallery_items.blocks %}
-  {% set gallery_img_file = record.attachments.get(gallery.image) %}
-  {% if gallery.direct_link %}
-  <a href="{{ gallery.url }}" class="fh5co-item" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
-  {% else %}
-  <a href="{{ gallery.image }}" class="fh5co-item image-popup" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
-  {% endif %}
-    {% if this.show_titles %}
-    <h3>{{ gallery.title }}</h3>
-    {% endif %}
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-        <h2>{{ gallery.title }}</h2>
-        {% if gallery.subtitle %}
-        <h3>{{ gallery.subtitle }}</h3>
-        {% endif %}
-      </div>
-    </div>
-  </a>
-  {% endfor %}
-</div> <!-- END gallery-section -->
+</a>
+{% endfor %}
