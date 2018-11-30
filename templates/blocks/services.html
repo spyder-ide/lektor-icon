@@ -1,4 +1,4 @@
-<div id="fh5co-services" data-section="services">
+<div id="section-{{ this.section_id }}" data-section="{{ this.section_id }}" class="services-section body-section">
   {% if this.video_url %}
   <div class="fh5co-video"><a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a> <span>Watch video</span>
   </div>
@@ -26,4 +26,4 @@
     </div>
     {% endfor %}
   </div>
-</div> <!-- END fh5co-services -->
+</div> <!-- END services-section -->

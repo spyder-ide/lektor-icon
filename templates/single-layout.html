@@ -8,16 +8,16 @@
 <style>
   {% if this.hero.blocks[0].image %}
   {% set hero_img_file = this.attachments.get(this.hero.blocks[0].image) %}
-  #fh5co-home {
+  .hero-section {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
   }
   @media ((min-device-width: 1921px) or ((min-device-width: 1281px) and (min-resolution: 102dpi)) or ((min-device-width: 961px) and (min-resolution: 152dpi))) {
-    #fh5co-home {
+    .hero-section {
       background-image: url("{{ hero_img_file.thumbnail(width=3840) | url }}")
     }
   }
   @media ((max-device-width: 768px) and (((max-resolution: 100dpi) and (max-device-height: 1400px)) or ((max-device-height: 1050px) and (max-resolution: 150dpi)) or (max-device-height: 700px))) {
-    #fh5co-home {
+    .hero-section {
       background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
     }
   }
@@ -33,69 +33,26 @@
 
 
 {% block nav_main %}
-{% if config.THEME_SETTINGS.nav_home_enable and config.THEME_SETTINGS.nav_home_enable.lower() not in ["false", "f", "no", "n"] %}
-<a href="#fh5co-home" data-nav-section="home">Home</a>
+{% if this.hero and config.THEME_SETTINGS.nav_home_enable and config.THEME_SETTINGS.nav_home_enable.lower() not in ["false", "f", "no", "n"] %}
+<a href="#section-home" data-nav-section="home">Home</a>
 {% endif %}
 
-{% if this.mission and this.mission.blocks[0].nav_label %}
-<a href="#fh5co-mission" data-nav-section="mission">{{ this.overview.blocks[0].nav_label }}</a>
+{% if this.main_content %}
+{% for block in this.main_content.blocks %}
+{% if block.nav_label %}
+<a href="#section-{{ block.section_id }}" data-nav-section="{{ block.section_id }}">{{ block.nav_label }}</a>
+{% endif %}
+{% endfor %}
 {% endif %}
 
-{% if this.overview and this.overview.blocks[0].nav_label %}
-<a href="#fh5co-overview" data-nav-section="overview">{{ this.overview.blocks[0].nav_label }}</a>
-{% endif %}
-
-{% if this.services and this.services.blocks[0].nav_label %}
-<a href="#fh5co-services" data-nav-section="services">{{ this.services.blocks[0].nav_label }}</a>
-{% endif %}
-
-{% if this.gallery and this.gallery.blocks[0].nav_label %}
-<a href="#fh5co-gallery" data-nav-section="gallery">{{ this.gallery.blocks[0].nav_label }}</a>
-{% endif %}
-
-{% if this.team and this.team.blocks[0].nav_label %}
-<a href="#fh5co-team" data-nav-section="team">{{ this.team.blocks[0].nav_label }}</a>
-{% endif %}
-
-{% if this.download and this.download.blocks[0].nav_label %}
-<a href="#fh5co-download" data-nav-section="download">{{ this.download.blocks[0].nav_label }}</a>
-{% endif %}
-
-{% if this.donate and this.donate.blocks[0].nav_label %}
-<a href="#fh5co-donate" data-nav-section="donate">{{ this.donate.blocks[0].nav_label }}</a>
-{% endif %}
 {% endblock %}
 
 {% block body %}
 
 {{ this.hero }}
 
-{% if this.mission %}
-{{ this.mission }}
-{% endif %}
-
-{% if this.overview %}
-{{ this.overview }}
-{% endif %}
-
-{% if this.services %}
-{{ this.services }}
-{% endif %}
-
-{% if this.gallery %}
-{{ this.gallery }}
-{% endif %}
-
-{% if this.team %}
-{{ this.team }}
-{% endif %}
-
-{% if this.download %}
-{{ this.download }}
-{% endif %}
-
-{% if this.donate %}
-{{ this.donate }}
+{% if this.main_content %}
+{{ this.main_content }}
 {% endif %}
 
 {% endblock %}
