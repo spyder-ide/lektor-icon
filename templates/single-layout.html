@@ -49,8 +49,8 @@
 <a href="#fh5co-services" data-nav-section="services">{{ this.services.blocks[0].nav_label }}</a>
 {% endif %}
 
-{% if this.work and this.work.blocks[0].nav_label %}
-<a href="#fh5co-gallery" data-nav-section="gallery">{{ this.work.blocks[0].nav_label }}</a>
+{% if this.gallery and this.gallery.blocks[0].nav_label %}
+<a href="#fh5co-gallery" data-nav-section="gallery">{{ this.gallery.blocks[0].nav_label }}</a>
 {% endif %}
 
 {% if this.team and this.team.blocks[0].nav_label %}
@@ -82,8 +82,8 @@
 {{ this.services }}
 {% endif %}
 
-{% if this.work %}
-{{ this.work }}
+{% if this.gallery %}
+{{ this.gallery }}
 {% endif %}
 
 {% if this.team %}

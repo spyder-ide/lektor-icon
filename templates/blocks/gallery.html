@@ -8,22 +8,22 @@
   {% if this.show_titles %}
   <div class="gallery-title-spacer"></div>
   {% endif %}
-  {% for work in this.works.blocks %}
-  {% set work_img_file = record.attachments.get(work.image) %}
-  {% if work.direct_link %}
-  <a href="{{ work.url }}" class="fh5co-item" style="background-image: url({{ work_img_file.thumbnail(width=1024) | url }})">
+  {% for gallery in this.gallery_items.blocks %}
+  {% set gallery_img_file = record.attachments.get(gallery.image) %}
+  {% if gallery.direct_link %}
+  <a href="{{ gallery.url }}" class="fh5co-item" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
   {% else %}
-  <a href="{{ work.image }}" class="fh5co-item image-popup" style="background-image: url({{ work_img_file.thumbnail(width=1024) | url }})">
+  <a href="{{ gallery.image }}" class="fh5co-item image-popup" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
   {% endif %}
     {% if this.show_titles %}
-    <h3>{{ work.title }}</h3>
+    <h3>{{ gallery.title }}</h3>
     {% endif %}
     <div class="fh5co-overlay"></div>
     <div class="fh5co-copy">
       <div class="fh5co-copy-inner">
-        <h2>{{ work.title }}</h2>
-        {% if work.subtitle %}
-        <h3>{{ work.subtitle }}</h3>
+        <h2>{{ gallery.title }}</h2>
+        {% if gallery.subtitle %}
+        <h3>{{ gallery.subtitle }}</h3>
         {% endif %}
       </div>
     </div>
