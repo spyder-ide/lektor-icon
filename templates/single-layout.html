@@ -37,8 +37,12 @@
 <a href="#fh5co-home" data-nav-section="home">Home</a>
 {% endif %}
 
-{% if this.overview and this.overview.blocks[0].nav_label %}
+{% if this.mission and this.mission.blocks[0].nav_label %}
 <a href="#fh5co-mission" data-nav-section="mission">{{ this.overview.blocks[0].nav_label }}</a>
+{% endif %}
+
+{% if this.overview and this.overview.blocks[0].nav_label %}
+<a href="#fh5co-overview" data-nav-section="overview">{{ this.overview.blocks[0].nav_label }}</a>
 {% endif %}
 
 {% if this.services and this.services.blocks[0].nav_label %}
