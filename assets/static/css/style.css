@@ -784,6 +784,12 @@ img {
   background: #e8ecf1;
 }
 
+.services-section .col-md-4,
+.team-section .col-md-4 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .services-section {
     padding: 5em 0 3em 0;
@@ -840,9 +846,9 @@ img {
 }
 .services-section .service {
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding: 40px 15px 20px 15px;
+  padding: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background: #ffffff;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -932,8 +938,9 @@ img {
   }
 }
 .team-section .person {
-  padding: 30px;
-  margin-bottom: 5px;
+  padding: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   transition: 0.5s;
   border-radius: 5px;
@@ -951,6 +958,7 @@ img {
 .team-section .person h4 {
   color: #707070;
   font-size: 1em;
+  margin-bottom: 0.5em;
 }
 .team-section .person .social {
   padding: 0;

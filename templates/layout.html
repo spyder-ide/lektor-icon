@@ -101,8 +101,9 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/static/css/style.css' | asseturl }}" type="text/css">
-  {% if config.THEME_SETTINGS.other_css %}
-  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.other_css | asseturl }}" type="text/css">
+  {% if config.THEME_SETTINGS.custom_css %}
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="{{ config.THEME_SETTINGS.custom_css | asseturl }}" type="text/css">
   {% endif %}
 </head>
 

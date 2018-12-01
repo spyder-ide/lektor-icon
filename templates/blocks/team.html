@@ -14,7 +14,7 @@
       {% endif %}
       <h3>{{ member.name }}</h3>
       <h4>{{ member.position }}</h4>
-      <p>{{ member.description }}</p>
+      {{ member.description }}
       <ul class="social">
         {% if member.facebook.url != '' %}
         <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>

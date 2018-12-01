@@ -33,7 +33,7 @@
 
 
 {% block nav_main %}
-{% if this.hero and config.THEME_SETTINGS.nav_home_enable and config.THEME_SETTINGS.nav_home_enable.lower() not in ["false", "f", "no", "n"] %}
+{% if this.hero and this.show_home_nav %}
 <a href="#section-home" data-nav-section="home">Home</a>
 {% endif %}
 
