@@ -6,8 +6,8 @@
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css' | asseturl }}" type="text/css">
 <style>
-  {% if this.hero.blocks[0].image %}
-  {% set hero_img_file = this.attachments.get(this.hero.blocks[0].image) %}
+  {% if this.hero_image %}
+  {% set hero_img_file = this.attachments.get(this.hero_image) %}
   .hero-section {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
   }
@@ -33,7 +33,7 @@
 
 
 {% block nav_main %}
-{% if this.hero and this.show_home_nav %}
+{% if this.hero_image and this.show_home_nav %}
 <a href="#section-home" data-nav-section="home">Home</a>
 {% endif %}
 
@@ -49,8 +49,23 @@
 
 {% block body %}
 
-{% if this.hero %}
-{{ this.hero }}
+{% if this.hero_image %}
+<div id="section-home" class="js-fullheight-home hero-section" data-section="home" data-stellar-background-ratio="0.5">
+  <div class="container">
+    <div class="col-md-6">
+      <div class="js-fullheight-home fh5co-copy">
+        <div class="js-fullheight-home fh5co-copy-inner">
+          {% if this.hero_title %}
+          <h1>{{ this.hero_title }}</h1>
+          {% endif %}
+          {% if this.hero_description %}
+          <h2>{{ this.hero_description }}</h2>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- END hero-section -->
 {% endif %}
 
 {% if this.main_content %}

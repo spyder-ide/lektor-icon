@@ -4,6 +4,12 @@
 
 {% block title %}Blog{% endblock %}
 
+{% block blogmaintitle %}
+<div id="blog-main-title" class="text-center fh5co-heading">
+  <h1>{{ this.title }}</h1>
+</div>
+{% endblock %}
+
 {% block blogbody %}
 {% for child in this.pagination.items %}
 {{ render_blog_post(child, from_index=true) }}
