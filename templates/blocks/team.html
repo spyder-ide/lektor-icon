@@ -16,14 +16,14 @@
       <h4>{{ member.position }}</h4>
       {{ member.description }}
       <ul class="social">
+        {% if member.website.url != '' %}
+        <li><a href="{{ member.website }}" aria-label="Website"><i class="icon-globe2"></i></a></li>
+        {% endif %}
         {% if member.facebook.url != '' %}
         <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
         {% endif %}
         {% if member.twitter.url != '' %}
         <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-        {% endif %}
-        {% if member.dribble.url != '' %}
-        <li><a href="{{ member.dribble }}" aria-label="Dribble"><i class="icon-dribbble"></i></a></li>
         {% endif %}
         {% if member.instagram.url != '' %}
         <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
