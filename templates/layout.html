@@ -137,19 +137,30 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
             </div>
             {% endif %}
 
-            {% block nav_main %}{% endblock %}
+            <div class="main-nav-container">
+              {% block nav_main %}{% endblock %}
 
-            {% if config.THEME_SETTINGS.nav_extension_enable and config.THEME_SETTINGS.nav_extension_enable.lower() not in ["false", "f", "no", "n"] %}
-            {% if config.THEME_SETTINGS.ext_3_ref and config.THEME_SETTINGS.ext_3_title %}
-            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_3_ref | url }}">{{ config.THEME_SETTINGS.ext_3_title }}</a>
-            {% endif %}
-            {% if config.THEME_SETTINGS.ext_2_ref and config.THEME_SETTINGS.ext_2_title %}
-            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_2_ref | url }}" >{{ config.THEME_SETTINGS.ext_2_title }}</a>
-            {% endif %}
-            {% if config.THEME_SETTINGS.ext_1_ref and config.THEME_SETTINGS.ext_1_title %}
-            <a class="pull-right" href="{{ config.THEME_SETTINGS.ext_1_ref | url }}" >{{ config.THEME_SETTINGS.ext_1_title }}</a>
-            {% endif %}
-            {% endif %}
+              {% if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
+              <div class="side-nav-container">
+                {% if config.THEME_SETTINGS.nav_extralinks %}
+                {% for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') %}
+                <a class="pull-right" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                {% endfor %}
+                {% endif %}
+
+                {% if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
+                {% for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key', reverse=True) %}
+                {% if page.short_title %}
+                {% set navlink_text = page.short_title %}
+                {% else %}
+                {% set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
+                {% endif %}
+                <a class="pull-right" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                {% endfor %}
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
@@ -161,21 +172,21 @@ style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
     <div id="fh5co-footer">
       <div class="container">
         {% if config.THEME_SETTINGS.footer_links %}
-        <div class="row">
+        <div class="row footer-connect-line">
           <div class="text-center">
-            <p><small>
+            <p>
               Connect with us on:
-              {% for footer_link in config.THEME_SETTINGS.footer_links.split(", ") %}
+              {% for footer_link in config.THEME_SETTINGS.footer_links.replace(', ', ',').split(',') %}
               {% if loop.index > 1 %}
               <span class="pipe-colored">|</span>
               {% endif %}
-              <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(": ")[0] }} </a>
+              <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(': ')[0] }} </a>
               {% endfor %}
-            </small></p>
+            </p>
           </div>
         </div>
         {% endif %}
-        <div class="row">
+        <div class="row footer-copyright">
           <div class="text-center">
             <p>
               {% if config.THEME_SETTINGS.copyright %}

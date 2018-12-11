@@ -210,7 +210,6 @@ img {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 1170px;
 }
 .container:before,
 .container:after {
@@ -221,19 +220,9 @@ img {
   clear: both;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1600px) {
   .container {
-    width: 955px;
-  }
-}
-@media screen and (max-width: 960px) {
-  .container {
-    width: 750px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    width: auto;
+    width: 1600px;
   }
 }
 
@@ -251,7 +240,6 @@ img {
 .container-fluid:after {
   clear: both;
 }
-
 
 .dropup,
 .dropdown {
@@ -503,19 +491,39 @@ img {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.6);
 }
 .fh5co-main-nav .fh5co-menu-1 {
-  vertical-align: middle;
+  align-items: center;
+  display: flex;
   float: left;
   line-height: 0;
+  vertical-align: middle;
+  width: 100%;
 }
+
+.fh5co-main-nav .fh5co-menu-1 .pull-left {
+  flex-shrink: 0;
+  margin-left: 2em;
+}
+
+.fh5co-main-nav .fh5co-menu-1 .main-nav-container {
+  margin-left: auto;
+  margin-right: 0.5em;
+}
+
+.fh5co-main-nav .fh5co-menu-1 .side-nav-container {
+  float: right;
+  margin-left: 3em;
+}
+
 .fh5co-main-nav .fh5co-menu-1 a {
-  padding: 39px 0;
-  margin-right: 30px;
+  padding: 1em 0;
+  margin-right: 2em;
   color: #707070;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
   font-weight: 400;
   display: inline-block;
+  vertical-align: middle;
 }
 .fh5co-main-nav .fh5co-menu-1 a:hover,
 .fh5co-main-nav .fh5co-menu-1 a:focus,
@@ -527,12 +535,7 @@ img {
   font-weight: 400;
   color: #000000;
 }
-.fh5co-main-nav .fh5co-menu-1 {
-  width: 100%;
-}
-.fh5co-main-nav .fh5co-menu-1 a {
-  vertical-align: middle;
-}
+
 .fh5co-main-nav .fh5co-logo {
   text-align: center;
   width: 19.33%;
@@ -2082,7 +2085,8 @@ border-radius: 0;
 /* Footer */
 
 #fh5co-footer {
-  padding: 0.9em 0;
+  padding-top: 0.9em;
+  padding-bottom: 0.6em;
   color: #ffffff;
 }
 
@@ -2090,12 +2094,12 @@ border-radius: 0;
   margin-bottom: 0.7em;
 }
 
-#fh5co-footer .container .row .text-center p small {
+#fh5co-footer .container .footer-connect-line .text-center p {
   font-size: 16px;
   line-height: 2em;
 }
 
-#fh5co-footer .container .row .text-center p {
+#fh5co-footer .container .footer-copyright .text-center p {
   font-size: 13px;
   line-height: 1.2em;
 }

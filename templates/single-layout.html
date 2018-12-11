@@ -33,11 +33,11 @@
 
 
 {% block nav_main %}
+
+{% if this.main_content %}
 {% if this.hero_image and this.show_home_nav %}
 <a href="#section-home" data-nav-section="home">Home</a>
 {% endif %}
-
-{% if this.main_content %}
 {% for block in this.main_content.blocks %}
 {% if block.nav_label %}
 <a href="#section-{{ block.section_id }}" data-nav-section="{{ block.section_id }}">{{ block.nav_label }}</a>
