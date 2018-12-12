@@ -76,6 +76,15 @@
 {% set current_section_bg = loop.cycle('dark-bg-section', 'light-bg-section') %}
 {% endif %}
 <div id="section-{{ block.section_id }}" data-section="{{ block.section_id }}" class="{{ block._flowblock }}-section body-section {{ current_section_bg }}">
+  {% if block.video_url %}
+  <div class="video-spacer"></div>
+  {% endif %}
+  {% if block.title %}
+  <div class="text-center fh5co-heading">
+    <h2>{{ block.title }}</h2>
+    {{ block.description }}
+  </div>
+  {% endif %}
 {{ block }}
 </div> <!-- END {{ block._flowblock }}-section -->
 {% endfor %}

@@ -3,16 +3,8 @@
   <a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a>
   <span>Watch video</span>
 </div>
-<div class="video-spacer"></div>
 {% endif %}
 <div class="container">
-  <div class="text-center fh5co-heading">
-    <h2>{{ this.title }}</h2>
-    {% if this.description %}
-    {{ this.description }}
-    {% endif %}
-  </div>
-
   {% for service in this.services.blocks %}
   <div class="col-md-4">
     <div class="service">
