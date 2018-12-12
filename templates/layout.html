@@ -7,22 +7,40 @@
   {% block csp %}
   {% if not config.THEME_SETTINGS.content_security_policy or config.THEME_SETTINGS.content_security_policy in ["true", "t", "yes", "y"] %}
   <meta http-equiv="Content-Security-Policy" content="
+{% set frame_src = "'self' http: https:" %}
+{% set img_src = "'self' http: https:" %}
+{% set script_src = "'self' 'unsafe-inline'" %}
+{% set style_src = "'self' https://fonts.googleapis.com 'unsafe-inline'" %}
+
+{% if config.THEME_SETTINGS.disqus_name %}
+{% set img_src = img_src ~ " data:" %}
+{% set script_src = script_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
+{% set style_src = style_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
+{% endif %}
+
+{% if config.THEME_SETTINGS.gitter_room %}
+{% set script_src = script_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
+{% set style_src = style_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
+{% endif %}
+
+{% if config.THEME_SETTINGS.content_security_policy_frame_src %}
+{% set frame_src = config.THEME_SETTINGS.content_security_policy_frame_src %}
+{% endif %}
+{% if config.THEME_SETTINGS.content_security_policy_script_src %}
+{% set script_src = config.THEME_SETTINGS.content_security_policy_script_src %}
+{% endif %}
+{% if config.THEME_SETTINGS.content_security_policy_style_src %}
+{% set style_src = config.THEME_SETTINGS.content_security_policy_style_src %}
+{% endif %}
+
 base-uri 'self';
 default-src 'self';
 font-src 'self' https://fonts.gstatic.com;
-{% if config.THEME_SETTINGS.content_security_policy_frame_src %}
-frame-src {{ config.THEME_SETTINGS.content_security_policy_frame_src }};
-{% else %}
-frame-src 'self' http: https:;
-{% endif %}
-img-src 'self' http: https:;
+frame-src {{ frame_src }};
+img-src {{ img_src }};
 plugin-types application/pdf;
-{% if config.THEME_SETTINGS.content_security_policy_script_src %}
-script-src {{ config.THEME_SETTINGS.content_security_policy_script_src }};
-{% else %}
-script-src 'self' https://gitter.im https://*.gitter.im https://disqus.com https://*.disqus.com https://*.disquscdn.com 'unsafe-inline';
-{% endif %}
-style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+script-src {{ script_src }};
+style-src {{ style_src }};
 ">
   {% elif config.THEME_SETTINGS.content_security_policy.lower() not in ["false", "f", "no", "n"] %}
   <meta http-equiv="Content-Security-Policy" content="{{ config.THEME_SETTINGS.content_security_policy | safe }}">

@@ -2179,6 +2179,10 @@ border-radius: 0;
   font-weight: bold;
 }
 
+#blog-center .comment-box {
+  margin-top: 4rem;
+}
+
 
 /* Generic page styling */
 
