@@ -2183,6 +2183,14 @@ border-radius: 0;
   margin-top: 4rem;
 }
 
+#rss-nav-link {
+  background-color: var(--theme-pipe-color, #ff4c52);
+  border: none;
+  border-radius: 0.5em;
+  color: #ffffff;
+  padding-left: 0.5em;
+  padding-right: 0.35em;
+}
 
 /* Generic page styling */
 
