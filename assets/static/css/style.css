@@ -992,12 +992,12 @@ img {
   width: 100%;
 }
 
-.gallery-section .gallery-item-headers {
-  padding-top: 1em;
+.gallery-section .fh5co-gallery-header {
+  margin-bottom: 1.5em;
 }
 
-.gallery-section .gallery-title-spacer {
-  padding-top: 0em;
+.gallery-section .gallery-item-headers {
+  padding-top: 1em;
 }
 
 .gallery-section .fh5co-item {
@@ -1014,8 +1014,12 @@ img {
   border-style: solid;
   border-width: 1px;
   font-size: 18px;
-  margin-top: 4em;
 }
+
+.gallery-section .gallery-item-title {
+  margin-top: 3.5em;
+}
+
 .gallery-section .fh5co-item-link {
   display: block;
   position: relative;

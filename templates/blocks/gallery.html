@@ -1,19 +1,22 @@
-<div id="fh5co-gallery-header" class="row">
+<div class="fh5co-gallery-header" class="row">
   <div class="text-center fh5co-heading">
     <h2>{{ this.title }}</h2>
     {{ this.description }}
   </div>
 </div>
-{% if this.show_titles %}
-<div class="gallery-title-spacer"></div>
-{% endif %}
 {% for gallery in this.gallery_items.blocks %}
 {% set gallery_img_file = record.attachments.get(gallery.image) %}
+{% set gallery_class_string = "fh5co-item" %}
 {% if gallery.direct_link %}
-<a href="{{ gallery.url }}" class="fh5co-item" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
+{% set gallery_link = gallery.url %}
 {% else %}
-<a href="{{ gallery.image }}" class="fh5co-item image-popup" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
+{% set gallery_link = gallery.image %}
+{% set gallery_class_string = gallery_class_string ~ " image-popup" %}
 {% endif %}
+{% if this.show_titles %}
+{% set gallery_class_string = gallery_class_string ~ " gallery-item-title" %}
+{% endif %}
+<a href="{{ gallery_link }}" class="{{ gallery_class_string }}" style="background-image: url({{ gallery_img_file.thumbnail(width=1024) | url }})">
   {% if this.show_titles %}
   <h3>{{ gallery.title }}</h3>
   {% endif %}
