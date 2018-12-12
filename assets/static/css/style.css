@@ -797,14 +797,18 @@ img {
 }
 .services-section .fh5co-video {
   position: absolute;
-  top: 0;
   width: 90px;
   height: 90px;
   left: 50%;
   margin-left: -45px;
-  top: -82px;
+  top: -45px;
   text-align: center;
 }
+
+.services-section .video-spacer {
+  margin-bottom: 3em;
+}
+
 .services-section .fh5co-video span {
   display: block;
   padding-top: 100px;
