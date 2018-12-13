@@ -6,16 +6,19 @@
 {% endif %}
 <div class="container">
   {% for service in this.services.blocks %}
-  <div class="col-md-4">
-    <div class="service">
-      {% if service.icon %}
-      {% set service_img_file = record.attachments.get(service.icon) %}
-      <div class="icon">
-          <img alt="{{ service.title | striptags | striptags }} photo" src="{{ service_img_file.thumbnail(width=640) | url }}" class="img-responsive center" srcset="{{ service_img_file.thumbnail(width=640) | url }} 1x, {{ service_img_file.thumbnail(width=1280) | url }} 2x">
+  <div class="col-md-4 card-outer">
+    <div class="card service">
+      <div class="card-inner">
+        {% if service.icon %}
+        {% set service_img_file = record.attachments.get(service.icon) %}
+        <div class="icon">
+            <img alt="{{ service.title | striptags | striptags }} photo" src="{{ service_img_file.thumbnail(width=640) | url }}" class="img-responsive center" srcset="{{ service_img_file.thumbnail(width=640) | url }} 1x, {{ service_img_file.thumbnail(width=1280) | url }} 2x">
+        </div>
+        {% endif %}
+        <h3>{{ service.title }}</h3>
+        {{ service.description }}
       </div>
-      {% endif %}
-      <h3>{{ service.title }}</h3>
-      {{ service.description }}
+      <div class="card-spacer"></div>
     </div>
   </div>
   {% endfor %}

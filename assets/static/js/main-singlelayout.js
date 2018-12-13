@@ -48,7 +48,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
     var fh5coTabs = function() {
-        // $('.fh5co-tabs-container').
         $('.fh5co-tabs li a').on('click', function(event){
             event.preventDefault();
             var $this = $(this),
@@ -62,13 +61,36 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
     var gridAutoHeight = function() {
-
         $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
 
         $(window).on('resize', function(){
             $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
         });
     }
+
+
+    // Equalize heights of cards in team/services section for proper layout
+    var cardsEvenHeight = function() {
+        $('.body-section .container').each(function() {
+            if ($(this).find('.card-inner').length && $(this).find('.card-outer').first().width() <= $(this).width() / 2.0) {
+                var cardHeightMax = 0;
+                $(this).find('.card-inner').each(function() {
+                    var cardHeight = $(this).height()
+                    if (cardHeight > cardHeightMax) {cardHeightMax = cardHeight; }
+                });
+            }
+            $(this).find('.card').each(function() {
+                var cardHeight = $(this).find('.card-inner').height()
+                $(this).find('.card-spacer').height(cardHeightMax - cardHeight);
+            });
+        });
+    }
+
+
+    var setCardsEvenHeight = function() {
+        $(window).on('load', cardsEvenHeight);
+        $(window).on('resize', cardsEvenHeight);
+    };
 
 
     var sliderSayings = function() {
@@ -196,13 +218,14 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
     // Document on load
-    $(function(){
+    $(function() {
         setHeroHeight();
         loaderPage();
         fh5coTabs();
         gridAutoHeight();
+        setCardsEvenHeight();
 
-        // sliderSayings();
+        sliderSayings();
         parallax();
         scrolledWindow();
         goToTop();

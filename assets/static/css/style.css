@@ -220,7 +220,32 @@ img {
   clear: both;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container {
+    width: 900px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 1024px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .container {
+    width: 1366px;
+  }
+}
+@media screen and (min-width: 2500px) {
   .container {
     width: 1600px;
   }
@@ -1600,7 +1625,7 @@ ul ul {
 @media screen and (max-width: 768px) {
   .col-md-4, .col-md-6 {
     float: none;
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -2194,6 +2219,10 @@ border-radius: 0;
   color: #ffffff;
   padding-left: 0.5em;
   padding-right: 0.35em;
+}
+
+.card-inner {
+  overflow: hidden;
 }
 
 /* Generic page styling */
