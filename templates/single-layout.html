@@ -70,12 +70,16 @@
 
 {% if this.main_content %}
 {% for block in this.main_content.blocks %}
+{% set extra_classes = '' %}
 {% if this.starting_block_bg == 'light' %}
-{% set current_section_bg = loop.cycle('light-bg-section', 'dark-bg-section') %}
+{% set extra_classes = extra_classes ~ loop.cycle(' light-bg-section', ' dark-bg-section') %}
 {% else %}
-{% set current_section_bg = loop.cycle('dark-bg-section', 'light-bg-section') %}
+{% set extra_classes = extra_classes ~ loop.cycle(' dark-bg-section', ' light-bg-section') %}
 {% endif %}
-<div id="section-{{ block.section_id }}" data-section="{{ block.section_id }}" class="{{ block._flowblock }}-section body-section {{ current_section_bg }}">
+{% if not block.title %}
+{% set extra_classes = extra_classes ~ ' notitle-section' %}
+{% endif %}
+<div id="section-{{ block.section_id }}" data-section="{{ block.section_id }}" class="{{ block._flowblock }}-section body-section{{ extra_classes }}">
   {% if block.video_url %}
   <div class="video-spacer"></div>
   {% endif %}

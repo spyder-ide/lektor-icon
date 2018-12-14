@@ -684,16 +684,13 @@ img {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-  .mission-section .fh5co-heading {
-    margin-bottom: 0;
-  }
-}
-
 .mission-section .fh5co-2col {
   width: 50%;
 }
 @media screen and (max-width: 768px) {
+  .mission-section .fh5co-heading {
+    margin-bottom: 0;
+  }
   .mission-section .fh5co-2col {
     width: 100%;
   }
@@ -775,6 +772,14 @@ img {
   padding-top: 1em;
   padding-bottom: 2em;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-tabs-container {
+    padding-bottom: 1.5em;
+  }
+  .notitle-section .fh5co-tabs-container {
+    padding-top: 3em;
+  }
 }
 @media screen and (max-width: 480px) {
   .fh5co-tabs-container {
@@ -2314,6 +2319,17 @@ border-radius: 0;
 .card-inner {
   overflow: hidden;
 }
+
+.mission-section.notitle-section,
+.gallery-section.notitle-section {
+  margin: 0;
+  padding: 0;
+}
+
+.mission-section.notitle-section .fh5co-tabs-container {
+  padding-top: 2em;
+}
+
 
 /* Generic page styling */
 
