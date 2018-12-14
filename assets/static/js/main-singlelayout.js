@@ -93,6 +93,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     var setCardsEvenHeight = function() {
         $(window).on('load', cardsEvenHeight);
         $(window).on('resize', cardsEvenHeight);
+        // For IE11, which doesn't work with load
+        window.setTimeout(cardsEvenHeight, 2000);
+        window.setTimeout(cardsEvenHeight, 5000);
     };
 
 
@@ -214,13 +217,13 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         loaderPage();
         fh5coTabs();
         // gridAutoHeight();
-        setCardsEvenHeight();
 
         parallax();
         scrolledWindow();
         goToTop();
         clickMenu();
         navigationSection();
+        setCardsEvenHeight();
     });
 
 }());

@@ -1,7 +1,7 @@
 {% for gallery in this.gallery_items.blocks %}
 {% set gallery_img_file = record.attachments.get(gallery.image) %}
 {% set gallery_class_string = "fh5co-item" %}
-{% if gallery.direct_link %}
+{% if gallery.direct_link and gallery.url and gallery.url.url != '' %}
 {% set gallery_link = gallery.url %}
 {% else %}
 {% set gallery_link = gallery.image %}

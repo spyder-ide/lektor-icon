@@ -13,22 +13,22 @@
         <h4>{{ member.position }}</h4>
         {{ member.description }}
         <ul class="social">
-          {% if member.website.url != '' %}
+          {% if  member.website and member.website.url != '' %}
           <li><a href="{{ member.website }}" aria-label="Website"><i class="icon-globe2"></i></a></li>
           {% endif %}
-          {% if member.facebook.url != '' %}
+          {% if member.facebook and member.facebook.url != '' %}
           <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
           {% endif %}
-          {% if member.twitter.url != '' %}
+          {% if member.twitter and member.twitter.url != '' %}
           <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
           {% endif %}
-          {% if member.instagram.url != '' %}
+          {% if member.instagram and member.instagram.url != '' %}
           <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
           {% endif %}
-          {% if member.github.url != '' %}
+          {% if member.github and member.github.url != '' %}
           <li><a href="{{ member.github }}" aria-label="Github"><i class="icon-github"></i></a></li>
           {% endif %}
-          {% if member.linkedin.url != '' %}
+          {% if member.github and member.github.url != '' %}
           <li><a href="{{ member.linkedin }}" aria-label="Linkedin"><i class="icon-linkedin"></i></a></li>
           {% endif %}
         </ul>

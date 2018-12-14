@@ -1,4 +1,4 @@
-{% if this.video_url %}
+{% if this.video_url and this.video_url.url != '' %}
 <div class="fh5co-video">
   <a href="{{ this.video_url }}" class="popup-youtube"><i class="icon-play2"></i></a>
   <span>Watch video</span>

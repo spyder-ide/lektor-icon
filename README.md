@@ -65,7 +65,10 @@ All of these, when present, are found both stickied at the top of the screen wit
 ### Page Content Links
 
 First, from the left, on the single-page layout only, are the section links automatically generated for any top-level flowblock included on the page, in the order present on the page with a user-customizable display title and section identifier allowing for copying and pasting; when clicked, they smoothly scroll the browser to the named section.
-Optionally, a link back to the hero image ("Home") can also be included. Obviously, these are not present on non-single-page layouts, such as the blog or individual pages. However, if enabled (see above), the RSS link appears here on the blog pages.
+You can control the link text, as well as whether it appears it all, on a per-section/flowblock basis using the ``nav_link`` field.
+Optionally, a link back to the hero image ("Home") can also be included.
+Obviously, these are not present on non-single-page layouts, such as the blog or individual pages.
+However, if enabled (see above), the RSS link appears here on the blog pages.
 
 
 ### Subpage Links
@@ -92,16 +95,32 @@ Browsers that don't support responsive images will gracefully degrade to a reaso
 Therefore, there is no harm in providing the highest reasonable resolution available for each image (nominally ~3840 px width for full-page backgrounds, ~1280px for other images) and the theme will automatically resize the images and, in many cases, send a version specifically optimized for the reader's screen size.
 
 
-### Browser Support
+### Accent Color Theming
 
-This theme has been tested for full functionality and consistent layout across late-2018 of the "big four" modern desktop browsers, Firefox, Chrome, and Edge, as well as the legacy Internet Explorer 11, and should also work identically on modern Safari (untested).
-Aside from a modest number of progressive enhancements, it should render fully correctly in desktop and mobile versions of Chrome (and Blink-based Opera versions) Firefox, Edge and Safari from at least 2015-onwards, Android browser >4.4 and onwards as well as Internet Explorer 11.
-It should degrade relatively gracefully with all core functionality and layout intact on Internet Explorer 10, Android browser 4.4, earlier versions of Edge and 2012-2013+ releases of Firefox, Chrome and Safari, although without real-world testing this is by no means guaranteed, and users should be encouraged to upgrade to a modern version of one of the aforementioned browsers if at all practical.
+You can also configure the "pipe" color, which is used on the pipe separators as well as the RSS button (if enabled) and is suggested to be a lighter variation of the primary accent color (since it will be heavily used in the footer, with a relatively dark background).
+By default, the former is set to "Spyder Red" (``#EE1C24``), and the latter is the lighter red ``#FF4C52``, but you can set them to anything you want.
+
+**Important Note:** Since Internet Explorer 11 (along with Edge <15, Safari <9.1, iOS <9.3 and Android browser <= 4.4, plus pre-2014 Firefox and pre-2016 Chrome and Opera) do not support CSS variables, which is how this feature is implemented, it will fall back to the default color for each.
+Therefore, users of your site running legacy browsers will see the various themed accent elements in that default color rather than your custom one, if you've set one up.
+As there is no straightforward way to implement this without CSS variables, modifying the theme for each color or tons of unmaintainable inline styles, you have a few choices to work around this:
+
+* Use the default accent color (great if it fits your site, but obviously limits your creative flexibility).
+* Accept that your users remaining on IE11 and other legacy browsers will see your site with the default accent color, and advise they upgrade to a modern browser (IE market share is now <3% globally and continues to drop, so this will eventually become the preferred approach).
+* Do a find and replace in ``style.css`` for the above two colors, and commit your changes to a modified branch of this theme (relatively quick and straightforward, but must be re-applied if you update to a newer version of this theme).
+* Include rules in your custom stylesheet (which you can set in ``[theme_settings]``) to replace each color on our stylesheet with your hardcoded preferred one (potentially a lot of work and could cause style bugs if not done correctly, but doesn't require modifying the theme itself and thus re-applying your changes on pulling a fresh version).
+
+
+### Browser Compatibility
+
+This theme has been tested for full functionality and consistent layout across late-2018 official releases of the "big four" modern desktop browsers, Firefox, Chrome, and Edge, as well as the legacy Internet Explorer 11 (with the aforementioned custom accent color exception).
+Aside from a modest number of progressive enhancements (and the custom accent color), the layout, styles and functionality should render identically or near-identically in desktop and mobile versions of Chrome, Opera, and Firefox from at least 2015-onwards, as well as Safari 9+, any version of Edge, iOS 9.3+, Android browser >4.4, and the aforementioned IE11.
+It should degrade relatively gracefully (if at all) with all core functionality and layout intact on 2013+ releases of Firefox, Chrome and Opera, along with iOS 9.x and Android browser 4.4 (amounting to over >95-98% of all users), although without real-world testing this is by no means guaranteed, and users should be encouraged to upgrade to a modern version of one of the aforementioned browsers.
+The primary blocker for browsers older than this is flexbox support, which several elements rely upon for fully correct layout.
 
 
 ### Library Versions and Security
 
-Lektor-Icon has been updated with the latest (as of November 2018) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
+Lektor-Icon has been updated with the latest (as of December 2018) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
 The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
 
 Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.
