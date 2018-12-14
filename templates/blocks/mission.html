@@ -1,52 +1,54 @@
-{% if this.image1 or this.image2 or this.image3 or this.image4 %}
-<div class="fh5co-2col">
+{% if this.enable_images %}
+<div class="fh5co-2col left">
   <div class="fh5co-2col-inner left">
 {% else %}
-<div>
+<div class="mission-1col-container">
   <div class="center">
 {% endif %}
+    {% if this.initial_tab_index %}
+    {% set initial_tab_index = this.initial_tab_index %}
+    {% else %}
+    {% set initial_tab_index = 1 %}
+    {% endif %}
     <div class="fh5co-tabs-container">
       <ul class="fh5co-tabs">
-        {% for service in this.items.blocks %}
-        {% if service.weight == 1 %}
+        {% for mission_item in this.items.blocks %}
+        {% if loop.index == initial_tab_index %}
         <li class="active">
         {% else %}
         <li>
         {% endif %}
-          <a href="#" data-tab="{{ service.name }}">{{ service.title }}</a>
+          <a href="#" data-tab="{{ mission_item.section_id }}">{{ mission_item.title }}</a>
         </li>
         {% endfor %}
       </ul>
 
-      {% for service in this.items.blocks %}
-      {% if service.weight == 1 %}
-      <div class="fh5co-tab-content active" data-tab-content="{{ service.name }}">
+      {% for mission_item in this.items.blocks %}
+      {% if loop.index == initial_tab_index %}
+      {% set active_class = ' active' %}
       {% else %}
-      <div class="fh5co-tab-content" data-tab-content="{{ service.name }}">
+      {% set active_class = '' %}
       {% endif %}
-        <h2>{{ service.subtitle }}</h2>
-        {{ service.description }}
+      <div class="fh5co-tab-content{{ active_class }}" data-tab-content="{{ mission_item.section_id }}">
+        <h2>{{ mission_item.subtitle }}</h2>
+        {{ mission_item.description }}
       </div>
       {% endfor %}
     </div>
   </div>
 </div>
 
-{% if this.image1 or this.image2 or this.image3 or this.image4 %}
-<div class="fh5co-2col fh5co-text">
-  <div class="fh5co-grid">
-    {% if this.image1 %}
-    <div class="fh5co-grid-item" style="background-image:url({{ this.image1 }});"></div>
+{% if this.enable_images %}
+<div class="fh5co-2col right">
+  <div class="mission-image-container">
+    {% for mission_item in this.items.blocks %}
+    {% if loop.index == initial_tab_index %}
+    {% set active_class = ' active' %}
+    {% else %}
+    {% set active_class = '' %}
     {% endif %}
-    {% if this.image2 %}
-    <div class="fh5co-grid-item" style="background-image:url({{ this.image2 }})"></div>
-    {% endif %}
-    {% if this.image3 %}
-    <div class="fh5co-grid-item" style="background-image:url({{ this.image3 }})"></div>
-    {% endif %}
-    {% if this.image4 %}
-    <div class="fh5co-grid-item" style="background-image:url({{ this.image4 }})"></div>
-    {% endif %}
+    <div class="mission-image tab-image {{ active_class }}" data-tab-content="{{ mission_item.section_id }}" style="background-image: url({{ mission_item.image | url }});"></div>
+    {% endfor %}
   </div>
 </div>
 {% endif %}

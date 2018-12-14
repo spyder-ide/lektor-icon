@@ -47,15 +47,18 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     };
 
 
+    // Show and hide tab content and images on click in the mission section
     var fh5coTabs = function() {
-        $('.fh5co-tabs li a').on('click', function(event){
+        $('.fh5co-tabs li a').on('click', function(event) {
             event.preventDefault();
             var $this = $(this),
                 tab = $this.data('tab');
-                $('.fh5co-tabs li').removeClass('active');
-                $this.closest('li').addClass('active');
-                $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content').removeClass('active');
-                $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content[data-tab-content="'+tab+'"]').addClass('active');
+            $('.fh5co-tabs li').removeClass('active');
+            $this.closest('li').addClass('active');
+            $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content').removeClass('active');
+            $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content[data-tab-content="' + tab + '"]').addClass('active');
+            $this.closest('.body-section').find('.tab-image').removeClass('active');
+            $this.closest('.body-section').find('.tab-image[data-tab-content="' + tab + '"]').addClass('active');
         });
     }
 
@@ -91,18 +94,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         $(window).on('load', cardsEvenHeight);
         $(window).on('resize', cardsEvenHeight);
     };
-
-
-    var sliderSayings = function() {
-        $('#fh5co-sayings .flexslider').flexslider({
-            animation: "slide",
-            slideshowSpeed: 5000,
-            directionNav: false,
-            controlNav: true,
-            smoothHeight: true,
-            reverse: true
-        });
-    }
 
 
     // Parallax
@@ -222,10 +213,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         setHeroHeight();
         loaderPage();
         fh5coTabs();
-        gridAutoHeight();
+        // gridAutoHeight();
         setCardsEvenHeight();
 
-        sliderSayings();
         parallax();
         scrolledWindow();
         goToTop();
