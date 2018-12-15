@@ -5,9 +5,11 @@
 <div id="{% block pageid %}generic-page{% endblock %}" class="page-content-container">
   <div class="page-content">
     <div class="text-center fh5co-heading">
+      {% if this.full_title %}
       <h1>
         {{ this.full_title }}
       </h1>
+      {% endif %}
       <div class="rule-under-heading"></div>
     </div>
     <div class="center">

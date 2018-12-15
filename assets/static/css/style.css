@@ -2139,6 +2139,11 @@ border-radius: 0;
   text-align: center;
 }
 
+.blog-post-header {
+  padding-top: 1.5rem;
+}
+
+
 .meta-blog-date {
   text-align: right;
 }
@@ -2159,6 +2164,7 @@ border-radius: 0;
 }
 
 .blog-pagination {
+  clear: both;
   margin-right: auto;
   margin-left: auto;
 }
@@ -2174,8 +2180,8 @@ border-radius: 0;
 }
 
 #blog-main-title {
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: 0;
 }
 
 #blog-main-title h1 {

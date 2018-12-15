@@ -71,7 +71,7 @@
 {% if this.main_content %}
 {% for block in this.main_content.blocks %}
 {% set extra_classes = '' %}
-{% if this.starting_block_bg == 'light' %}
+{% if this.starting_block_bg and this.starting_block_bg == 'light' %}
 {% set extra_classes = extra_classes ~ loop.cycle(' light-bg-section', ' dark-bg-section') %}
 {% else %}
 {% set extra_classes = extra_classes ~ loop.cycle(' dark-bg-section', ' light-bg-section') %}

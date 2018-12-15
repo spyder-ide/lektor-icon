@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ config.THEME_SETTINGS.content_lang }}">
-
+{% if config.THEME_SETTINGS.content_lang %}
+{% set lang_string = ' lang="' ~ config.THEME_SETTINGS.content_lang ~ '"' %}
+{% else %}
+{% set lang_string = '' %}
+{% endif %}
+<html{{ lang_string | safe }}>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
@@ -83,11 +87,19 @@ style-src {{ style_src }};
   <!-- For information on the included third-party assets, see NOTICE.txt -->
   <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
 
-  <title>{% block title %}{% endblock %} — {{ config.THEME_SETTINGS.title }}</title>
-  <meta name="author" content="{{ config.THEME_SETTINGS.author }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="description" content="{{ config.THEME_SETTINGS.description }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
-  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}" lang="{{ config.THEME_SETTINGS.content_lang }}">
+  <title>{% block title %}{% endblock %}{% if config.THEME_SETTINGS.title %} — {{ config.THEME_SETTINGS.title }}{% endif %}</title>
+  {% if config.THEME_SETTINGS.author %}
+  <meta name="author" content="{{ config.THEME_SETTINGS.author }}"{{ lang_string | safe }}>
+  {% endif %}
+  {% if config.THEME_SETTINGS.copyright %}
+  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}"{{ lang_string | safe }}>
+  {% endif %}
+  {% if config.THEME_SETTINGS.description %}
+  <meta name="description" content="{{ config.THEME_SETTINGS.description }}"{{ lang_string | safe }}>
+  {% endif %}
+  {% if config.THEME_SETTINGS.keywords %}
+  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}"{{ lang_string | safe }}>
+  {% endif %}
   {% if config.THEME_SETTINGS.theme_accent_color %}
   <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color }}">
   {% endif %}

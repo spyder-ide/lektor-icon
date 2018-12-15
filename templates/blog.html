@@ -5,9 +5,11 @@
 {% block title %}Blog{% endblock %}
 
 {% block blogmaintitle %}
+{% if this.title %}
 <div id="blog-main-title" class="text-center fh5co-heading">
   <h1>{{ this.title }}</h1>
 </div>
+{% endif %}
 {% endblock %}
 
 {% block blogbody %}
