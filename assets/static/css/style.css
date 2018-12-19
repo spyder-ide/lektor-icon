@@ -548,6 +548,7 @@ img {
 .fh5co-main-nav .fh5co-menu-1 .pull-left {
   flex-shrink: 0;
   margin-left: 2em;
+  min-height: 55px;
 }
 
 .fh5co-main-nav .fh5co-menu-1 .main-nav-container {
@@ -1770,6 +1771,7 @@ ul ul {
 
 .service .icon .img-responsive {
   margin-bottom: 0.5em;
+  width: 80%;
 }
 
 
@@ -2289,8 +2291,7 @@ border-radius: 0;
 @media screen and (max-width: 768px) {
   .content-section .content-button {
     margin-top: 1em;
-    min-width: 80%;
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -2415,6 +2416,11 @@ border-radius: 0;
 
 #error-page .fh5co-heading {
   margin-bottom: 3em;
+}
+
+#error-page .center {
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 #error-page .center p {

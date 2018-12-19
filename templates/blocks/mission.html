@@ -1,3 +1,4 @@
+{% if this.items %}
 {% if this.enable_images %}
 <div class="fh5co-2col left">
   <div class="fh5co-2col-inner left">
@@ -47,8 +48,11 @@
     {% else %}
     {% set active_class = '' %}
     {% endif %}
+    {% if mission_item.image %}
     <div class="mission-image tab-image {{ active_class }}" data-tab-content="{{ mission_item.section_id }}" style="background-image: url({{ mission_item.image | url }});"></div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>
+{% endif %}
 {% endif %}

@@ -8,6 +8,8 @@
 <style>
   {% if this.hero_image %}
   {% set hero_img_file = this.attachments.get(this.hero_image) %}
+  {% set is_svg = this.hero_image.split('.')[-1].lower() in ['svg', 'svgz'] %}
+  {% if hero_img_file.thumbnail %}
   .hero-section {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
   }
@@ -21,12 +23,17 @@
       background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
     }
   }
+  {% elif is_svg %}
+  .hero-section {
+    background-image: url("{{ this.hero_image | url }}")
+  }
+  {% endif %}
   {% endif %}
 </style>
 {% endblock %}
 
 {% block loader %}
-{% if config.THEME_SETTINGS.loader_enable and config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
+{% if not config.THEME_SETTINGS.loader_enable or config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
 <div class="fh5co-loader"></div>
 {% endif %}
 {% endblock %}
@@ -34,10 +41,10 @@
 
 {% block nav_main %}
 
-{% if this.main_content %}
 {% if this.hero_image and this.show_home_nav %}
 <a href="#section-home" data-nav-section="home">Home</a>
 {% endif %}
+{% if this.main_content %}
 {% for block in this.main_content.blocks %}
 {% if block.nav_label %}
 <a href="#section-{{ block.section_id }}" data-nav-section="{{ block.section_id }}">{{ block.nav_label }}</a>
@@ -83,7 +90,7 @@
   {% if block.video_url and block.video_url.url != '' %}
   <div class="video-spacer"></div>
   {% endif %}
-  {% if block.title %}
+  {% if block.title or block.description %}
   <div class="text-center fh5co-heading">
     <h2>{{ block.title }}</h2>
     {{ block.description }}

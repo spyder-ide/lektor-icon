@@ -12,12 +12,11 @@
   {% if not config.THEME_SETTINGS.content_security_policy or config.THEME_SETTINGS.content_security_policy in ["true", "t", "yes", "y"] %}
   <meta http-equiv="Content-Security-Policy" content="
 {% set frame_src = "'self' http: https:" %}
-{% set img_src = "'self' http: https:" %}
+{% set img_src = "'self' http: https: data:" %}
 {% set script_src = "'self' 'unsafe-inline'" %}
 {% set style_src = "'self' https://fonts.googleapis.com 'unsafe-inline'" %}
 
 {% if config.THEME_SETTINGS.disqus_name %}
-{% set img_src = img_src ~ " data:" %}
 {% set script_src = script_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
 {% set style_src = style_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
 {% endif %}
@@ -101,22 +100,22 @@ style-src {{ style_src }};
   <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}"{{ lang_string | safe }}>
   {% endif %}
   {% if config.THEME_SETTINGS.theme_accent_color %}
-  <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color }}">
+  <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color | safe }}">
   {% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="{{ '/static/images/favicon.png' | asseturl }}" type="image/png">
+  <link rel="icon" href="{{ config.THEME_SETTINGS.favicon_path | asseturl }}" type="image/png">
   <style>
     :root {
       {% if config.THEME_SETTINGS.theme_accent_color %}
-      --theme-accent-color: {{ config.THEME_SETTINGS.theme_accent_color }};
+      --theme-accent-color: {{ config.THEME_SETTINGS.theme_accent_color | safe }};
       {% else %}
       --theme-accent-color: #ee1c24;
       {% endif %}
       {% if config.THEME_SETTINGS.theme_pipe_color %}
-      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_pipe_color }}
+      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_pipe_color | safe }}
       {% elif config.THEME_SETTINGS.theme_accent_color %}
-      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_accent_color }}
+      --theme-pipe-color: {{ config.THEME_SETTINGS.theme_accent_color | safe }}
       {% else %}
       --theme-pipe-color: #ff4c52;
       {% endif %}
@@ -146,7 +145,13 @@ style-src {{ style_src }};
       <div class="fh5co-main-nav navbar fixed-top">
         <div class="container">
           <div class="fh5co-menu-1">
-            {% if (config.THEME_SETTINGS.nav_logo_enable and config.THEME_SETTINGS.nav_logo_enable.lower() not in ["false", "f", "no", "n"]) and (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
+            {% if not (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
+            {% set nav_logo_text = "Site Name" %}
+            {% elif config.THEME_SETTINGS.nav_logo_text %}
+            {% set nav_logo_text = config.THEME_SETTINGS.nav_logo_text %}
+            {% else %}
+            {% set nav_logo_text = '' %}
+            {% endif %}
             <div class='pull-left'>
               <ul class='dropdown menu' data-dropdown-menu>
                 <li id='menu-logo'>
@@ -155,9 +160,9 @@ style-src {{ style_src }};
                     {% if config.THEME_SETTINGS.nav_logo_path %}
                     <img alt="Site Logo" src="{{ config.THEME_SETTINGS.nav_logo_path | asseturl }}">
                     {% endif %}
-                    {% if config.THEME_SETTINGS.nav_logo_text %}
+                    {% if nav_logo_text %}
                     <span class="logo-text-container">
-                      <span class="logo-text">{{ config.THEME_SETTINGS.nav_logo_text | safe }} {% block section %}{% endblock %}</span>
+                      <span class="logo-text">{{ nav_logo_text | safe }} {% block section %}{% endblock %}</span>
                     </span>
                     {% endif %}
                   </a>
@@ -165,7 +170,6 @@ style-src {{ style_src }};
                 </li>
               </ul>
             </div>
-            {% endif %}
 
             <div class="main-nav-container">
               {% block nav_main %}{% endblock %}
@@ -173,7 +177,7 @@ style-src {{ style_src }};
               {% if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
               <div class="side-nav-container">
                 {% if config.THEME_SETTINGS.nav_extralinks %}
-                {% for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') %}
+                {% for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
                 <a class="pull-right" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
                 {% endfor %}
                 {% endif %}
@@ -198,7 +202,6 @@ style-src {{ style_src }};
 
     {% block body %}{% endblock %}
 
-    {% if config.THEME_SETTINGS.footer_enable and config.THEME_SETTINGS.footer_enable.lower() not in ["false", "f", "no", "n"] %}
     <div id="fh5co-footer">
       <div class="container">
         {% if config.THEME_SETTINGS.footer_links %}
@@ -232,13 +235,12 @@ style-src {{ style_src }};
               <br>
               {% endif %}
               <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> designed by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>  <span class="pipe-colored"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC-BY 3.0</a>
-              <br>Hugo port by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> Lektor port by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor port</a> by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
             </p>
           </div>
         </div>
       </div>
     </div>
-    {% endif %}
   </div>
 </div>
 {% if config.THEME_SETTINGS.gitter_room %}

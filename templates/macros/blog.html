@@ -1,5 +1,12 @@
 {% macro render_blog_post(post, from_index=false) %}
+{% if post.author %}
 {% set author =  site.get('authors/' + post.author) %}
+{% if not author %}
+{% set author = post.author %}
+{% endif %}
+{% else %}
+{% set author = '' %}
+{% endif %}
 <div class="blog-post">
   {% if from_index %}
   <div class="blog-header blog-index-header">
@@ -16,6 +23,8 @@
         <p>
           {% if author.name %}
           {{ author.name }}<br>
+          {% elif author %}
+          {{ author }}<br>
           {% endif %}
           {% if post.pub_date %}
           <span class="small">{{ post.pub_date.strftime('%Y-%m-%d') }}</span>
