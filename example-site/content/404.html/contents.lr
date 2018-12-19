@@ -1,0 +1,20 @@
+_model: 404
+---
+_discoverable: no
+---
+full_title: 404 — Page Not Found
+---
+short_title: 404
+---
+bg_image: camg-fog-vt-bg.jpg
+---
+bg_image_fadeout: 0.3
+---
+message:
+
+This is an example of a 404 page.
+
+You can customize its title, message, and background image, and apply a fade-out effect to the latter.
+It won't appear in the navbar (or direct navigation or queries, assuming you include ``_discoverable: no`` in its ``contents.lr``), and you'll need to create it manually see see it appear in the admin UI.
+If not setup with Lektor, your server/host's default 404 page will be used.
+---

@@ -1,0 +1,25 @@
+title: Welcome to the Lektor-Icon Blog!
+---
+pub_date: 2018-12-16 15:15
+---
+author: spyderdevteam
+---
+category: News
+---
+tags: announcement
+---
+summary: We'd like to welcome you to the Lektor-Icon theme example website, and offer you a brief tour of how to use the blog feature for beginners.
+---
+body:
+
+We'd like to welcome all of you to the official example website of the next-generation Lektor-Icon theme.
+Our theme conforms to modern web standards and exhibits the proper layout on popular browsers, and is vastly easier to maintain and update.
+Furthermore, the site is built using the latest web frameworks, enabling responsive design that dynamically adapts to its window size, and automatically adopts a mobile-friendly layout for easy browsing on the go.
+All the templates, models, stylesheets and scripts are brand-new or throughly updated, and it features a number of new elements with more to come!
+
+You don't need to know fancy HTML, CSS or Javascript to submit directly to the blog, just simple Markdown and Git/Github; you can even use this post as a template!
+Users can just fork the repository, create a new branch and add your post in it (you can just copy this one's directory and make your changes from there), then push your changes to your fork and submit a Github pull request against the main repo, and you're good to go!
+Even easier, this theme fully supports the interactive Lektor admin GUI, so you can create a blog post, add metadata, and write your content in a GUI editor and see your changes update in real time.
+
+Thanks, and looking forward to seeing what you all come up with!
+---

@@ -1,0 +1,404 @@
+_model: single-layout
+---
+
+
+show_home_nav: yes
+---
+hero_title: Lektor-Icon
+---
+hero_description:
+
+Welcome to the demo website of the Lektor-Icon theme!
+---
+hero_image: camg-clover-bg.jpg
+---
+starting_block_bg: light
+---
+
+
+
+main_content:
+
+
+#### content ####
+section_id: overview
+----
+title: Lektor-Icon
+----
+description: A modern theme for the Lektor CMS
+----
+nav_label: About
+----
+content:
+
+This a heavily modified and expanded version of the [FreeHTML5](https://freehtml5.co/) ["Icon" template](https://freehtml5.co/icon-free-website-template-using-bootstrap/) ported to the [Lektor](https://www.getlektor.com/) static CMS by [Daniel Althviz](https://dalthviz.github.io/) and the [Spyder](https://www.spyder-ide.org/) development team; it was initially derived from the [Hugo port](https://github.com/SteveLane/hugo-icon) of the Icon theme by [Steve Lane](https://gtown-ds.netlify.com/).
+The core template is a single-page, responsive layout, with sections for describing your organization and its mission, services, a gallery, your team and how visitors can download your software or donate to your cause.
+
+It also features additions including a built-in blog, generic page template, custom error page, common navbar, Gitter, Disqus, RSS/Atom and OpenCollective integration, heavy customizability, numerous fixes and improvements, and re-written for speed, extensibility, responsiveness and conformance.
+The theme is designed to be more desktop and mobile-friendly, and designed and tested to smoothly adapt to a wide variety of viewport sizes from well below 480px all the way to 4K, and closely follows modern web standards while still offering compatibility with a wide range of modern and legacy browsers.
+----
+
+
+
+#### services ####
+section_id: features
+----
+title: Features
+----
+description:
+----
+nav_label: Features
+----
+video_url: https://www.youtube.com/watch?v=vtLdH4VbACA
+----
+services:
+
+##### service #####
+title: Flexible Design
+-----
+description:
+
+Developed specifically to offer maximum customizability and adaptability both within pages and in the overall structure and organization of the site, while requiring a minimum of deep technical knowledge or awareness of edge-cases from content creators and gracefully handling missing or ambiguous field values.
+-----
+icon: flexible-design.png
+-----
+
+
+##### service #####
+title: Responsive Layout
+-----
+description:
+
+Optimized for both desktop and mobile, and both portrait and landscape orientations; and individually tuned for a range of screen sizes from 360p to 4K without kludgy device detection, just media queries, adaptive sizing and responsive images.
+-----
+icon: responsive-layout.png
+-----
+
+
+##### service #####
+title: Standards-Based
+-----
+description:
+
+Built on a foundation of modern web standards, including HTML5, CSS3, and jQuery 3, audited for HTML/CSS validity, accessibility and performance, and security hardened with updated Javascript libraries, XSS protection and best practices; all while remaining fully compatible with common modern and legacy browsers.
+-----
+icon: standards-based.png
+-----
+----
+
+
+
+#### mission ####
+section_id: modules
+----
+nav_label: Modules
+----
+enable_images: true
+----
+initial_tab_index: 1
+----
+items:
+
+##### m_item #####
+section_id: singlepage
+-----
+title: Singlepage
+-----
+subtitle:
+
+A highly modern, unified template featuring numerous flexible section flowblocks (like this one).
+-----
+description:
+
+When you want to put your best foot forward and make sure your homepage impresses visitors with a slick, modern, and approachable feel *and* functionality, Lektor-Icon's flagship single-page template is just what you're looking for. It can be endlessly customized with any number and order of a half-dozen flowblock designs that can be adapted to many popular use-cases and content types, and if you're still not satisfied you can even add your own! 
+-----
+image: full-singlepage.jpg
+-----
+
+
+##### m_item #####
+section_id: blog
+-----
+title: Blog
+-----
+subtitle:
+
+A clean, content-focused blog design with pagination and automatic author ID cards.
+-----
+description:
+
+Get your message out and keep your viewers up to date with our fully functional blog module. You and your contributors can easily create and edit posts, add images and interactive content, and publish it to the web all with simple markdown in a text editor, or the even simpler Lektor admin GUI. Your audience can share their feedback with built-in Disqus comments support, and can subscribe to the optional RSS/Atom feed so they never miss an update.
+-----
+image: full-blog.png
+-----
+
+
+##### m_item #####
+section_id: page
+-----
+title: Content Page
+-----
+subtitle:
+
+A minimalist model sharing the navbar, footer and basic style with the rest of the theme, allowing for extensive customization.
+-----
+description:
+
+Sometimes a stock page design, no matter how flexible or varied, just isn't enough—maybe you want to include traditional article-style pages on your domain, design a template to meet specific requirements, or just a blank canvas to fill with your ideas that still fits in with the rest of the site. For all of those cases and more, Lektor-Icon offers an standard page model, which includes all the standard ``<head>``, navigation and footer elements from the rest of the theme along with simple, clean and consistent styling, allowing you to easily include long-form content, make your own templates while retaining all the advantages of the themes, or style it to your heart's content.
+-----
+image: full-page.png
+-----
+----
+
+
+
+#### gallery ####
+section_id: gallery
+----
+title: Example Screenshots
+----
+description:
+----
+nav_label:
+----
+show_titles: true
+----
+gallery_items:
+
+
+##### w_item #####
+title: Singlepage
+-----
+subtitle: All in one homepage
+-----
+image: gallery-singlepage.png
+-----
+url: #section-features
+-----
+direct_link: true
+-----
+
+
+##### w_item #####
+title: Blog Index
+-----
+subtitle: Lists most recent posts
+-----
+image: blog-index.png
+-----
+url: /blog
+-----
+direct_link: false
+-----
+
+
+##### w_item #####
+title: Blog Post
+-----
+subtitle: Displays episodic content
+-----
+image: gallery-blog.png
+-----
+url: /blog/welcome-blog
+-----
+direct_link: false
+-----
+
+
+##### w_item #####
+title: Custom Page (404)
+-----
+subtitle: Include your own content
+-----
+image: gallery-404.png
+-----
+url: /example-page
+-----
+direct_link: false
+-----
+
+
+
+#### team ####
+section_id: credits
+----
+title: Credits
+----
+description:
+
+The key people and organizations without which this theme wouldn't be possible.<br>
+(*Note:* Inclusion here does *not* imply endorsement, association or any direct involvement with the theme in its current form.)
+----
+nav_label: Credits
+----
+members:
+
+##### member #####
+name: FreeHTML5.co
+-----
+position: Original Template Creator
+-----
+description:
+
+Created the original "Icon" plain HTML template, on which Hugo-Icon was based.
+-----
+image:
+-----
+website: https://freehtml5.co/
+-----
+facebook: https://www.facebook.com/fh5co/
+-----
+twitter: https://twitter.com/fh5co
+-----
+instagram:
+-----
+github:
+-----
+linkedin:
+-----
+
+
+##### member #####
+name: Steve Lane
+-----
+position: Hugo-Icon Theme Creator
+-----
+description:
+
+Ported the "Icon" template to Hugo and converted it into a jinja-templated theme.
+-----
+image:
+-----
+website: https://gtown-ds.netlify.com/
+-----
+facebook:
+-----
+twitter: https://twitter.com/stephenelane
+-----
+instagram:
+-----
+github: https://github.com/SteveLane
+-----
+linkedin:
+-----
+
+
+##### member #####
+name: Daniel Althviz Moré
+-----
+position: Lektor-Icon Theme Porter
+-----
+description:
+
+Ported the Hugo-Icon theme to Lektor, revamping it and adding new features and styling in the process.
+Also helped create the original blog templates.
+-----
+image: dalthviz.jpg
+-----
+website: https://dalthviz.github.io/
+-----
+facebook:
+-----
+twitter:
+-----
+instagram:
+-----
+github: https://github.com/dalthviz
+-----
+linkedin:
+-----
+
+
+##### member #####
+name: Spyder Development Team
+-----
+position: Primary Lektor-Icon Developers
+-----
+description:
+
+Have taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.
+-----
+image: /static/images/spyder-logo.svg
+-----
+website: https://www.spyder-ide.org/
+-----
+facebook: https://www.facebook.com/SpyderIDE/
+-----
+twitter: https://twitter.com/spyder_ide"
+-----
+instagram:
+-----
+github: https://github.com/spyder-ide/spyder
+-----
+linkedin:
+-----
+
+
+##### member #####
+name: Third Party Assets
+-----
+position: JS Libs, Icon Fonts and Styles
+-----
+description:
+
+Lektor-Icon includes a number of icon font glyphs, third-party styles and Javascript libraries in the final product. Check out NOTICE.txt for more.
+-----
+image:
+-----
+website: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
+-----
+facebook:
+-----
+twitter:
+-----
+instagram:
+-----
+github: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
+-----
+linkedin:
+-----
+
+
+##### member #####
+name: You!
+-----
+position: Community Contributors
+-----
+description:
+
+Lektor-Icon welcomes your help in making this theme better for everyone. Anyone can submit a PR or participate in development!
+-----
+image:
+-----
+website:
+-----
+facebook:
+-----
+twitter:
+-----
+instagram:
+-----
+github:
+-----
+linkedin:
+-----
+----
+
+
+
+#### content ####
+section_id: donate
+----
+title: Donate
+----
+description: Help support Spyder's activities!
+----
+nav_label: Donate
+----
+button_type: image
+----
+button_content: collective.svg
+----
+button_link: https://opencollective.com/spyder/
+----
+---

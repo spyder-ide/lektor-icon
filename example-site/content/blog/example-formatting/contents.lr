@@ -1,0 +1,82 @@
+title: Blog Post Formatting Examples
+---
+pub_date: 2018-12-16 18:55
+---
+author: noimage
+---
+category: Tutorial
+---
+tags: howto, example
+---
+summary: Check out this post for examples of different types of content and formatting in a blog post.
+---
+body:
+
+The blog is formatted in standard Markdown, like other free-form Lektor text.
+We recommend one sentence per line for clean Git diffs and reasonable line lengths while not having to worry about fussing over spacing (your editor has soft-wrap for a reason).
+Here's an example [link](https://www.spyder-ide.org/).
+
+
+## Code blocks
+
+Use second level headings (``##``) to separate your sections.
+You can also include inline code, which looks like ``this``.
+If inline code isn't enough, you can also use code blocks:
+
+```
+import time
+t1 = time.time()
+print("test_time" + t1)
+```
+
+## Unordered and ordered lists
+
+You can make unordered lists, this:
+
+* Test item 1
+* Test item 2
+* Test item 3
+
+Of course, you can make ordered lists too:
+
+1. Test 1
+2. Test 2
+3. Test 3
+
+Cool, eh?
+
+### Sample subheading
+
+You can also make sub-headers, sub-sub-headings, and on down the line by appending additional ``#``s, which look like the above.
+We recommend you do try to keep things organized and don't skip levels, as that creates problems for accessibility and makes your post less organized.
+
+
+## Adding images
+
+You can easily add images to the blog via standard Markdown semantics.
+By default, they will appear as full width blocks, with their width as the minimum of their native dimensions or the blog post column width, whichever is less.
+You can add them from elsewhere if you know the path, but its easiest to just add them as attachments in your ``contents`` directory.
+For accessibility, and to ensure readers on slow connections or where the images don't load can still understand the semantic meaning, make sure to include descriptive alt text explaining what the image represents.
+Oh look, here's one now!
+
+![Spyder IDE logo, a spiderweb overlaid by a red snake](spyder-logo.svg)
+
+You can also link to images from other parts of the web:
+
+![Screenshot of the Spyder documentation website, showing the index page](https://www.spyder-ide.org/blog/spyder-status-2018-present/spyder-docs-preview.png)
+
+
+## Getting fancy with HTML
+
+You can embed HTML markup where desired, for formatting that Markdown doesn't natively support or to embed other elements.
+
+As a simple example, this is a manual line break.<br>Isn't that something?
+
+You can also embed HTML comments which show up in the source, but not the output: <!--- Like this --->
+
+Finally, to incorporate external resources, including media players, forms, and even entire pages, you can use ``iframes``, like here:
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vtLdH4VbACA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+That's all, folks, and looking forward to seeing what you come up with!
+---

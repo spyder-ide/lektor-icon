@@ -1,0 +1,6 @@
+_model: author
+---
+name: Lorem Ipsum
+---
+image: ../../../static/images/placeholder_person.png
+---
