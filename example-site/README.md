@@ -1,6 +1,8 @@
 # Lektor-Icon Demo Website
 
-*Copyright © 2018 Lektor-Icon Contributors (see ../AUTHORS.txt)*
+*Copyright © 2016-2019 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+
+![Screenshot of Lektor-Icon screenshot section](../images/mainpage-screenshots.png)
 
 This is the demo site for Lektor-Icon, a [Lektor](https://www.getlektor.com) theme from the [Spyder](https:///www.spyder-ide.org) development team which includes a single-page, responsive layout with many flexible flowblock sections, a full-featured blog, customizable page, author and error templates and more.
 Aside from demonstrating the theme's features and capabilities, the site itself is more than just an empty placeholder; also serves as documentation and a tutorial on using the theme, with a large amount of (hopefully) helpful information included.

@@ -2034,8 +2034,10 @@ border-radius: 0;
   color: #505050;
 }
 
-.blog-post img {
+.blog-post img,
+.page-content .center img {
   display: block;
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   vertical-align: middle;

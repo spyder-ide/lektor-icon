@@ -1,6 +1,8 @@
 # Lektor-Icon Theme
 
-*Copyright © 2016-2018 Lektor-Icon Contributors and others (see AUTHORS.txt)*
+*Copyright © 2016-2019 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+
+![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
 This a heavily modified and expanded version of the [FreeHTML5](https://freehtml5.co/) ["Icon" template](https://freehtml5.co/icon-free-website-template-using-bootstrap/) ported to the [Lektor](https://www.getlektor.com/) static CMS by [Daniel Althviz](https://dalthviz.github.io/) and the [Spyder](https://www.spyder-ide.org/) development team; it was initially derived from the [Hugo port](https://github.com/SteveLane/hugo-icon) of the Icon theme by [Steve Lane](https://gtown-ds.netlify.com/).
 The core template is a single-page, responsive layout, with sections for describing your organization and its mission, services, a gallery, your team and how visitors can download your software or donate to your cause.
@@ -107,7 +109,7 @@ Used for the ``"author"`` HTML meta tag.
 
 ``copyright`` (*string*): The copyright statement of the website.
 Used for the ``"copyright"`` HTML meta tag and the copyright statement in the page footer.
-*Example:* ``copyright = &copy; 2018 Lektor-Icon Contributors``
+*Example:* ``copyright = &copy; 2019 Lektor-Icon Contributors``
 
 ``description`` (*string*): A short (<1 sentance) summary of the site's purpose.
 Used for the ``"description"`` HTML meta tag.
@@ -300,7 +302,7 @@ As there is no straightforward way to implement this without CSS variables, modi
 
 ### Browser Compatibility
 
-This theme has been tested for full functionality and consistent layout across late-2018 official releases of the "big four" modern desktop browsers, Firefox, Chrome, and Edge, as well as the legacy Internet Explorer 11 (with the aforementioned custom accent color exception).
+This theme has been tested for full functionality and consistent layout across January 2019 official releases of the "big four" modern desktop browsers, Firefox, Chrome, and Edge, as well as the legacy Internet Explorer 11 (with the aforementioned custom accent color exception).
 Aside from a modest number of progressive enhancements (and the custom accent color), the layout, styles and functionality should render identically or near-identically in desktop and mobile versions of Chrome, Opera, and Firefox from at least 2015-onwards, as well as Safari 9+, any version of Edge, iOS 9.3+, Android browser >4.4, and the aforementioned IE11.
 It should degrade relatively gracefully (if at all) with all core functionality and layout intact on 2013+ releases of Firefox, Chrome and Opera, along with iOS 9.x and Android browser 4.4 (amounting to over >95-98% of all users), although without real-world testing this is by no means guaranteed, and users should be encouraged to upgrade to a modern version of one of the aforementioned browsers.
 The primary blocker for browsers older than this is flexbox support, which several elements rely upon for fully correct layout.
@@ -308,7 +310,7 @@ The primary blocker for browsers older than this is flexbox support, which sever
 
 ### Library Versions and Security
 
-Lektor-Icon has been updated with the latest (as of December 2018) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
+Lektor-Icon has been updated with the latest (as of Feburary 1, 2019) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
 The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
 
 Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.
@@ -329,7 +331,7 @@ The contents of the ``example-site`` directory are distributed under separate te
 ## Credits
 
 The original [plain HTML5 template](https://freehtml5.co/icon-free-website-template-using-bootstrap/) which was the basis for Hugo-Icon, and in turn Lektor-Icon was created by [FreeHTML5.co](https://freehtml5.co/) and released under the [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) license.
-Attribution is built into the rendered theme's common footer, so please retain it, as well as this credits section in a visible place in the source code (like here in the README) and the proper legal notices in the LICENSE.txt and NOTICE.txt files.
+Attribution is built into the rendered theme's common footer, so please retain it, as well as this credits section in a visible place in the source code (like here in the README) and the proper legal notices in the LICENSE.txt and NOTICE.txt files (see above section).
 
 The [Hugo port](https://github.com/SteveLane/hugo-icon) of the theme, the source for this Lektor version, was created by [Steve Lane](https://gtown-ds.netlify.com/), with the modifications released under the [MIT (Expat) License](https://github.com/SteveLane/hugo-icon/blob/master/LICENSE.md).
 
