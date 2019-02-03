@@ -4,5 +4,5 @@ sort_key: 1
 ---
 title: Latest Blog Posts Listed Here
 ---
-allow_comments_default: yes
+allow_comments_default: true
 ---

@@ -2,7 +2,7 @@ _model: single-layout
 ---
 
 
-show_home_nav: yes
+show_home_nav: true
 ---
 hero_title: Lektor-Icon
 ---
@@ -110,7 +110,7 @@ A highly modern, unified template featuring numerous flexible section flowblocks
 -----
 description:
 
-When you want to put your best foot forward and make sure your homepage impresses visitors with a slick, modern, and approachable feel *and* functionality, Lektor-Icon's flagship single-page template is just what you're looking for. It can be endlessly customized with any number and order of a half-dozen flowblock designs that can be adapted to many popular use-cases and content types, and if you're still not satisfied you can even add your own! 
+When you want to put your best foot forward and make sure your homepage impresses visitors with a slick, modern, and approachable feel *and* functionality, Lektor-Icon's flagship single-page template is just what you're looking for. It can be endlessly customized with any number and order of a half-dozen flowblock designs that can be adapted to many popular use-cases and content types, and if you're still not satisfied you can even add your own!
 -----
 image: full-singlepage.jpg
 -----
