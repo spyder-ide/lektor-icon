@@ -99,7 +99,7 @@ initial_tab_index: 1
 ----
 items:
 
-##### m_item #####
+##### mission_tab #####
 section_id: singlepage
 -----
 title: Singlepage
@@ -116,7 +116,7 @@ image: full-singlepage.jpg
 -----
 
 
-##### m_item #####
+##### mission_tab #####
 section_id: blog
 -----
 title: Blog
@@ -133,7 +133,7 @@ image: full-blog.png
 -----
 
 
-##### m_item #####
+##### mission_tab #####
 section_id: page
 -----
 title: Content Page
@@ -166,7 +166,7 @@ show_titles: true
 gallery_items:
 
 
-##### w_item #####
+##### gallery_item #####
 title: Singlepage
 -----
 subtitle: All in one homepage
@@ -179,7 +179,7 @@ direct_link: true
 -----
 
 
-##### w_item #####
+##### gallery_item #####
 title: Blog Index
 -----
 subtitle: Lists most recent posts
@@ -192,7 +192,7 @@ direct_link: false
 -----
 
 
-##### w_item #####
+##### gallery_item #####
 title: Blog Post
 -----
 subtitle: Displays episodic content
@@ -205,7 +205,7 @@ direct_link: false
 -----
 
 
-##### w_item #####
+##### gallery_item #####
 title: Custom Page (404)
 -----
 subtitle: Include your own content
