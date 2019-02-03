@@ -318,10 +318,19 @@ Potentially burdensome restrictions have been been avoided by default, while all
 
 
 
+## Contributing
+
+Want to add a feature, report a bug, or suggest an enhancement to this theme?
+You can—everyone is welcome to help with Lektor-Icon!
+Please read our [contributing guide](https://github.com/spyder-ide/lektor-icon/blob/master/CONTRIBUTING.md) to get started!
+Thanks for your interest in Lektor-Icon, and we appreciate everyone using and supporting the project!
+
+
+
 ## License
 
-The theme (code) as a whole is distributed under the [MIT (Expat) license](https://opensource.org/licenses/MIT), and certain portions are also originally licensed [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) (CC-BY-3.0), along with certain other third-party external assets included under other permissive licenses.
-You're covered and don't need to do anything else so long as the fine print in the footer is displayed, and a copy of the ``LICENSE.txt`` is preserved in the theme repo; if you don't modify the theme itself both conditions will always be true.
+The theme code as a whole is distributed under the [MIT (Expat) license](https://opensource.org/licenses/MIT), and certain portions are also originally licensed [Creative Commons Attribution 3.0](https://creativecommons.org/licenses/by/3.0/) (CC-BY-3.0), along with certain other third-party external assets included under other permissive licenses.
+You're covered and don't need to do anything else so long as the fine print in the footer is displayed, and a copy of the ``LICENSE.txt`` is preserved in the theme repo; if you don't modify the theme itself both conditions will always be fulfilled.
 For all the gory legal details, see the [LICENSE.txt](https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt) and [NOTICE.txt](https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt) in the root of the theme repository.
 
 The contents of the ``example-site`` directory are distributed under separate terms, the [Creative Commons Attribution Share-Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC-BY-SA 4.0) license, so see the [README in that directory](https://github.com/spyder-ide/lektor-icon/blob/master/example-site/README.md) for more details.
@@ -343,3 +352,35 @@ It is used for the [official website](https://www.spyder-ide.org/) of Spyder, th
 ## Changelog
 
 A [changelog](https://github.com/spyder-ide/lektor-icon/blob/master/changelog.md) for this theme lists the major modifications and improvements since the initial port to Hugo by @SteveLane; if you fork this theme and make changes, please list them.
+
+
+
+## About the Spyder IDE
+
+Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
+It offers a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
+
+Beyond its many built-in features, its abilities can be extended even further via its plugin system and API.
+Furthermore, Spyder can also be used as a PyQt5 extension library, allowing you to build upon its functionality and embed its components, such as the interactive console, in your own software.
+
+For more general information about Spyder and to stay up to date on the latest Spyder news and information, please check out [our website](https://www.spyder-ide.org/).
+
+
+
+## More information
+
+[Spyder Website](https://www.spyder-ide.org/)
+
+[Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
+
+[Spyder Github](https://github.com/spyder-ide/spyder)
+
+[Gitter Chatroom](https://gitter.im/spyder-ide/public)
+
+[Google Group](https://groups.google.com/group/spyderlib)
+
+[@Spyder_IDE on Twitter](https://twitter.com/spyder_ide)
+
+[@SpyderIDE on Facebook](https://www.facebook.com/SpyderIDE/)
+
+[Support Spyder on OpenCollective](https://opencollective.com/spyder/)
