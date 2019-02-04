@@ -52,6 +52,10 @@
 	{% include "partials/donate.html" %}
 	{% endif %}
 
+	{% if config.THEME_SETTINGS.sponsors_enable %}
+	{{ this.sponsors }}
+	{% endif %}
+
 	{% if config.THEME_SETTINGS.footer_enable %}
 	{% include "partials/footer.html" %}
 	{% endif %}      

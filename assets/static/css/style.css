@@ -287,7 +287,7 @@ p {
   color: #969191;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   display: -moz-inline-stack;
   display: inline-block;
@@ -861,6 +861,82 @@ p {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
 }
 
+#fh5co-sponsors {
+  position: relative;
+  padding: 3em 0 0;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-sponsors {
+    padding: 5em 0 3em 0;
+  }
+}
+
+#fh5co-sponsors .sponsor {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 40px;
+  padding: 40px 15px 20px 15px;
+  background: #fff;
+  border: 1px solid transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#fh5co-sponsors .sponsor .icon {
+  text-align: center;
+  width: 100%;
+}
+#fh5co-sponsors .sponsor .icon i {
+  font-size: 40px;
+  color: #ee1c24;
+}
+/* #fh5co-sponsors .sponsor h3 {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #ee1c24;
+} */
+
+#fh5co-sponsors .sponsor h3 {
+  margin-bottom: 0;
+}
+#fh5co-sponsors .sponsor h4 {
+  color: #999999;
+  font-size: 16px;
+}
+#fh5co-sponsors .sponsor .social {
+  padding: 0;
+  margin: 0;
+}
+#fh5co-sponsors .sponsor .social li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+#fh5co-sponsors .sponsor .social li a {
+  padding: 10px;
+}
+#fh5co-sponsors .sponsor .social li a:hover {
+  text-decoration: none;
+}
+#fh5co-sponsors .sponsor:focus, #fh5co-sponsors .sponsor:hover {
+  background: #fff;
+  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+  -ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+}
+
 #fh5co-gallery {
   clear: both;
   float: left;
@@ -1335,6 +1411,12 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #open_chat{
