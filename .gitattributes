@@ -14,9 +14,9 @@
 *.ipynb     text
 *.h         text
 *.py        text
-*.py3 		text
+*.py3       text
 *.pxd       text
-*.pyw 		text
+*.pyw       text
 *.pyx       text
 *.qss       text
 *.r         text
@@ -187,8 +187,8 @@ MANIFEST.in     text
 *.XLSX      binary
 
 # Documents
-*.doc	    binary
-*.DOC	    binary
+*.doc       binary
+*.DOC       binary
 *.docx      binary
 *.DOCX      binary
 *.epub      binary
@@ -197,12 +197,12 @@ MANIFEST.in     text
 *.odp       binary
 *.odt       binary
 *.pdf       binary
-*.PDF	    binary
+*.PDF       binary
 *.ppt       binary
 *.PPT       binary
 *.pptx      binary
 *.PPTX      binary
-*.rtf	    binary
+*.rtf       binary
 *.RTF       binary
 
 # Graphics
