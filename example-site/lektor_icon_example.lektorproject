@@ -2,6 +2,9 @@
 name = Lektor Icon Example Site
 themes = lektor-icon
 
+[servers.ghpages]
+target = ghpages+https://spyder-ide/lektor-icon
+
 [theme_settings]
 title = Lektor-Icon Demo Site
 content_lang = en-US
