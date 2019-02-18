@@ -43,12 +43,14 @@
 			<p>{{ this.community_description }}</p>
 			
 		</div>
-		<div class="col-md-12" >
+		<div class="col-md-12">
+			<div class="opencollective">
 				{% if this.opencollective %}
 				<a href="https://opencollective.com/spyder#support">
 					<img src="https://opencollective.com/{{this.opencollective}}/sponsors.svg" class="img-responsive img-center"/>
 				</a>
 				{% endif %}
+			</div>
 		</div>
 	</div>
 </div> <!-- END fh5co-sponsors -->

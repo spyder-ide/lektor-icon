@@ -874,10 +874,7 @@ p {
 
 #fh5co-sponsors .sponsor {
   text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-bottom: 40px;
-  padding: 40px 15px 20px 15px;
+  margin-bottom: 8px;
   background: #fff;
   border: 1px solid transparent;
   -webkit-border-radius: 5px;
@@ -935,6 +932,10 @@ p {
   -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
   -ms-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.09);
+}
+#fh5co-sponsors .opencollective {
+  margin-top: -15px;
+  margin-bottom: 13px;
 }
 
 #fh5co-gallery {
