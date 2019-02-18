@@ -1,12 +1,16 @@
-<div id="fh5co-{{this.data_section}}" data-section="{{this.data_section}}">
-    <div>
-      <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-        <h2>{{ this.title }}</h2>
-        <p>{{ this.description }}</p>
-      </div>
-      <div class="center">
-        {{this.content}}      
-      </div>
-    </div>
-</div> <!-- END fh5co-download -->
-  
+{% if this.content %}
+<div class="center">
+  {{ this.content }}
+</div>
+{% endif %}
+{% if this.button_type and this.button_content %}
+<div class="row">
+  {% if this.button_type == "text" %}
+  <a href="{{ this.button_link }}"  class="content-button text-button" target="_blank" rel="noopener noreferrer">{{ this.button_content | safe }}</a>
+  {% elif this.button_type == "image" %}
+  <a href="{{ this.button_link }}" class="center content-button image-button" target="_blank" rel="noopener noreferrer">
+    <img alt="Action Button" src="{{ this.button_content | url }}" class="center">
+  </a>
+  {% endif %}
+</div>
+{% endif %}

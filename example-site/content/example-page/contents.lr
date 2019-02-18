@@ -1,0 +1,23 @@
+_model: page
+---
+sort_key: 3
+---
+short_title: Page
+---
+full_title: Example of a Standard Page
+---
+body:
+
+This is a simple example of a standalone page model in the Lektor-Icon theme.
+You can make your own by creating a new subfolder off the main ``content`` directory with your desired URL path (in this case, ``example-page``) and creating within a ``contents.lr`` file with the ``_model: page``.
+Aside from the short and long titles and sort order, the rest of the file under the ``body`` field is just free-form Markdown text, which can include rich formatting, HTML tags, embedded links and images, and even ``iframes`` for media an interactive content.
+
+While the pages are currently quite clean and simple, the sky's the limit as far as you're creativity, and you're free to extend the ``page`` model with your own custom templates for advanced functionality.
+You can also style it as you like using our custom stylesheet, <span class="red-text-test">like this</span>!
+By default, it gives you the same capabilities as a blog post, just as a full-on, permanent page.
+As usual, you can include your own images and content by adding it to this directory, and embedding it as a standard Markdown image.
+
+![Spyder IDE logo, a spiderweb overlaid by a red snake](spyder-logo.svg)
+
+Have fun!
+---
