@@ -66,7 +66,7 @@
           <h1>{{ this.hero_title }}</h1>
           {% endif %}
           {% if this.hero_description %}
-          <h2>{{ this.hero_description }}</h2>
+          <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe }}</h2>
           {% endif %}
         </div>
       </div>

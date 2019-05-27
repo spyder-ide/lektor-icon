@@ -31,7 +31,7 @@
       {% set active_class = '' %}
       {% endif %}
       <div class="fh5co-tab-content{{ active_class }}" data-tab-content="{{ mission_item.section_id }}">
-        <h2>{{ mission_item.subtitle }}</h2>
+        <h2>{{ mission_item.subtitle | replace('<p>', '') | replace('</p>', '') | safe }}</h2>
         {{ mission_item.description }}
       </div>
       {% endfor %}

@@ -15,7 +15,7 @@
         <img alt="Placeholder person" src="{{ '/static/images/placeholder_person.png' | asseturl }}" class="img-responsive">
         {% endif %}
         <h3>{{ member.name }}</h3>
-        <h4>{{ member.position }}</h4>
+        <h4>{{ member.position | replace('<p>', '') | replace('</p>', '') | safe }}</h4>
         {{ member.description }}
         <ul class="social">
           {% if  member.website and member.website.url != '' %}
