@@ -257,6 +257,10 @@ style-src {{ style_src }};
 <script src="{{ '/static/js/jquery-3.3.1.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
 <script src="{{ '/static/js/jquery.waypoints.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{% if config.THEME_SETTINGS.custom_js_main %}
+<!-- User Custom Scripts -->
+<script src="{{ config.THEME_SETTINGS.custom_js_main | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{% endif %}
 <!-- Main JS -->
 <script src="{{ '/static/js/main.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% block scripts %}

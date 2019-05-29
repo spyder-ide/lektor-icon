@@ -111,6 +111,10 @@
 <!-- Magnific Popup -->
 <script src="{{ '/static/js/jquery.magnific-popup.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <script src="{{ '/static/js/magnific-popup-options.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{% if config.THEME_SETTINGS.custom_js_singlepage %}
+<!-- User Custom Scripts -->
+<script src="{{ config.THEME_SETTINGS.custom_js_singlepage | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{% endif %}
 <!-- Main JS -->
 <script src="{{ '/static/js/main-singlelayout.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% endblock %}
