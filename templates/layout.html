@@ -107,6 +107,31 @@ style-src {{ style_src }};
   <link rel="icon" href="{{ config.THEME_SETTINGS.favicon_path | asseturl }}" type="image/png">
   <style>
     :root {
+      {% if config.THEME_SETTINGS.theme_fg_color %}
+      --theme-fg-color: {{ config.THEME_SETTINGS.theme_fg_color | safe }};
+      {% else %}
+      --theme-fg-color: #000000;
+      {% endif %}
+      {% if config.THEME_SETTINGS.theme_fg_alt_color %}
+      --theme-fg-alt-color: {{ config.THEME_SETTINGS.theme_fg_alt_color | safe }};
+      {% else %}
+      --theme-fg-alt-color: #333333;
+      {% endif %}
+      {% if config.THEME_SETTINGS.theme_bg_color %}
+      --theme-bg-color: {{ config.THEME_SETTINGS.theme_bg_color | safe }};
+      {% else %}
+      --theme-bg-color: #ffffff;
+      {% endif %}
+      {% if config.THEME_SETTINGS.theme_bg_alt_color %}
+      --theme-bg-alt-color: {{ config.THEME_SETTINGS.theme_bg_alt_color | safe }};
+      {% else %}
+      --theme-bg-alt-color: #e8ecf1;
+      {% endif %}
+      {% if config.THEME_SETTINGS.theme_bg_accent_color %}
+      --theme-bg-accent-color: {{ config.THEME_SETTINGS.theme_bg_accent_color | safe }};
+      {% else %}
+      --theme-bg-accent-color: #f5f5f5;
+      {% endif %}
       {% if config.THEME_SETTINGS.theme_accent_color %}
       --theme-accent-color: {{ config.THEME_SETTINGS.theme_accent_color | safe }};
       {% else %}

@@ -108,11 +108,15 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.9;
-  color: #505050;
+  color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
   margin: 0;
   padding: 0;
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
   background-color: #ffffff;
+  background-color: var(--theme-bg-color, #ffffff);
+
 }
 body.fh5co-overflow {
   overflow-x: hidden;
@@ -172,6 +176,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
   line-height: 1.1;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
   margin: 0;
   margin-bottom: 30px;
 }
@@ -446,7 +451,7 @@ img {
 
 .btn-outline {
   background: none;
-  border: 2px solid #888888;
+  border: 2px solid #808080;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -531,6 +536,7 @@ img {
 .fh5co-main-nav {
   position: relative;
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
   font-size: 11px;
 }
 .fh5co-main-nav.fh5co-shadow {
@@ -564,7 +570,8 @@ img {
 .fh5co-main-nav .fh5co-menu-1 a {
   padding: 1em 0;
   margin-right: 2em;
-  color: #707070;
+  color: #040404;
+  color: var(--theme-fg-alt-color, #040404);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
@@ -581,6 +588,7 @@ img {
 .fh5co-main-nav .fh5co-menu-1 a.active {
   font-weight: 400;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
 }
 
 .fh5co-main-nav .fh5co-logo {
@@ -643,6 +651,7 @@ img {
   font-size: 2.1em;
   font-weight: 500;
   color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
   padding-bottom: 20px;
   margin-bottom: 20px;
   position: relative;
@@ -672,10 +681,12 @@ img {
 
 .light-bg-section {
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
 }
 
 .dark-bg-section {
   background: #e8ecf1;
+  background: var(--theme-bg-alt-color, #e8ecf1);
 }
 
 .mission-section {
@@ -815,7 +826,7 @@ img {
   text-align: center;
 }
 .fh5co-tabs-container .fh5co-tabs li a {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #808080;
   padding-top: 0.5em;
   padding-bottom: 1.5em;
   float: left;
@@ -825,7 +836,7 @@ img {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #888888;
+  color: #808080;
 }
 .fh5co-tabs-container .fh5co-tabs li a:hover,
 .fh5co-tabs-container .fh5co-tabs li a:active,
@@ -861,7 +872,8 @@ img {
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #707070;
+  color: #040404;
+  color: var(--theme-fg-alt-color, #040404);
 }
 .fh5co-tabs-container .fh5co-tab-content.active,
 .mission-image.active {
@@ -1003,6 +1015,7 @@ img {
   margin-top: 10px;
   margin-bottom: 10px;
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
   border: 1px solid transparent;
   border-radius: 5px;
   transition: 0.5s;
@@ -1025,8 +1038,11 @@ img {
 }
 .services-section .service:hover,
 .services-section .service:focus {
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #f5f5f5;
+  border: 1px solid var(--theme-bg-accent-color, #f5f5f5);
+  background: #f5f5f5;
+  background: var(--theme-bg-accent-color, #f5f5f5);
+  box-shadow: 0 0 20px 0 rgba(0.4, 0.4, 0.4, 0.3);
 }
 
 .checked {
@@ -1068,6 +1084,7 @@ img {
   transition: 0.5s;
   border-radius: 5px;
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
 }
 .team-section .person img {
   width: 50%;
@@ -1079,7 +1096,7 @@ img {
   margin-bottom: 0.5em;
 }
 .team-section .person h4 {
-  color: #707070;
+  color: #808080;
   font-size: 1em;
   margin-bottom: 0.5em;
 }
@@ -1101,8 +1118,9 @@ img {
 }
 .team-section .person:focus,
 .team-section .person:hover {
-  background: #ffffff;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.1);
+  background: #303030;
+  background: var(--theme-bg-accent-color, #303030);
+  box-shadow: 0 0 20px 0 rgba(0.4, 0.4, 0.4, 0.3);
 }
 
 .gallery-section {
@@ -1289,7 +1307,7 @@ img {
 #fh5co-footer {
   clear: both;
   padding: 3em 0;
-  background: #404040;
+  background: #333333;
   box-shadow: inset 0px 10px 21px -15px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 768px) {
@@ -1350,6 +1368,7 @@ img {
 
 #fh5co-container {
   background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
 }
 
 #fh5co-offcanvas,
@@ -1375,14 +1394,14 @@ img {
   top: 0;
   bottom: 0;
   width: 275px;
-  background: rgba(0, 0, 0, 0.9);
+  background: #303030;
   padding: 0.75em 1.25em;
   transform: translateX(-275px);
   transition: 0.9s;
 }
 #fh5co-offcanvas a {
   display: block;
-  color: rgba(255, 255, 255, 0.4);
+  color: #e8ecf1;
   text-align: center;
   padding: 7px 0;
 }
@@ -1520,6 +1539,7 @@ img {
 
 .header-row {
   background: #e8ecf1;
+  background: var(--theme-bg-alt-color, #e8ecf1);
   margin-right: auto;
   margin-left: auto;
   margin-top: 1em;
@@ -1550,6 +1570,7 @@ img {
   height: 100%;
   z-index: 9999;
   background: url(../images/Preloader_2.gif) center no-repeat #ffffff;
+  background: url(../images/Preloader_2.gif) center no-repeat var(--theme-bg-color, #ffffff);
 }
 
 
@@ -1562,6 +1583,7 @@ img {
 mark {
   background-color: #ffff00;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
 }
 
 sub,
@@ -1606,7 +1628,8 @@ small,
 
 small {
   line-height: inherit;
-  color: #ffffff;
+  color: #000000;
+  color: var(--theme-fg-color, #000000);
 }
 
 h1 small,
@@ -1616,7 +1639,8 @@ h4 small,
 h5 small,
 h6 small {
   line-height: 0;
-  color: #cccccc;
+  color: #333333;
+  color: var(--theme-fg-color, #333333);
 }
 
 h1 {
@@ -1644,7 +1668,8 @@ a img {
 
 small a,
 small a:focus {
-  color: #ffffff;
+  color: #000000;
+  color: var(--theme-fg-color, #000000);
   font-weight: bold;
 }
 
@@ -1789,10 +1814,12 @@ samp {
   font-family: Inconsolata, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace;
   font-size: 0.9em;
   color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
 }
 
 code {
-  background-color: #f9f2f4;
+  background-color: #e8ecf1;
+  background-color: var(--theme-fg-alt-color, #e8ecf1);
   border-radius: 4px;
   font-weight: 400;
   padding: .125rem .3125rem .0625rem;
@@ -1800,11 +1827,13 @@ code {
 
 p code {
   background-color: #f5f5f5;
-  border: 1px solid #cccccc;
+  background-color: var(--theme-bg-accent-color, #f5f5f5);
+  border: 1px solid #808080;
 }
 
 kbd {
   background-color: #333333;
+  background-color: var(--theme-fg-alt-color, #333333);
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
   margin: 0;
@@ -1827,7 +1856,8 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #f5f5f5;
-  border: 1px solid #cccccc;
+  background-color: var(--theme-bg-accent-color, #f5f5f5);
+  border: 1px solid #808080;
   border-radius: 4px;
   overflow: auto;
 }
@@ -1994,7 +2024,8 @@ border-radius: 0;
 
 #menu-logo .logo-text-container {
   display: inline-block;
-  color: #333333;
+  color: #040404;
+  color: var(--theme-fg-alt-color, #333333);
   vertical-align: middle;
 }
 
@@ -2031,7 +2062,8 @@ border-radius: 0;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: Raleway, "DejaVu Sans", "Open Sans", "Liberation Sans", Helvetica, Arial, sans-serif;
-  color: #505050;
+  color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
 }
 
 .blog-post img,
@@ -2073,6 +2105,7 @@ border-radius: 0;
 .blog-post h3 a {
   text-decoration: none;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
   border: 0;
 }
 
@@ -2081,6 +2114,7 @@ border-radius: 0;
 .blog-post h3 {
   text-align: left;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
   font-family: Amiri, "Open Serif", "Liberation Serif", "DejaVu Serif", Times, "Times New Roman", serif;
 }
 
@@ -2104,6 +2138,7 @@ border-radius: 0;
 .blog-post .blog-index-header .row h3 {
   text-align: left;
   color: #000000;
+  color: var(--theme-fg-color, #000000);
   font-family: Amiri, "Open Serif", "Liberation Serif", "DejaVu Serif", Times, "Times New Roman", serif;
 }
 
@@ -2131,6 +2166,7 @@ border-radius: 0;
 .meta-blog-date,
 .meta-blog-index {
   color: #000000;
+  color: var(--theme-fg-color, #000000);
   font-size: .9em;
 }
 
@@ -2306,7 +2342,7 @@ border-radius: 0;
   background-color: var(--theme-accent-color, #ee1c24);
   border: none;
   border-radius: 1.4em;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   display: table;
   font-size: 1.4em;
@@ -2367,7 +2403,7 @@ border-radius: 0;
 /* Generic page styling */
 
 .page-content-container {
-  background-color: #ffffff;
+  background-color: var(--theme-bg-color, #ffffff);
   overflow: auto;
 }
 
