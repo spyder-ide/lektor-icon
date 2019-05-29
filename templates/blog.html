@@ -2,7 +2,9 @@
 {% from "macros/blog.html" import render_blog_post %}
 {% from "macros/pagination.html" import render_pagination %}
 
-{% block title %}Blog{% endblock %}
+{% block title %}
+{% if this.short_title %}{{ this.short_title }}{% else %}Blog{% endif %}
+{% endblock %}
 
 {% block blogmaintitle %}
 {% if this.title %}
