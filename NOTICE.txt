@@ -264,7 +264,7 @@ assets/static/js/magnific-popup.js
 
 
 
-JQuery 3.3.1
+JQuery 3.4.1
 ------------
 
 
@@ -303,7 +303,7 @@ https://github.com/jquery/jquery/blob/master/LICENSE.txt
 
 Files covered:
 
-assets/static/js/jquery-3.3.1.min.js
+assets/static/js/jquery-3.4.1.min.js
 
 
 -------------------------------------------------------------------------------

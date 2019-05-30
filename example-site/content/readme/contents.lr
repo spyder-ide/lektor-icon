@@ -312,7 +312,7 @@ The primary blocker for browsers older than this is flexbox support, which sever
 
 ### Library Versions and Security
 
-Lektor-Icon has been updated with the latest (as of Feburary 1, 2019) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
+Lektor-Icon has been updated with the latest (as of June 1, 2019) releases of jQuery (3.4.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
 The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
 
 Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.
