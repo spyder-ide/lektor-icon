@@ -130,32 +130,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     };
 
 
-    // Just like it says on the tin
-    var goToTop = function() {
-
-        $('.js-gotop').on('click', function(event){
-
-            event.preventDefault();
-
-            $('html, body').animate({
-                scrollTop: $('html').offset().top
-            }, 500, 'easeInOutExpo');
-
-            return false;
-        });
-
-        $(window).on('scroll', function(){
-
-            var $win = $(window);
-            if ($win.scrollTop() > 200) {
-                $('.js-top').addClass('active');
-            } else {
-                $('.js-top').removeClass('active');
-            }
-        });
-    };
-
-
     // Page Nav
     var clickMenu = function() {
         var topVal = ( $(window).width() < 769 ) ? 0 : 58;
@@ -220,7 +194,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
         parallax();
         scrolledWindow();
-        goToTop();
         clickMenu();
         navigationSection();
         setCardsEvenHeight();
