@@ -27,21 +27,20 @@
 {% endif %}
 
 {% if config.THEME_SETTINGS.content_security_policy_frame_src %}
-{% set frame_src = config.THEME_SETTINGS.content_security_policy_frame_src %}
+{% set frame_src = frame_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_frame_src %}
 {% endif %}
 {% if config.THEME_SETTINGS.content_security_policy_script_src %}
-{% set script_src = config.THEME_SETTINGS.content_security_policy_script_src %}
+{% set script_src = script_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_script_src %}
 {% endif %}
 {% if config.THEME_SETTINGS.content_security_policy_style_src %}
-{% set style_src = config.THEME_SETTINGS.content_security_policy_style_src %}
+{% set style_src = style_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_style_src %}
 {% endif %}
 
 base-uri 'self';
 default-src 'self';
-font-src 'self' https://fonts.gstatic.com;
-frame-src {{ frame_src }};
-img-src {{ img_src }};
-plugin-types application/pdf;
+font-src 'self' https://fonts.gstatic.com{% block csp_extra_fontsrc %}{% endblock %};
+frame-src {{ frame_src }}{% block csp_extra_framesrc %}{% endblock %};
+img-src {{ img_src }}{% block csp_extra_imgsrc %}{% endblock %};
 script-src {{ script_src }}{% block csp_extra_scriptsrc %}{% endblock %};
 style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
 ">
