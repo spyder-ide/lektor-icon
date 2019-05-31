@@ -5,12 +5,14 @@
 {% endif %}
 {% if this.button_type and this.button_content %}
 <div class="row">
-  {% if this.button_type == "text" %}
+  {% if this.button_type == 'text' %}
   <a href="{{ this.button_link }}"  class="content-button text-button" target="_blank" rel="noopener noreferrer">{{ this.button_content | safe }}</a>
-  {% elif this.button_type == "image" %}
+  {% elif this.button_type == 'image' %}
   <a href="{{ this.button_link }}" class="center content-button image-button" target="_blank" rel="noopener noreferrer">
     <img alt="Action Button" src="{{ this.button_content | url }}" class="center">
   </a>
+  {% elif this.button_type == 'mailchimp' %}
+  <button id="mailchimp-button" class="content-button text-button mailchimp-button">{{ this.button_content | safe }}</button>
   {% endif %}
 </div>
 {% endif %}

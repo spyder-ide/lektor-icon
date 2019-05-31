@@ -42,8 +42,8 @@ font-src 'self' https://fonts.gstatic.com;
 frame-src {{ frame_src }};
 img-src {{ img_src }};
 plugin-types application/pdf;
-script-src {{ script_src }};
-style-src {{ style_src }};
+script-src {{ script_src }}{% block csp_extra_scriptsrc %}{% endblock %};
+style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
 ">
   {% elif config.THEME_SETTINGS.content_security_policy.lower() not in ["false", "f", "no", "n"] %}
   <meta http-equiv="Content-Security-Policy" content="{{ config.THEME_SETTINGS.content_security_policy | safe }}">

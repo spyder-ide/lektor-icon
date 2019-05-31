@@ -184,6 +184,12 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     };
 
 
+    // Set Mailchimp event handler
+    var setMailchimpEvent = function() {
+        document.getElementById("mailchimp-button").onclick = function() {showMailingPopUp()};
+    };
+
+
 
     // Document on load
     $(function() {
@@ -197,6 +203,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         clickMenu();
         navigationSection();
         setCardsEvenHeight();
+        if (mailchimpButtonEnabled) {
+            setMailchimpEvent();
+        }
     });
 
 }());

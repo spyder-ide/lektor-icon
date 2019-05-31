@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 
+{% if this.main_content %}
+{% set mailchimp_data = this.main_content.blocks | selectattr('button_type', 'equalto', 'mailchimp') | map(attribute='button_link') | first %}
+{% else %}
+{% set mailchimp_data = '' %}
+{% endif %}
+
 {% block title %}Home{% endblock %}
 
 {% block stylesheets %}
@@ -111,6 +117,18 @@
 <!-- Magnific Popup -->
 <script src="{{ '/static/js/jquery.magnific-popup.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <script src="{{ '/static/js/magnific-popup-options.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script>var mailchimpButtonEnabled = false;</script>
+{% if mailchimp_data %}
+<!-- Mailchimp Popup Form Script -->
+<script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script>
+  function showMailingPopUp() {
+    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({ {{ mailchimp_data | safe }} }) })
+    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  };
+  mailchimpButtonEnabled = true;
+</script>
+{% endif %}
 {% if config.THEME_SETTINGS.custom_js_singlepage %}
 <!-- User Custom Scripts -->
 <script src="{{ config.THEME_SETTINGS.custom_js_singlepage | asseturl }}" type="application/javascript" charset="UTF-8"></script>
@@ -118,3 +136,6 @@
 <!-- Main JS -->
 <script src="{{ '/static/js/main-singlelayout.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 {% endblock %}
+
+{% block csp_extra_scriptsrc %}{% if mailchimp_data %} https://*.mailchimp.com http://*.mailchimp.com 'unsafe-eval' http://*.list-manage.com/ https://*.list-manage.com/{% endif %}{% endblock %}
+{% block csp_extra_stylesrc %}{% if mailchimp_data %} https://*.mailchimp.com http://*.mailchimp.com{% endif %}{% endblock %}
