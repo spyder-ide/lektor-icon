@@ -118,6 +118,19 @@ body {
   background-color: var(--theme-bg-color, #ffffff);
 
 }
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    font-size: 0.90em;
+  }
+}
+
 body.fh5co-overflow {
   overflow-x: hidden;
   width: 100%;
@@ -181,12 +194,31 @@ h1, h2, h3, h4, h5, h6,
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1;
+  }
+}
+
 p {
   margin: 0 0 10px;
   margin-bottom: 1rem;
   font-size: inherit;
   line-height: 1.9;
   text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    line-height: 1.75;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  p {
+    line-height: 1.55;
+  }
 }
 
 img {
@@ -329,19 +361,55 @@ img {
   margin: 0;
   padding: 0;
 }
+
 .hero-section .fh5co-copy-inner h1 {
   color: #ffffff;
-  font-size: 55px;
+  font-size: 3em;
   margin-bottom: 20px;
   line-height: 1.2;
   font-weight: 300;
 }
 .hero-section .fh5co-copy-inner h2 {
-  font-size: 20px;
+  font-size: 1.1em;
   color: #ffffff;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.7);
 }
+
+@media screen and (max-width: 480px) {
+  .hero-section .fh5co-copy-inner h1 {
+    font-size: 2.35em;
+    line-height: 1.0;
+  }
+  .hero-section .fh5co-copy-inner h2 {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero-section .fh5co-copy-inner h1 {
+    font-size: 2.0em;
+    line-height: 1.0;
+  }
+  .hero-section .fh5co-copy-inner h2 {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+@media screen and ((max-height: 860px) and (max-width: 768px)) {
+  .hero-section .fh5co-copy-inner h1 {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section .fh5co-copy-inner h1 {
+    text-align: center;
+  }
+}
+
 .hero-section .fh5co-copy-inner a {
   color: #ffffff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -474,6 +542,20 @@ img {
   margin-bottom: 20px;
   position: relative;
 }
+
+@media screen and (max-width: 480px) {
+  .fh5co-heading h2 {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .fh5co-heading h2 {
+    font-size: 1.5em;
+  }
+}
+
+
 .fh5co-heading h2:after,
 .rule-under-heading {
   position: absolute;
@@ -485,9 +567,6 @@ img {
   margin-left: -25px;
   background: #ee1c24;
   background: var(--theme-accent-color, #ee1c24);
-}
-.fh5co-heading p {
-  font-size: 18px;
 }
 
 .body-section {
@@ -678,6 +757,8 @@ img {
   .fh5co-tabs-container .fh5co-tabs li a {
     padding-top: 1em;
     padding-bottom: 0.5em;
+    font-size: 0.0em;
+    line-height: 1.5;
   }
 }
 .fh5co-tabs-container .fh5co-tab-content,
@@ -693,6 +774,21 @@ img {
   color: #040404;
   color: var(--theme-fg-alt-color, #040404);
 }
+
+@media screen and (max-width: 480px) {
+  .fh5co-tabs-container .fh5co-tab-content h2 {
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .fh5co-tabs-container .fh5co-tab-content h2 {
+    font-size: 1.05em;
+    line-height: 1.5;
+  }
+}
+
 .fh5co-tabs-container .fh5co-tab-content.active,
 .mission-image.active {
   display: block;
@@ -1444,6 +1540,48 @@ h5 {
 }
 h6 {
     font-size: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+  h2 {
+      font-size: 2.0rem;
+  }
+  h3 {
+      font-size: 1.5rem;
+  }
+  h4 {
+      font-size: 1.25rem;
+  }
+  h5 {
+      font-size: 1.0rem;
+  }
+  h6 {
+      font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+      font-size: 2.0rem;
+  }
+  h2 {
+      font-size: 1.5rem;
+  }
+  h3 {
+      font-size: 1.25rem;
+  }
+  h4 {
+      font-size: 1rem;
+  }
+  h5 {
+      font-size: 0.9rem;
+  }
+  h6 {
+      font-size: 0.8rem;
+  }
 }
 
 a img {

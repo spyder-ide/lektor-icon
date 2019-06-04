@@ -28,7 +28,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
     var heroHeight = function() {
-        if ($(window).width() >= 752) {
+        if ($(window).width() > 768) {
             $('.js-fullheight-home').css('height', $(window).height() - $('.js-sticky').height());
         } else {
             $('.js-fullheight-home').css('height', $(window).height() / 2);
