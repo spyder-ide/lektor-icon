@@ -202,7 +202,7 @@ style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
               <div class="side-nav-container">
                 {% if config.THEME_SETTINGS.nav_extralinks %}
                 {% for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
-                <a class="pull-right" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                <a class="pull-right nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
                 {% endfor %}
                 {% endif %}
 
@@ -213,7 +213,7 @@ style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
                 {% else %}
                 {% set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
                 {% endif %}
-                <a class="pull-right" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                <a class="pull-right nav-link-internal" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
                 {% endfor %}
                 {% endif %}
               </div>
