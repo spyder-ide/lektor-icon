@@ -213,7 +213,7 @@ style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
                 {% else %}
                 {% set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
                 {% endif %}
-                <a class="pull-right nav-link-internal" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                <a class="pull-right nav-link-internal{% if page.special_link %} special-link{% endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
                 {% endfor %}
                 {% endif %}
               </div>
