@@ -2239,27 +2239,27 @@ border-radius: 0;
   width: 51%;
 }
 
-.content-section .content-button {
+button.content-button {
   margin-top: 0.5em;
 }
 
-.content-section .image-button {
+button.image-button {
   min-width: 480px;
   width: 480px;
 }
 
 @media screen and (max-width: 768px) {
-  .content-section .content-button {
+  button.content-button {
     margin-top: 1em;
     width: 100%;
   }
 }
 
-.content-section .image-button img.center {
+button.image-button img.center {
   width: 100%;
 }
 
-.content-section .text-button {
+button.text-button {
   background-color: #ee1c24;
   background-color: var(--theme-accent-color, #ee1c24);
   border: none;
@@ -2282,9 +2282,9 @@ border-radius: 0;
   transition: 0.5s;
 }
 
-.content-section .text-button:hover,
-.content-section .text-button:focus,
-.content-section .text-button:active {
+button.text-button:hover,
+button.text-button:focus,
+button.text-button:active {
   background-color: #ee1c24;
   background-color: var(--theme-pipe-color, #ee1c24);
 }
