@@ -20,6 +20,7 @@ content_security_policy = true
 content_security_policy_frame_src =
 content_security_policy_script_src =
 content_security_policy_style_src =
+content_security_policy_connect_src =
 loader_enable = true
 nav_logo_path = /static/images/spyder-logo.svg
 nav_logo_text = Lektor-Icon
