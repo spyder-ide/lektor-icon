@@ -152,6 +152,9 @@ Can be further customized with the properties below.
 ``content_security_policy_style_src`` (*safe string*): String to use instead of the default for the ``script_src`` rule of the site's CSP (if enabled).
 *Example:* ``content_security_policy_style_src = 'self' https://fonts.googleapis.com 'unsafe-inline'``
 
+``content_security_policy_connect_src`` (*safe string*): String to use instead of the default for the ``connect-src`` rule of the site's CSP (if enabled).
+*Example:* ``content_security_policy_connect_src = 'self' https://api.foo.bar``
+
 ``loader_enable`` (*boolean*): Whether to show the animated loading icon for a brief period while any singlepage-theme page is loading.
 Defaults to true if not set.
 *Example:* ``loader_enable = true``

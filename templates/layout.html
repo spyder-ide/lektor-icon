@@ -35,6 +35,11 @@
 {% if config.THEME_SETTINGS.content_security_policy_style_src %}
 {% set style_src = style_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_style_src %}
 {% endif %}
+{% if config.THEME_SETTINGS.content_security_policy_connect_src %}
+{% set connect_src = " " ~ config.THEME_SETTINGS.content_security_policy_connect_src %}
+{% else %}
+{% set connect_src = ""  %}
+{% endif %}
 
 base-uri 'self';
 default-src 'self';
@@ -43,6 +48,7 @@ frame-src {{ frame_src }}{% block csp_extra_framesrc %}{% endblock %};
 img-src {{ img_src }}{% block csp_extra_imgsrc %}{% endblock %};
 script-src {{ script_src }}{% block csp_extra_scriptsrc %}{% endblock %};
 style-src {{ style_src }}{% block csp_extra_stylesrc %}{% endblock %};
+connect-src {{ connect_src }}{% block csp_extra_connectsrc %}{% endblock %};
 ">
   {% elif config.THEME_SETTINGS.content_security_policy.lower() not in ["false", "f", "no", "n"] %}
   <meta http-equiv="Content-Security-Policy" content="{{ config.THEME_SETTINGS.content_security_policy | safe }}">
