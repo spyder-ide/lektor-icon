@@ -1,0 +1,25 @@
+{% if this.widgets %}
+<div class="container">
+  {% for widget in this.widgets.blocks %}
+  <div class="col-md-4 card-outer">
+    <div class="card card-item widget">
+      <div class="card-inner">
+        {% if widget.content %}
+        <div class="widget-content">
+          {{ widget.content }}
+        </div>
+        {% endif %}
+        <h3>{{ widget.title }}</h3>
+        {{ widget.description }}
+      </div>
+      <div class="card-spacer"></div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% if this.update_script %}
+<script>
+  {{ this.update_script }}
+</script>
+{% endif %}

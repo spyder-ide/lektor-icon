@@ -8,7 +8,7 @@
 <div class="container">
   {% for service in this.services.blocks %}
   <div class="col-md-4 card-outer">
-    <div class="card service">
+    <div class="card card-item service">
       <div class="card-inner">
         {% if service.icon %}
         {% set service_img_file = record.attachments.get(service.icon) %}

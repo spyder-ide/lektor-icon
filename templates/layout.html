@@ -163,6 +163,9 @@ connect-src {{ connect_src }}{% block csp_extra_connectsrc %}{% endblock %};
   <!-- User Custom CSS -->
   <link rel="stylesheet" href="{{ config.THEME_SETTINGS.custom_css | asseturl }}" type="text/css">
   {% endif %}
+  {% if config.THEME_SETTINGS.custom_head_content %}
+  {{ config.THEME_SETTINGS.custom_head_content | safe }}
+  {% endif %}
 </head>
 
 <body>
