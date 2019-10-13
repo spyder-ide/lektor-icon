@@ -1,18 +1,27 @@
 {% if this.content %}
+{% if not this.button_position or this.button_position == "bottom" %}
 <div class="center">
   {{ this.content }}
 </div>
 {% endif %}
+{% endif %}
 {% if this.button_type and this.button_content %}
 <div class="row">
   {% if this.button_type == 'text' %}
-  <a href="{{ this.button_link }}"  class="content-button text-button" target="_blank" rel="noopener noreferrer">{{ this.button_content | safe }}</a>
+  <button href="{{ this.button_link }}"  class="content-button text-button" target="_blank" rel="noopener noreferrer">{{ this.button_content | safe }}</a>
   {% elif this.button_type == 'image' %}
-  <a href="{{ this.button_link }}" class="center content-button image-button" target="_blank" rel="noopener noreferrer">
+  <button href="{{ this.button_link }}" class="center content-button image-button" target="_blank" rel="noopener noreferrer">
     <img alt="Action Button" src="{{ this.button_content | url }}" class="center">
   </a>
   {% elif this.button_type == 'mailchimp' %}
   <button id="mailchimp-button" class="content-button text-button mailchimp-button">{{ this.button_content | safe }}</button>
   {% endif %}
 </div>
+{% endif %}
+{% if this.content %}
+{% if this.button_position and this.button_position == "top" %}
+<div class="center">
+  {{ this.content }}
+</div>
+{% endif %}
 {% endif %}
