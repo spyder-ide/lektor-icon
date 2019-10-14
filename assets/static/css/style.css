@@ -1753,17 +1753,17 @@ samp {
 }
 
 code {
-  background-color: #e8ecf1;
-  background-color: var(--theme-fg-alt-color, #e8ecf1);
+  background-color: transparent;
   border-radius: 4px;
   font-weight: 400;
-  padding: .125rem .3125rem .0625rem;
+  padding: 0;
 }
 
 p code {
   background-color: #f5f5f5;
   background-color: var(--theme-bg-accent-color, #f5f5f5);
   border: 1px solid #808080;
+  padding: .125rem .3125rem .0625rem;
 }
 
 kbd {
