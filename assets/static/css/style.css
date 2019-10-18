@@ -902,6 +902,14 @@ img {
   border-radius: 5px;
   transition: 0.5s;
 }
+.light-bg-section .card-item {
+  background: #e8ecf1;
+  background: var(--theme-bg-alt-color, #e8ecf1);
+}
+.dark-bg-section .card-item {
+  background: #ffffff;
+  background: var(--theme-bg-color, #ffffff);
+}
 .services-section .service .icon {
   text-align: center;
   width: 100%;
