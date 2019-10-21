@@ -1,6 +1,6 @@
 {% if this.content %}
 {% if not this.button_position or this.button_position == "bottom" %}
-<div class="center">
+<div class="center{% if this.full_width %} full-width{% endif %}">
   {{ this.content }}
 </div>
 {% endif %}

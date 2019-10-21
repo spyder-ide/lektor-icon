@@ -1737,6 +1737,10 @@ ul ul {
   }
 }
 
+.content-section .full-width {
+  width: 100%;
+}
+
 .service .icon .img-responsive {
   margin-bottom: 0.5em;
   width: 80%;
