@@ -2213,12 +2213,15 @@ border-radius: 0;
   color: #ffffff;
 }
 
+button:disabled,
 .button.disabled,
 .button[disabled] {
   opacity: .25;
   cursor: not-allowed;
 }
 
+button:focus:disabled,
+button:hover:disabled,
 .button.disabled:focus,
 .button.disabled:hover,
 .button[disabled]:focus,

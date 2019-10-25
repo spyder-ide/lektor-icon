@@ -6,9 +6,9 @@
 {% if this.button_type and this.button_content %}
 <div class="row">
   {% if this.button_type == 'text' %}
-  <a href="{{ this.button_link }}"  class="content-button text-button" {% if this.button_newtab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ this.button_content | safe }}</a>
+  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="content-button text-button" {% if this.button_newtab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ this.button_content | safe }}</a>
   {% elif this.button_type == 'image' %}
-  <a href="{{ this.button_link }}" class="center content-button image-button" {% if this.button_newtab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="center content-button image-button" {% if this.button_newtab %}target="_blank" rel="noopener noreferrer"{% endif %}>
     <img alt="Action Button" src="{{ this.button_content | url }}" class="center">
   </a>
   {% elif this.button_type == 'mailchimp' %}
