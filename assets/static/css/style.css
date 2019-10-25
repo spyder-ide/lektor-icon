@@ -2268,7 +2268,8 @@ border-radius: 0;
 }
 
 .content-button {
-  margin-top: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .image-button {
@@ -2289,10 +2290,11 @@ border-radius: 0;
 
 .text-button {
   background-color: #ee1c24;
-  background-color: var(--theme-accent-color, #ee1c24);
+  background-color: var(--theme-pipe-color, #ee1c24);
   border: none;
   border-radius: 1.4em;
   color: #ffffff;
+  color: var(--theme-bg-color, #ffffff);
   cursor: pointer;
   display: table;
   font-size: 1.4em;
@@ -2310,17 +2312,23 @@ border-radius: 0;
   transition: 0.5s;
 }
 
-.text-button:hover,
-.text-button:focus,
-.text-button:active {
-  background-color: #ee1c24;
-  background-color: var(--theme-pipe-color, #ee1c24);
-}
-
 #open_chat {
   background-color: #ee1c24;
-  background-color: var(--theme-accent-color, #ee1c24);
+  background-color: var(--theme-pipe-color, #ee1c24);
   font-weight: bold;
+  transition: 0.5s;
+}
+
+.text-button:hover,
+.text-button:focus,
+.text-button:active,
+#open_chat:hover,
+#open_chat:focus,
+#open-chat:active {
+  background-color: #ee1c24;
+  background-color: var(--theme-accent-color, #ee1c24);
+  color: #ffffff;
+  color: var(--theme-bg-color, #ffffff);
 }
 
 .pipe-colored {
