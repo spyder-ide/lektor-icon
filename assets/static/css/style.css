@@ -40,13 +40,13 @@ body.fh5co-overflow {
 }
 
 a {
-  color: #8c0000;
+  color: #d50000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:focus, a:active {
-  color: #8c0000;
+  color: #d50000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1421,7 +1421,7 @@ p {
 }
 
 #open_chat{
-  background-color: #8c0000;
+  background-color: #d50000;
   font-weight: bold;
 }
 
