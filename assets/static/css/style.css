@@ -87,40 +87,40 @@ p {
 }
 
 .btn-primary {
-  background: #8c0000;
+  background: #d50000;
   color: #fff;
-  border: 2px solid #8c0000;
+  border: 2px solid #d50000;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #8c0000 !important;
-  border-color: #8c0000 !important;
+  background: #d50000 !important;
+  border-color: #d50000 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #8c0000;
-  border: 2px solid #8c0000;
+  color: #d50000;
+  border: 2px solid #d50000;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #8c0000;
+  background: #d50000;
   color: #fff;
 }
 
 .btn-success {
-  background: #8c0000;
+  background: #d50000;
   color: #fff;
-  border: 2px solid #8c0000;
+  border: 2px solid #d50000;
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active {
-  background: #8c0000 !important;
-  border-color: #8c0000 !important;
+  background: #d50000 !important;
+  border-color: #d50000 !important;
 }
 .btn-success.btn-outline {
   background: transparent;
-  color: #8c0000;
-  border: 2px solid #8c0000;
+  color: #d50000;
+  border: 2px solid #d50000;
 }
 .btn-success.btn-outline:hover, .btn-success.btn-outline:focus, .btn-success.btn-outline:active {
-  background: #8c0000;
+  background: #d50000;
   color: #fff;
 }
 
@@ -553,8 +553,8 @@ p {
   outline: none;
 }
 .fh5co-tabs-container .fh5co-tabs li.active a {
-  color: #8c0000;
-  border-bottom: 1px solid #8c0000;
+  color: #d50000;
+  border-bottom: 1px solid #d50000;
 }
 @media screen and (max-width: 480px) {
   .fh5co-tabs-container .fh5co-tabs li {
@@ -692,7 +692,7 @@ p {
   line-height: 40px;
 }
 #fh5co-services .fh5co-video a:hover {
-  background: #8c0000;
+  background: #d50000;
 }
 #fh5co-services .container .col-md-6 .col-md-offset-3 .text-center .fh5co-heading {
   margin-top: -45px;
@@ -728,13 +728,13 @@ p {
 }
 #fh5co-services .service .icon i {
   font-size: 40px;
-  color: #8c0000;
+  color: #d50000;
 }
 #fh5co-services .service h3 {
   text-align: center;
   font-size: 1.4em;
   font-weight: 500;
-  color: #8c0000;
+  color: #4e4e4e;
 }
 #fh5co-services .service:hover, #fh5co-services .service:focus {
   border: 1px solid #e6e6e6;
@@ -758,7 +758,7 @@ p {
   left: 0;
   top: .15em;
   font-size: 23px;
-  color: #8c0000;
+  color: #d50000;
   font-family: 'icomoon';
   display: none;
   font-style: normal;
@@ -891,13 +891,13 @@ p {
 }
 #fh5co-sponsors .sponsor .icon i {
   font-size: 40px;
-  color: #8c0000;
+  color: #d50000;
 }
 /* #fh5co-sponsors .sponsor h3 {
   text-align: center;
   font-size: 1.4em;
   font-weight: 500;
-  color: #8c0000;
+  color: #d50000;
 } */
 
 #fh5co-sponsors .sponsor h3 {
@@ -987,7 +987,7 @@ p {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  color: #8c0000;
+  color: #d50000;
 }
 
 #fh5co-gallery h3{
@@ -995,7 +995,7 @@ p {
   align-content: center;
   font-size: 1.4em;
   font-family: Raleway, Arial, sans-serif;
-  color: #8c0000;
+  color: #d50000;
 }
 @media screen and (max-width: 1200px) {
   #fh5co-gallery .fh5co-item {
@@ -1019,7 +1019,7 @@ p {
   right: 0;
   left: 0;
   z-index: 0;
-  background: #8c0000;
+  background: #d50000;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: 0.1s;
