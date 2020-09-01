@@ -219,7 +219,7 @@ direct_link: false
 
 
 
-#### team ####
+#### multisection ####
 section_id: credits
 ----
 title: Credits
@@ -231,156 +231,183 @@ The key people and organizations without which this theme wouldn't be possible.<
 ----
 nav_label: Credits
 ----
+inner_content:
+
+##### team #####
+section_id: contributors
+-----
+title:
+-----
+description:
+-----
+nav_label:
+-----
 members:
 
-##### member #####
+###### member ######
 name: FreeHTML5.co
------
+------
 position: Original Template Creator
------
+------
 description:
 
 Created the original "Icon" plain HTML template, on which Hugo-Icon was based.
------
+------
 image:
------
+------
 website: https://freehtml5.co/
------
+------
 facebook: https://www.facebook.com/fh5co/
------
+------
 twitter: https://twitter.com/fh5co
------
+------
 instagram:
------
+------
 github:
------
+------
 linkedin:
------
+------
 
 
-##### member #####
+###### member ######
 name: Steve Lane
------
+------
 position: Hugo-Icon Theme Creator
------
+------
 description:
 
 Ported the "Icon" template to Hugo and converted it into a jinja-templated theme.
------
+------
 image:
------
+------
 website: https://gtown-ds.netlify.com/
------
+------
 facebook:
------
+------
 twitter: https://twitter.com/stephenelane
------
+------
 instagram:
------
+------
 github: https://github.com/SteveLane
------
+------
 linkedin:
------
+------
 
 
-##### member #####
+###### member ######
 name: Daniel Althviz Moré
------
+------
 position: Lektor-Icon Theme Porter
------
+------
 description:
 
 Ported the Hugo-Icon theme to Lektor, revamping it and adding new features and styling in the process.
 Also helped create the original blog templates.
------
+------
 image: dalthviz.jpg
------
+------
 website: https://dalthviz.github.io/
------
+------
 facebook:
------
+------
 twitter:
------
+------
 instagram:
------
+------
 github: https://github.com/dalthviz
------
+------
 linkedin:
------
+------
 
 
-##### member #####
-name: Spyder Development Team
------
-position: Primary Lektor-Icon Developers
------
+###### member ######
+name: Spyder Team
+------
+position: Theme Maintainers
+------
 description:
 
-Have taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.
------
+Has taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.
+------
 image: /static/images/spyder-logo.svg
------
+------
 website: https://www.spyder-ide.org/
------
+------
 facebook: https://www.facebook.com/SpyderIDE/
------
-twitter: https://twitter.com/spyder_ide"
------
+------
+twitter: https://twitter.com/spyder_ide
+------
 instagram:
------
+------
 github: https://github.com/spyder-ide/spyder
------
+------
 linkedin:
------
+------
 
 
-##### member #####
+###### member ######
 name: Third Party Assets
------
+------
 position: JS Libs, Icon Fonts and Styles
------
+------
 description:
 
 Lektor-Icon includes a number of icon font glyphs, third-party styles and Javascript libraries in the final product. Check out NOTICE.txt for more.
------
+------
 image:
------
+------
 website: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
------
+------
 facebook:
------
+------
 twitter:
------
+------
 instagram:
------
+------
 github: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
------
+------
 linkedin:
------
+------
 
 
-##### member #####
+###### member ######
 name: You!
------
+------
 position: Community Contributors
------
+------
 description:
 
 Lektor-Icon welcomes your help in making this theme better for everyone. Anyone can submit a PR or participate in development!
------
+------
 image:
------
+------
 website:
------
+------
 facebook:
------
+------
 twitter:
------
+------
 instagram:
------
+------
 github:
------
+------
 linkedin:
+------
+-----
+
+
+##### content #####
+section_id: opencollective-backers
+-----
+title:
+-----
+description:
+-----
+content:
+
+<a href="https://opencollective.com/spyder#support">
+  <img src="https://opencollective.com/spyder/sponsors.svg" class="img-responsive img-center" alt="Graphic showing Spyder's top backers on OpenCollective">
+</a>
 -----
 ----
 

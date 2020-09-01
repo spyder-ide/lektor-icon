@@ -576,6 +576,10 @@ img {
   position: relative;
 }
 
+.body-subsection {
+  padding-top: 1em;
+}
+
 .light-bg-section {
   background: #ffffff;
   background: var(--theme-bg-color, #ffffff);
