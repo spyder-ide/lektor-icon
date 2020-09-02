@@ -92,7 +92,7 @@
 {%- if not main_block.title %}
 {%- set extra_classes = extra_classes ~ ' notitle-section' %}
 {%- endif %}
-<div id="section-{{ main_block.section_id }}" data-section="{{ main_block.section_id }}" class="{{ main_block._flowblock }}-section body-section{{ extra_classes }}">
+<div id="section-{{ main_block.section_id }}" data-section="{{ main_block.section_id }}" class="{{ main_block._flowblock }}-section body-section body-block{{ extra_classes }}">
   {%- if main_block.video_url and main_block.video_url.url != '' %}
   <div class="video-spacer"></div>
   {%- endif %}

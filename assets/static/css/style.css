@@ -2420,3 +2420,17 @@ button:hover:disabled,
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+/* Center cards and kill whitespace */
+
+.center-container {
+  font-size: 0;
+  text-align: center;
+}
+
+.center-container > .center-inner {
+  display: inline-block;
+  float: none;
+  font-size: 1rem;
+  vertical-align: middle;
+}
