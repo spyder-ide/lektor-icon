@@ -18,13 +18,22 @@
  */
 
 html {
-  font-size: 100%;
-  font-family: sans-serif;
-  line-height: 1.15;
+  font-size: 18px;
   box-sizing: border-box;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  background-color: #ffffff;
+  background-color: var(--theme-bg-color, #ffffff);
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 0.90em;
+  }
 }
 
 @font-face {
@@ -77,58 +86,26 @@ html {
   float: right !important;
 }
 
-/* small screen portrait */
-
-@media screen and (max-width: 480px) {
-
-  .pull-right {
-    float: none!important;
-  }
-
-}
-
-/* small screen landscape */
-
 @media screen and (max-width: 768px) {
-
   .pull-right {
     float: none!important;
   }
-
 }
 
 *,
 :after,
 :before {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
   font-family: Raleway, "DejaVu Sans", "Open Sans", "Liberation Sans", Helvetica, Arial, sans-serif;
-  font-size: 18px;
   font-weight: 300;
   line-height: 1.9;
   color: #333333;
   color: var(--theme-fg-alt-color, #333333);
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  background: var(--theme-bg-color, #ffffff);
-  background-color: #ffffff;
-  background-color: var(--theme-bg-color, #ffffff);
-
-}
-
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 0.95em;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  body {
-    font-size: 0.90em;
-  }
 }
 
 body.fh5co-overflow {
