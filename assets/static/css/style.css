@@ -2434,3 +2434,14 @@ button:hover:disabled,
   font-size: 1rem;
   vertical-align: middle;
 }
+
+/* Set up links for cards */
+
+a.card-link-full {
+  color: inherit;
+}
+
+a.card-link-full:hover,
+a.card-link-full:focus {
+  text-decoration: none;
+}

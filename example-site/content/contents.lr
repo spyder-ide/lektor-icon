@@ -51,6 +51,8 @@ nav_label: Features
 ----
 video_url: https://www.youtube.com/watch?v=vtLdH4VbACA
 ----
+link_whole_card: true
+----
 services:
 
 ##### service #####
@@ -61,6 +63,8 @@ description:
 Developed specifically to offer maximum customizability and adaptability both within pages and in the overall structure and organization of the site, while requiring a minimum of deep technical knowledge or awareness of edge-cases from content creators and gracefully handling missing or ambiguous field values.
 -----
 icon: flexible-design.png
+-----
+url:
 -----
 
 
@@ -73,6 +77,8 @@ Optimized for both desktop and mobile, and both portrait and landscape orientati
 -----
 icon: responsive-layout.png
 -----
+url:
+-----
 
 
 ##### service #####
@@ -83,6 +89,8 @@ description:
 Built on a foundation of modern web standards, including HTML5, CSS3, and jQuery 3, audited for HTML/CSS validity, accessibility and performance, and security hardened with updated Javascript libraries, XSS protection and best practices; all while remaining fully compatible with common modern and legacy browsers.
 -----
 icon: standards-based.png
+-----
+url: readme
 -----
 ----
 
@@ -242,6 +250,8 @@ description:
 -----
 nav_label:
 -----
+link_whole_card: false
+-----
 members:
 
 ###### member ######
@@ -254,6 +264,8 @@ description:
 Created the original "Icon" plain HTML template, on which Hugo-Icon was based.
 ------
 image:
+------
+url: https://freehtml5.co/
 ------
 website: https://freehtml5.co/
 ------
@@ -279,6 +291,8 @@ description:
 Ported the "Icon" template to Hugo and converted it into a jinja-templated theme.
 ------
 image:
+------
+url:
 ------
 website: https://gtown-ds.netlify.com/
 ------
@@ -306,6 +320,8 @@ Also helped create the original blog templates.
 ------
 image: dalthviz.jpg
 ------
+url:
+------
 website: https://dalthviz.github.io/
 ------
 facebook:
@@ -330,6 +346,8 @@ description:
 Has taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.
 ------
 image: /static/images/spyder-logo.svg
+------
+url: https://www.spyder-ide.org/
 ------
 website: https://www.spyder-ide.org/
 ------
@@ -356,6 +374,8 @@ Lektor-Icon includes a number of icon font glyphs, third-party styles and Javasc
 ------
 image:
 ------
+url: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
+------
 website: https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 ------
 facebook:
@@ -380,6 +400,8 @@ description:
 Lektor-Icon welcomes your help in making this theme better for everyone. Anyone can submit a PR or participate in development!
 ------
 image:
+------
+url:
 ------
 website:
 ------
