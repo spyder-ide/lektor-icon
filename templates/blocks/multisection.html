@@ -10,7 +10,9 @@
   {%- endif %}
   {%- if inner_block.title or inner_block.description %}
   <div class="text-center fh5co-heading">
+    {%- if inner_block.title %}
     <h2>{{ inner_block.title }}</h2>
+    {%- endif %}
     {{ inner_block.description }}
   </div>
   {%- endif %}
