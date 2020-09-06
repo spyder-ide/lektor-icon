@@ -17,12 +17,14 @@
         {%- else %}
         <img alt="Placeholder person" src="{{ '/static/images/placeholder_person.png' | asseturl }}" class="img-responsive">
         {%- endif %}
+        {%- if member.name %}
         {%- if member.url and member.url.url != '' and not this.link_whole_card %}
         <a href="{{ member.url }}" class="card-link-title">
           <h3>{{ member.name }}</h3>
         </a>
         {%- else %}
         <h3>{{ member.name }}</h3>
+        {%- endif %}
         {%- endif %}
         <h4>{{ member.position | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h4>
         {{ member.description }}
