@@ -13,8 +13,13 @@
 <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css' | asseturl }}" type="text/css">
 <style>
   {%- if this.hero_image %}
-  {%- set hero_img_file = this.attachments.get(this.hero_image) %}
   {%- set is_svg = this.hero_image.split('.')[-1].lower() in ['svg', 'svgz'] %}
+  {%- if is_svg or this.hero_no_downscale %}
+  .hero-section {
+    background-image: url("{{ this.hero_image | url }}")
+  }
+  {%- else %}
+  {%- set hero_img_file = this.attachments.get(this.hero_image) %}
   {%- if hero_img_file.thumbnail %}
   .hero-section {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
@@ -29,10 +34,7 @@
       background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
     }
   }
-  {%- elif is_svg %}
-  .hero-section {
-    background-image: url("{{ this.hero_image | url }}")
-  }
+  {%- endif %}
   {%- endif %}
   {%- endif %}
 </style>
