@@ -5,7 +5,7 @@
     {%- if widget.url and widget.url.url != '' and this.link_whole_card %}
     <a href="{{ widget.url }}" class="card-link-full">
     {%- endif %}
-    <div class="card card-item widget">
+    <div class="card card-item widget {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
       <div class="card-inner">
         {%- if widget.content %}
         <div class="widget-content">

@@ -11,7 +11,7 @@
     {%- if service.url and service.url.url != '' and this.link_whole_card %}
     <a href="{{ service.url }}" class="card-link-full">
     {%- endif %}
-    <div class="card card-item service">
+    <div class="card card-item service {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
       <div class="card-inner">
         {%- if service.icon %}
         {%- set service_img_file = record.attachments.get(service.icon) %}

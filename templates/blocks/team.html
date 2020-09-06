@@ -5,7 +5,7 @@
     {%- if member.url and member.url.url != '' and this.link_whole_card %}
     <a href="{{ member.url }}" class="card-link-full">
     {%- endif %}
-    <div class="card person">
+    <div class="card person {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
       <div class="card-inner">
         {%- if member.image %}
         {%- set member_img_file = record.attachments.get(member.image) %}

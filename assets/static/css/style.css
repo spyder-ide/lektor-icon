@@ -883,11 +883,11 @@ img {
   border-radius: 5px;
   transition: 0.5s;
 }
-.light-bg-section .card-item {
+.light-bg-section .offset-bg {
   background: #e8ecf1;
   background: var(--theme-bg-alt-color, #e8ecf1);
 }
-.dark-bg-section .card-item {
+.dark-bg-section .offset-bg {
   background: #ffffff;
   background: var(--theme-bg-color, #ffffff);
 }
@@ -968,8 +968,6 @@ img {
   text-align: center;
   transition: 0.5s;
   border-radius: 5px;
-  background: #ffffff;
-  background: var(--theme-bg-color, #ffffff);
 }
 .team-section .person img {
   width: 50%;
@@ -2444,4 +2442,9 @@ a.card-link-full {
 a.card-link-full:hover,
 a.card-link-full:focus {
   text-decoration: none;
+}
+
+/* Background color for e.g. cards */
+.transparent-bg {
+  background: transparent;
 }
