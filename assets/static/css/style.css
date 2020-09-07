@@ -875,8 +875,8 @@ img {
 .card-item {
   text-align: center;
   padding: 2em;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   background: #ffffff;
   background: var(--theme-bg-color, #ffffff);
   border: 1px solid transparent;
@@ -891,14 +891,21 @@ img {
   background: #ffffff;
   background: var(--theme-bg-color, #ffffff);
 }
-.services-section .service .icon {
+.service .icon {
   text-align: center;
   width: 100%;
 }
-.services-section .service .icon i {
+.service .icon .img-responsive {
+  margin-bottom: 0.5em;
+  width: 80%;
+}
+.service .icon i {
   font-size: 40px;
   color: #ee1c24;
   color: var(--theme-accent-color, #ee1c24);
+}
+.service p {
+  margin: 0;
 }
 .card-item h3 {
   text-align: center;
@@ -963,8 +970,8 @@ img {
 }
 .team-section .person {
   padding: 2em;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   text-align: center;
   transition: 0.5s;
   border-radius: 5px;
@@ -2222,17 +2229,18 @@ button:hover:disabled,
 }
 
 #fh5co-footer .container .row .text-center {
-  margin-bottom: 0.7em;
+  margin-bottom: 0.5em;
 }
 
 #fh5co-footer .container .footer-connect-line .text-center p {
-  font-size: 16px;
-  line-height: 2em;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
 }
 
 #fh5co-footer .container .footer-copyright .text-center p {
-  font-size: 13px;
-  line-height: 1.2em;
+  font-size: 0.7em;
+  line-height: 1.3em;
 }
 
 #fh5co-footer a,
@@ -2258,7 +2266,6 @@ button:hover:disabled,
 }
 
 .image-button {
-  min-width: 480px;
   width: 480px;
 }
 
@@ -2418,6 +2425,7 @@ button:hover:disabled,
   margin-bottom: 1em;
 }
 
+
 /* Center cards and kill whitespace */
 
 .center-container {
@@ -2432,6 +2440,7 @@ button:hover:disabled,
   vertical-align: middle;
 }
 
+
 /* Set up links for cards */
 
 a.card-link-full {
@@ -2443,7 +2452,18 @@ a.card-link-full:focus {
   text-decoration: none;
 }
 
+
 /* Background color for e.g. cards */
+
 .transparent-bg {
   background: transparent;
+}
+
+
+/* Reduce card padding at narrow widths */
+
+@media screen and (max-width: 360px) {
+  .body-block .card {
+    padding: 1em;
+  }
 }
