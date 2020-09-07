@@ -24,7 +24,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     var isMSIE = function() {
         var is_ie = /MSIE|Trident/.test(window.navigator.userAgent);
         return is_ie;
-    }
+    };
 
 
     var heroHeight = function() {
@@ -60,7 +60,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
             $this.closest('.body-section').find('.tab-image').removeClass('active');
             $this.closest('.body-section').find('.tab-image[data-tab-content="' + tab + '"]').addClass('active');
         });
-    }
+    };
 
 
     var gridAutoHeight = function() {
@@ -69,25 +69,28 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         $(window).on('resize', function(){
             $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight()/2);
         });
-    }
+    };
 
 
     // Equalize heights of cards in team/services section for proper layout
     var cardsEvenHeight = function() {
         $('.body-section .container').each(function() {
+            var cardHeightMax = 0;
             if ($(this).find('.card-inner').length && $(this).find('.card-outer').first().width() <= $(this).width() / 2.0) {
-                var cardHeightMax = 0;
                 $(this).find('.card-inner').each(function() {
                     var cardHeight = $(this).height()
-                    if (cardHeight > cardHeightMax) {cardHeightMax = cardHeight; }
+                    if (cardHeight > cardHeightMax) {
+                        cardHeightMax = cardHeight;
+                    };
                 });
             }
             $(this).find('.card').each(function() {
-                var cardHeight = $(this).find('.card-inner').height()
-                $(this).find('.card-spacer').height(cardHeightMax - cardHeight);
+                var cardHeight = $(this).find('.card-inner').height();
+                var spacerHeight = Math.max(cardHeightMax - cardHeight, 0);
+                $(this).find('.card-spacer').height(spacerHeight);
             });
         });
-    }
+    };
 
 
     var setCardsEvenHeight = function() {

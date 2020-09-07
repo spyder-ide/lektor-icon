@@ -1697,7 +1697,7 @@ ul ul {
 @media screen and (max-width: 768px) {
   .col-md-4, .col-md-6 {
     float: none;
-    width: auto;
+    width: 100%;
   }
 }
 
