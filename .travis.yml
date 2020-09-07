@@ -1,20 +1,12 @@
 language: python
-python: 3.6
-cache:
-  directories:
-    - $HOME/.cache/pip
-    - $HOME/.cache/lektor/builds
+python: 3.7
 
-install:
-  - "pip install -U pip"
-  - "pip install Lektor"
+install: "ci/install.sh"
 
-script:
-  - "cd example-site"
-  - "lektor build -v"
+script: "ci/build.sh"
 
 deploy:
   provider: script
-  script: "lektor deploy ghpages"
+  script: "lektor deploy ghpages --output-path website-lektor-icon-build"
   on:
     branch: master

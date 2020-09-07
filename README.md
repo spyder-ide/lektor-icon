@@ -2,6 +2,9 @@
 
 *Copyright © 2016-2020 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
 
+[![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)
+
 ![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
 This a heavily modified and expanded version of the [FreeHTML5](https://freehtml5.co/) ["Icon" template](https://freehtml5.co/icon-free-website-template-using-bootstrap/) ported to the [Lektor](https://www.getlektor.com/) static CMS by [Daniel Althviz](https://dalthviz.github.io/) and the [Spyder](https://www.spyder-ide.org/) development team; it was initially derived from the [Hugo port](https://github.com/SteveLane/hugo-icon) of the Icon theme by [Steve Lane](https://gtown-ds.netlify.com/).
