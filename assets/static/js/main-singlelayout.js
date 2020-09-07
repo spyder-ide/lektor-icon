@@ -194,7 +194,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
 
-    // Document on load
+    // Document on DOM ready
     $(function() {
         setHeroHeight();
         loaderPage();
