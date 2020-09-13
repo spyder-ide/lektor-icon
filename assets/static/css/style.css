@@ -433,11 +433,11 @@ img {
 .fh5co-main-nav .fh5co-menu-1 a {
   padding: 1em 0;
   margin-right: 2em;
-  color: #040404;
-  color: var(--theme-fg-alt-color, #040404);
+  color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   display: inline-block;
   vertical-align: middle;
@@ -531,7 +531,6 @@ img {
     font-size: 1.5em;
   }
 }
-
 
 .fh5co-heading h2:after,
 .rule-under-heading {
@@ -711,7 +710,7 @@ img {
   width: 100%;
   display: block;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
   color: #808080;
@@ -752,8 +751,8 @@ img {
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #040404;
-  color: var(--theme-fg-alt-color, #040404);
+  color: #333333;
+  color: var(--theme-fg-alt-color, #333333);
 }
 
 @media screen and (max-width: 480px) {
@@ -1735,7 +1734,6 @@ ul ul {
 }
 
 
-
 /* Verbatim styling */
 
 figure {
@@ -1959,7 +1957,7 @@ border-radius: 0;
 
 #menu-logo .logo-text-container {
   display: inline-block;
-  color: #040404;
+  color: #333333;
   color: var(--theme-fg-alt-color, #333333);
   vertical-align: middle;
 }
@@ -2240,7 +2238,7 @@ button:hover:disabled,
 
 #fh5co-footer .container .footer-copyright .text-center p {
   font-size: 0.7em;
-  line-height: 1.3em;
+  line-height: 1.25em;
 }
 
 #fh5co-footer a,
@@ -2265,8 +2263,8 @@ button:hover:disabled,
   margin-bottom: 1em;
 }
 
-.image-button {
-  width: 480px;
+.content-section .image-button {
+  max-width: 480px;
 }
 
 @media screen and (max-width: 768px) {
