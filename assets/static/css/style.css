@@ -2194,10 +2194,14 @@ border-radius: 0;
   outline: 0;
 }
 
+button:focus,
+button:hover,
 .button:focus,
 .button:hover {
-  background-color: #450200;
+  background-color: #d50000;
+  background-color: var(--theme-accent-alt-color, #d50000);
   color: #ffffff;
+  text-decoration: none;
 }
 
 button:disabled,
@@ -2213,7 +2217,8 @@ button:hover:disabled,
 .button.disabled:hover,
 .button[disabled]:focus,
 .button[disabled]:hover {
-  background-color: #450200;
+  background-color: #d50000;
+  background-color: var(--theme-accent-alt-color, #d50000);
   color: #ffffff;
 }
 
@@ -2280,7 +2285,7 @@ button:hover:disabled,
 
 .text-button {
   background-color: #ee1c24;
-  background-color: var(--theme-pipe-color, #ee1c24);
+  background-color: var(--theme-accent-color, #ee1c24);
   border: none;
   border-radius: 1.4em;
   color: #ffffff;
@@ -2304,7 +2309,7 @@ button:hover:disabled,
 
 #open_chat {
   background-color: #ee1c24;
-  background-color: var(--theme-pipe-color, #ee1c24);
+  background-color: var(--theme-accent-color, #ee1c24);
   font-weight: bold;
   transition: 0.5s;
 }
@@ -2315,8 +2320,8 @@ button:hover:disabled,
 #open_chat:hover,
 #open_chat:focus,
 #open-chat:active {
-  background-color: #ee1c24;
-  background-color: var(--theme-accent-color, #ee1c24);
+  background-color: #d50000;
+  background-color: var(--theme-accent-alt-color, #d50000);
   color: #ffffff;
   color: var(--theme-bg-color, #ffffff);
 }
@@ -2328,8 +2333,8 @@ button:hover:disabled,
 }
 
 #rss-nav-link {
-  background-color: #ff4c52;
-  background-color: var(--theme-pipe-color, #ff4c52);
+  background-color: #ee1c24;
+  background-color: var(--theme-accent-color, #ee1c24);
   border: none;
   border-radius: 0.5em;
   color: #ffffff;

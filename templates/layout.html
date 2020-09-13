@@ -145,6 +145,11 @@
       {%- else %}
       --theme-accent-color: #ee1c24;
       {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_accent_alt_color %}
+      --theme-accent-alt-color: {{ config.THEME_SETTINGS.theme_accent_alt_color | safe }};
+      {%- else %}
+      --theme-accent-alt-color: #d50000;
+      {%- endif %}
       {%- if config.THEME_SETTINGS.theme_pipe_color %}
       --theme-pipe-color: {{ config.THEME_SETTINGS.theme_pipe_color | safe }}
       {%- elif config.THEME_SETTINGS.theme_accent_color %}
