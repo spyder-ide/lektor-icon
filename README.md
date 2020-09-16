@@ -1,6 +1,9 @@
 # Lektor-Icon Theme
 
-*Copyright © 2016-2019 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+*Copyright © 2016-2020 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+
+[![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)
 
 ![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
@@ -109,7 +112,7 @@ Used for the ``"author"`` HTML meta tag.
 
 ``copyright`` (*string*): The copyright statement of the website.
 Used for the ``"copyright"`` HTML meta tag and the copyright statement in the page footer.
-*Example:* ``copyright = &copy; 2019 Lektor-Icon Contributors``
+*Example:* ``copyright = &copy; 2020 Lektor-Icon Contributors``
 
 ``description`` (*string*): A short (<1 sentance) summary of the site's purpose.
 Used for the ``"description"`` HTML meta tag.
@@ -151,6 +154,9 @@ Can be further customized with the properties below.
 
 ``content_security_policy_style_src`` (*safe string*): String to use instead of the default for the ``script_src`` rule of the site's CSP (if enabled).
 *Example:* ``content_security_policy_style_src = 'self' https://fonts.googleapis.com 'unsafe-inline'``
+
+``content_security_policy_connect_src`` (*safe string*): String to use instead of the default for the ``connect-src`` rule of the site's CSP (if enabled).
+*Example:* ``content_security_policy_connect_src = 'self' https://api.foo.bar``
 
 ``loader_enable`` (*boolean*): Whether to show the animated loading icon for a brief period while any singlepage-theme page is loading.
 Defaults to true if not set.
@@ -310,7 +316,7 @@ The primary blocker for browsers older than this is flexbox support, which sever
 
 ### Library Versions and Security
 
-Lektor-Icon has been updated with the latest (as of Feburary 1, 2019) releases of jQuery (3.3.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
+Lektor-Icon has been updated with the latest (as of August 21, 2020) releases of jQuery (3.5.1) and all other included libraries/plugins, with some additional manual patches applied to fix deprecations and other Javascript warnings and errors.
 The theme originally relied on Bootstrap 3.3.5 along with a number of other major third party stylesheets, JavaScript libraries and fonts but that is no longer the case, the JS is no longer used and the relatively few CSS styles utilized were inlined into the main stylesheet.
 
 Although destined for relatively low-risk static site applications, the remaining libraries have been checked for unpatched vulnerabilities and considerable security hardening of the headers, links and elements have been done.

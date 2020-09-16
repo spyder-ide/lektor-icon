@@ -1,16 +1,23 @@
-{% if this.content %}
-<div class="center">
+{%- if this.content and not this.button_position or this.button_position == "bottom" %}
+<div class="center{%- if this.full_width %} full-width{%- endif %}">
   {{ this.content }}
 </div>
-{% endif %}
-{% if this.button_type and this.button_content %}
+{%- endif %}
+{%- if this.button_type and this.button_content %}
 <div class="row">
-  {% if this.button_type == "text" %}
-  <a href="{{ this.button_link }}"  class="content-button text-button" target="_blank" rel="noopener noreferrer">{{ this.button_content | safe }}</a>
-  {% elif this.button_type == "image" %}
-  <a href="{{ this.button_link }}" class="center content-button image-button" target="_blank" rel="noopener noreferrer">
-    <img alt="Action Button" src="{{ this.button_content | url }}" class="center">
+  {%- if this.button_type == 'text' %}
+  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="content-button text-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>{{ this.button_content | safe }}</a>
+  {%- elif this.button_type == 'image' %}
+  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="center content-button image-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>
+    <img alt="Action Button" src="{%- if this.button_content.split('://')[0] in ['http', 'https'] %}{{ this.button_content }}{%- else %}{{ this.button_content | url }}{%- endif %}" class="center">
   </a>
-  {% endif %}
+  {%- elif this.button_type == 'mailchimp' %}
+  <button id="mailchimp-button" class="content-button text-button mailchimp-button">{{ this.button_content | safe }}</button>
+  {%- endif %}
 </div>
-{% endif %}
+{%- endif %}
+{%- if this.content and this.button_position and this.button_position == "top" %}
+<div class="center{%- if this.full_width %} full-width{%- endif %}">
+  {{ this.content }}
+</div>
+{%- endif %}

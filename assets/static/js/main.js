@@ -23,7 +23,8 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
     // Fullsize Error Page Background
     var fullHeight = function() {
-        $('#error-page').css('height', $(window).height() - $('.js-sticky').height() - $('#fh5co-footer').outerHeight());
+        var heightToSet = $(window).height() - $('.js-sticky').height() - $('#fh5co-footer').outerHeight();
+        $('#error-page').css('height', heightToSet);
     };
 
     var setFullHeight = function() {
@@ -38,9 +39,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         $('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" aria-label="Toggle for hamburger menu"><i></i></a>');
 
         $('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function(){
-
             var $this = $(this);
-
             $('#fh5co-offcanvas').append($this.clone());
         });
         // $('#fh5co-offcanvas').append
@@ -53,9 +52,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         var sticky = $('.js-sticky');
         var $section = $('.fh5co-main-nav');
 
-        sticky.css('height', sticky.height());
+        sticky.css('height', $section.height());
         $(window).on('resize', function(){
-            sticky.css('height',  $section.height());
+            sticky.css('height', $section.height());
         });
 
         $section.waypoint(function(direction) {
@@ -112,13 +111,13 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 
 
-    // Document on load
+    // Document on DOM ready
     $(function(){
         offcanvasMenu();
-        mainMenuSticky();
-        setFullHeight();
         burgerMenu();
         mobileMenuOutsideClick();
+        mainMenuSticky();
+        setFullHeight();
     });
 
 }());

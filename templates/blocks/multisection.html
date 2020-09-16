@@ -1,0 +1,22 @@
+{%- if this.inner_content %}
+{%- for inner_block in this.inner_content.blocks %}
+{%- set extra_classes = '' %}
+{%- if not inner_block.title %}
+{%- set extra_classes = extra_classes ~ ' notitle-section' %}
+{%- endif %}
+<div id="section-{{ inner_block.section_id }}" data-section="{{ inner_block.section_id }}" class="{{ inner_block._flowblock }}-section body-subsection body-block{{ extra_classes }}">
+  {%- if inner_block.video_url and inner_block.video_url.url != '' %}
+  <div class="video-spacer"></div>
+  {%- endif %}
+  {%- if inner_block.title or inner_block.description %}
+  <div class="text-center fh5co-heading">
+    {%- if inner_block.title %}
+    <h2>{{ inner_block.title }}</h2>
+    {%- endif %}
+    {{ inner_block.description }}
+  </div>
+  {%- endif %}
+{{ inner_block }}
+</div> <!-- END {{ inner_block._flowblock }}-subsection -->
+{%- endfor %}
+{%- endif %}

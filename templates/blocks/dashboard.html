@@ -1,0 +1,37 @@
+{%- if this.widgets %}
+<div class="container center-container">
+  {%- for widget in this.widgets.blocks %}
+  <div class="col-md-4 card-outer center-inner">
+    {%- if widget.url and widget.url.url != '' and this.link_whole_card %}
+    <a href="{{ widget.url }}" class="card-link-full">
+    {%- endif %}
+    <div class="card card-item widget {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
+      <div class="card-inner">
+        {%- if widget.content %}
+        <div class="widget-content">
+          {{ widget.content }}
+        </div>
+        {%- endif %}
+        {%- if widget.title %}
+        {%- if widget.url and widget.url.url != '' and not this.link_whole_card %}
+        <a href="{{ widget.url }}" class="card-link-title">
+          <h3>{{ widget.title }}</h3>
+        </a>
+        {%- else %}
+        <h3>{{ widget.title }}</h3>
+        {%- endif %}
+        {%- endif %}
+        {{ widget.description }}
+      </div>
+      <div class="card-spacer"></div>
+    </div>
+    {%- if widget.url and widget.url.url != '' and this.link_whole_card %}</a>{%- endif %}
+  </div>
+  {%- endfor %}
+</div>
+{%- endif %}
+{%- if this.update_script %}
+<script>
+  {{ this.update_script }}
+</script>
+{%- endif %}

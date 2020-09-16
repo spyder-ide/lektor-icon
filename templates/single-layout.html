@@ -1,15 +1,26 @@
-{% extends "layout.html" %}
+{%- extends "layout.html" %}
 
-{% block title %}Home{% endblock %}
+{%- if this.main_content %}
+{%- set mailchimp_data = this.main_content.blocks | selectattr('button_type', 'equalto', 'mailchimp') | map(attribute='button_link') | first %}
+{%- else %}
+{%- set mailchimp_data = '' %}
+{%- endif %}
 
-{% block stylesheets %}
+{%- block title %}Home{%- endblock %}
+
+{%- block stylesheets %}
 <!-- Magnific Popup -->
 <link rel="stylesheet" href="{{ '/static/css/magnific-popup.css' | asseturl }}" type="text/css">
 <style>
-  {% if this.hero_image %}
-  {% set hero_img_file = this.attachments.get(this.hero_image) %}
-  {% set is_svg = this.hero_image.split('.')[-1].lower() in ['svg', 'svgz'] %}
-  {% if hero_img_file.thumbnail %}
+  {%- if this.hero_image %}
+  {%- set is_svg = this.hero_image.split('.')[-1].lower() in ['svg', 'svgz'] %}
+  {%- if is_svg or this.hero_no_downscale %}
+  .hero-section {
+    background-image: url("{{ this.hero_image | url }}")
+  }
+  {%- else %}
+  {%- set hero_img_file = this.attachments.get(this.hero_image) %}
+  {%- if hero_img_file.thumbnail %}
   .hero-section {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
   }
@@ -23,87 +34,84 @@
       background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
     }
   }
-  {% elif is_svg %}
-  .hero-section {
-    background-image: url("{{ this.hero_image | url }}")
-  }
-  {% endif %}
-  {% endif %}
+  {%- endif %}
+  {%- endif %}
+  {%- endif %}
 </style>
-{% endblock %}
+{%- endblock %}
 
-{% block loader %}
-{% if not config.THEME_SETTINGS.loader_enable or config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
+{%- block loader %}
+{%- if not config.THEME_SETTINGS.loader_enable or config.THEME_SETTINGS.loader_enable.lower() not in ["false", "f", "no", "n"] %}
 <div class="fh5co-loader"></div>
-{% endif %}
-{% endblock %}
+{%- endif %}
+{%- endblock %}
 
 
-{% block nav_main %}
+{%- block nav_main %}
 
-{% if this.hero_image and this.show_home_nav %}
-<a href="#section-home" data-nav-section="home">Home</a>
-{% endif %}
-{% if this.main_content %}
-{% for block in this.main_content.blocks %}
-{% if block.nav_label %}
-<a href="#section-{{ block.section_id }}" data-nav-section="{{ block.section_id }}">{{ block.nav_label }}</a>
-{% endif %}
-{% endfor %}
-{% endif %}
+{%- if this.hero_image and this.show_home_nav %}
+<a class="nav-link-section" href="#section-home" data-nav-section="home">Home</a>
+{%- endif %}
+{%- if this.main_content %}
+{%- for block in this.main_content.blocks %}
+{%- if block.nav_label %}
+<a class="nav-link-section" href="#section-{{ block.section_id }}" data-nav-section="{{ block.section_id }}">{{ block.nav_label }}</a>
+{%- endif %}
+{%- endfor %}
+{%- endif %}
 
-{% endblock %}
+{%- endblock %}
 
-{% block body %}
+{%- block body %}
 
-{% if this.hero_image %}
+{%- if this.hero_image %}
 <div id="section-home" class="js-fullheight-home hero-section" data-section="home" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="col-md-6">
       <div class="js-fullheight-home fh5co-copy">
         <div class="js-fullheight-home fh5co-copy-inner">
-          {% if this.hero_title %}
+          {%- if this.hero_title %}
           <h1>{{ this.hero_title }}</h1>
-          {% endif %}
-          {% if this.hero_description %}
-          <h2>{{ this.hero_description }}</h2>
-          {% endif %}
+          {%- endif %}
+          {%- if this.hero_description %}
+          <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h2>
+          {%- endif %}
         </div>
       </div>
     </div>
   </div>
 </div> <!-- END hero-section -->
-{% endif %}
+{%- endif %}
 
-{% if this.main_content %}
-{% for block in this.main_content.blocks %}
-{% set extra_classes = '' %}
-{% if this.starting_block_bg and this.starting_block_bg == 'light' %}
-{% set extra_classes = extra_classes ~ loop.cycle(' light-bg-section', ' dark-bg-section') %}
-{% else %}
-{% set extra_classes = extra_classes ~ loop.cycle(' dark-bg-section', ' light-bg-section') %}
-{% endif %}
-{% if not block.title %}
-{% set extra_classes = extra_classes ~ ' notitle-section' %}
-{% endif %}
-<div id="section-{{ block.section_id }}" data-section="{{ block.section_id }}" class="{{ block._flowblock }}-section body-section{{ extra_classes }}">
-  {% if block.video_url and block.video_url.url != '' %}
+{%- if this.main_content %}
+{%- for main_block in this.main_content.blocks %}
+{%- set extra_classes = '' %}
+{%- if this.starting_block_bg and this.starting_block_bg == 'light' %}
+{%- set extra_classes = extra_classes ~ loop.cycle(' light-bg-section', ' dark-bg-section') %}
+{%- else %}
+{%- set extra_classes = extra_classes ~ loop.cycle(' dark-bg-section', ' light-bg-section') %}
+{%- endif %}
+{%- if not main_block.title %}
+{%- set extra_classes = extra_classes ~ ' notitle-section' %}
+{%- endif %}
+<div id="section-{{ main_block.section_id }}" data-section="{{ main_block.section_id }}" class="{{ main_block._flowblock }}-section body-section body-block{{ extra_classes }}">
+  {%- if main_block.video_url and main_block.video_url.url != '' %}
   <div class="video-spacer"></div>
-  {% endif %}
-  {% if block.title or block.description %}
+  {%- endif %}
+  {%- if main_block.title or main_block.description %}
   <div class="text-center fh5co-heading">
-    <h2>{{ block.title }}</h2>
-    {{ block.description }}
+    <h2>{{ main_block.title }}</h2>
+    {{ main_block.description }}
   </div>
-  {% endif %}
-{{ block }}
-</div> <!-- END {{ block._flowblock }}-section -->
-{% endfor %}
-{% endif %}
+  {%- endif %}
+  {{ main_block }}
+</div> <!-- END {{ main_block._flowblock }}-section -->
+{%- endfor %}
+{%- endif %}
 
-{% endblock %}
+{%- endblock %}
 
-{% block scripts %}
+{%- block scripts %}
 <!-- jQuery Easing -->
 <script src="{{ '/static/js/jquery.easing.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Stellar Parallax -->
@@ -111,6 +119,25 @@
 <!-- Magnific Popup -->
 <script src="{{ '/static/js/jquery.magnific-popup.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <script src="{{ '/static/js/magnific-popup-options.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script>var mailchimpButtonEnabled = false;</script>
+{%- if mailchimp_data %}
+<!-- Mailchimp Popup Form Script -->
+<script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script>
+  function showMailingPopUp() {
+    window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({ {{ mailchimp_data | safe }} }) })
+    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+  };
+  mailchimpButtonEnabled = true;
+</script>
+{%- endif %}
+{%- if config.THEME_SETTINGS.custom_js_singlepage %}
+<!-- User Custom Scripts -->
+<script src="{{ config.THEME_SETTINGS.custom_js_singlepage | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{%- endif %}
 <!-- Main JS -->
 <script src="{{ '/static/js/main-singlelayout.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
-{% endblock %}
+{%- endblock %}
+
+{%- block csp_extra_scriptsrc %}{%- if mailchimp_data %} https://*.mailchimp.com http://*.mailchimp.com 'unsafe-eval' http://*.list-manage.com/ https://*.list-manage.com/{%- endif %}{%- endblock %}
+{%- block csp_extra_stylesrc %}{%- if mailchimp_data %} https://*.mailchimp.com http://*.mailchimp.com{%- endif %}{%- endblock %}

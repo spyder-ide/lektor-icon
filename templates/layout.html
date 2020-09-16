@@ -1,54 +1,60 @@
 <!DOCTYPE html>
-{% if config.THEME_SETTINGS.content_lang %}
-{% set lang_string = ' lang="' ~ config.THEME_SETTINGS.content_lang ~ '"' %}
-{% else %}
-{% set lang_string = '' %}
-{% endif %}
+{%- if config.THEME_SETTINGS.content_lang %}
+{%- set lang_string = ' lang="' ~ config.THEME_SETTINGS.content_lang ~ '"' %}
+{%- else %}
+{%- set lang_string = '' %}
+{%- endif %}
 <html{{ lang_string | safe }}>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
-  {% block csp %}
-  {% if not config.THEME_SETTINGS.content_security_policy or config.THEME_SETTINGS.content_security_policy in ["true", "t", "yes", "y"] %}
+  {%- block csp %}
+  {%- if not config.THEME_SETTINGS.content_security_policy or config.THEME_SETTINGS.content_security_policy in ["true", "t", "yes", "y"] %}
   <meta http-equiv="Content-Security-Policy" content="
-{% set frame_src = "'self' http: https:" %}
-{% set img_src = "'self' http: https: data:" %}
-{% set script_src = "'self' 'unsafe-inline'" %}
-{% set style_src = "'self' https://fonts.googleapis.com 'unsafe-inline'" %}
+{%- set frame_src = "'self' http: https:" %}
+{%- set img_src = "'self' http: https: data:" %}
+{%- set script_src = "'self' 'unsafe-inline'" %}
+{%- set style_src = "'self' https://fonts.googleapis.com 'unsafe-inline'" %}
 
-{% if config.THEME_SETTINGS.disqus_name %}
-{% set script_src = script_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
-{% set style_src = style_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
-{% endif %}
+{%- if config.THEME_SETTINGS.disqus_name %}
+{%- set script_src = script_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
+{%- set style_src = style_src ~ " " ~ "https://disqus.com https://*.disqus.com https://*.disquscdn.com http://" ~ config.THEME_SETTINGS.disqus_name ~ ".disqus.com" %}
+{%- endif %}
 
-{% if config.THEME_SETTINGS.gitter_room %}
-{% set script_src = script_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
-{% set style_src = style_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
-{% endif %}
+{%- if config.THEME_SETTINGS.gitter_room %}
+{%- set script_src = script_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
+{%- set style_src = style_src ~ " " ~ "https://gitter.im https://*.gitter.im" %}
+{%- endif %}
 
-{% if config.THEME_SETTINGS.content_security_policy_frame_src %}
-{% set frame_src = config.THEME_SETTINGS.content_security_policy_frame_src %}
-{% endif %}
-{% if config.THEME_SETTINGS.content_security_policy_script_src %}
-{% set script_src = config.THEME_SETTINGS.content_security_policy_script_src %}
-{% endif %}
-{% if config.THEME_SETTINGS.content_security_policy_style_src %}
-{% set style_src = config.THEME_SETTINGS.content_security_policy_style_src %}
-{% endif %}
+{%- if config.THEME_SETTINGS.content_security_policy_frame_src %}
+{%- set frame_src = frame_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_frame_src %}
+{%- endif %}
+{%- if config.THEME_SETTINGS.content_security_policy_script_src %}
+{%- set script_src = script_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_script_src %}
+{%- endif %}
+{%- if config.THEME_SETTINGS.content_security_policy_style_src %}
+{%- set style_src = style_src ~ " " ~ config.THEME_SETTINGS.content_security_policy_style_src %}
+{%- endif %}
+{%- if config.THEME_SETTINGS.content_security_policy_connect_src %}
+{%- set connect_src = " " ~ config.THEME_SETTINGS.content_security_policy_connect_src %}
+{%- else %}
+{%- set connect_src = ""  %}
+{%- endif %}
 
-base-uri 'self';
-default-src 'self';
-font-src 'self' https://fonts.gstatic.com;
-frame-src {{ frame_src }};
-img-src {{ img_src }};
-plugin-types application/pdf;
-script-src {{ script_src }};
-style-src {{ style_src }};
-">
-  {% elif config.THEME_SETTINGS.content_security_policy.lower() not in ["false", "f", "no", "n"] %}
+    base-uri 'self';
+    default-src 'self';
+    font-src 'self' https://fonts.gstatic.com{%- block csp_extra_fontsrc %}{%- endblock %};
+    frame-src {{ frame_src }}{%- block csp_extra_framesrc %}{%- endblock %};
+    img-src {{ img_src }}{%- block csp_extra_imgsrc %}{%- endblock %};
+    script-src {{ script_src }}{%- block csp_extra_scriptsrc %}{%- endblock %};
+    style-src {{ style_src }}{%- block csp_extra_stylesrc %}{%- endblock %};
+    connect-src {{ connect_src }}{%- block csp_extra_connectsrc %}{%- endblock %};
+    ">
+  {%- elif config.THEME_SETTINGS.content_security_policy.lower() not in ["false", "f", "no", "n"] %}
   <meta http-equiv="Content-Security-Policy" content="{{ config.THEME_SETTINGS.content_security_policy | safe }}">
-  {% endif %}
-  {% endblock %}
+  {%- endif %}
+  {%- endblock %}
+
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-XSS-Protection" content="1">
   <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
@@ -86,85 +92,124 @@ style-src {{ style_src }};
   <!-- For information on the included third-party assets, see NOTICE.txt -->
   <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
 
-  <title>{% block title %}{% endblock %}{% if config.THEME_SETTINGS.title %} — {{ config.THEME_SETTINGS.title }}{% endif %}</title>
-  {% if config.THEME_SETTINGS.author %}
+  <title>{%- block title %}{%- endblock %}{%- if config.THEME_SETTINGS.title %} — {{ config.THEME_SETTINGS.title }}{%- endif %}</title>
+  {%- if config.THEME_SETTINGS.author %}
   <meta name="author" content="{{ config.THEME_SETTINGS.author }}"{{ lang_string | safe }}>
-  {% endif %}
-  {% if config.THEME_SETTINGS.copyright %}
+  {%- endif %}
+  {%- if config.THEME_SETTINGS.copyright %}
   <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}"{{ lang_string | safe }}>
-  {% endif %}
-  {% if config.THEME_SETTINGS.description %}
+  {%- endif %}
+  {%- if config.THEME_SETTINGS.description %}
   <meta name="description" content="{{ config.THEME_SETTINGS.description }}"{{ lang_string | safe }}>
-  {% endif %}
-  {% if config.THEME_SETTINGS.keywords %}
+  {%- endif %}
+  {%- if config.THEME_SETTINGS.keywords %}
   <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}"{{ lang_string | safe }}>
-  {% endif %}
-  {% if config.THEME_SETTINGS.theme_accent_color %}
+  {%- endif %}
+  {%- if config.THEME_SETTINGS.theme_accent_color %}
   <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color | safe }}">
-  {% endif %}
+  {%- endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {%- if config.THEME_SETTINGS.favicon_path %}
   <link rel="icon" href="{{ config.THEME_SETTINGS.favicon_path | asseturl }}" type="image/png">
+  {%- endif %}
   <style>
     :root {
-      {% if config.THEME_SETTINGS.theme_accent_color %}
+      {%- if config.THEME_SETTINGS.theme_fg_color %}
+      --theme-fg-color: {{ config.THEME_SETTINGS.theme_fg_color | safe }};
+      {%- else %}
+      --theme-fg-color: #000000;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_fg_alt_color %}
+      --theme-fg-alt-color: {{ config.THEME_SETTINGS.theme_fg_alt_color | safe }};
+      {%- else %}
+      --theme-fg-alt-color: #333333;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_bg_color %}
+      --theme-bg-color: {{ config.THEME_SETTINGS.theme_bg_color | safe }};
+      {%- else %}
+      --theme-bg-color: #ffffff;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_bg_alt_color %}
+      --theme-bg-alt-color: {{ config.THEME_SETTINGS.theme_bg_alt_color | safe }};
+      {%- else %}
+      --theme-bg-alt-color: #e8ecf1;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_bg_accent_color %}
+      --theme-bg-accent-color: {{ config.THEME_SETTINGS.theme_bg_accent_color | safe }};
+      {%- else %}
+      --theme-bg-accent-color: #f5f5f5;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_accent_color %}
       --theme-accent-color: {{ config.THEME_SETTINGS.theme_accent_color | safe }};
-      {% else %}
+      {%- else %}
       --theme-accent-color: #ee1c24;
-      {% endif %}
-      {% if config.THEME_SETTINGS.theme_pipe_color %}
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_accent_alt_color %}
+      --theme-accent-alt-color: {{ config.THEME_SETTINGS.theme_accent_alt_color | safe }};
+      {%- else %}
+      --theme-accent-alt-color: #d50000;
+      {%- endif %}
+      {%- if config.THEME_SETTINGS.theme_pipe_color %}
       --theme-pipe-color: {{ config.THEME_SETTINGS.theme_pipe_color | safe }}
-      {% elif config.THEME_SETTINGS.theme_accent_color %}
+      {%- elif config.THEME_SETTINGS.theme_accent_color %}
       --theme-pipe-color: {{ config.THEME_SETTINGS.theme_accent_color | safe }}
-      {% else %}
+      {%- else %}
       --theme-pipe-color: #ff4c52;
-      {% endif %}
+      {%- endif %}
     }
   </style>
-  {% block stylesheets %}
-  {% endblock %}
+  {%- block stylesheets %}
+  {%- endblock %}
   <!-- Google fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ '/static/css/style.css' | asseturl }}" type="text/css">
-  {% if config.THEME_SETTINGS.custom_css %}
+  {%- if config.THEME_SETTINGS.custom_css %}
   <!-- User Custom CSS -->
   <link rel="stylesheet" href="{{ config.THEME_SETTINGS.custom_css | asseturl }}" type="text/css">
-  {% endif %}
+  {%- endif %}
+  {%- if config.THEME_SETTINGS.custom_head_content %}
+  {{ config.THEME_SETTINGS.custom_head_content | safe }}
+  {%- endif %}
 </head>
 
 <body>
 
-{% block loader %}
-{% endblock %}
+{%- block loader %}
+{%- endblock %}
 <div class="fh5co-page">
   <div id="fh5co-container">
     <div class="js-sticky">
       <div class="fh5co-main-nav navbar fixed-top">
         <div class="container">
           <div class="fh5co-menu-1">
-            {% if not (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
-            {% set nav_logo_text = "Site Name" %}
-            {% elif config.THEME_SETTINGS.nav_logo_text %}
-            {% set nav_logo_text = config.THEME_SETTINGS.nav_logo_text %}
-            {% else %}
-            {% set nav_logo_text = '' %}
-            {% endif %}
+            {%- if not (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
+            {%- if config.THEME_SETTINGS.title %}
+            {%- set nav_logo_text = config.THEME_SETTINGS.title %}
+            {%- else %}
+            {%- set nav_logo_text = "Site Name" %}
+            {%- endif %}
+            {%- elif config.THEME_SETTINGS.nav_logo_text %}
+            {%- set nav_logo_text = config.THEME_SETTINGS.nav_logo_text %}
+            {%- else %}
+            {%- set nav_logo_text = '' %}
+            {%- endif %}
             <div class='pull-left'>
               <ul class='dropdown menu' data-dropdown-menu>
                 <li id='menu-logo'>
                   <p></p>
                     <a href='{{ '/' | url }}'>
-                    {% if config.THEME_SETTINGS.nav_logo_path %}
+                    {%- if config.THEME_SETTINGS.nav_logo_path %}
                     <img alt="Site Logo" src="{{ config.THEME_SETTINGS.nav_logo_path | asseturl }}">
-                    {% endif %}
-                    {% if nav_logo_text %}
+                    {%- endif %}
+                    {%- if nav_logo_text %}
                     <span class="logo-text-container">
-                      <span class="logo-text">{{ nav_logo_text | safe }} {% block section %}{% endblock %}</span>
+                      <span class="logo-text">{{ nav_logo_text | safe }}&nbsp;{%- block section %}{%- endblock %}</span>
                     </span>
-                    {% endif %}
+                    {%- endif %}
                   </a>
                   <p></p>
                 </li>
@@ -172,70 +217,77 @@ style-src {{ style_src }};
             </div>
 
             <div class="main-nav-container">
-              {% block nav_main %}{% endblock %}
+              {%- block nav_main %}{%- endblock %}
 
-              {% if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
+              {%- if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
               <div class="side-nav-container">
-                {% if config.THEME_SETTINGS.nav_extralinks %}
-                {% for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
-                <a class="pull-right" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
-                {% endfor %}
-                {% endif %}
+                {%- if config.THEME_SETTINGS.nav_extralinks %}
+                {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
+                <a class="pull-right nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                {%- endfor %}
+                {%- endif %}
 
-                {% if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
-                {% for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key', reverse=True) %}
-                {% if page.short_title %}
-                {% set navlink_text = page.short_title %}
-                {% else %}
-                {% set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
-                {% endif %}
-                <a class="pull-right" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
-                {% endfor %}
-                {% endif %}
+                {%- if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
+                {%- for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key', reverse=True) %}
+                {%- if page.short_title %}
+                {%- set navlink_text = page.short_title %}
+                {%- else %}
+                {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
+                {%- endif %}
+                <a class="pull-right nav-link-internal{%- if page.special_link %} special-link{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                {%- endfor %}
+                {%- endif %}
               </div>
-              {% endif %}
+              {%- endif %}
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    {% block body %}{% endblock %}
+    {%- block body %}{%- endblock %}
 
     <div id="fh5co-footer">
       <div class="container">
-        {% if config.THEME_SETTINGS.footer_links %}
+        {%- if config.THEME_SETTINGS.footer_links %}
         <div class="row footer-connect-line">
           <div class="text-center">
             <p>
               Connect with us on:
-              {% for footer_link in config.THEME_SETTINGS.footer_links.replace(', ', ',').split(',') %}
-              {% if loop.index > 1 %}
+              {%- for footer_link in config.THEME_SETTINGS.footer_links.replace(', ', ',').split(',') %}
+              {%- if loop.index > 1 %}
               <span class="pipe-colored">|</span>
-              {% endif %}
+              {%- endif %}
               <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(': ')[0] }} </a>
-              {% endfor %}
+              {%- endfor %}
             </p>
           </div>
         </div>
-        {% endif %}
+        {%- endif %}
         <div class="row footer-copyright">
           <div class="text-center">
             <p>
-              {% if config.THEME_SETTINGS.copyright %}
+              {%- if config.THEME_SETTINGS.copyright %}
               {{ config.THEME_SETTINGS.copyright | safe }}
-              {% endif %}
-              {% if config.THEME_SETTINGS.copyright and config.THEME_SETTINGS.footer_license_name %}
+              {%- endif %}
+              {%- if config.THEME_SETTINGS.copyright and config.THEME_SETTINGS.footer_license_name %}
               <span class="pipe-colored"> | </span>
-              {% endif %}
-              {% if config.THEME_SETTINGS.footer_license_name %}
+              {%- endif %}
+              {%- if config.THEME_SETTINGS.footer_license_name %}
               Licensed <a href="{{ config.THEME_SETTINGS.footer_license_link }}" target="_blank" rel="noopener noreferrer">{{ config.THEME_SETTINGS.footer_license_name }}</a>
-              {% endif %}
-              {% if config.THEME_SETTINGS.copyright or config.THEME_SETTINGS.footer_license_name %}
+              {%- endif %}
+              {%- if config.THEME_SETTINGS.copyright or config.THEME_SETTINGS.footer_license_name %}
               <br>
-              {% endif %}
-              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> designed by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>  <span class="pipe-colored"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC-BY 3.0</a>
-              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor port</a> by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
+              {%- endif %}
+              {%- if config.THEME_SETTINGS.footer_custom_line %}
+              {{ config.THEME_SETTINGS.footer_custom_line | safe }}<br>
+              {%- endif %}
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+              {%- if config.THEME_SETTINGS.footer_custom_info_databag %}
+              <br>{{ bag(config.THEME_SETTINGS.footer_custom_info_databag) | safe }}
+              {%- endif %}
             </p>
           </div>
         </div>
@@ -243,7 +295,7 @@ style-src {{ style_src }};
     </div>
   </div>
 </div>
-{% if config.THEME_SETTINGS.gitter_room %}
+{%- if config.THEME_SETTINGS.gitter_room %}
 <script type="application/javascript">
   ((window.gitter = {}).chat = {}).options = {
   room: '{{ config.THEME_SETTINGS.gitter_room }}',
@@ -252,15 +304,19 @@ style-src {{ style_src }};
 </script>
 <a href="https://gitter.im/{{ config.THEME_SETTINGS.gitter_room }}" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
 <script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
-{% endif %}
+{%- endif %}
 <!-- jQuery -->
-<script src="{{ '/static/js/jquery-3.3.1.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+<script src="{{ '/static/js/jquery-3.5.1.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
 <script src="{{ '/static/js/jquery.waypoints.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{%- if config.THEME_SETTINGS.custom_js_main %}
+<!-- User Custom Scripts -->
+<script src="{{ config.THEME_SETTINGS.custom_js_main | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{%- endif %}
 <!-- Main JS -->
 <script src="{{ '/static/js/main.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
-{% block scripts %}
-{% endblock %}
+{%- block scripts %}
+{%- endblock %}
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>
