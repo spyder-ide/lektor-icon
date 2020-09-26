@@ -8,6 +8,6 @@ script: "ci/build.sh"
 deploy:
   provider: script
   skip_cleanup: true
-  script: "lektor deploy ghpages --output-path website-lektor-icon-build"
+  script: "ci/deploy.sh"
   on:
     branch: master
