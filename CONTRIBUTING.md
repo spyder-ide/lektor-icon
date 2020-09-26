@@ -32,6 +32,38 @@ You might want to open an issue first discussing your changes, to get feedback a
 
 
 
+## Installing and using the pre-commit hooks
+
+This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
+To obtain the pre-commit package, simply run the following with conda:
+
+```bash
+$ conda install -c conda-forge pre-commit
+```
+
+or with pip:
+
+```bash
+$ pip install -U pre-commit
+```
+
+and install the hooks by running the following from the root of this repo:
+
+```bash
+$ pre-commit install
+```
+
+The hooks will be automatically run against any new/changed files every time you commit.
+It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
+To run the hooks manually on all the files in the repo, execute:
+
+```bash
+$ pre-commit run --all-files
+```
+
+
+
+
 ## Standards and Conventions
 
 Make sure you follow these to ensure clarity, consistency and correctness throughout our codebase.

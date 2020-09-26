@@ -4,6 +4,7 @@
 
 [![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 ![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
@@ -18,7 +19,7 @@ The theme is designed to be more desktop and mobile-friendly, and designed and t
 
 See the [Lektor theme docs](https://www.getlektor.com/docs/themes/).
 We recommend installing Lektor-Icon as a Git submodule, as we often update and improve it from time to time.
-The theme should support Lektor versions 3.1.0 and later like any other, but we recommend Lektor 3.1.2 for the best results since it has been most extensively tested with that version, and we plan to update it with the responsive image improvements in the next version of Lektor when those become available.
+The theme should support Lektor versions 3.1.0 and later like any other, but we recommend Lektor 3.1.3 for the best results since it has been most extensively tested with that version, and we plan to update it with the responsive image improvements in the next version of Lektor when those become available.
 
 No plugins are required with the default settings, but enabling support for Disqus comments and a RSS/Atom feed for the blog naturally demands the inclusion of those appropriate package names in the ``[packages]`` section of your ``.lektorproject`` file.
 The theme doesn't depend on any ``.lektorproject`` settings aside from its own ``[theme_settings]`` configuration to function properly, and rather uses its own where needed, so you are free to keep its configuration variables fully separate from any you may make use of.
