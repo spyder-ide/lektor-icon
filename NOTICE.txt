@@ -144,8 +144,8 @@ Third-Party Assets
 ==================
 
 
-Bootstrap Stylesheet (with Glphyicons font) 3.3.5
--------------------------------------------------
+Bootstrap Styles 3.3.5
+----------------------
 
 
 Copyright (c) 2011-2015 Twitter, Inc.
@@ -157,7 +157,7 @@ Site: https://getbootstrap.com/
 Source: https://github.com/twbs/bootstrap
 License: MIT (Expat) License | https://opensource.org/licenses/MIT
 
-Minor style modifications made to boostrap.css stylesheet.
+Some bootstrap styles modified and incorporated into the style.css stylesheet.
 
 
 Code copyright 2011-2015 the Bootstrap Authors and Twitter, Inc.
@@ -173,8 +173,7 @@ https://github.com/twbs/bootstrap/blob/master/LICENSE
 
 Files covered:
 
-assets/static/css/boostrap.css
-assets/static/fonts/boostrap/
+assets/static/css/style.css
 
 
 -------------------------------------------------------------------------------

@@ -6,7 +6,7 @@ minimum_pre_commit_version: '2.7.1'
 default_language_version:
     python: python3.7
 
-exclude: '^example-site/themes/lektor-icon$'
+exclude: '^example-site/themes/lektor-icon$|\.min\.js$|jquery\.stellar\.js$|icomoon\.css$|magnific-popup\.css$'
 
 repos:
 -   repo: meta
@@ -25,6 +25,17 @@ repos:
         args: ['--fix=lf']
     -   id: end-of-file-fixer
         exclude_types: [svg]
+
+-   repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: v1.1.9
+    hooks:
+    -   id: remove-crlf
+        types: [text]
+        exclude_types: [svg]
+    -   id: remove-tabs
+        types: [text]
+        exclude_types: [svg]
+        args: ['--whitespaces-count', '2']  # defaults to: 4
 
 
 # Checkers
