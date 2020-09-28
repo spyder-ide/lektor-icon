@@ -77,7 +77,7 @@ You can view a full example with all settings present with sensible defaults in 
 Since data types in ``INI`` configuration files are all natively strings by default, Lektor-Icon does some custom parsing on various values to convert them to the indicated type.
 The following describes the various formats and their parsing rules.
 
-*String:* A basic string; no special interpretion.
+*String:* A basic string; no special interpretation.
 Generally converted by ``jinja`` into an HTML-safe representation, escaping problematic characters.
 Used when the output should be plain text.
 
@@ -115,7 +115,7 @@ Used for the ``"author"`` HTML meta tag.
 Used for the ``"copyright"`` HTML meta tag and the copyright statement in the page footer.
 *Example:* ``copyright = &copy; 2020 Lektor-Icon Contributors``
 
-``description`` (*string*): A short (<1 sentance) summary of the site's purpose.
+``description`` (*string*): A short (<1 sentence) summary of the site's purpose.
 Used for the ``"description"`` HTML meta tag.
 *Example:* ``description = Official live demo site for the Lektor-Icon theme``
 
@@ -204,7 +204,7 @@ See the Optional Feature Configuration section for more details.
 ``disqus_name`` (*string*): The name of your Disqus organization on their website.
 If set, will globally allow Disqus comments on blogs on your site.
 Each individual blog's default (comments on or off) can be set on its configuration page.
-Furthermore, this can again be overrided on a per-post basis and comments individually set to on or off.
+Furthermore, this can again be overridden on a per-post basis and comments individually set to on or off.
 Also, the ``lektor-disqus-comments`` plugin needs to be installed, and the ``disqus-comments.ini`` file needs to be present in the ``config`` directory of your site for it to work.
 If not present, comments will be globally disabled across your site.
 See the Optional Feature Configuration section for more details.
