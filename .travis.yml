@@ -3,19 +3,20 @@ python: 3.7
 
 cache:
   directories:
-  - "$HOME/.cache/pre-commit"
+  - $HOME/.cache/pre-commit
 
 install:
-    - "ci/install.sh"
-    - "pip3 install -U pre-commit"
+- ci/install.sh
+- pip3 install -U pre-commit
 
 script:
-    - "pre-commit run --all-files"
-    - "ci/build.sh"
+- pre-commit run --all-files
+- ci/build.sh
 
 deploy:
   provider: script
   skip_cleanup: true
-  script: "ci/deploy.sh"
-  on:
+  script: ci/deploy.sh
+
+  on:  # yamllint disable-line rule:truthy
     branch: master
