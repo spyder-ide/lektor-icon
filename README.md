@@ -13,6 +13,41 @@ The core template is a single-page, responsive layout, with sections for describ
 It also features additions including a built-in blog, generic page template, custom error page, common navbar, Gitter, Disqus, RSS/Atom and OpenCollective integration, heavy customizability, numerous fixes and improvements, and re-written for speed, extensibility, responsiveness and conformance.
 The theme is designed to be more desktop and mobile-friendly, and designed and tested to smoothly adapt to a wide variety of viewport sizes from well below 480px all the way to 4K, and closely follows modern web standards while still offering compatibility with a wide range of modern and legacy browsers.
 
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
+
+- [Installation](#installation)
+- [Basic Setup](#basic-setup)
+  - [Quickstart](#quickstart)
+  - [Step by Step Manual Setup](#step-by-step-manual-setup)
+- [Theme-Level Configuration Settings](#theme-level-configuration-settings)
+  - [Interpreted datatypes](#interpreted-datatypes)
+  - [Theme Settings List](#theme-settings-list)
+- [Optional Feature Configuration](#optional-feature-configuration)
+  - [Gitter Chat Sidebar](#gitter-chat-sidebar)
+  - [Disqus Blog Comments](#disqus-blog-comments)
+  - [RSS/Atom Feed for Blog Posts](#rssatom-feed-for-blog-posts)
+- [Link Organization and Navigation](#link-organization-and-navigation)
+  - [Page Content Links](#page-content-links)
+  - [Subpage Links](#subpage-links)
+  - [Custom Links](#custom-links)
+- [Technical Notes](#technical-notes)
+  - [Responsive Image Handling](#responsive-image-handling)
+  - [Accent Color Theming](#accent-color-theming)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Library Versions and Security](#library-versions-and-security)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits](#credits)
+- [Changelog](#changelog)
+- [About the Spyder IDE](#about-the-spyder-ide)
+- [More information](#more-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-restore -->
+
 
 
 ## Installation

@@ -1,14 +1,36 @@
 # Contributing to Lektor-Icon
 
 
-First off, thanks for your interest in helping out!
+Thanks for your interest in helping out!
 
-**Important Note:** Keep in mind that the original and a continuing purpose of the code in this repository is to provide a high-quality, modern theme for the [Spyder](https://www.spyder-ide.org/) website.
-Therefore, all additions, changes and removals should should strive to retain compatibility, to the extent practicable, with its usage there.
-If not possible, please discuss them with us first.
-Thanks!
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
 
-For more guidance on the basics of using ``git`` and Github to contribute to Lektor-Icon and other projects, check out the tutorial in the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed instructions, and be sure to see the [Spyder Contributing Guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) for [guidelines on adding third party content to Lektor-Icon](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md#adding-third-party-content) (like images, fonts, CSS stylesheets and Javascript libraries, as well as Jinja2 templates from other projects).
+- [Reporting Issues](#reporting-issues)
+- [Submitting Pull Requests](#submitting-pull-requests)
+- [Installing and using the pre-commit hooks](#installing-and-using-the-pre-commit-hooks)
+- [Standards and Conventions](#standards-and-conventions)
+  - [All Files](#all-files)
+  - [All Lektor files (INI and ``contents.lr``)](#all-lektor-files-ini-and-contentslr)
+  - [Lektor ``contents.lr``](#lektor-contentslr)
+  - [INI Files (Models, Flowblocks, Lektorproject, etc)](#ini-files-models-flowblocks-lektorproject-etc)
+  - [Models and Flowblocks](#models-and-flowblocks)
+  - [Jinja2 HTML Templates](#jinja2-html-templates)
+  - [HTML](#html)
+  - [CSS](#css)
+  - [Javascript](#javascript)
+  - [Python](#python)
+  - [Images](#images)
+  - [Fonts](#fonts)
+  - [Documentation](#documentation)
+- [Roadmap](#roadmap)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-restore -->
+
+For guidance on the basics of using ``git`` and Github to contribute to Lektor-Icon and other projects, check out the tutorial in the [Spyder Development Documentation](https://github.com/spyder-ide/spyder/wiki/Contributing-to-Spyder) for detailed instructions, and be sure to see the [Spyder Contributing Guide](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md) for [guidelines on adding third party content to Lektor-Icon](https://github.com/spyder-ide/spyder/blob/master/CONTRIBUTING.md#adding-third-party-content) (like images, fonts, CSS stylesheets and Javascript libraries, as well as Jinja2 templates from other projects).
 As always, feel free to contact us via one of the platforms listed at the bottom of this document if you have any questions or concerns, and we look forward to reviewing your contribution to Lektor-Icon!
 
 
@@ -25,7 +47,8 @@ Thanks!
 
 We welcome contributions from the community, and will do our best to review all of them in a timely fashion.
 To do so, please fork this repository, create a new feature branch there based off the latest ``master``, make and test your changes, and then submit a pull request (PR) to this repo.
-Please make sure your PR titles are brief but descriptive, and include ``PR: `` as a prefix (if a work in progress, also prefix ``[WiP]``).
+Please make sure your PR titles are brief but descriptive, and include ``PR:`` as a prefix.
+If a work in progress, use Github's draft feature.
 
 You should also create a corresponding issue as well if your change is substantive, so that we can keep track of everything and give you credit for closing it.
 You might want to open an issue first discussing your changes, to get feedback and suggestions before implementing them.
@@ -38,20 +61,20 @@ This repository uses [pre-commit](https://pre-commit.com/) to install, configure
 To obtain the pre-commit package, simply run the following with conda:
 
 ```bash
-$ conda install -c conda-forge pre-commit
+conda install -c conda-forge pre-commit
 ```
 
 or with pip:
 
 ```bash
-$ pip install -U pre-commit
+pip install -U pre-commit
 ```
 
 and install the hooks by running the following from the root of this repo:
 
 ```bash
-$ pre-commit install
-$ pre-commit install --hook-type commit-msg
+pre-commit install
+pre-commit install --hook-type commit-msg
 ```
 
 The hooks will be automatically run against any new/changed files every time you commit.
@@ -59,7 +82,7 @@ It may take a few minutes to install the needed packages the first time you comm
 To run the hooks manually on all the files in the repo, execute:
 
 ```bash
-$ pre-commit run --all-files
+pre-commit run --all-files
 ```
 
 
