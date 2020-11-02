@@ -9,7 +9,7 @@
     <div class="fh5co-tabs-container">
       <ul class="fh5co-tabs">
         {%- for mission_item in this.items.blocks %}
-        <li {%- if loop.index == initial_tab_index %}class="active"{%- endif %}>
+        <li{%- if loop.index == initial_tab_index %} class="active"{%- endif %}>
           <a href="#" data-tab="{{ mission_item.section_id }}">{{ mission_item.title }}</a>
         </li>
         {%- endfor %}
