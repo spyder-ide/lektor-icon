@@ -78,7 +78,10 @@ repos:
   hooks:
   - id: stylelint
     name: Lint and fix CSS with stylelint
-    additional_dependencies: ['stylelint@13.7.2', 'stylelint-config-standard@20.0.0']
+    additional_dependencies:
+    - 'stylelint@13.7.2'
+    - 'stylelint-config-standard@20.0.0'
+    - 'stylelint-order@4.1.0'
     args: [--fix, --color, --maxWarnings, '0', --report-needless-disables, --report-invalid-scope-disables, --report-descriptionless-disables]
 
 # Pretty-format INI

@@ -1,5 +1,8 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
   "rules": {
     "at-rule-semicolon-space-before": "never",
     "at-rule-no-vendor-prefix": true,
@@ -39,6 +42,7 @@
     "time-min-milliseconds": 100,
     "unicode-bom": "never",
     "value-list-comma-newline-before": "never-multi-line",
-    "value-no-vendor-prefix": true
+    "value-no-vendor-prefix": true,
+    "order/properties-alphabetical-order": true
   }
 }
