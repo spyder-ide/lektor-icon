@@ -1,17 +1,17 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // MagnificPopup
-  var magnifPopup = function() {
+  var magnifPopup = function () {
     $('.image-popup').magnificPopup({
       type: 'image',
       removalDelay: 300,
       mainClass: 'mfp-with-zoom',
-      gallery:{
-        enabled:true
+      gallery: {
+        enabled: true
       }
-    });
-  };
+    })
+  }
 
-  var magnifVideo = function() {
+  var magnifVideo = function () {
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
       disableOn: 700,
       type: 'iframe',
@@ -19,10 +19,10 @@ $(document).ready(function() {
       removalDelay: 160,
       preloader: false,
       fixedContentPos: false
-    });
-  };
+    })
+  }
 
   // Call the functions
-  magnifPopup();
-  magnifVideo();
-});
+  magnifPopup()
+  magnifVideo()
+})

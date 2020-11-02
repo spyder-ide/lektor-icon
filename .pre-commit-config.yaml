@@ -78,6 +78,7 @@ repos:
   hooks:
   - id: stylelint
     name: Lint and fix CSS (stylelint)
+    args: [--fix, --color, --maxWarnings, '0', --report-needless-disables, --report-invalid-scope-disables, --report-descriptionless-disables]
     additional_dependencies:
     - 'stylelint@13.7.2'
     - 'stylelint-config-standard@20.0.0'
@@ -87,7 +88,6 @@ repos:
     - 'stylelint-no-unsupported-browser-features@4.1.4'
     - 'stylelint-order@4.1.0'
     - 'postcss'  # Manually required or a11y doesn't work properly
-    args: [--fix, --color, --maxWarnings, '0', --report-needless-disables, --report-invalid-scope-disables, --report-descriptionless-disables]
 
 - repo: https://github.com/pre-commit/mirrors-csslint
   rev: v1.0.5
@@ -104,6 +104,20 @@ repos:
     types: [text]
     files: '\.(ini|lektorproject|codespellrc)$'
     args: [--autofix]
+
+# Lint and fix JavaScript
+- repo: https://github.com/pre-commit/mirrors-eslint
+  rev: v7.12.1
+  hooks:
+  - id: eslint
+    name: Lint and fix JavaScript
+    args: [--fix, --max-warnings, '0', --color]
+    additional_dependencies:
+    - 'eslint@7.12.1'
+    - 'eslint-config-standard@16.0.1'
+    - 'eslint-plugin-import@2.22.1'
+    - 'eslint-plugin-node@11.1.0'
+    - 'eslint-plugin-promise@4.2.1'
 
 # Lint Jinja
 - repo: https://github.com/thibaudcolas/curlylint
