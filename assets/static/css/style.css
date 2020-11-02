@@ -130,9 +130,7 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
-menu,
 nav,
 section,
 summary {
@@ -462,7 +460,8 @@ img {
   color: #fff;
 }
 
-.hero-section .fh5co-copy-inner a:hover {
+.hero-section .fh5co-copy-inner a:hover,
+.hero-section .fh5co-copy-inner a:focus {
   border-bottom: 1px solid rgb(255 255 255 / 0.9);
   text-decoration: none;
 }
@@ -483,7 +482,6 @@ img {
   display: flex;
   float: left;
   line-height: 0;
-  vertical-align: middle;
   width: 100%;
 }
 
@@ -519,7 +517,6 @@ img {
 .fh5co-main-nav .fh5co-menu-1 a:hover,
 .fh5co-main-nav .fh5co-menu-1 a:focus,
 .fh5co-main-nav .fh5co-menu-1 a:active {
-  outline: none;
   text-decoration: none;
 }
 
@@ -709,7 +706,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    min-height: unset;
+    min-height: 0;
     padding: 0;
     width: 80% !important;
   }
@@ -829,7 +826,6 @@ img {
 .fh5co-tabs-container .fh5co-tabs li a:hover,
 .fh5co-tabs-container .fh5co-tabs li a:active,
 .fh5co-tabs-container .fh5co-tabs li a:focus {
-  outline: none;
   text-decoration: none;
 }
 
@@ -1001,7 +997,6 @@ img {
 .services-section .fh5co-video a:hover,
 .services-section .fh5co-video a:focus,
 .services-section .fh5co-video a:active {
-  outline: none;
   text-decoration: none;
   transform: scale(1.2);
 }
@@ -1158,7 +1153,8 @@ img {
   padding: 10px;
 }
 
-.team-section .person .social li a:hover {
+.team-section .person .social li a:hover,
+.team-section .person .social li a:focus {
   text-decoration: none;
 }
 
@@ -1411,7 +1407,6 @@ img {
 #fh5co-footer .fh5co-social li a:hover,
 #fh5co-footer .fh5co-social li a:focus,
 #fh5co-footer .fh5co-social li a:active {
-  outline: none;
   text-decoration: none;
 }
 
@@ -1483,7 +1478,6 @@ img {
 #fh5co-offcanvas a:active {
   color: #ee1c24;
   color: var(--theme-accent-color, #ee1c24);
-  outline: none;
   text-decoration: none;
 }
 
@@ -1561,7 +1555,6 @@ img {
 .fh5co-nav-toggle:focus,
 .fh5co-nav-toggle:active {
   border-bottom: none !important;
-  outline: none;
 }
 
 .fh5co-nav-toggle i {
@@ -1599,11 +1592,13 @@ img {
   bottom: -7px;
 }
 
-.fh5co-nav-toggle:hover i::before {
+.fh5co-nav-toggle:hover i::before,
+.fh5co-nav-toggle:focus i::before {
   top: -10px;
 }
 
-.fh5co-nav-toggle:hover i::after {
+.fh5co-nav-toggle:hover i::after,
+.fh5co-nav-toggle:focus i::after {
   bottom: -10px;
 }
 
@@ -2005,7 +2000,7 @@ pre {
   margin-bottom: 22px;
   overflow: auto;
   padding: 9.5px;
-  word-break: break-all;
+  word-break: break-all;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   word-wrap: break-word;
 }
 
@@ -2038,7 +2033,7 @@ textarea {
 }
 
 button {
-  appearance: none;
+  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -2060,13 +2055,13 @@ select {
 [type="submit"],
 button,
 html [type="button"] {
-  appearance: button;
+  appearance: button;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   cursor: pointer;
 }
 
 [type="button"],
 [type="submit"] {
-  appearance: none;
+  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   border-radius: 0;
 }
 
@@ -2218,7 +2213,6 @@ html [type="button"] {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  vertical-align: middle;
 }
 
 .blog-post p,
@@ -2382,7 +2376,7 @@ html [type="button"] {
 /* Blog buttons */
 
 .button {
-  appearance: none;
+  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   background-color: #ee1c24;
   background-color: var(--theme-accent-color, #ee1c24);
   border: 1px solid transparent;
@@ -2416,7 +2410,7 @@ button:hover,
 button:disabled,
 .button.disabled,
 .button[disabled] {
-  cursor: not-allowed;
+  cursor: not-allowed;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   opacity: 0.25;
 }
 

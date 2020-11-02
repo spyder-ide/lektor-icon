@@ -1,6 +1,12 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-a11y/recommended"
+  ],
   "plugins": [
+    "stylelint-csstree-validator",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-no-unsupported-browser-features",
     "stylelint-order"
   ],
   "rules": {
@@ -43,6 +49,12 @@
     "unicode-bom": "never",
     "value-list-comma-newline-before": "never-multi-line",
     "value-no-vendor-prefix": true,
-    "order/properties-alphabetical-order": true
+    "a11y/no-obsolete-attribute": true,
+    "a11y/no-obsolete-element": true,
+    "a11y/media-prefers-reduced-motion": null,
+    "csstree/validator": true,
+    "order/properties-alphabetical-order": true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/no-unsupported-browser-features": true
   }
 }
