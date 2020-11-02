@@ -441,7 +441,7 @@ img {
   }
 }
 
-@media screen and ((max-height: 860px) and (max-width: 768px)) {  /* stylelint-disable-line media-feature-name-no-unknown -- Seems to be a false positive */
+@media screen and (max-height: 860px) and (max-width: 768px) {
 
   .hero-section .fh5co-copy-inner h1 {
     margin-top: 20px;
@@ -802,7 +802,6 @@ img {
 .fh5co-tabs-container .fh5co-tabs li {
   display: inline-block;
   flex-grow: 1;
-  float: left;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1643,7 +1642,7 @@ img {
 
 .fh5co-loader {
   background: url("../images/Preloader_2.gif") center no-repeat #fff;
-  background: url("../images/Preloader_2.gif") center no-repeat var(--theme-bg-color, #fff);
+  background: url("../images/Preloader_2.gif") center no-repeat   var(--theme-bg-color, #fff);   /* csslint allow: duplicate-background-images */
   height: 100%;
   left: 0;
   position: fixed;
