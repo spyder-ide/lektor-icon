@@ -10,7 +10,11 @@ Thanks for your interest in helping out!
 
 - [Reporting Issues](#reporting-issues)
 - [Submitting Pull Requests](#submitting-pull-requests)
-- [Installing and using the pre-commit hooks](#installing-and-using-the-pre-commit-hooks)
+- [Setting up a development environment](#setting-up-a-development-environment)
+  - [Clone the repo](#clone-the-repo)
+  - [Install dependencies](#install-dependencies)
+  - [Set up Pre-Commit](#set-up-pre-commit)
+  - [Run server and make changes](#run-server-and-make-changes)
 - [Standards and Conventions](#standards-and-conventions)
   - [All Files](#all-files)
   - [All Lektor files (INI and ``contents.lr``)](#all-lektor-files-ini-and-contentslr)
@@ -55,22 +59,35 @@ You might want to open an issue first discussing your changes, to get feedback a
 
 
 
-## Installing and using the pre-commit hooks
+## Setting up a development environment
 
-This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
-To obtain the pre-commit package, simply run the following with conda:
+
+### Clone the repo
 
 ```bash
-conda install -c conda-forge pre-commit
+git clone https://github.com/spyder-ide/lektor-icon.git
+```
+
+
+### Install dependencies
+
+You can install the required development and production dependencies with conda (recommended):
+
+```bash
+conda install -c conda-forge --file requirements.txt
 ```
 
 or with pip:
 
 ```bash
-pip install -U pre-commit
+pip install -r requirements.txt
 ```
 
-and install the hooks by running the following from the root of this repo:
+
+### Set up Pre-Commit
+
+This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
+Pre-commit itself is installed with the above command, and the hooks can be installed by running the following from the root of this repo:
 
 ```bash
 pre-commit install
@@ -79,11 +96,26 @@ pre-commit install --hook-type commit-msg
 
 The hooks will be automatically run against any new/changed files every time you commit.
 It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
-To run the hooks manually on all the files in the repo, execute:
+If you made one or more commits before installing the hooks (not recommended), to run them manually on all the files in the repo, execute:
 
 ```bash
 pre-commit run --all-files
 ```
+
+**Note**: Most of the hooks fix the problems they detect automatically (the hook output will say ``files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
+Once you're satisfied, ``git add .`` again and re-commit.
+
+
+### Run server and make changes
+
+Change to the ``example-site`` subdirectory of this repository and run a continuously updating local webserver:
+
+```bash
+cd example-site
+lektor server
+```
+
+The resulting website can be viewed in your browser at ``http://localhost:5000``;  simply reload the page to see any changes you make.
 
 
 
