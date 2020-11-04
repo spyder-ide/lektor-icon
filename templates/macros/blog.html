@@ -8,11 +8,7 @@
 {%- set author = '' %}
 {%- endif %}
 <div class="blog-post">
-  {%- if from_index %}
-  <div class="blog-header blog-index-header">
-  {%- else %}
-  <div class="blog-header blog-post-header">
-  {%- endif %}
+  <div class="blog-header blog-{%- if from_index %}index{%- else %}post{%- endif %}-header">
     <div class="row">
       {%- if author.image %}
       <div class="column meta-blog-author">

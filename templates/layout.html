@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 {%- if config.THEME_SETTINGS.content_lang %}
-{%- set lang_string = ' lang="' ~ config.THEME_SETTINGS.content_lang ~ '"' %}
+{%- set lang_string = config.THEME_SETTINGS.content_lang %}
 {%- else %}
-{%- set lang_string = '' %}
+{%- set lang_string = 'en' %}
 {%- endif %}
-<html{{ lang_string | safe }}>
+<html lang="{{ lang_string }}">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Access-Control-Allow-Origin" content="Origin">

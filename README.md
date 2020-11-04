@@ -4,6 +4,7 @@
 
 [![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 ![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
@@ -12,13 +13,48 @@ The core template is a single-page, responsive layout, with sections for describ
 It also features additions including a built-in blog, generic page template, custom error page, common navbar, Gitter, Disqus, RSS/Atom and OpenCollective integration, heavy customizability, numerous fixes and improvements, and re-written for speed, extensibility, responsiveness and conformance.
 The theme is designed to be more desktop and mobile-friendly, and designed and tested to smoothly adapt to a wide variety of viewport sizes from well below 480px all the way to 4K, and closely follows modern web standards while still offering compatibility with a wide range of modern and legacy browsers.
 
+<!-- markdownlint-disable -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Contents**
+
+- [Installation](#installation)
+- [Basic Setup](#basic-setup)
+  - [Quickstart](#quickstart)
+  - [Step by Step Manual Setup](#step-by-step-manual-setup)
+- [Theme-Level Configuration Settings](#theme-level-configuration-settings)
+  - [Interpreted datatypes](#interpreted-datatypes)
+  - [Theme Settings List](#theme-settings-list)
+- [Optional Feature Configuration](#optional-feature-configuration)
+  - [Gitter Chat Sidebar](#gitter-chat-sidebar)
+  - [Disqus Blog Comments](#disqus-blog-comments)
+  - [RSS/Atom Feed for Blog Posts](#rssatom-feed-for-blog-posts)
+- [Link Organization and Navigation](#link-organization-and-navigation)
+  - [Page Content Links](#page-content-links)
+  - [Subpage Links](#subpage-links)
+  - [Custom Links](#custom-links)
+- [Technical Notes](#technical-notes)
+  - [Responsive Image Handling](#responsive-image-handling)
+  - [Accent Color Theming](#accent-color-theming)
+  - [Browser Compatibility](#browser-compatibility)
+  - [Library Versions and Security](#library-versions-and-security)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits](#credits)
+- [Changelog](#changelog)
+- [About the Spyder IDE](#about-the-spyder-ide)
+- [More information](#more-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<!-- markdownlint-restore -->
+
 
 
 ## Installation
 
 See the [Lektor theme docs](https://www.getlektor.com/docs/themes/).
 We recommend installing Lektor-Icon as a Git submodule, as we often update and improve it from time to time.
-The theme should support Lektor versions 3.1.0 and later like any other, but we recommend Lektor 3.1.2 for the best results since it has been most extensively tested with that version, and we plan to update it with the responsive image improvements in the next version of Lektor when those become available.
+The theme should support Lektor versions 3.1.0 and later like any other, but we recommend Lektor 3.1.3 for the best results since it has been most extensively tested with that version, and we plan to update it with the responsive image improvements in the next version of Lektor when those become available.
 
 No plugins are required with the default settings, but enabling support for Disqus comments and a RSS/Atom feed for the blog naturally demands the inclusion of those appropriate package names in the ``[packages]`` section of your ``.lektorproject`` file.
 The theme doesn't depend on any ``.lektorproject`` settings aside from its own ``[theme_settings]`` configuration to function properly, and rather uses its own where needed, so you are free to keep its configuration variables fully separate from any you may make use of.
@@ -76,7 +112,7 @@ You can view a full example with all settings present with sensible defaults in 
 Since data types in ``INI`` configuration files are all natively strings by default, Lektor-Icon does some custom parsing on various values to convert them to the indicated type.
 The following describes the various formats and their parsing rules.
 
-*String:* A basic string; no special interpretion.
+*String:* A basic string; no special interpretation.
 Generally converted by ``jinja`` into an HTML-safe representation, escaping problematic characters.
 Used when the output should be plain text.
 
@@ -114,7 +150,7 @@ Used for the ``"author"`` HTML meta tag.
 Used for the ``"copyright"`` HTML meta tag and the copyright statement in the page footer.
 *Example:* ``copyright = &copy; 2020 Lektor-Icon Contributors``
 
-``description`` (*string*): A short (<1 sentance) summary of the site's purpose.
+``description`` (*string*): A short (<1 sentence) summary of the site's purpose.
 Used for the ``"description"`` HTML meta tag.
 *Example:* ``description = Official live demo site for the Lektor-Icon theme``
 
@@ -203,7 +239,7 @@ See the Optional Feature Configuration section for more details.
 ``disqus_name`` (*string*): The name of your Disqus organization on their website.
 If set, will globally allow Disqus comments on blogs on your site.
 Each individual blog's default (comments on or off) can be set on its configuration page.
-Furthermore, this can again be overrided on a per-post basis and comments individually set to on or off.
+Furthermore, this can again be overridden on a per-post basis and comments individually set to on or off.
 Also, the ``lektor-disqus-comments`` plugin needs to be installed, and the ``disqus-comments.ini`` file needs to be present in the ``config`` directory of your site for it to work.
 If not present, comments will be globally disabled across your site.
 See the Optional Feature Configuration section for more details.
