@@ -1,5 +1,5 @@
 {%- extends "layout.html" %}
-{%- block section %}<span class="pipe-colored">|</span> Blog{%- endblock %}
+{%- block section %}{%- if not config.THEME_SETTINGS.nav_subsection_subtitle or config.THEME_SETTINGS.nav_subsection_subtitle in ["true", "t", "yes", "y"] %}<span class="pipe-colored">|</span> Blog{%- endif %}{%- endblock %}
 {%- block nav_main %}
 {%- if config.THEME_SETTINGS.atom_enable and config.THEME_SETTINGS.atom_enable.lower() not in ["false", "f", "no", "n"] %}
 <a id="rss-nav-link" data-nav-section="RSS" href="{{ '/blog/feed.xml' | url }}">RSS</a>

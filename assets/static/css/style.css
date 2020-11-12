@@ -2179,12 +2179,12 @@ html [type="button"] {
 }
 
 #menu-logo img {
+  height: 48px;
   vertical-align: middle;
-  width: 3.7em;
 }
 
 #menu-logo > p {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .fh5co-main-nav .fh5co-menu-1 .dropdown {
