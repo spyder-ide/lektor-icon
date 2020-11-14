@@ -133,7 +133,9 @@
 {%- endif %}
 {%- if config.THEME_SETTINGS.custom_js_singlepage %}
 <!-- User Custom Scripts -->
-<script src="{{ config.THEME_SETTINGS.custom_js_singlepage | asseturl }}" type="application/javascript" charset="UTF-8"></script>
+{%- for custom_js_singlepage in config.THEME_SETTINGS.custom_js_singlepage.replace(', ', ',').split(',') %}
+<script src="{%- if custom_js_singlepage.startswith('http') %}{{ custom_js_singlepage | safe }}{%- else %}{{ custom_js_singlepage | asseturl }}{%- endif %}" type="application/javascript" charset="UTF-8"></script>
+{%- endfor %}
 {%- endif %}
 <!-- Main JS -->
 <script src="{{ '/static/js/main-singlelayout.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
