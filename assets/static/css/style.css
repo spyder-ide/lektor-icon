@@ -540,11 +540,11 @@ img {
   font-weight: normal;
 }
 
-.fh5co-main-nav .fh5co-menu-1 a.nav-link-active {
+.fh5co-main-nav .fh5co-menu-1 a.nav-link-active-section {
   font-weight: bold;
 }
 
-.fh5co-main-nav .fh5co-menu-1 a.nav-link-active::after,
+.fh5co-main-nav .fh5co-menu-1 a.nav-link-active-page::after,
 .fh5co-main-nav .fh5co-menu-1 a.active::after {
   opacity: 1;
 }
