@@ -510,6 +510,7 @@ img {
   letter-spacing: 2px;
   margin-right: 2em;
   padding: 1em 0;
+  position: relative;
   text-transform: uppercase;
   vertical-align: middle;
 }
@@ -520,10 +521,32 @@ img {
   text-decoration: none;
 }
 
+.fh5co-main-nav .fh5co-menu-1 a::after {
+  background: #ee1c24;
+  background: var(--theme-accent-color, #ee1c24);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  opacity: 0;
+  position: absolute;
+  transition: 1s;
+  width: 100%;
+}
+
 .fh5co-main-nav .fh5co-menu-1 a.active {
   color: #000;
   color: var(--theme-fg-color, #000);
   font-weight: normal;
+}
+
+.fh5co-main-nav .fh5co-menu-1 a.nav-link-active-section {
+  font-weight: bold;
+}
+
+.fh5co-main-nav .fh5co-menu-1 a.nav-link-active-page::after,
+.fh5co-main-nav .fh5co-menu-1 a.active::after {
+  opacity: 1;
 }
 
 .fh5co-main-nav .fh5co-logo {
