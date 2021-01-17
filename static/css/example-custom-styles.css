@@ -3,7 +3,7 @@
 /* Site custom styles */
 
 .red-text-test {
-  color: red;
+  color: red;  /* stylelint-disable-line color-named -- For demo purposes */
 }
 
 .hero-section .container .col-md-6 {
@@ -15,5 +15,5 @@
 }
 
 .hero-section .js-fullheight-home h2 {
-  color: #ffffff;
+  color: #fff;
 }

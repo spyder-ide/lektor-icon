@@ -1,41 +1,20 @@
 <!DOCTYPE html>
-
-
-
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
-  
-  
   <meta http-equiv="Content-Security-Policy" content="
 
+    base-uri 'self';
+    default-src 'self';
+    font-src 'self' https://fonts.gstatic.com;
+    frame-src &#39;self&#39; http: https:;
+    img-src &#39;self&#39; http: https: data:;
+    script-src &#39;self&#39; &#39;unsafe-inline&#39; https://gitter.im https://*.gitter.im;
+    style-src &#39;self&#39; https://fonts.googleapis.com &#39;unsafe-inline&#39; https://gitter.im https://*.gitter.im;
+    connect-src ;
+    ">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-base-uri 'self';
-default-src 'self';
-font-src 'self' https://fonts.gstatic.com;
-frame-src &#39;self&#39; http: https:;
-img-src &#39;self&#39; http: https: data:;
-plugin-types application/pdf;
-script-src &#39;self&#39; &#39;unsafe-inline&#39; https://gitter.im https://*.gitter.im;
-style-src &#39;self&#39; https://fonts.googleapis.com &#39;unsafe-inline&#39; https://gitter.im https://*.gitter.im;
-">
-  
-  
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-XSS-Protection" content="1">
   <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
@@ -74,74 +53,51 @@ style-src &#39;self&#39; https://fonts.googleapis.com &#39;unsafe-inline&#39; ht
   <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
 
   <title>Blog | Welcome to the Lektor-Icon Blog! — Lektor-Icon Demo Site</title>
-  
-  <meta name="author" content="Spyder Dev Team and Lektor-Icon Contributors" lang="en-US">
-  
-  
-  <meta name="copyright" content="&amp;copy; 2019 Lektor-Icon Contributors" lang="en-US">
-  
-  
-  <meta name="description" content="Official live demo site for the Lektor-Icon theme by the Spyder IDE organization" lang="en-US">
-  
-  
-  <meta name="keywords" content="lektor, theme, example, website, demo, static, html" lang="en-US">
-  
-  
+  <meta name="author" content="Spyder Dev Team and Lektor-Icon Contributors"en-US>
+  <meta name="copyright" content="&amp;copy; 2020 Lektor-Icon Contributors"en-US>
+  <meta name="description" content="Official live demo site for the Lektor-Icon theme by the Spyder IDE organization"en-US>
+  <meta name="keywords" content="lektor, theme, example, website, demo, static, html"en-US>
   <meta name="theme-color" content="#ee1c24">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="icon" href="../../static/images/favicon.png?h=bb776907" type="image/png">
   <style>
     :root {
-      
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
       --theme-accent-color: #ee1c24;
-      
-      
+      --theme-accent-alt-color: #d50000;
       --theme-pipe-color: rgb(255, 76, 82)
-      
     }
   </style>
-  
-  
   <!-- Google fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../static/css/style.css?h=79956b2c" type="text/css">
-  
+  <link rel="stylesheet" href="../../static/css/style.css?h=038b8d38" type="text/css">
   <!-- User Custom CSS -->
-  <link rel="stylesheet" href="../../static/css/example-custom-styles.css?h=8859e27f" type="text/css">
-  
+  <link rel="stylesheet" href="../../static/css/example-custom-styles.css?h=50c7d332" type="text/css">
 </head>
 
 <body>
-
-
-
 <div class="fh5co-page">
   <div id="fh5co-container">
     <div class="js-sticky">
       <div class="fh5co-main-nav navbar fixed-top">
         <div class="container">
           <div class="fh5co-menu-1">
-            
-            
-            
             <div class='pull-left'>
               <ul class='dropdown menu' data-dropdown-menu>
                 <li id='menu-logo'>
                   <p></p>
                     <a href='../../'>
-                    
                     <img alt="Site Logo" src="../../static/images/spyder-logo.svg?h=946d9158">
-                    
-                    
                     <span class="logo-text-container">
-                      <span class="logo-text">Lektor-Icon <span class="pipe-colored">|</span> Blog</span>
+                      <span class="logo-text">Lektor-Icon&nbsp;<span class="pipe-colored">|</span> Blog</span>
                     </span>
-                    
                   </a>
                   <p></p>
                 </li>
@@ -149,152 +105,77 @@ style-src &#39;self&#39; https://fonts.googleapis.com &#39;unsafe-inline&#39; ht
             </div>
 
             <div class="main-nav-container">
-              
-
-
-
-              
               <div class="side-nav-container">
-                
-                
-                <a class="pull-right" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
-                
-                <a class="pull-right" href="https://www.spyder-ide.org/"> Spyder</a>
-                
-                
-
-                
-                
-                
-                
-                
-                <a class="pull-right" href="../../example-page/">Page</a>
-                
-                
-                
-                
-                <a class="pull-right" href="../../blog/">Blog</a>
-                
-                
-                
-                
-                <a class="pull-right" href="../../readme/">Readme</a>
-                
-                
+                <a class="pull-right nav-link-external" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
+                <a class="pull-right nav-link-external" href="https://www.spyder-ide.org/"> Spyder</a>
+                <a class="pull-right nav-link-internal" href="../../example-page/">Page</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/welcome-blog sep /blog" href="../">Blog</a>
+                <a class="pull-right nav-link-internal" href="../../readme/">Readme</a>
               </div>
-              
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    
 <div class="blog-content-container" data-section="Blog">
-  
-  
   <div id="blog-center" class="center">
-    
-
-
-
-
 
 <div class="blog-post">
-  
   <div class="blog-header blog-post-header">
-  
     <div class="row">
-      
       <div class="column meta-blog-author">
         <img alt="Spyder Development Team photo" class="author-img" src="../../authors/spyderdevteam/spyder-logo.svg">
       </div>
-      
       <div class="meta-blog-index">
         <p>
-          
           Spyder Development Team<br>
-          
-          
           <span class="small">2018-12-16</span>
-          
         </p>
       </div>
     </div>
-    
     <h1>Welcome to the Lektor-Icon Blog!</h1>
     <p>We'd like to welcome all of you to the official example website of the next-generation Lektor-Icon theme.
 Our theme conforms to modern web standards and exhibits the proper layout on popular browsers, and is vastly easier to maintain and update.
 Furthermore, the site is built using the latest web frameworks, enabling responsive design that dynamically adapts to its window size, and automatically adopts a mobile-friendly layout for easy browsing on the go.
-All the templates, models, stylesheets and scripts are brand-new or throughly updated, and it features a number of new elements with more to come!</p>
+All the templates, models, stylesheets and scripts are brand-new or thoroughly updated, and it features a number of new elements with more to come!</p>
 <p>You don't need to know fancy HTML, CSS or Javascript to submit directly to the blog, just simple Markdown and Git/Github; you can even use this post as a template!
 Users can just fork the repository, create a new branch and add your post in it (you can just copy this one's directory and make your changes from there), then push your changes to your fork and submit a Github pull request against the main repo, and you're good to go!
 Even easier, this theme fully supports the interactive Lektor admin GUI, so you can create a blog post, add metadata, and write your content in a GUI editor and see your changes update in real time.</p>
 <p>Thanks, and looking forward to seeing what you all come up with!</p>
 
-    
-  </div>
-  
-</div>
-
-
-
   </div>
 </div>
-
+  </div>
+</div>
 
     <div id="fh5co-footer">
       <div class="container">
-        
         <div class="row footer-connect-line">
           <div class="text-center">
             <p>
               Connect with us on:
-              
-              
               <a href="https://github.com/spyder-ide/lektor-icon"> Github </a>
-              
-              
               <span class="pipe-colored">|</span>
-              
               <a href="https://www.facebook.com/SpyderIDE/"> Facebook </a>
-              
-              
               <span class="pipe-colored">|</span>
-              
               <a href="https://twitter.com/spyder_ide"> Twitter </a>
-              
-              
               <span class="pipe-colored">|</span>
-              
               <a href="https://groups.google.com/forum/?hl=en#!forum/uahuntsvilleams"> Google Groups </a>
-              
-              
               <span class="pipe-colored">|</span>
-              
               <a href="https://opencollective.com/spyder"> OpenCollective </a>
-              
             </p>
           </div>
         </div>
-        
         <div class="row footer-copyright">
           <div class="text-center">
             <p>
-              
-              &copy; 2019 Lektor-Icon Contributors
-              
-              
+              &copy; 2020 Lektor-Icon Contributors
               <span class="pipe-colored"> | </span>
-              
-              
               Licensed <a href="https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt" target="_blank" rel="noopener noreferrer">MIT (Code); CC-BY-SA 4.0 (Content)</a>
-              
-              
               <br>
-              
-              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> designed by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>  <span class="pipe-colored"> | </span> Licensed <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC-BY 3.0</a>
-              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor port</a> by <a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a> and <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder</a>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
             </p>
           </div>
         </div>
@@ -302,7 +183,6 @@ Even easier, this theme fully supports the interactive Lektor admin GUI, so you 
     </div>
   </div>
 </div>
-
 <script type="application/javascript">
   ((window.gitter = {}).chat = {}).options = {
   room: 'spyder-ide/public',
@@ -311,15 +191,12 @@ Even easier, this theme fully supports the interactive Lektor admin GUI, so you 
 </script>
 <a href="https://gitter.im/spyder-ide/public" id="open_chat" class="gitter-open-chat-button">Open Chat</a>
 <script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
-
 <!-- jQuery -->
-<script src="../../static/js/jquery-3.3.1.min.js?h=0dc32db4" type="application/javascript" charset="UTF-8"></script>
+<script src="../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
 <script src="../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
 <!-- Main JS -->
-<script src="../../static/js/main.js?h=6653e38d" type="application/javascript" charset="UTF-8"></script>
-
-
+<script src="../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>
