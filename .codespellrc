@@ -1,5 +1,6 @@
 [codespell]
-enable-colors =
+builtin = clear,rare,informal,code,names,en-GB_to_en-US
 check-filenames =
 check-hidden =
-count =
+enable-colors =
+skip = *.gitattributes
