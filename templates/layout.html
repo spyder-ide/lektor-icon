@@ -169,7 +169,7 @@
   <link rel="stylesheet" href="{{ '/static/css/style.css' | asseturl }}" type="text/css">
   {%- if config.THEME_SETTINGS.custom_css %}
   <!-- User Custom CSS -->
-  {%- for custom_css in config.THEME_SETTINGS.custom_css.replace(', ', ',').split(',') %}
+  {%- for custom_css in config.THEME_SETTINGS.custom_css.split(', ') %}
   <link rel="stylesheet" href="{%- if custom_css.startswith('http') %}{{ custom_css | safe }}{%- else %}{{ custom_css | asseturl }}{%- endif %}" type="text/css">
   {%- endfor %}
   {%- endif %}
