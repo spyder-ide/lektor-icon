@@ -45,7 +45,7 @@ html {
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: icomoon;  /* stylelint-disable-line font-family-no-missing-generic-family-keyword -- Is a single icon font */
+  font-family: icomoon; /* stylelint-disable-line font-family-no-missing-generic-family-keyword -- Is a single icon font */
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -1062,7 +1062,7 @@ img {
   color: var(--theme-accent-color, #ee1c24);
   content: "\e116";
   display: none;
-  font-family: icomoon;  /* stylelint-disable-line font-family-no-missing-generic-family-keyword -- Is a single icon font */
+  font-family: icomoon; /* stylelint-disable-line font-family-no-missing-generic-family-keyword -- Is a single icon font */
   font-size: 23px;
   font-style: normal;
   font-variant: normal;
@@ -1530,7 +1530,7 @@ img {
   height: 2px;
   line-height: 0.4;
   position: relative;
-  text-indent: -55px;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- False positive; numeric values supported on all browsers */
+  text-indent: -55px; /* stylelint-disable-line plugin/no-unsupported-browser-features -- False positive; numeric values supported on all browsers */
   text-transform: uppercase;
   transition: all 0.2s ease-out;
   width: 30px;
@@ -1614,7 +1614,6 @@ img {
   width: 100%;
   z-index: 9999;
 }
-
 
 /*
 * Additions Specific to Lektor Version
@@ -1805,7 +1804,6 @@ ul ul {
   margin-left: 1.25rem;
 }
 
-
 /* Columns and layout */
 
 .text-center {
@@ -1899,7 +1897,6 @@ ul ul {
   width: 100%;
 }
 
-
 /* Verbatim styling */
 
 figure {
@@ -1975,7 +1972,6 @@ pre code {
   overflow-y: scroll;
 }
 
-
 /* Button styling from Bootstrap */
 
 button,
@@ -1990,7 +1986,7 @@ textarea {
 }
 
 button {
-  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  appearance: none; /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   background: transparent;
   border: 0;
   border-radius: 0;
@@ -2012,16 +2008,15 @@ select {
 [type="submit"],
 button,
 html [type="button"] {
-  appearance: button;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  appearance: button; /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   cursor: pointer;
 }
 
 [type="button"],
 [type="submit"] {
-  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  appearance: none; /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   border-radius: 0;
 }
-
 
 /* Navbar */
 
@@ -2109,7 +2104,6 @@ html [type="button"] {
   }
 }
 
-
 /* Navbar logo */
 
 #menu-logo a {
@@ -2149,7 +2143,6 @@ html [type="button"] {
   margin: 0;
   padding: 0;
 }
-
 
 /* Blog */
 
@@ -2328,11 +2321,10 @@ html [type="button"] {
   margin-bottom: 0;
 }
 
-
 /* Blog buttons */
 
 .button {
-  appearance: none;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  appearance: none; /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   background-color: #ee1c24;
   background-color: var(--theme-accent-color, #ee1c24);
   border: 1px solid transparent;
@@ -2345,7 +2337,9 @@ html [type="button"] {
   margin: 0 0 1rem;
   padding: 0.85em 1em;
   text-align: center;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  transition:
+    background-color 0.25s ease-out,
+    color 0.25s ease-out;
   vertical-align: middle;
 }
 
@@ -2366,7 +2360,7 @@ button:hover,
 button:disabled,
 .button.disabled,
 .button[disabled] {
-  cursor: not-allowed;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  cursor: not-allowed; /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
   opacity: 0.25;
 }
 
@@ -2380,7 +2374,6 @@ button:hover:disabled,
   background-color: var(--theme-accent-alt-color, #d50000);
   color: #fff;
 }
-
 
 /* Footer */
 
@@ -2404,7 +2397,6 @@ button:hover:disabled,
   color: #fff;
   font-weight: bold;
 }
-
 
 /* Specific feature additions */
 
@@ -2506,7 +2498,6 @@ button:hover:disabled,
   padding-top: 2em;
 }
 
-
 /* Generic page styling */
 
 .page-content-container {
@@ -2533,7 +2524,6 @@ button:hover:disabled,
   margin-right: auto;
   position: inherit;
 }
-
 
 /* 404 Error page styling */
 
@@ -2575,7 +2565,6 @@ button:hover:disabled,
   margin-top: 1em;
 }
 
-
 /* Center cards and kill whitespace */
 
 .center-container {
@@ -2590,7 +2579,6 @@ button:hover:disabled,
   vertical-align: middle;
 }
 
-
 /* Set up links for cards */
 
 a.card-link-full {
@@ -2602,13 +2590,11 @@ a.card-link-full:focus {
   text-decoration: none;
 }
 
-
 /* Background color for e.g. cards */
 
 .transparent-bg {
   background: transparent;
 }
-
 
 /* Reduce card padding at narrow widths */
 

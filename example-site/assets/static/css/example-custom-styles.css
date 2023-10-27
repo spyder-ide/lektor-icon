@@ -3,7 +3,7 @@
 /* Site custom styles */
 
 .red-text-test {
-  color: red;  /* stylelint-disable-line color-named -- For demo purposes */
+  color: red; /* stylelint-disable-line color-named -- For demo purposes */
 }
 
 .hero-section .container .col-md-6 {
