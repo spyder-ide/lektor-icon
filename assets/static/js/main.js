@@ -32,7 +32,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   // Offcanvas layout for "hamburger" mobile menu
   var offcanvasMenu = function () {
     $('body').prepend('<div id="fh5co-offcanvas"></div>')
-    $('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" aria-label="Toggle for hamburger menu"><i></i></a>')
+    $('body').prepend(
+      '<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" aria-label="Toggle for hamburger menu"><i></i></a>'
+    )
 
     $('.fh5co-main-nav .fh5co-menu-1 a, .fh5co-main-nav .fh5co-menu-2 a').each(function () {
       var $this = $(this)
@@ -51,18 +53,23 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
       sticky.css('height', $section.height())
     })
 
-    $section.waypoint(function (direction) {
-      if (direction === 'down') {
-        $section.css({
-          position: 'fixed',
-          top: 0,
-          width: '100%',
-          'z-index': 99999
-        }).addClass('fh5co-shadow')
+    $section.waypoint(
+      function (direction) {
+        if (direction === 'down') {
+          $section
+            .css({
+              position: 'fixed',
+              top: 0,
+              width: '100%',
+              'z-index': 99999
+            })
+            .addClass('fh5co-shadow')
+        }
+      },
+      {
+        offset: '0px'
       }
-    }, {
-      offset: '0px'
-    })
+    )
   }
 
   // Mobile "burger" menu
@@ -102,4 +109,4 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     mainMenuSticky()
     setFullHeight()
   })
-}())
+})()
