@@ -25,14 +25,12 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-
   html {
     font-size: 0.95em;
   }
 }
 
 @media screen and (max-width: 360px) {
-
   html {
     font-size: 0.9em;
   }
@@ -97,7 +95,6 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-
   .pull-right {
     float: none !important;
   }
@@ -193,7 +190,6 @@ h6,
 }
 
 @media screen and (max-width: 480px) {
-
   h1,
   h2,
   h3,
@@ -219,14 +215,12 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-
   p {
     line-height: 1.75;
   }
 }
 
 @media screen and (max-width: 360px) {
-
   p {
     line-height: 1.55;
   }
@@ -275,7 +269,6 @@ img {
 }
 
 @media screen and (min-width: 769px) {
-
   .container {
     width: 768px;
   }
@@ -286,7 +279,6 @@ img {
 }
 
 @media screen and (min-width: 900px) {
-
   .container {
     width: 900px;
   }
@@ -297,7 +289,6 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-
   .container {
     width: 1024px;
   }
@@ -308,7 +299,6 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-
   .container {
     width: 1200px;
   }
@@ -319,7 +309,6 @@ img {
 }
 
 @media screen and (min-width: 1366px) {
-
   .container {
     width: 1366px;
   }
@@ -330,7 +319,6 @@ img {
 }
 
 @media screen and (min-width: 2500px) {
-
   .container {
     width: 1600px;
   }
@@ -415,7 +403,6 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
   .hero-section .fh5co-copy-inner h1 {
     font-size: 2.35em;
     line-height: 1;
@@ -428,7 +415,6 @@ img {
 }
 
 @media screen and (max-width: 400px) {
-
   .hero-section .fh5co-copy-inner h1 {
     font-size: 2em;
     line-height: 1;
@@ -441,14 +427,12 @@ img {
 }
 
 @media screen and (max-height: 860px) and (max-width: 768px) {
-
   .hero-section .fh5co-copy-inner h1 {
     margin-top: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .hero-section .fh5co-copy-inner h1 {
     text-align: center;
   }
@@ -577,7 +561,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-heading .heading {
     font-size: 30px;
   }
@@ -600,7 +583,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-heading .sub-heading {
     font-size: 18px;
   }
@@ -624,14 +606,12 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
   .fh5co-heading h2 {
     font-size: 1.75em;
   }
 }
 
 @media screen and (max-width: 360px) {
-
   .fh5co-heading h2 {
     font-size: 1.5em;
   }
@@ -683,7 +663,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .mission-section .fh5co-heading {
     margin-bottom: 0;
   }
@@ -698,14 +677,12 @@ img {
 }
 
 @media screen and (max-width: 768px) and (max-height: 768px) {
-
   .mission-section .fh5co-2col.right {
     height: 360px;
   }
 }
 
 @media screen and (max-width: 768px) and (max-height: 480px) {
-
   .mission-section .fh5co-2col.right {
     height: 240px;
   }
@@ -723,7 +700,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .mission-section .fh5co-2col-inner {
     display: block;
     margin-left: auto;
@@ -743,7 +719,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .mission-section .fh5co-2col-inner.left,
   .mission-section .fh5co-2col-inner.right {
     float: none;
@@ -757,7 +732,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .mission-image-container {
     height: 100%;
     padding: 0;
@@ -783,7 +757,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-tabs-container {
     padding-bottom: 1.5em;
   }
@@ -794,7 +767,6 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
   .fh5co-tabs-container {
     padding-top: 0.5em;
   }
@@ -858,7 +830,6 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
   .fh5co-tabs-container .fh5co-tabs {
     display: block;
   }
@@ -891,7 +862,6 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-
   .fh5co-tabs-container .fh5co-tab-content h2 {
     font-size: 1.1em;
     line-height: 1.5;
@@ -899,7 +869,6 @@ img {
 }
 
 @media screen and (max-width: 360px) {
-
   .fh5co-tabs-container .fh5co-tab-content h2 {
     font-size: 1.05em;
     line-height: 1.5;
@@ -920,7 +889,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-grid {
     padding-left: 0;
   }
@@ -935,14 +903,12 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-grid .fh5co-grid-item {
     height: 300px !important;
   }
 }
 
 @media screen and (max-width: 480px) {
-
   .fh5co-grid .fh5co-grid-item {
     height: 200px !important;
     width: 100%;
@@ -957,7 +923,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .services-section,
   .dashboard-section {
     padding: 5em 0 3em;
@@ -1123,7 +1088,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .team-section {
     padding: 3em 0;
   }
@@ -1296,14 +1260,12 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-
   .gallery-section .fh5co-item {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .gallery-section .fh5co-item {
     width: 100%;
   }
@@ -1316,7 +1278,6 @@ img {
 }
 
 @media screen and (max-width: 768px) and (max-height: 768px) {
-
   .gallery-section .fh5co-item,
   .gallery-section .fh5co-item .fh5co-copy,
   .gallery-section .fh5co-item .fh5co-copy .fh5co-copy-inner {
@@ -1325,7 +1286,6 @@ img {
 }
 
 @media screen and (max-width: 768px) and (max-height: 768px) {
-
   .gallery-section .fh5co-item,
   .gallery-section .fh5co-item .fh5co-copy,
   .gallery-section .fh5co-item .fh5co-copy .fh5co-copy-inner {
@@ -1334,7 +1294,6 @@ img {
 }
 
 @media screen and (max-width: 768px) and (max-height: 480px) {
-
   .mission-section .fh5co-2col.right {
     height: 150px;
   }
@@ -1394,7 +1353,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   #fh5co-footer .fh5co-social {
     float: left;
     text-align: left;
@@ -1496,7 +1454,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   #fh5co-offcanvas {
     display: block;
   }
@@ -1508,7 +1465,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   #fh5co-container,
   #fh5co-footer,
   .fh5co-nav-toggle {
@@ -1527,7 +1483,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .js-sticky {
     display: none;
   }
@@ -1549,7 +1504,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-
   .fh5co-nav-toggle {
     display: block;
   }
@@ -1755,7 +1709,6 @@ h6 {
 }
 
 @media screen and (max-width: 480px) {
-
   h1 {
     font-size: 2.5rem;
   }
@@ -1782,7 +1735,6 @@ h6 {
 }
 
 @media screen and (max-width: 360px) {
-
   h1 {
     font-size: 2rem;
   }
@@ -1905,7 +1857,6 @@ ul ul {
 }
 
 @media screen and (max-width: 1200px) {
-
   .col-md-4,
   .col-md-6 {
     width: 50%;
@@ -1913,7 +1864,6 @@ ul ul {
 }
 
 @media screen and (max-width: 768px) {
-
   .col-md-4,
   .col-md-6 {
     float: none;
@@ -1930,7 +1880,6 @@ ul ul {
 }
 
 @media screen and (max-width: 1200px) {
-
   .content-section .center,
   .mission-section .center,
   #blog-center {
@@ -1939,7 +1888,6 @@ ul ul {
 }
 
 @media screen and (max-width: 768px) {
-
   .content-section .center,
   .mission-section .center,
   #blog-center {
@@ -2152,7 +2100,6 @@ html [type="button"] {
 }
 
 @media screen and (max-width: 768px) {
-
   .navbar {
     border-radius: 0;
   }
@@ -2479,7 +2426,6 @@ button:hover:disabled,
 }
 
 @media screen and (max-width: 768px) {
-
   .content-button {
     margin-top: 1em;
     width: 100%;
@@ -2667,7 +2613,6 @@ a.card-link-full:focus {
 /* Reduce card padding at narrow widths */
 
 @media screen and (max-width: 360px) {
-
   .body-block .card {
     padding: 1em;
   }
