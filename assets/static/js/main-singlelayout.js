@@ -17,52 +17,58 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
 /* global showMailingPopUp, mailchimpButtonEnabled */
 
-;(function () {
-  'use strict'
+(function () {
+  "use strict";
 
   var isMSIE = function () {
-    var isIE = /MSIE|Trident/.test(window.navigator.userAgent)
-    return isIE
-  }
+    var isIE = /MSIE|Trident/.test(window.navigator.userAgent);
+    return isIE;
+  };
 
   var heroHeight = function () {
     if ($(window).outerWidth() > 768) {
-      $('.js-fullheight-home').css('height', $(window).height() - $('.js-sticky').height())
+      $(".js-fullheight-home").css(
+        "height",
+        $(window).height() - $(".js-sticky").height()
+      );
     } else {
-      $('.js-fullheight-home').css('height', $(window).height() / 2)
+      $(".js-fullheight-home").css("height", $(window).height() / 2);
     }
-  }
+  };
 
   var setHeroHeight = function () {
-    heroHeight()
-    $(window).on('resize', heroHeight)
-  }
+    heroHeight();
+    $(window).on("resize", heroHeight);
+  };
 
   // Loading animation
   var loaderPage = function () {
-    $('.fh5co-loader').fadeOut('slow')
-  }
+    $(".fh5co-loader").fadeOut("slow");
+  };
 
   // Show and hide tab content and images on click in the mission section
   var fh5coTabs = function () {
-    $('.fh5co-tabs li a').on('click', function (event) {
-      event.preventDefault()
-      var $this = $(this)
-      var tab = $this.data('tab')
-      $('.fh5co-tabs li').removeClass('active')
-      $this.closest('li').addClass('active')
-      $this.closest('.fh5co-tabs-container').find('.fh5co-tab-content').removeClass('active')
+    $(".fh5co-tabs li a").on("click", function (event) {
+      event.preventDefault();
+      var $this = $(this);
+      var tab = $this.data("tab");
+      $(".fh5co-tabs li").removeClass("active");
+      $this.closest("li").addClass("active");
       $this
-        .closest('.fh5co-tabs-container')
+        .closest(".fh5co-tabs-container")
+        .find(".fh5co-tab-content")
+        .removeClass("active");
+      $this
+        .closest(".fh5co-tabs-container")
         .find('.fh5co-tab-content[data-tab-content="' + tab + '"]')
-        .addClass('active')
-      $this.closest('.body-section').find('.tab-image').removeClass('active')
+        .addClass("active");
+      $this.closest(".body-section").find(".tab-image").removeClass("active");
       $this
-        .closest('.body-section')
+        .closest(".body-section")
         .find('.tab-image[data-tab-content="' + tab + '"]')
-        .addClass('active')
-    })
-  }
+        .addClass("active");
+    });
+  };
 
   // var gridAutoHeight = function () {
   // $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight() / 2)
@@ -74,147 +80,153 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   // Equalize heights of cards in team/services section for proper layout
   var cardsEvenHeight = function () {
-    $('.body-section .container').each(function () {
-      var cardHeightMax = 0
-      if ($(this).find('.card-inner').length && $(this).find('.card-outer').first().width() <= $(this).width() / 2.0) {
+    $(".body-section .container").each(function () {
+      var cardHeightMax = 0;
+      if (
+        $(this).find(".card-inner").length &&
+        $(this).find(".card-outer").first().width() <= $(this).width() / 2.0
+      ) {
         $(this)
-          .find('.card-inner')
+          .find(".card-inner")
           .each(function () {
-            var cardHeight = $(this).height()
+            var cardHeight = $(this).height();
             if (cardHeight > cardHeightMax) {
-              cardHeightMax = cardHeight
+              cardHeightMax = cardHeight;
             }
-          })
+          });
       }
       $(this)
-        .find('.card')
+        .find(".card")
         .each(function () {
-          var cardHeight = $(this).find('.card-inner').height()
-          var spacerHeight = Math.max(cardHeightMax - cardHeight, 0)
-          $(this).find('.card-spacer').height(spacerHeight)
-        })
-    })
-  }
+          var cardHeight = $(this).find(".card-inner").height();
+          var spacerHeight = Math.max(cardHeightMax - cardHeight, 0);
+          $(this).find(".card-spacer").height(spacerHeight);
+        });
+    });
+  };
 
   var setCardsEvenHeight = function () {
-    $(window).on('load', cardsEvenHeight)
-    $(window).on('resize', cardsEvenHeight)
+    $(window).on("load", cardsEvenHeight);
+    $(window).on("resize", cardsEvenHeight);
     // For IE11, which doesn't work with load
-    window.setTimeout(cardsEvenHeight, 2000)
-    window.setTimeout(cardsEvenHeight, 5000)
-  }
+    window.setTimeout(cardsEvenHeight, 2000);
+    window.setTimeout(cardsEvenHeight, 5000);
+  };
 
   // Parallax
   var parallax = function () {
-    var verticalOffsetConst = !isMSIE() * 51
+    var verticalOffsetConst = !isMSIE() * 51;
     $(window).stellar({
       horizontalScrolling: false,
-      verticalOffset: verticalOffsetConst + $('.fh5co-main-nav').height(),
-      responsive: false
-    })
-  }
+      verticalOffset: verticalOffsetConst + $(".fh5co-main-nav").height(),
+      responsive: false,
+    });
+  };
 
   // Hide the sidebar if user scrolls the page
   var scrolledWindow = function () {
-    $(window).on('scroll', function () {
-      if ($('body').hasClass('offcanvas-visible')) {
-        $('body').removeClass('offcanvas-visible')
-        $('.js-fh5co-nav-toggle').removeClass('active')
+    $(window).on("scroll", function () {
+      if ($("body").hasClass("offcanvas-visible")) {
+        $("body").removeClass("offcanvas-visible");
+        $(".js-fh5co-nav-toggle").removeClass("active");
       }
-    })
+    });
 
-    $(window).on('resize', function () {
-      if ($('body').hasClass('offcanvas-visible')) {
-        $('body').removeClass('offcanvas-visible')
-        $('.js-fh5co-nav-toggle').removeClass('active')
+    $(window).on("resize", function () {
+      if ($("body").hasClass("offcanvas-visible")) {
+        $("body").removeClass("offcanvas-visible");
+        $(".js-fh5co-nav-toggle").removeClass("active");
       }
-    })
-  }
+    });
+  };
 
   // Page Nav
   var clickMenu = function () {
-    var topVal = $(window).width() < 769 ? 0 : 58
+    var topVal = $(window).width() < 769 ? 0 : 58;
 
-    $(window).on('resize', function () {
-      topVal = $(window).width() < 769 ? 0 : 58
-    })
+    $(window).on("resize", function () {
+      topVal = $(window).width() < 769 ? 0 : 58;
+    });
     $(
       '.fh5co-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"]), a.fh5co-content-nav:not([class="external"])'
-    ).on('click', function (event) {
-      var section = $(this).data('nav-section')
+    ).on("click", function (event) {
+      var section = $(this).data("nav-section");
 
       if ($('div[data-section="' + section + '"]').length) {
-        $('html, body').animate(
+        $("html, body").animate(
           {
-            scrollTop: $('div[data-section="' + section + '"]').offset().top - topVal
+            scrollTop:
+              $('div[data-section="' + section + '"]').offset().top - topVal,
           },
           500,
-          'easeInOutExpo'
-        )
+          "easeInOutExpo"
+        );
 
-        event.preventDefault()
+        event.preventDefault();
       }
-    })
-  }
+    });
+  };
 
   // Reflect scrolling in navigation
   var navActive = function (section) {
-    $('.fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]').removeClass('active')
-    $('.fh5co-main-nav, #fh5co-offcanvas')
+    $(
+      ".fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]"
+    ).removeClass("active");
+    $(".fh5co-main-nav, #fh5co-offcanvas")
       .find('a[data-nav-section="' + section + '"]')
-      .addClass('active')
-  }
+      .addClass("active");
+  };
 
   // A section to scroll to on the mainpage
   var navigationSection = function () {
-    var $section = $('div[data-section]')
+    var $section = $("div[data-section]");
 
     $section.waypoint(
       function (direction) {
-        if (direction === 'down') {
-          navActive($(this.element).data('section'))
+        if (direction === "down") {
+          navActive($(this.element).data("section"));
         }
       },
       {
-        offset: '150px'
+        offset: "150px",
       }
-    )
+    );
 
     $section.waypoint(
       function (direction) {
-        if (direction === 'up') {
-          navActive($(this.element).data('section'))
+        if (direction === "up") {
+          navActive($(this.element).data("section"));
         }
       },
       {
         offset: function () {
-          return -$(this.element).height() + 155
-        }
+          return -$(this.element).height() + 155;
+        },
       }
-    )
-  }
+    );
+  };
 
   // Set Mailchimp event handler
   var setMailchimpEvent = function () {
-    document.getElementById('mailchimp-button').onclick = function () {
-      showMailingPopUp()
-    }
-  }
+    document.getElementById("mailchimp-button").onclick = function () {
+      showMailingPopUp();
+    };
+  };
 
   // Document on DOM ready
   $(function () {
-    setHeroHeight()
-    loaderPage()
-    fh5coTabs()
+    setHeroHeight();
+    loaderPage();
+    fh5coTabs();
     // gridAutoHeight();
 
-    parallax()
-    scrolledWindow()
-    clickMenu()
-    navigationSection()
-    setCardsEvenHeight()
+    parallax();
+    scrolledWindow();
+    clickMenu();
+    navigationSection();
+    setCardsEvenHeight();
     if (mailchimpButtonEnabled) {
-      setMailchimpEvent()
+      setMailchimpEvent();
     }
-  })
-})()
+  });
+})();
