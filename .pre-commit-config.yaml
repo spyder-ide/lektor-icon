@@ -89,13 +89,6 @@ repos:
     - 'stylelint-order@4.1.0'
     - 'postcss'  # Manually required or a11y doesn't work properly
 
-# Lint CSS with CSSlint
-- repo: https://github.com/pre-commit/mirrors-csslint
-  rev: v1.0.5
-  hooks:
-  - id: csslint
-    name: Check CSS (CSSlint)
-
 # Pretty-format INI
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.0.0

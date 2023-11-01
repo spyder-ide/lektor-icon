@@ -1665,7 +1665,7 @@ img {
 
 .fh5co-loader {
   background: url("../images/Preloader_2.gif") center no-repeat #fff;
-  background: url("../images/Preloader_2.gif") center no-repeat   var(--theme-bg-color, #fff);   /* csslint allow: duplicate-background-images */
+  background: url("../images/Preloader_2.gif") center no-repeat var(--theme-bg-color, #fff);
   height: 100%;
   left: 0;
   position: fixed;
