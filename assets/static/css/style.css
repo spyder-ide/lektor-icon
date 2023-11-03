@@ -144,7 +144,6 @@ a {
   cursor: pointer;
   line-height: inherit;
   text-decoration: none;
-  text-decoration-skip: objects;
   transition: 0.5s;
 }
 
@@ -216,7 +215,7 @@ p {
   line-height: 1.9;
   margin: 0 0 10px;
   margin-bottom: 1rem;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 @media screen and (max-width: 480px) {
@@ -373,7 +372,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: inset -1px -11px 21px -15px rgb(0 0 0 / 0.75);
+  box-shadow: inset -1px -11px 21px -15px rgb(0 0 0 / 75%);
   min-height: 300px;
   position: relative;
 }
@@ -410,7 +409,7 @@ img {
 
 .hero-section .fh5co-copy-inner h2 {
   color: #fff;
-  color: rgb(255 255 255 / 0.7);
+  color: rgb(255 255 255 / 70%);
   font-size: 1.1em;
   line-height: 1.9;
 }
@@ -456,13 +455,13 @@ img {
 }
 
 .hero-section .fh5co-copy-inner a {
-  border-bottom: 1px solid rgb(255 255 255 / 0.4);
+  border-bottom: 1px solid rgb(255 255 255 / 40%);
   color: #fff;
 }
 
 .hero-section .fh5co-copy-inner a:hover,
 .hero-section .fh5co-copy-inner a:focus {
-  border-bottom: 1px solid rgb(255 255 255 / 0.9);
+  border-bottom: 1px solid rgb(255 255 255 / 90%);
   text-decoration: none;
 }
 
@@ -474,7 +473,7 @@ img {
 }
 
 .fh5co-main-nav.fh5co-shadow {
-  box-shadow: 0 0 7px 0 rgb(0 0 0 / 0.6);
+  box-shadow: 0 0 7px 0 rgb(0 0 0 / 60%);
 }
 
 .fh5co-main-nav .fh5co-menu-1 {
@@ -989,7 +988,7 @@ img {
   background: #ee1c24;
   background: var(--theme-accent-color, #ee1c24);
   border-radius: 50%;
-  box-shadow: 0 0 15px 0 rgb(0 0 0 / 0.2);
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 20%);
   color: #fff;
   display: table;
   float: left;
@@ -1079,7 +1078,7 @@ img {
   background: var(--theme-bg-accent-color, #f5f5f5);
   border: 1px solid #f5f5f5;
   border: 1px solid var(--theme-bg-accent-color, #f5f5f5);
-  box-shadow: 0 0 20px 0 rgb(0.4 0.4 0.4 / 0.3);
+  box-shadow: 0 0 20px 0 rgb(0.4 0.4 0.4 / 30%);
 }
 
 .checked {
@@ -1111,10 +1110,7 @@ img {
 }
 
 .dashboard-section .card-item {
-  padding-bottom: 1em;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1em;
+  padding: 1em 5px;
 }
 
 .dashboard-section h3 {
@@ -1184,7 +1180,7 @@ img {
 .team-section .person:hover {
   background: #303030;
   background: var(--theme-bg-accent-color, #303030);
-  box-shadow: 0 0 20px 0 rgb(0.4 0.4 0.4 / 0.3);
+  box-shadow: 0 0 20px 0 rgb(0.4 0.4 0.4 / 30%);
 }
 
 .gallery-section {
@@ -1251,26 +1247,20 @@ img {
 .gallery-section .fh5co-item .fh5co-overlay {
   background: #ee1c24;
   background: var(--theme-accent-color, #ee1c24);
-  bottom: 0;
-  left: 0;
+  inset: 0;
   opacity: 0;
   position: absolute;
-  right: 0;
-  top: 0;
   transition: 0.1s;
   visibility: hidden;
   z-index: 0;
 }
 
 .gallery-section .fh5co-item .fh5co-copy {
-  bottom: 0;
   display: table;
   height: 300px;
-  left: 0;
+  inset: 0;
   position: absolute;
-  right: 0;
   text-align: center;
-  top: 0;
   width: 100%;
   z-index: 3;
 }
@@ -1300,7 +1290,7 @@ img {
 }
 
 .gallery-section .fh5co-item .fh5co-copy > .fh5co-copy-inner h3 {
-  color: rgb(255 255 255 / 0.7);
+  color: rgb(255 255 255 / 70%);
   font-size: 16px;
   top: 0;
 }
@@ -1388,13 +1378,10 @@ img {
 
 #fh5co-footer {
   background: #333;
-  box-shadow: inset 0 10px 21px -15px rgb(0 0 0 / 0.1);
+  box-shadow: inset 0 10px 21px -15px rgb(0 0 0 / 10%);
   clear: both;
   color: #fff;
-  padding-bottom: 0.6em;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0.9em;
+  padding: 0.9em 0 0.6em;
 }
 
 #fh5co-footer p:last-child {
@@ -1547,7 +1534,7 @@ img {
 }
 
 .fh5co-nav-toggle {
-  background: rgb(0 0 0 / 0.7);
+  background: rgb(0 0 0 / 70%);
   border-bottom: none !important;
   border-radius: 4px;
   cursor: pointer;
@@ -1589,7 +1576,7 @@ img {
   height: 2px;
   line-height: 0.4;
   position: relative;
-  text-indent: -55px;
+  text-indent: -55px;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- False positive; numeric values supported on all browsers */
   text-transform: uppercase;
   transition: all 0.2s ease-out;
   width: 30px;
@@ -1999,7 +1986,7 @@ kbd {
   background-color: #333;
   background-color: var(--theme-fg-alt-color, #333);
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 0.25);
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 25%);
   margin: 0;
   padding: 0.125rem 0.25rem 0;
 }
@@ -2022,7 +2009,7 @@ pre {
   margin-bottom: 22px;
   overflow: auto;
   padding: 9.5px;
-  word-break: break-all;  /* stylelint-disable-line plugin/no-unsupported-browser-features -- Extra bonus styling for browsers that support it */
+  word-break: break-all;
   word-wrap: break-word;
 }
 
@@ -2243,7 +2230,7 @@ html [type="button"] {
   font-size: inherit;
   line-height: 1.57;
   margin-bottom: 1.4rem;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 .blog-post p img {
@@ -2518,16 +2505,13 @@ button:hover:disabled,
   margin-right: auto;
   max-width: 80%;
   min-width: 20%;
-  padding-bottom: 0.5em;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 0.5em;
+  padding: 0.5em 2em;
   text-align: center;
   text-decoration: none !important;
   transition: 0.5s;
 }
 
-#open_chat {
+#open-chat {
   background-color: #ee1c24;
   background-color: var(--theme-accent-color, #ee1c24);
   font-weight: bold;
@@ -2537,8 +2521,8 @@ button:hover:disabled,
 .text-button:hover,
 .text-button:focus,
 .text-button:active,
-#open_chat:hover,
-#open_chat:focus,
+#open-chat:hover,
+#open-chat:focus,
 #open-chat:active {
   background-color: #d50000;
   background-color: var(--theme-accent-alt-color, #d50000);
@@ -2585,10 +2569,7 @@ button:hover:disabled,
 }
 
 .page-content {
-  margin-bottom: 4em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
+  margin: 3em auto 4em;
   max-width: 1100px;
   width: 75%;
 }
@@ -2621,7 +2602,7 @@ button:hover:disabled,
 }
 
 #error-page .page-content {
-  background-color: rgb(232 236 241 / 0.5);
+  background-color: rgb(232 236 241 / 50%);
   border-radius: 50px;
   margin-bottom: 6em;
   margin-top: 5em;

@@ -16,7 +16,7 @@ All files in this repository, including those not listed here, are covered by
 Lektor-Icon's MIT (Expat) license, described in the LICENSE.txt file.
 https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt
 
-Images, icons and font gyphs that include trademarked elements are used for
+Images, icons and font glyphs that include trademarked elements are used for
 informational purposes only, and do not necessarily constitute any endorsement,
 association or ownership by or of the marks or their respective owners.
 
