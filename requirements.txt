@@ -1,0 +1,2 @@
+Lektor>=3.2,<3.4  # Primary dependency
+pre-commit>=2.10.0,<4.0  # For pre-commit hooks
