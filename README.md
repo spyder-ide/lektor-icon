@@ -1,6 +1,6 @@
 # Lektor-Icon Theme
 
-*Copyright © 2016-2020 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+*Copyright © 2016- Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
 
 [![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)

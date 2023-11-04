@@ -1,6 +1,6 @@
 # Lektor-Icon Demo Website
 
-*Copyright © 2016-2020 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+*Copyright © 2016- Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
 
 ![Screenshot of Lektor-Icon screenshot section](../images/mainpage-screenshots.png)
 
