@@ -1,0 +1,32 @@
+# Run the project's linting suite via Pre-Commit
+name: Lint
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
+  pull_request:
+    branches:
+    - master
+    - main
+    - '*.*'
+    - 'staging*'
+
+jobs:
+  lint:
+    name: Lint with Pre-Commit
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    - name: Run pre-commit hooks
+      uses: pre-commit/action@v3.0.0

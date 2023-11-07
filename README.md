@@ -1,10 +1,19 @@
 # Lektor-Icon Theme
 
-*Copyright © 2016-2020 Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
+*Copyright © 2016- Lektor-Icon Contributors and others (see [AUTHORS.txt](https://github.com/spyder-ide/lektor-icon/blob/master/AUTHORS.txt))*
 
-[![Travis status](https://travis-ci.org/spyder-ide/lektor-icon.svg?branch=master)](https://travis-ci.org/spyder-ide/lektor-icon)
+<!-- Project status -->
+[![License](https://img.shields.io/github/license/spyder-ide/lektor-icon?label=License)](https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt)
+[![Framework](https://img.shields.io/badge/Framework-Lektor-purple.svg)](https://www.getlektor.com/)
+[![OpenCollective Backers](https://opencollective.com/spyder/backers/badge.svg?color=blue)](https://opencollective.com/spyder)
+
+
+<!-- Build and deploy status -->
+[![Build status](https://github.com/spyder-ide/lektor-icon/actions/workflows/build.yaml/badge.svg?branch=master)](https://github.com/spyder-ide/lektor-icon/actions/workflows/build.yaml)
+[![Lint status](https://github.com/spyder-ide/lektor-icon/actions/workflows/lint.yaml/badge.svg?branch=master)](https://github.com/spyder-ide/lektor-iconz/actions/workflows/lint.yaml)
+[![Pre-Commit](https://img.shields.io/badge/Linting-Pre--Commit-brightgreen?logo=pre-commit&logoColor=white)](https://pre-commit.com/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8b768d7f-1623-4134-8cea-0d049894d99c/deploy-status)](https://app.netlify.com/sites/lektor-icon-preview/deploys)
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 
 ![Screenshot of Lektor-Icon screenshot section](./images/mainpage-screenshots.png)
 
@@ -231,6 +240,7 @@ If not present, the license text will not be linked.
 *Example:* ``footer_license_link = https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt``
 
 ``gitter_room`` (*string*): Name/path to the Gitter room associated with your site (the part of its Gitter URL after ``https://gitter.im/``).
+**DEPRECATED:** As Gitter has migrated to Matrix, this option is no longer functional, and should be removed from your websites.
 If included, will enable an ``Open Chat`` button on your site that, when clicked, will open a fully interactive sidebar containing a Gitter chat client, allowing them to communicate directly with you to ask questions or give feedback.
 If not set, the script will not be enabled and no button will be present.
 See the Optional Feature Configuration section for more details.
@@ -413,11 +423,7 @@ For more general information about Spyder and to stay up to date on the latest S
 
 [Spyder Website](https://www.spyder-ide.org/)
 
-[Download Spyder (with Anaconda)](https://www.anaconda.com/download/)
-
-[Spyder Github](https://github.com/spyder-ide/spyder)
-
-[Gitter Chatroom](https://gitter.im/spyder-ide/public)
+[Spyder GitHub](https://github.com/spyder-ide/spyder)
 
 [Google Group](https://groups.google.com/group/spyderlib)
 

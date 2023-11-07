@@ -10,7 +10,7 @@ target = ghpages+https://spyder-ide/lektor-icon
 title = Lektor-Icon Demo Site
 content_lang = en-US
 author = Spyder Dev Team and Lektor-Icon Contributors
-copyright = &copy; 2020 Lektor-Icon Contributors
+copyright = &copy; 2023 Lektor-Icon Contributors
 description = Official live demo site for the Lektor-Icon theme by the Spyder IDE organization
 keywords = lektor, theme, example, website, demo, static, html
 favicon_path = /static/images/favicon.png
@@ -29,6 +29,6 @@ nav_extralinks = Spyder: https://www.spyder-ide.org/, Github: https://github.com
 footer_links = Github: https://github.com/spyder-ide/lektor-icon, Facebook: https://www.facebook.com/SpyderIDE/, Twitter: https://twitter.com/spyder_ide, Google Groups: https://groups.google.com/forum/?hl=en#!forum/uahuntsvilleams, OpenCollective: https://opencollective.com/spyder
 footer_license_name = MIT (Code); CC-BY-SA 4.0 (Content)
 footer_license_link = https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt
-gitter_room = spyder-ide/public
+gitter_room =
 disqus_name =
 atom_enable =

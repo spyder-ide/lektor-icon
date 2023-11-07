@@ -12,18 +12,18 @@ These files are listed here with their corresponding authors,
 permission notices, disclaimers, and copyright statements; these are also
 included in the file's directory and/or their headers, as appropriate.
 
-All files in this repository, including those not listed here, are covered by
+Any file in this repository not listed here are covered by
 Lektor-Icon's MIT (Expat) license, described in the LICENSE.txt file.
 https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt
 
-Images, icons and font gyphs that include trademarked elements are used for
+Images, icons and font glyphs that include trademarked elements are used for
 informational purposes only, and do not necessarily constitute any endorsement,
 association or ownership by or of the marks or their respective owners.
 
 All trademarks are and remain the property of their respective owners.
 
-See https://github.com/spyder-ide/spyder/blob/master/NOTICE.txt
-for a guide and template on adding new assets to the project and this file.
+Reference the Spyder NOTICE.txt for how to add items to this file.
+https://github.com/spyder-ide/spyder/blob/master/NOTICE.txt
 
 
 ===============================================================================
@@ -263,11 +263,11 @@ assets/static/js/magnific-popup.js
 
 
 
-JQuery 3.5.1
+JQuery 3.7.1
 ------------
 
 
-Copyright 2020 JS Foundation and other contributors, https://js.foundation/
+Copyright 2023 JS Foundation and other contributors, https://js.foundation/
 
 
 Author: JS Foundation and other contributors | https://js.foundation/
@@ -302,7 +302,7 @@ https://github.com/jquery/jquery/blob/master/LICENSE.txt
 
 Files covered:
 
-assets/static/js/jquery-3.5.1.min.js
+assets/static/js/jquery-3.7.1.min.js
 
 
 -------------------------------------------------------------------------------

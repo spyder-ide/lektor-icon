@@ -1,7 +1,11 @@
-# Contributing to Lektor-Icon
+# Contributing Guide
+
+This is the website for the Spyder scientific Python development environment, and is developed with standard GitHub flow.
+If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend seeking out a beginner tutorial; if you are already are experienced with it, most of this guide will already be familiar to you.
+However, the guide should fill you in on pretty much all the parts you need to know, so read on.
+Thanks!
 
 
-Thanks for your interest in helping out!
 
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -9,12 +13,14 @@ Thanks for your interest in helping out!
 **Contents**
 
 - [Reporting Issues](#reporting-issues)
-- [Submitting Pull Requests](#submitting-pull-requests)
-- [Setting up a development environment](#setting-up-a-development-environment)
-  - [Clone the repo](#clone-the-repo)
-  - [Install dependencies](#install-dependencies)
-  - [Set up Pre-Commit](#set-up-pre-commit)
-  - [Run server and make changes](#run-server-and-make-changes)
+- [Setting Up a Development Environment](#setting-up-a-development-environment)
+  - [Fork and clone the repo](#fork-and-clone-the-repo)
+  - [Create and activate a fresh venv](#create-and-activate-a-fresh-venv)
+  - [Install the development dependencies](#install-the-development-dependencies)
+  - [Install the required Pre-Commit hooks](#install-the-required-pre-commit-hooks)
+- [Running the server](#running-the-server)
+- [Making Your Changes](#making-your-changes)
+- [Pushing your Changes and Submitting a Pull Request](#pushing-your-changes-and-submitting-a-pull-request)
 - [Standards and Conventions](#standards-and-conventions)
   - [All Files](#all-files)
   - [All Lektor files (INI and ``contents.lr``)](#all-lektor-files-ini-and-contentslr)
@@ -41,82 +47,155 @@ As always, feel free to contact us via one of the platforms listed at the bottom
 
 ## Reporting Issues
 
-If you encounter an issue using Lektor-Icon, spot a bug in the code, or have a suggestion for improving it further, please let us know by submitting a report on our [Github Issue Tracker](https://github.com/spyder-ide/lektor-icon/issues).
-Make sure you provide as much information as possible to help us track down the issue, and we always appreciate offers to help resolve it yourself.
+Discover a bug?
+Want a new feature?
+[Open](https://github.com/spyder-ide/lektor-icon/issues/new/choose) an [issue](https://github.com/spyder-ide/lektor-icon/issues)!
+Make sure to describe the bug or feature in detail, with reproducible examples and references if possible, what you are looking to have fixed/added.
+While we can't promise we'll fix everything you might find, we'll certainly take it into consideration, and typically welcome pull requests to resolve accepted issues.
 Thanks!
 
 
 
-## Submitting Pull Requests
+## Setting Up a Development Environment
 
-We welcome contributions from the community, and will do our best to review all of them in a timely fashion.
-To do so, please fork this repository, create a new feature branch there based off the latest ``master``, make and test your changes, and then submit a pull request (PR) to this repo.
-Please make sure your PR titles are brief but descriptive, and include ``PR:`` as a prefix.
-If a work in progress, use Github's draft feature.
+**Note**: You may need to substitute ``python3`` for ``python`` in the commands below on some Linux distros where ``python`` isn't mapped to ``python3`` (yet).
 
-You should also create a corresponding issue as well if your change is substantive, so that we can keep track of everything and give you credit for closing it.
-You might want to open an issue first discussing your changes, to get feedback and suggestions before implementing them.
+### Fork and clone the repo
 
-
-
-## Setting up a development environment
-
-
-### Clone the repo
+First, navigate to the [project repository](https://github.com/spyder-ide/lektor-icon) in your web browser and press the ``Fork`` button to make a personal copy of the repository on your own Github account.
+Then, click the ``Clone or Download`` button on your repository, copy the link and run the following on the command line to clone the repo with submodules:
 
 ```bash
-git clone https://github.com/spyder-ide/lektor-icon.git
+git clone --recursive <LINK-TO-YOUR-REPO>
+```
+
+Finally, set the upstream remote to the official website repo with:
+
+```bash
+git remote add upstream https://github.com/spyder-ide/lektor-icon.git
 ```
 
 
-### Install dependencies
+### Create and activate a fresh venv
 
-You can install the required development and production dependencies with conda (recommended):
+Particularly for development installs, we highly recommend you create and activate a virtual environment to avoid any conflicts with other packages on your system or causing any other issues.
+To do so with Conda (recommended), simply execute the following:
 
 ```bash
-conda install -c conda-forge --file requirements-dev.txt
+conda create -c conda-forge -n lektor-icon-env python=3
 ```
 
-or with pip:
+And activate it with
 
 ```bash
-pip install -r requirements-dev.txt
+conda activate lektor-icon-env
+```
+
+With pip/venv, you can create a virtual environment with
+
+```bash
+python -m venv lektor-icon-env
+```
+
+And activate it with the following on Linux and macOS,
+
+```bash
+source lektor-icon-env/bin/activate
+```
+
+or on Windows (cmd),
+
+```cmd
+.\lektor-icon-env\Scripts\activate.bat
+```
+
+Regardless of the tool you use, make sure to remember to always activate your environment before using it.
+
+
+### Install the development dependencies
+
+To get the consistent pinned versions of the development dependencies, install the deps from the requirements file.
+If using conda, run:
+
+```bash
+conda install -c conda-forge --file requirements.txt
+```
+
+Or, using pip,
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
 
-### Set up Pre-Commit
+### Install the required Pre-Commit hooks
 
-This repository uses [pre-commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues and fix many of them automatically.
-Pre-commit itself is installed with the above command, and the hooks can be installed by running the following from the root of this repo:
+You'll need to install the pre-commit hooks before committing any changes, as they both auto-generate/update specific files and run a comprehensive series of checks to help you find likely errors and enforce the project's code quality guidelines and style guide; they are also run in CI, and will fail the build if any don't pass or modify any files.
+This repository uses [Pre-Commit](https://pre-commit.com/) to install, configure and update a suite of pre-commit hooks that check for common problems and issues, and fix many of them automatically.
+Pre-commit itself is installed with the above command, and the hooks should be enabled by running the following from the root of this repo:
 
 ```bash
-pre-commit install
-pre-commit install --hook-type commit-msg
+pre-commit install --hook-type pre-commit --hook-type commit-msg
 ```
 
 The hooks will be automatically run against any new/changed files every time you commit.
 It may take a few minutes to install the needed packages the first time you commit, but subsequent runs should only take a few seconds.
-If you made one or more commits before installing the hooks (not recommended), to run them manually on all the files in the repo, execute:
+If you made one or more commits before installing the hooks (not recommended), you can run them manually on all the files in the repo with:
 
 ```bash
 pre-commit run --all-files
 ```
 
-**Note**: Most of the hooks fix the problems they detect automatically (the hook output will say ``files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
-Once you're satisfied, ``git add .`` again and re-commit.
+**Note**: Many of the hooks fix the problems they detect automatically (the hook output will say ``Files were modified by this hook``, but no errors/warnings will be listed), but they will still abort the commit so you can double-check everything first.
+Once you're satisfied, ``git add .`` and commit again.
 
 
-### Run server and make changes
 
-Change to the ``example-site`` subdirectory of this repository and run a continuously updating local webserver:
+## Running the server
+
+In the ``example-site`` directory of this repository, run a continuously updating local webserver:
 
 ```bash
 cd example-site
 lektor server
 ```
 
-The resulting website can be viewed in your browser at ``http://localhost:5000``;  simply reload the page to see any changes you make.
+The resulting website can be viewed in your browser at ``http://localhost:5000``.
 
+
+
+## Making Your Changes
+
+To start working on a new PR, you need to execute these commands, filling in the branch names where appropriate (``<FEATURE-BRANCH>`` is the branch you'll be creating to store your changes, e.g. ``fix-startup-bug`` or ``add-widget-support``):
+
+```bash
+git checkout master
+git pull upstream master
+git checkout -b <FEATURE-BRANCH>
+```
+
+Once you've made and tested your changes, commit them with a descriptive message of 74 characters or less written in the imperative tense, with a capitalized first letter and no period at the end (our pre-commit hooks will check that for you, so make sure to install them).
+For example:
+
+```bash
+git commit -am "Fix style issues on mobile browsers"
+```
+
+After making your changes, make sure to test them with ``lektor server``.
+
+
+
+## Pushing your Changes and Submitting a Pull Request
+
+Now that your changes are ready to go, you'll need to push them to your fork.
+
+```bash
+git push -u origin <FEATURE-BRANCH>
+```
+
+Finally, create a pull request to the [spyder-ide/lektor-icon repository](https://github.com/spyder-ide/lektor-icon/) on Github.
+
+Thanks, and we look forward to your generous contributions!
 
 
 ## Standards and Conventions
