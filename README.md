@@ -240,6 +240,7 @@ If not present, the license text will not be linked.
 *Example:* ``footer_license_link = https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt``
 
 ``gitter_room`` (*string*): Name/path to the Gitter room associated with your site (the part of its Gitter URL after ``https://gitter.im/``).
+**DEPRECATED:** As Gitter has migrated to Matrix, this option is no longer functional, and should be removed from your websites.
 If included, will enable an ``Open Chat`` button on your site that, when clicked, will open a fully interactive sidebar containing a Gitter chat client, allowing them to communicate directly with you to ask questions or give feedback.
 If not set, the script will not be enabled and no button will be present.
 See the Optional Feature Configuration section for more details.
