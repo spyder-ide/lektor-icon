@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{%- if config.THEME_SETTINGS.content_lang %}
+{% if config.THEME_SETTINGS.content_lang %}
 {%- set lang_string = config.THEME_SETTINGS.content_lang %}
 {%- else %}
 {%- set lang_string = 'en' %}
@@ -94,16 +94,16 @@
 
   <title>{%- block title %}{%- endblock %}{%- if config.THEME_SETTINGS.title %} — {{ config.THEME_SETTINGS.title }}{%- endif %}</title>
   {%- if config.THEME_SETTINGS.author %}
-  <meta name="author" content="{{ config.THEME_SETTINGS.author }}"{{ lang_string | safe }}>
+  <meta name="author" content="{{ config.THEME_SETTINGS.author }}">
   {%- endif %}
   {%- if config.THEME_SETTINGS.copyright %}
-  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}"{{ lang_string | safe }}>
+  <meta name="copyright" content="{{ config.THEME_SETTINGS.copyright }}">
   {%- endif %}
   {%- if config.THEME_SETTINGS.description %}
-  <meta name="description" content="{{ config.THEME_SETTINGS.description }}"{{ lang_string | safe }}>
+  <meta name="description" content="{{ config.THEME_SETTINGS.description }}">
   {%- endif %}
   {%- if config.THEME_SETTINGS.keywords %}
-  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}"{{ lang_string | safe }}>
+  <meta name="keywords" content="{{ config.THEME_SETTINGS.keywords }}">
   {%- endif %}
   {%- if config.THEME_SETTINGS.theme_accent_color %}
   <meta name="theme-color" content="{{ config.THEME_SETTINGS.theme_accent_color | safe }}">
