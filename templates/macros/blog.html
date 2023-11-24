@@ -9,6 +9,12 @@
 {%- endif %}
 <div class="blog-post">
   <div class="blog-header blog-{%- if from_index %}index{%- else %}post{%- endif %}-header">
+    {%- if from_index %}
+      <h2><a href="{{ post | url }}">{{ post.title }}</a></h2>
+    {%- else %}
+      <h1>{{ post.title }}</h1>
+    {%- endif %}
+
     <div class="row">
       {%- if author.image %}
       <div class="column meta-blog-author">
@@ -28,15 +34,12 @@
         </p>
       </div>
     </div>
-    {%- if from_index %}
-    <div class="row">
-      <h2><a href="{{ post | url }}">{{ post.title }}</a></h2>
-    </div>
-    {%- else %}
-    <h1>{{ post.title }}</h1>
-    {{ post.body }}
-    {%- endif %}
   </div>
+
+  {%- if not from_index %}
+  {{ post.body }}
+  {%- endif %}
+
   {%- if from_index %}
   {%- if post.summary %}
   {{ post.summary }}
