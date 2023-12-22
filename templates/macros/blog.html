@@ -17,22 +17,26 @@
 
     <div class="row">
       {%- if author.image %}
-      <div class="column meta-blog-author">
-        <img alt="{{ author.name | striptags | striptags }} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}">
-      </div>
-      {%- endif %}
-      <div class="meta-blog-index">
-        <p>
-          {%- if author.name %}
-          {{ author.name }}<br>
-          {%- elif author %}
-          {{ author }}<br>
-          {%- endif %}
-          {%- if post.pub_date %}
-          <span class="small">{{ post.pub_date.strftime('%Y-%m-%d') }}</span>
-          {%- endif %}
-        </p>
-      </div>
+        <div class="col-auto">
+          <div class="meta-blog-author">
+            <img alt="{{ author.name | striptags | striptags }} photo" class="author-img" src="{{ (author.path ~ '/' ~ author.image) | url }}">
+          </div>
+        </div>
+        {%- endif %}
+        <div class="col">
+          <div class="meta-blog-index">
+            <p>
+              {%- if author.name %}
+              {{ author.name }}<br>
+              {%- elif author %}
+              {{ author }}<br>
+              {%- endif %}
+              {%- if post.pub_date %}
+              <span class="small">{{ post.pub_date.strftime('%Y-%m-%d') }}</span>
+              {%- endif %}
+            </p>
+          </div>
+        </div>
     </div>
   </div>
 
@@ -44,7 +48,7 @@
   {%- if post.summary %}
   {{ post.summary }}
   {%- endif %}
-  <p class="pull-right">
+  <p class="float-end">
     <a href="{{ post | url }}">Read more...</a>
   </p>
   {%- endif %}

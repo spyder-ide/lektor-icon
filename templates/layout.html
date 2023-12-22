@@ -166,6 +166,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
+  <link rel="stylesheet" href="{{ '/static/css/bootstrap.css' | asseturl }}" type="text/css">
   <link rel="stylesheet" href="{{ '/static/css/style.css' | asseturl }}" type="text/css">
   {%- if config.THEME_SETTINGS.custom_css %}
   <!-- User Custom CSS -->
@@ -199,7 +200,7 @@
             {%- else %}
             {%- set nav_logo_text = '' %}
             {%- endif %}
-            <div class='pull-left'>
+            <div class='float-start'>
               <ul class='dropdown menu' data-dropdown-menu>
                 <li id='menu-logo'>
                   <p></p>
@@ -225,7 +226,7 @@
               <div class="side-nav-container">
                 {%- if config.THEME_SETTINGS.nav_extralinks %}
                 {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
-                <a class="pull-right nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                <a class="float-end nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
                 {%- endfor %}
                 {%- endif %}
 
@@ -236,7 +237,7 @@
                 {%- else %}
                 {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
                 {%- endif %}
-                <a class="pull-right nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                <a class="float-end nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
                 {%- endfor %}
                 {%- endif %}
               </div>
@@ -307,7 +308,6 @@
 <a href="https://gitter.im/{{ config.THEME_SETTINGS.gitter_room }}" id="open-chat" class="gitter-open-chat-button">Open Chat</a>
 <script defer src="https://sidecar.gitter.im/dist/sidecar.v1.js" type="application/javascript" charset="UTF-8"></script>
 {%- endif %}
-<!-- jQuery -->
 <script src="{{ '/static/js/jquery-3.7.1.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>
 <!-- Waypoints -->
 <script src="{{ '/static/js/jquery.waypoints.min.js' | asseturl }}" type="application/javascript" charset="UTF-8"></script>

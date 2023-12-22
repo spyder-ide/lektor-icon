@@ -5,15 +5,17 @@
 {%- endif %}
 {%- if this.button_type and this.button_content %}
 <div class="row">
-  {%- if this.button_type == 'text' %}
-  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="content-button text-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>{{ this.button_content | safe }}</a>
-  {%- elif this.button_type == 'image' %}
-  <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="center content-button image-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>
-    <img alt="Action Button" src="{%- if this.button_content.split('://')[0] in ['http', 'https'] %}{{ this.button_content }}{%- else %}{{ this.button_content | url }}{%- endif %}" class="center">
-  </a>
-  {%- elif this.button_type == 'mailchimp' %}
-  <button id="mailchimp-button" class="content-button text-button mailchimp-button">{{ this.button_content | safe }}</button>
-  {%- endif %}
+  <div class="col">
+    {%- if this.button_type == 'text' %}
+    <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="content-button text-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>{{ this.button_content | safe }}</a>
+    {%- elif this.button_type == 'image' %}
+    <a id="{{ this.section_id }}-button" href="{{ this.button_link }}" class="center content-button image-button" {%- if this.button_newtab %}target="_blank" rel="noopener noreferrer"{%- endif %}>
+      <img alt="Action Button" src="{%- if this.button_content.split('://')[0] in ['http', 'https'] %}{{ this.button_content }}{%- else %}{{ this.button_content | url }}{%- endif %}" class="center">
+    </a>
+    {%- elif this.button_type == 'mailchimp' %}
+    <button id="mailchimp-button" class="content-button text-button mailchimp-button">{{ this.button_content | safe }}</button>
+    {%- endif %}
+  </div>
 </div>
 {%- endif %}
 {%- if this.content and this.button_position and this.button_position == "top" %}
