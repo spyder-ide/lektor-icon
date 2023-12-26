@@ -10,7 +10,7 @@ default_language_version:
 
 default_stages: [commit]
 
-exclude: '\.min\.(css|js)$|jquery\.stellar\.js$|icomoon\.css$|magnific-popup\.css$|^example-site/themes/lektor-icon$'
+exclude: '\.min\.(css|js)(\.map)?$|jquery\.stellar\.js$|icomoon\.css$|magnific-popup\.css$|^example-site/themes/lektor-icon$'
 
 
 repos:

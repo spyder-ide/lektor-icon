@@ -1833,7 +1833,6 @@ pre code {
   overflow-y: scroll;
 }
 
-
 /* Navbar */
 
 .menu {
@@ -1874,7 +1873,7 @@ pre code {
 .menu > li > a i,
 .menu > li > a img,
 .menu > li > a svg {
-display: inline-block;
+  display: inline-block;
   margin-right: 0.25rem;
 }
 
