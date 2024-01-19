@@ -54,7 +54,6 @@ html {
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
-  speak: none;
   text-transform: none;
 }
 
@@ -251,11 +250,6 @@ img {
   position: relative;
 }
 
-.hero-section > .container {
-  position: relative;
-  z-index: 2;
-}
-
 .hero-section .fh5co-copy {
   display: table;
   width: 100%;
@@ -318,12 +312,6 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .hero-section .fh5co-copy-inner h1 {
-    text-align: center;
-  }
-}
-
 .hero-section .fh5co-copy-inner a {
   border-bottom: 1px solid rgb(255 255 255 / 40%);
   color: #fff;
@@ -354,7 +342,7 @@ img {
   width: 100%;
 }
 
-.fh5co-main-nav .fh5co-menu-1 .pull-left {
+.fh5co-main-nav .fh5co-menu-1 .float-start {
   flex-shrink: 0;
   margin-left: 2em;
   min-height: 55px;
@@ -1894,6 +1882,7 @@ pre code {
   color: var(--theme-fg-alt-color, #333);
   display: inline-block;
   vertical-align: middle;
+  white-space: nowrap;
 }
 
 #menu-logo .logo-text {
