@@ -168,8 +168,7 @@ h6,
   font-family: var(--main-font);
   font-weight: 500;
   line-height: 1.1;
-  margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -2328,20 +2327,6 @@ button:hover:disabled,
 #error-page .center img {
   margin-bottom: 1em;
   margin-top: 1em;
-}
-
-/* Center cards and kill whitespace */
-
-.center-container {
-  font-size: 0;
-  text-align: center;
-}
-
-.center-container > .center-inner {
-  display: inline-block;
-  float: none;
-  font-size: 1rem;
-  vertical-align: middle;
 }
 
 /* Set up links for cards */

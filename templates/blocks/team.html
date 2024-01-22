@@ -1,12 +1,12 @@
 {%- if this.members %}
-<div class="container center-container">
-  {%- for member in this.members.blocks %}
-  <div class="col-md-4 card-outer center-inner">
-    {%- if member.url and member.url.url != '' and this.link_whole_card %}
-    <a href="{{ member.url }}" class="card-link-full">
-    {%- endif %}
-    <div class="card person {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
-      <div class="card-inner">
+<div class="container-xxl">
+  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4 justify-content-center">
+    {%- for member in this.members.blocks %}
+    <div class="col">
+      {%- if member.url and member.url.url != '' and this.link_whole_card %}
+      <a href="{{ member.url }}" class="card-link-full">
+      {%- endif %}
+      <div class="card h-100 card-item person {% if this.transparent_bg %}transparent-bg{%- else %}offset-bg{%- endif %}">
         {%- if member.image %}
         {%- set member_img_file = record.attachments.get(member.image) %}
         {%- endif %}
@@ -17,42 +17,45 @@
         {%- else %}
         <img alt="Placeholder person" src="{{ '/static/images/placeholder_person.png' | asseturl }}" class="img-responsive">
         {%- endif %}
-        {%- if member.name %}
-        {%- if member.url and member.url.url != '' and not this.link_whole_card %}
-        <a href="{{ member.url }}" class="card-link-title">
-          <h3>{{ member.name }}</h3>
-        </a>
-        {%- else %}
-        <h3>{{ member.name }}</h3>
-        {%- endif %}
-        {%- endif %}
-        <h4>{{ member.position | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h4>
-        {{ member.description }}
-        <ul class="social">
-          {%- if member.website and member.website.url != '' %}
-          <li><a href="{{ member.website }}" aria-label="Website"><i class="icon-globe2"></i></a></li>
+        <div class="card-body">
+          {%- if member.name %}
+          {%- if member.url and member.url.url != '' and not this.link_whole_card %}
+          <a href="{{ member.url }}">
+            <h3 class="card-title">{{ member.name }}</h3>
+          </a>
+          {%- else %}
+          <h3 class="card-title">{{ member.name }}</h3>
           {%- endif %}
-          {%- if member.facebook and member.facebook.url != '' %}
-          <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
           {%- endif %}
-          {%- if member.twitter and member.twitter.url != '' %}
-          <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-          {%- endif %}
-          {%- if member.instagram and member.instagram.url != '' %}
-          <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
-          {%- endif %}
-          {%- if member.github and member.github.url != '' %}
-          <li><a href="{{ member.github }}" aria-label="Github"><i class="icon-github"></i></a></li>
-          {%- endif %}
-          {%- if member.github and member.linkedin.url != '' %}
-          <li><a href="{{ member.linkedin }}" aria-label="Linkedin"><i class="icon-linkedin"></i></a></li>
-          {%- endif %}
-        </ul>
+          <h4>{{ member.position | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h4>
+          <p class="card-text">
+            {{ member.description }}
+          </p>
+          <ul class="social">
+            {%- if member.website and member.website.url != '' %}
+            <li><a href="{{ member.website }}" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            {%- endif %}
+            {%- if member.facebook and member.facebook.url != '' %}
+            <li><a href="{{ member.facebook }}" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
+            {%- endif %}
+            {%- if member.twitter and member.twitter.url != '' %}
+            <li><a href="{{ member.twitter }}" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+            {%- endif %}
+            {%- if member.instagram and member.instagram.url != '' %}
+            <li><a href="{{ member.instagram }}" aria-label="Instagram"><i class="icon-instagram"></i></a></li>
+            {%- endif %}
+            {%- if member.github and member.github.url != '' %}
+            <li><a href="{{ member.github }}" aria-label="Github"><i class="icon-github"></i></a></li>
+            {%- endif %}
+            {%- if member.github and member.linkedin.url != '' %}
+            <li><a href="{{ member.linkedin }}" aria-label="Linkedin"><i class="icon-linkedin"></i></a></li>
+            {%- endif %}
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
+    {%- if member.url and member.url.url != '' and this.link_whole_card %}</a>{%- endif %}
     </div>
-  {%- if member.url and member.url.url != '' and this.link_whole_card %}</a>{%- endif %}
+    {%- endfor %}
   </div>
-  {%- endfor %}
 </div>
 {%- endif %}
