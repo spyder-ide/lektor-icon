@@ -6,8 +6,8 @@
   color: red; /* stylelint-disable-line color-named -- For demo purposes */
 }
 
-.hero-section .container .col-md-6 {
-  float: left;
+.hero-section .fh5co-copy-inner {
+  text-align: left !important;
 }
 
 .hero-section .js-fullheight-home h1 {

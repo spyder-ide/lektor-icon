@@ -217,14 +217,16 @@
               </ul>
             </div>
 
-            <div class="main-nav-container">
-              {%- block nav_main %}{%- endblock %}
+            <div class="nav-container">
+              <div class="main-nav-container">
+                {%- block nav_main %}{%- endblock %}
+              </div>
 
               {%- if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
               <div class="side-nav-container">
                 {%- if config.THEME_SETTINGS.nav_extralinks %}
                 {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
-                <a class="float-lg-end nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                <a class="nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
                 {%- endfor %}
                 {%- endif %}
 
@@ -235,7 +237,7 @@
                 {%- else %}
                 {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
                 {%- endif %}
-                <a class="float-lg-end nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                <a class="nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
                 {%- endfor %}
                 {%- endif %}
               </div>
@@ -249,7 +251,7 @@
     {%- block body %}{%- endblock %}
 
     <div id="fh5co-footer">
-      <div class="container-xxl">
+      <div class="container">
         {%- if config.THEME_SETTINGS.footer_links %}
         <div class="row footer-connect-line">
           <div class="text-center">
