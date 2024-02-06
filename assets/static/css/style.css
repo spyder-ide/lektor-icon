@@ -281,15 +281,16 @@ img {
   line-height: 1.9;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .hero-section .fh5co-copy-inner h1 {
     font-size: 2.35em;
     line-height: 1;
+    text-align: center;
   }
 
   .hero-section .fh5co-copy-inner h2 {
-    font-size: 1em;
     line-height: 1.6;
+    text-align: center;
   }
 }
 
@@ -305,7 +306,7 @@ img {
   }
 }
 
-@media screen and (max-height: 860px) and (max-width: 768px) {
+@media screen and (max-height: 860px) and (max-width: 767px) {
   .hero-section .fh5co-copy-inner h1 {
     margin-top: 20px;
   }

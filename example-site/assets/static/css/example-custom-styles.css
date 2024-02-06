@@ -11,19 +11,8 @@
   color: red; /* stylelint-disable-line color-named -- For demo purposes */
 }
 
-@media screen and (min-width: 992px) {
-  .hero-section .fh5co-copy-inner {
-    text-align: left !important;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-section .fh5co-copy-inner h2 {
-    text-align: left !important;
-  }
-}
-
 .hero-section .js-fullheight-home h1 {
+  font-size: 4rem;
   margin-top: 75px;
 }
 
