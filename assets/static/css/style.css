@@ -381,10 +381,6 @@ img {
   }
 }
 
-.fh5co-main-nav .fh5co-menu-1 .side-nav-container {
-  flex-direction: row-reverse;
-}
-
 .fh5co-main-nav .fh5co-menu-1 a {
   color: #333;
   color: var(--theme-fg-alt-color, #333);

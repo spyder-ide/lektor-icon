@@ -224,20 +224,20 @@
 
               {%- if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
               <div class="side-nav-container">
-                {%- if config.THEME_SETTINGS.nav_extralinks %}
-                {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') | reverse %}
-                <a class="nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
-                {%- endfor %}
-                {%- endif %}
-
                 {%- if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
-                {%- for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key', reverse=True) %}
+                {%- for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key') %}
                 {%- if page.short_title %}
                 {%- set navlink_text = page.short_title %}
                 {%- else %}
                 {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
                 {%- endif %}
                 <a class="nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                {%- endfor %}
+                {%- endif %}
+
+                {%- if config.THEME_SETTINGS.nav_extralinks %}
+                {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') %}
+                <a class="nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
                 {%- endfor %}
                 {%- endif %}
               </div>
