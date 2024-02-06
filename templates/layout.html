@@ -255,15 +255,13 @@
         {%- if config.THEME_SETTINGS.footer_links %}
         <div class="row footer-connect-line">
           <div class="text-center">
-            <p>
-              Connect with us on:
-              {%- for footer_link in config.THEME_SETTINGS.footer_links.replace(', ', ',').split(',') %}
-              {%- if loop.index > 1 %}
-              <span class="pipe-colored">|</span>
-              {%- endif %}
-              <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(': ')[0] }} </a>
-              {%- endfor %}
-            </p>
+            Connect with us on:
+            {%- for footer_link in config.THEME_SETTINGS.footer_links.replace(', ', ',').split(',') %}
+            {%- if loop.index > 1 %}
+            <span class="pipe-colored">|</span>
+            {%- endif %}
+            <a href="{{ footer_link.split(': ')[1] }}"> {{ footer_link.split(': ')[0] }} </a>
+            {%- endfor %}
           </div>
         </div>
         {%- endif %}
