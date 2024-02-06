@@ -2159,13 +2159,13 @@ button:hover:disabled,
   margin-bottom: 0.5em;
 }
 
-#fh5co-footer .container .footer-connect-line .text-center p {
+#fh5co-footer .container .footer-connect-line {
   font-size: 0.9em;
   line-height: 1.5em;
   margin-bottom: 1em;
 }
 
-#fh5co-footer .container .footer-copyright .text-center p {
+#fh5co-footer .container .footer-copyright {
   font-size: 0.7em;
   line-height: 1.25em;
 }
