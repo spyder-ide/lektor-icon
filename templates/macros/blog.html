@@ -1,11 +1,11 @@
 {%- macro render_blog_post(post, from_index=false) %}
 {%- if post.author %}
-{%- set author =  site.get('authors/' + post.author) %}
-{%- if not author %}
-{%- set author = post.author %}
-{%- endif %}
+  {%- set author =  site.get('authors/' + post.author) %}
+  {%- if not author %}
+    {%- set author = post.author %}
+  {%- endif %}
 {%- else %}
-{%- set author = '' %}
+  {%- set author = '' %}
 {%- endif %}
 <div class="blog-post">
   <div class="blog-header blog-{%- if from_index %}index{%- else %}post{%- endif %}-header">
@@ -26,29 +26,31 @@
       <div class="col">
         <div class="meta-blog-index">
           {%- if author.name %}
-          {{ author.name }}<br>
+            <div>{{ author.name }}</div>
           {%- elif author %}
-          {{ author }}<br>
+            <div>{{ author }}</div>
           {%- endif %}
           {%- if post.pub_date %}
-          <span class="small">{{ post.pub_date.strftime('%Y-%m-%d') }}</span>
+            <div class="small">{{ post.pub_date.strftime('%Y-%m-%d') }}</div>
           {%- endif %}
         </div>
       </div>
     </div>
   </div>
-
-  {%- if not from_index %}
-  {{ post.body }}
-  {%- endif %}
-
-  {%- if from_index %}
-  {%- if post.summary %}
-  {{ post.summary }}
-  {%- endif %}
-  <p class="text-end">
+{%- if not from_index %}
+  <div class="blog-content">
+    {{ post.body }}
+  </div>
+{%- endif %}
+{%- if from_index %}
+  <div class="blog-content">
+    {%- if post.summary %}
+      {{ post.summary }}
+    {%- endif %}
+  </div>
+  <div class="blog-footer text-md-end">
     <a href="{{ post | url }}">Read more...</a>
-  </p>
-  {%- endif %}
+  </div>
+{%- endif %}
 </div>
 {%- endmacro %}

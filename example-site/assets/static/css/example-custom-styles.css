@@ -2,12 +2,25 @@
 
 /* Site custom styles */
 
+.container {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
 .red-text-test {
   color: red; /* stylelint-disable-line color-named -- For demo purposes */
 }
 
-.hero-section .fh5co-copy-inner {
-  text-align: left !important;
+@media screen and (min-width: 992px) {
+  .hero-section .fh5co-copy-inner {
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-section .fh5co-copy-inner h2 {
+    text-align: left !important;
+  }
 }
 
 .hero-section .js-fullheight-home h1 {

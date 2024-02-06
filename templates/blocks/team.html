@@ -1,6 +1,6 @@
 {%- if this.members %}
 <div class="container-xxl">
-  <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4 justify-content-center">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
     {%- for member in this.members.blocks %}
     <div class="col">
       {%- if member.url and member.url.url != '' and this.link_whole_card %}
