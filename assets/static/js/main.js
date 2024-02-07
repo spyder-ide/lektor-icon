@@ -22,7 +22,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   var fullHeight = function () {
     var heightToSet =
       $(window).height() -
-      $(".js-sticky").height() -
+      $(".js-sticky").outerHeight() -
       $("#fh5co-footer").outerHeight();
     $("#error-page").css("height", heightToSet);
   };
@@ -53,9 +53,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     var sticky = $(".js-sticky");
     var $section = $(".fh5co-main-nav");
 
-    sticky.css("height", $section.height());
+    sticky.css("height", $section.outerHeight());
     $(window).on("resize", function () {
-      sticky.css("height", $section.height());
+      sticky.css("height", $section.outerHeight());
     });
 
     $section.waypoint(

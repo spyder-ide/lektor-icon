@@ -27,12 +27,13 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   var heroHeight = function () {
     if ($(window).outerWidth() > 768) {
+      const compensation = $(".js-sticky").outerHeight() / 2;
       $(".js-fullheight-home").css(
         "height",
-        $(window).height() - $(".js-sticky").height()
+        `calc(100dvh + ${compensation}px)`
       );
     } else {
-      $(".js-fullheight-home").css("height", $(window).height() / 2);
+      $(".js-fullheight-home").css("height", "50dvh");
     }
   };
 
