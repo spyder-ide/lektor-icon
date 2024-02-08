@@ -185,23 +185,24 @@
 {%- endblock %}
 <div class="fh5co-page">
   <div id="fh5co-container">
-    <div class="js-sticky fh5co-main-nav navbar">
-      <div class="container-xxl px-4">
-        <div class="fh5co-menu-1">
-          {%- if not (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
-          {%- if config.THEME_SETTINGS.title %}
-          {%- set nav_logo_text = config.THEME_SETTINGS.title %}
-          {%- else %}
-          {%- set nav_logo_text = "Site Name" %}
-          {%- endif %}
-          {%- elif config.THEME_SETTINGS.nav_logo_text %}
-          {%- set nav_logo_text = config.THEME_SETTINGS.nav_logo_text %}
-          {%- else %}
-          {%- set nav_logo_text = '' %}
-          {%- endif %}
-          <div class="float-start">
-            <ul class="dropdown menu" data-dropdown-menu>
-              <li id="menu-logo">
+    <div class="js-sticky fh5co-main-nav">
+      <div class="navbar px-4">
+        <div class="container-xxl">
+          <div class="fh5co-menu-1">
+            {%- if not (config.THEME_SETTINGS.nav_logo_path or config.THEME_SETTINGS.nav_logo_text) %}
+            {%- if config.THEME_SETTINGS.title %}
+            {%- set nav_logo_text = config.THEME_SETTINGS.title %}
+            {%- else %}
+            {%- set nav_logo_text = "Site Name" %}
+            {%- endif %}
+            {%- elif config.THEME_SETTINGS.nav_logo_text %}
+            {%- set nav_logo_text = config.THEME_SETTINGS.nav_logo_text %}
+            {%- else %}
+            {%- set nav_logo_text = '' %}
+            {%- endif %}
+            <div class="float-start">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li id="menu-logo">
                   <a href="{{ '/' | url }}" class="d-flex-md align-items-center my-2">
                     {%- if config.THEME_SETTINGS.nav_logo_path %}
                     <img alt="Site Logo" src="{{ config.THEME_SETTINGS.nav_logo_path | asseturl }}">
@@ -212,35 +213,36 @@
                     </span>
                     {%- endif %}
                   </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="nav-container">
-            <div class="main-nav-container">
-              {%- block nav_main %}{%- endblock %}
+                </li>
+              </ul>
             </div>
 
-            {%- if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
-            <div class="side-nav-container">
-              {%- if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
-              {%- for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key') %}
-              {%- if page.short_title %}
-              {%- set navlink_text = page.short_title %}
-              {%- else %}
-              {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
-              {%- endif %}
-              <a class="nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
-              {%- endfor %}
-              {%- endif %}
+            <div class="nav-container">
+              <div class="main-nav-container">
+                {%- block nav_main %}{%- endblock %}
+              </div>
 
-              {%- if config.THEME_SETTINGS.nav_extralinks %}
-              {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') %}
-              <a class="nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
-              {%- endfor %}
+              {%- if config.THEME_SETTINGS.nav_extralinks or (site.query('/') and (site.query('/') | selectattr('sort_key'))) %}
+              <div class="side-nav-container">
+                {%- if site.query('/') and (site.query('/') | selectattr('sort_key')) %}
+                {%- for page in site.query('/') | selectattr('sort_key') | sort(attribute='sort_key') %}
+                {%- if page.short_title %}
+                {%- set navlink_text = page.short_title %}
+                {%- else %}
+                {%- set navlink_text = page.path | replace('/', '') | replace('-', ' ') | replace("_", " ") | title %}
+                {%- endif %}
+                <a class="nav-link-internal{%- if page.special_link %} special-link{%- endif %}{%- if this.is_child_of(page.path) %} nav-link-active-section {{ this.path.split('@')[0] }} sep {{ page.path }} {%- if this.path.split('@')[0] == page.path %} nav-link-active-page{%- endif %}{%- endif %}" href="{{ page.url_path | url }}">{{ navlink_text }}</a>
+                {%- endfor %}
+                {%- endif %}
+
+                {%- if config.THEME_SETTINGS.nav_extralinks %}
+                {%- for nav_link in config.THEME_SETTINGS.nav_extralinks.replace(', ', ',').split(',') %}
+                <a class="nav-link-external" href="{{ nav_link.split(': ')[1] }}"> {{ nav_link.split(': ')[0] }}</a>
+                {%- endfor %}
+                {%- endif %}
+              </div>
               {%- endif %}
             </div>
-            {%- endif %}
           </div>
         </div>
       </div>

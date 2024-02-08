@@ -250,14 +250,14 @@ img {
 }
 
 .hero-section .fh5co-copy {
-  display: table;
+  height: 100%;
   width: 100%;
 }
 
 .hero-section .fh5co-copy-inner {
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-section .fh5co-copy-inner h1,

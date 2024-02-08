@@ -23,6 +23,7 @@
           {%- endif %}
         </div>
         {%- endif %}
+        {%- if service.title or service.description %}
         <div class="card-body">
           {%- if service.title %}
           {%- if service.url and service.url.url != '' and not this.link_whole_card %}
@@ -37,6 +38,7 @@
             {{ service.description }}
           </p>
         </div>
+        {%- endif %}
       </div>
       {%- if service.url and service.url.url != '' and this.link_whole_card %}</a>{%- endif %}
     </div>
