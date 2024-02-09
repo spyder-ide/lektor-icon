@@ -124,10 +124,10 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   // Page Nav
   const clickMenu = function () {
-    let topVal = $(window).width() < 769 ? 0 : 58;
+    let topVal = $(window).width() < 768 ? 0 : 58;
 
     $(window).on("resize", function () {
-      topVal = $(window).width() < 769 ? 0 : 58;
+      topVal = $(window).width() < 768 ? 0 : 58;
     });
     $(
       '.fh5co-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"]), a.fh5co-content-nav:not([class="external"])'
