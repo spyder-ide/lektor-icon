@@ -20,12 +20,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 (function () {
   "use strict";
 
-  var isMSIE = function () {
-    var isIE = /MSIE|Trident/.test(window.navigator.userAgent);
-    return isIE;
-  };
-
-  var heroHeight = function () {
+  const heroHeight = function () {
     if ($(window).outerWidth() > 768) {
       $(".js-fullheight-home").css("height", "100dvh");
     } else {
@@ -33,22 +28,22 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     }
   };
 
-  var setHeroHeight = function () {
+  const setHeroHeight = function () {
     heroHeight();
     $(window).on("resize", heroHeight);
   };
 
   // Loading animation
-  var loaderPage = function () {
+  const loaderPage = function () {
     $(".fh5co-loader").fadeOut("slow");
   };
 
   // Show and hide tab content and images on click in the mission section
-  var fh5coTabs = function () {
+  const fh5coTabs = function () {
     $(".fh5co-tabs li a").on("click", function (event) {
       event.preventDefault();
-      var $this = $(this);
-      var tab = $this.data("tab");
+      const $this = $(this);
+      const tab = $this.data("tab");
       $(".fh5co-tabs li").removeClass("active");
       $this.closest("li").addClass("active");
       $this
@@ -67,18 +62,10 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     });
   };
 
-  // var gridAutoHeight = function () {
-  // $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight() / 2)
-
-  // $(window).on('resize', function () {
-  // $('.fh5co-grid-item').css('height', $('.fh5co-2col-inner').outerHeight() / 2)
-  // })
-  // }
-
   // Equalize heights of cards in team/services section for proper layout
-  var cardsEvenHeight = function () {
+  const cardsEvenHeight = function () {
     $(".body-section .container").each(function () {
-      var cardHeightMax = 0;
+      let cardHeightMax = 0;
       if (
         $(this).find(".card-inner").length &&
         $(this).find(".card-outer").first().width() <= $(this).width() / 2.0
@@ -86,7 +73,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         $(this)
           .find(".card-inner")
           .each(function () {
-            var cardHeight = $(this).height();
+            const cardHeight = $(this).height();
             if (cardHeight > cardHeightMax) {
               cardHeightMax = cardHeight;
             }
@@ -95,14 +82,14 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
       $(this)
         .find(".card")
         .each(function () {
-          var cardHeight = $(this).find(".card-inner").height();
-          var spacerHeight = Math.max(cardHeightMax - cardHeight, 0);
+          const cardHeight = $(this).find(".card-inner").height();
+          const spacerHeight = Math.max(cardHeightMax - cardHeight, 0);
           $(this).find(".card-spacer").height(spacerHeight);
         });
     });
   };
 
-  var setCardsEvenHeight = function () {
+  const setCardsEvenHeight = function () {
     $(window).on("load", cardsEvenHeight);
     $(window).on("resize", cardsEvenHeight);
     // For IE11, which doesn't work with load
@@ -111,17 +98,15 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Parallax
-  var parallax = function () {
-    var verticalOffsetConst = !isMSIE() * 51;
+  const parallax = function () {
     $(window).stellar({
       horizontalScrolling: false,
-      verticalOffset: verticalOffsetConst + $(".fh5co-main-nav").height(),
-      responsive: false,
+      responsive: true,
     });
   };
 
   // Hide the sidebar if user scrolls the page
-  var scrolledWindow = function () {
+  const scrolledWindow = function () {
     $(window).on("scroll", function () {
       if ($("body").hasClass("offcanvas-visible")) {
         $("body").removeClass("offcanvas-visible");
@@ -138,8 +123,8 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Page Nav
-  var clickMenu = function () {
-    var topVal = $(window).width() < 769 ? 0 : 58;
+  const clickMenu = function () {
+    let topVal = $(window).width() < 769 ? 0 : 58;
 
     $(window).on("resize", function () {
       topVal = $(window).width() < 769 ? 0 : 58;
@@ -147,7 +132,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     $(
       '.fh5co-main-nav a:not([class="external"]), #fh5co-offcanvas a:not([class="external"]), a.fh5co-content-nav:not([class="external"])'
     ).on("click", function (event) {
-      var section = $(this).data("nav-section");
+      const section = $(this).data("nav-section");
 
       if ($('div[data-section="' + section + '"]').length) {
         $("html, body").animate(
@@ -165,7 +150,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Reflect scrolling in navigation
-  var navActive = function (section) {
+  const navActive = function (section) {
     $(
       ".fh5co-main-nav a[data-nav-section], #fh5co-offcanvas a[data-nav-section]"
     ).removeClass("active");
@@ -175,8 +160,8 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // A section to scroll to on the mainpage
-  var navigationSection = function () {
-    var $section = $("div[data-section]");
+  const navigationSection = function () {
+    const $section = $("div[data-section]");
 
     $section.waypoint(
       function (direction) {
@@ -204,7 +189,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Set Mailchimp event handler
-  var setMailchimpEvent = function () {
+  const setMailchimpEvent = function () {
     document.getElementById("mailchimp-button").onclick = function () {
       showMailingPopUp();
     };
