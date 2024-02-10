@@ -19,21 +19,21 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   "use strict";
 
   // Fullsize Error Page Background
-  var fullHeight = function () {
-    var heightToSet =
+  const fullHeight = function () {
+    const heightToSet =
       $(window).height() -
       $(".js-sticky").outerHeight() -
       $("#fh5co-footer").outerHeight();
     $("#error-page").css("height", heightToSet);
   };
 
-  var setFullHeight = function () {
+  const setFullHeight = function () {
     fullHeight();
     $(window).on("resize", fullHeight);
   };
 
   // Offcanvas layout for "hamburger" mobile menu
-  var offcanvasMenu = function () {
+  const offcanvasMenu = function () {
     $("body").prepend('<div id="fh5co-offcanvas"></div>');
     $("body").prepend(
       '<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" aria-label="Toggle for hamburger menu"><i></i></a>'
@@ -49,13 +49,13 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Top navbar stickiness
-  var mainMenuSticky = function () {
-    var sticky = $(".js-sticky");
-    var $section = $(".fh5co-main-nav");
+  const mainMenuSticky = function () {
+    const $section = $(".js-sticky");
+    const sectionHeight = $section.outerHeight();
 
-    sticky.css("height", $section.outerHeight());
+    $section.css("height", sectionHeight);
     $(window).on("resize", function () {
-      sticky.css("height", $section.outerHeight());
+      $section.css("height", sectionHeight);
     });
 
     $section.waypoint(
