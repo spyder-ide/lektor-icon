@@ -51,11 +51,14 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   // Top navbar stickiness
   const mainMenuSticky = function () {
     const $section = $(".js-sticky");
-    const sectionHeight = $section.outerHeight();
+    const inner = $(".navbar");
+    let innerHeight = inner.outerHeight();
 
-    $section.css("height", sectionHeight);
+    $section.css("height", innerHeight);
+
     $(window).on("resize", function () {
-      $section.css("height", sectionHeight);
+      innerHeight = inner.outerHeight();
+      $section.css("height", innerHeight);
     });
 
     $section.waypoint(
