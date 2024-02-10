@@ -81,9 +81,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Mobile "burger" menu
-  var burgerMenu = function () {
+  const burgerMenu = function () {
     $("body").on("click", ".js-fh5co-nav-toggle", function (event) {
-      var $this = $(this);
+      const $this = $(this);
 
       if ($("body").hasClass("offcanvas-visible")) {
         $("body").removeClass("offcanvas-visible fh5co-overflow");
@@ -97,9 +97,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   };
 
   // Click outside of offcanvas sidebar to close it
-  var mobileMenuOutsideClick = function () {
+  const mobileMenuOutsideClick = function () {
     $(document).on("click", function (e) {
-      var container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
+      const container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($("body").hasClass("offcanvas-visible")) {
           $("body").removeClass("offcanvas-visible");
