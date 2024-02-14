@@ -18,6 +18,15 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 (function () {
   "use strict";
 
+  // Fix for header height in inner pages
+  const fixInnerPage = function () {
+    const headerHeight = $(".js-sticky").outerHeight();
+    $(".page-content-container, .blog-content-container").css(
+      "padding-top",
+      headerHeight
+    );
+  };
+
   // Fullsize Error Page Background
   const fullHeight = function () {
     const heightToSet =
@@ -116,5 +125,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     mobileMenuOutsideClick();
     mainMenuSticky();
     setFullHeight();
+    fixInnerPage();
   });
 })();

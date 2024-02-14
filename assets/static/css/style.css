@@ -371,21 +371,14 @@ img {
 .fh5co-main-nav .fh5co-menu-1 .side-nav-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5em;
+  gap: 0 1.5em;
   justify-content: end;
-}
-
-@media screen and (max-width: 919px) {
-  .fh5co-main-nav .fh5co-menu-1 .main-nav-container,
-  .fh5co-main-nav .fh5co-menu-1 .side-nav-container {
-    gap: 1.5em;
-  }
 }
 
 .fh5co-main-nav .fh5co-menu-1 a {
   color: #333;
   color: var(--theme-fg-alt-color, #333);
-  display: inline-block;
+  display: block;
   font-size: 12px;
   font-weight: normal;
   letter-spacing: 2px;
@@ -775,7 +768,6 @@ img {
   }
 
   .fh5co-tabs-container .fh5co-tabs li a {
-    font-size: 0;
     line-height: 1.5;
     padding-bottom: 0.5em;
     padding-top: 1em;

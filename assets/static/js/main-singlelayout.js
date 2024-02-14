@@ -62,41 +62,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     });
   };
 
-  // Equalize heights of cards in team/services section for proper layout
-  const cardsEvenHeight = function () {
-    $(".body-section .container").each(function () {
-      let cardHeightMax = 0;
-      if (
-        $(this).find(".card-inner").length &&
-        $(this).find(".card-outer").first().width() <= $(this).width() / 2.0
-      ) {
-        $(this)
-          .find(".card-inner")
-          .each(function () {
-            const cardHeight = $(this).height();
-            if (cardHeight > cardHeightMax) {
-              cardHeightMax = cardHeight;
-            }
-          });
-      }
-      $(this)
-        .find(".card")
-        .each(function () {
-          const cardHeight = $(this).find(".card-inner").height();
-          const spacerHeight = Math.max(cardHeightMax - cardHeight, 0);
-          $(this).find(".card-spacer").height(spacerHeight);
-        });
-    });
-  };
-
-  const setCardsEvenHeight = function () {
-    $(window).on("load", cardsEvenHeight);
-    $(window).on("resize", cardsEvenHeight);
-    // For IE11, which doesn't work with load
-    window.setTimeout(cardsEvenHeight, 2000);
-    window.setTimeout(cardsEvenHeight, 5000);
-  };
-
   // Parallax
   const parallax = function () {
     $(window).stellar({
@@ -200,13 +165,10 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     setHeroHeight();
     loaderPage();
     fh5coTabs();
-    // gridAutoHeight();
-
     parallax();
     scrolledWindow();
     clickMenu();
     navigationSection();
-    setCardsEvenHeight();
     if (mailchimpButtonEnabled) {
       setMailchimpEvent();
     }
