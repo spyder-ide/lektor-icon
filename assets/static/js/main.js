@@ -27,6 +27,11 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     );
   };
 
+  const runInnerPageFix = function () {
+    fixInnerPage();
+    $(window).on("resize", fixInnerPage);
+  };
+
   // Fullsize Error Page Background
   const fullHeight = function () {
     const heightToSet =
@@ -125,7 +130,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     mobileMenuOutsideClick();
     mainMenuSticky();
     setFullHeight();
-    fixInnerPage();
-    window.addEventListener("resize", fixInnerPage);
+    runInnerPageFix();
   });
 })();
