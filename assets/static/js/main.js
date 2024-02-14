@@ -126,5 +126,6 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     mainMenuSticky();
     setFullHeight();
     fixInnerPage();
+    window.addEventListener("resize", fixInnerPage);
   });
 })();

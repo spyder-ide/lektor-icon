@@ -350,20 +350,14 @@ img {
 .fh5co-main-nav .fh5co-menu-1 .nav-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5em;
+  gap: 1em 4em;
   justify-content: end;
-  row-gap: 0;
   width: 100%;
 }
 
 @media screen and (max-width: 919px) {
-  .fh5co-main-nav .fh5co-menu-1 {
-    gap: 0;
-  }
-
   .fh5co-main-nav .fh5co-menu-1 .nav-container {
     flex-direction: column !important;
-    gap: 0 !important;
   }
 }
 
