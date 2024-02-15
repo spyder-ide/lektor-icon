@@ -65,17 +65,19 @@
 {%- block body %}
 
 {%- if this.hero_image %}
-<div id="section-home" class="js-fullheight-home hero-section" data-section="home" data-stellar-background-ratio="0.5">
+<div id="section-home" class="hero-section" data-section="home" data-stellar-background-ratio="0.5">
   <div class="container">
-    <div class="col-md-6">
-      <div class="js-fullheight-home fh5co-copy">
-        <div class="js-fullheight-home fh5co-copy-inner">
-          {%- if this.hero_title %}
-          <h1>{{ this.hero_title }}</h1>
-          {%- endif %}
-          {%- if this.hero_description %}
-          <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h2>
-          {%- endif %}
+    <div class="row row-cols-1 row-cols-lg-2 g-4 justify-content-center justify-content-lg-start">
+      <div class="col">
+        <div class="fh5co-copy">
+          <div class="js-fullheight-home fh5co-copy-inner">
+            {%- if this.hero_title %}
+            <h1>{{ this.hero_title }}</h1>
+            {%- endif %}
+            {%- if this.hero_description %}
+            <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h2>
+            {%- endif %}
+          </div>
         </div>
       </div>
     </div>

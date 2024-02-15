@@ -2,15 +2,17 @@
 
 /* Site custom styles */
 
+.container {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
 .red-text-test {
   color: red; /* stylelint-disable-line color-named -- For demo purposes */
 }
 
-.hero-section .container .col-md-6 {
-  float: left;
-}
-
 .hero-section .js-fullheight-home h1 {
+  font-size: 4rem;
   margin-top: 75px;
 }
 
