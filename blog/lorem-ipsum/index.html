@@ -78,40 +78,41 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../static/css/style.css?h=fb390f4f" type="text/css">
+  <link rel="stylesheet" href="../../static/css/bootstrap.min.css?h=1f139981" type="text/css">
+  <link rel="stylesheet" href="../../static/css/style.css?h=0c123039" type="text/css">
   <!-- User Custom CSS -->
-  <link rel="stylesheet" href="../../static/css/example-custom-styles.css?h=997cf8e5" type="text/css">
+  <link rel="stylesheet" href="../../static/css/example-custom-styles.css?h=1af02901" type="text/css">
 </head>
 
 <body>
 <div class="fh5co-page">
   <div id="fh5co-container">
-    <div class="js-sticky">
-      <div class="fh5co-main-nav navbar fixed-top">
-        <div class="container">
+    <div class="js-sticky fh5co-main-nav">
+      <div class="navbar px-4">
+        <div class="container-xxl">
           <div class="fh5co-menu-1">
-            <div class='pull-left'>
-              <ul class='dropdown menu' data-dropdown-menu>
-                <li id='menu-logo'>
-                  <p></p>
-                    <a href='../../'>
+            <div class="float-start">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li id="menu-logo">
+                  <a href="../../" class="d-flex-md align-items-center my-2">
                     <img alt="Site Logo" src="../../static/images/spyder-logo.svg?h=3ee53ca2">
                     <span class="logo-text-container">
                       <span class="logo-text">Lektor-Icon&nbsp;<span class="pipe-colored">|</span> Blog</span>
                     </span>
                   </a>
-                  <p></p>
                 </li>
               </ul>
             </div>
 
-            <div class="main-nav-container">
+            <div class="nav-container">
+              <div class="main-nav-container">
+              </div>
               <div class="side-nav-container">
-                <a class="pull-right nav-link-external" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
-                <a class="pull-right nav-link-external" href="https://www.spyder-ide.org/"> Spyder</a>
-                <a class="pull-right nav-link-internal" href="../../example-page/">Page</a>
-                <a class="pull-right nav-link-internal nav-link-active-section /blog/lorem-ipsum sep /blog" href="../">Blog</a>
-                <a class="pull-right nav-link-internal" href="../../readme/">Readme</a>
+                <a class="nav-link-internal" href="../../readme/">Readme</a>
+                <a class="nav-link-internal nav-link-active-section /blog/lorem-ipsum sep /blog" href="../">Blog</a>
+                <a class="nav-link-internal" href="../../example-page/">Page</a>
+                <a class="nav-link-external" href="https://www.spyder-ide.org/"> Spyder</a>
+                <a class="nav-link-external" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
               </div>
             </div>
           </div>
@@ -125,19 +126,22 @@
   <div class="blog-header blog-post-header">
       <h1>Lorem Ipsum Dolor Sit Amet</h1>
 
-    <div class="row">
-      <div class="column meta-blog-author">
-        <img alt="Lorem Ipsum photo" class="author-img" src="../../static/images/placeholder_person.png">
-      </div>
-      <div class="meta-blog-index">
-        <p>
-          Lorem Ipsum<br>
-          <span class="small">2018-12-17</span>
-        </p>
+    <div class="row align-items-center mb-2 g-2">
+        <div class="col-auto">
+          <div class="meta-blog-author">
+            <img alt="Lorem Ipsum photo" class="author-img" src="../../static/images/placeholder_person.png">
+          </div>
+        </div>
+      <div class="col">
+        <div class="meta-blog-index">
+            <div>Lorem Ipsum</div>
+            <div class="small">2018-12-17</div>
+        </div>
       </div>
     </div>
   </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  <div class="blog-content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -183,6 +187,7 @@ Duis ut lectus id felis molestie efficitur congue nec mi.
 Aenean vulputate mauris non neque imperdiet, et pulvinar turpis ultrices.
 Phasellus finibus pellentesque nibh, condimentum lobortis magna porta bibendum.</p>
 
+  </div>
 </div>
   </div>
 </div>
@@ -227,7 +232,7 @@ Phasellus finibus pellentesque nibh, condimentum lobortis magna porta bibendum.<
 <!-- Waypoints -->
 <script src="../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
 <!-- Main JS -->
-<script src="../../static/js/main.js?h=8d911085" type="application/javascript" charset="UTF-8"></script>
+<script src="../../static/js/main.js?h=996d9217" type="application/javascript" charset="UTF-8"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>

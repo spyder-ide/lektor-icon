@@ -95,60 +95,63 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="static/css/style.css?h=fb390f4f" type="text/css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css?h=1f139981" type="text/css">
+  <link rel="stylesheet" href="static/css/style.css?h=0c123039" type="text/css">
   <!-- User Custom CSS -->
-  <link rel="stylesheet" href="static/css/example-custom-styles.css?h=997cf8e5" type="text/css">
+  <link rel="stylesheet" href="static/css/example-custom-styles.css?h=1af02901" type="text/css">
 </head>
 
 <body>
 <div class="fh5co-loader"></div>
 <div class="fh5co-page">
   <div id="fh5co-container">
-    <div class="js-sticky">
-      <div class="fh5co-main-nav navbar fixed-top">
-        <div class="container">
+    <div class="js-sticky fh5co-main-nav">
+      <div class="navbar px-4">
+        <div class="container-xxl">
           <div class="fh5co-menu-1">
-            <div class='pull-left'>
-              <ul class='dropdown menu' data-dropdown-menu>
-                <li id='menu-logo'>
-                  <p></p>
-                    <a href='./'>
+            <div class="float-start">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li id="menu-logo">
+                  <a href="./" class="d-flex-md align-items-center my-2">
                     <img alt="Site Logo" src="static/images/spyder-logo.svg?h=3ee53ca2">
                     <span class="logo-text-container">
                       <span class="logo-text">Lektor-Icon&nbsp;</span>
                     </span>
                   </a>
-                  <p></p>
                 </li>
               </ul>
             </div>
 
-            <div class="main-nav-container">
+            <div class="nav-container">
+              <div class="main-nav-container">
 <a class="nav-link-section" href="#section-home" data-nav-section="home">Home</a>
 <a class="nav-link-section" href="#section-overview" data-nav-section="overview">About</a>
 <a class="nav-link-section" href="#section-features" data-nav-section="features">Features</a>
 <a class="nav-link-section" href="#section-modules" data-nav-section="modules">Modules</a>
 <a class="nav-link-section" href="#section-credits" data-nav-section="credits">Credits</a>
 <a class="nav-link-section" href="#section-donate" data-nav-section="donate">Donate</a>
+              </div>
               <div class="side-nav-container">
-                <a class="pull-right nav-link-external" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
-                <a class="pull-right nav-link-external" href="https://www.spyder-ide.org/"> Spyder</a>
-                <a class="pull-right nav-link-internal" href="example-page/">Page</a>
-                <a class="pull-right nav-link-internal" href="blog/">Blog</a>
-                <a class="pull-right nav-link-internal" href="readme/">Readme</a>
+                <a class="nav-link-internal" href="readme/">Readme</a>
+                <a class="nav-link-internal" href="blog/">Blog</a>
+                <a class="nav-link-internal" href="example-page/">Page</a>
+                <a class="nav-link-external" href="https://www.spyder-ide.org/"> Spyder</a>
+                <a class="nav-link-external" href="https://github.com/spyder-ide/lektor-icon"> Github</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-<div id="section-home" class="js-fullheight-home hero-section" data-section="home" data-stellar-background-ratio="0.5">
+<div id="section-home" class="hero-section" data-section="home" data-stellar-background-ratio="0.5">
   <div class="container">
-    <div class="col-md-6">
-      <div class="js-fullheight-home fh5co-copy">
-        <div class="js-fullheight-home fh5co-copy-inner">
-          <h1>Lektor-Icon</h1>
-          <h2>Welcome to the demo website of the Lektor-Icon theme!</h2>
+    <div class="row row-cols-1 row-cols-lg-2 g-4 justify-content-center justify-content-lg-start">
+      <div class="col">
+        <div class="fh5co-copy">
+          <div class="js-fullheight-home fh5co-copy-inner">
+            <h1>Lektor-Icon</h1>
+            <h2>Welcome to the demo website of the Lektor-Icon theme!</h2>
+          </div>
         </div>
       </div>
     </div>
@@ -180,46 +183,51 @@ The theme is designed to be more desktop and mobile-friendly, and designed and t
   <a href="https://www.youtube.com/watch?v=vtLdH4VbACA" class="popup-youtube"><i class="icon-play2"></i></a>
   <span>Watch video</span>
 </div>
-<div class="container center-container">
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card card-item service offset-bg">
-      <div class="card-inner">
+<div class="container-xxl">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center">
+    <div class="col">
+      <div class="card h-100 card-item service offset-bg">
         <div class="icon">
           <img alt="Flexible Design photo" src="flexible-design@640.png" class="img-responsive center" srcset="flexible-design@640.png 1x, flexible-design@1280.png 2x">
         </div>
-        <h3>Flexible Design</h3>
-        <p>Developed specifically to offer maximum customizability and adaptability both within pages and in the overall structure and organization of the site, while requiring a minimum of deep technical knowledge or awareness of edge-cases from content creators and gracefully handling missing or ambiguous field values.</p>
+        <div class="card-body">
+          <h3 class="card-title">Flexible Design</h3>
+          <p class="card-text">
+            <p>Developed specifically to offer maximum customizability and adaptability both within pages and in the overall structure and organization of the site, while requiring a minimum of deep technical knowledge or awareness of edge-cases from content creators and gracefully handling missing or ambiguous field values.</p>
 
+          </p>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card card-item service offset-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item service offset-bg">
         <div class="icon">
           <img alt="Responsive Layout photo" src="responsive-layout@640.png" class="img-responsive center" srcset="responsive-layout@640.png 1x, responsive-layout@1280.png 2x">
         </div>
-        <h3>Responsive Layout</h3>
-        <p>Optimized for both desktop and mobile, and both portrait and landscape orientations; and individually tuned for a range of screen sizes from 360p to 4K without kludgy device detection, just media queries, adaptive sizing and responsive images.</p>
+        <div class="card-body">
+          <h3 class="card-title">Responsive Layout</h3>
+          <p class="card-text">
+            <p>Optimized for both desktop and mobile, and both portrait and landscape orientations; and individually tuned for a range of screen sizes from 360p to 4K without kludgy device detection, just media queries, adaptive sizing and responsive images.</p>
 
+          </p>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <a href="readme" class="card-link-full">
-    <div class="card card-item service offset-bg">
-      <div class="card-inner">
+    <div class="col">
+      <a href="readme" class="card-link-full">
+      <div class="card h-100 card-item service offset-bg">
         <div class="icon">
           <img alt="Standards-Based photo" src="standards-based@640.png" class="img-responsive center" srcset="standards-based@640.png 1x, standards-based@1280.png 2x">
         </div>
-        <h3>Standards-Based</h3>
-        <p>Built on a foundation of modern web standards, including HTML5, CSS3, and jQuery 3, audited for HTML/CSS validity, accessibility and performance, and security hardened with updated Javascript libraries, XSS protection and best practices; all while remaining fully compatible with common modern and legacy browsers.</p>
+        <div class="card-body">
+          <h3 class="card-title">Standards-Based</h3>
+          <p class="card-text">
+            <p>Built on a foundation of modern web standards, including HTML5, CSS3, and jQuery 3, audited for HTML/CSS validity, accessibility and performance, and security hardened with updated Javascript libraries, XSS protection and best practices; all while remaining fully compatible with common modern and legacy browsers.</p>
 
-      </div>
-      <div class="card-spacer"></div>
-    </div></a>
+          </p>
+        </div>
+      </div></a>
+    </div>
   </div>
 </div>
 </div> <!-- END services-section -->
@@ -271,47 +279,49 @@ The theme is designed to be more desktop and mobile-friendly, and designed and t
     
   </div>
   
-<div class="center-container">
-  <a href="#section-features" class="center-inner fh5co-item gallery-item-title" style="background-image: url(gallery-singlepage@1024.png)">
-    <h3>Singlepage</h3>
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-        <h2>Singlepage</h2>
-        <h3>All in one homepage</h3>
-      </div>
-    </div>
-  </a>
-  <a href="blog-index.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(blog-index@1024.png)">
-    <h3>Blog Index</h3>
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-        <h2>Blog Index</h2>
-        <h3>Lists most recent posts</h3>
-      </div>
-    </div>
-  </a>
-  <a href="gallery-blog.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(gallery-blog@1024.png)">
-    <h3>Blog Post</h3>
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-        <h2>Blog Post</h2>
-        <h3>Displays episodic content</h3>
-      </div>
-    </div>
-  </a>
-  <a href="gallery-404.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(gallery-404@1024.png)">
-    <h3>Custom Page (404)</h3>
-    <div class="fh5co-overlay"></div>
-    <div class="fh5co-copy">
-      <div class="fh5co-copy-inner">
-        <h2>Custom Page (404)</h2>
-        <h3>Include your own content</h3>
-      </div>
-    </div>
-  </a>
+<div class="container-xxl">
+  <div class="row justify-content-center">
+      <a href="#section-features" class="center-inner fh5co-item gallery-item-title" style="background-image: url(gallery-singlepage@1024.png)">
+        <h3>Singlepage</h3>
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-copy">
+          <div class="fh5co-copy-inner">
+            <h2>Singlepage</h2>
+            <h3>All in one homepage</h3>
+          </div>
+        </div>
+      </a>
+      <a href="blog-index.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(blog-index@1024.png)">
+        <h3>Blog Index</h3>
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-copy">
+          <div class="fh5co-copy-inner">
+            <h2>Blog Index</h2>
+            <h3>Lists most recent posts</h3>
+          </div>
+        </div>
+      </a>
+      <a href="gallery-blog.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(gallery-blog@1024.png)">
+        <h3>Blog Post</h3>
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-copy">
+          <div class="fh5co-copy-inner">
+            <h2>Blog Post</h2>
+            <h3>Displays episodic content</h3>
+          </div>
+        </div>
+      </a>
+      <a href="gallery-404.png" class="center-inner fh5co-item image-popup gallery-item-title" style="background-image: url(gallery-404@1024.png)">
+        <h3>Custom Page (404)</h3>
+        <div class="fh5co-overlay"></div>
+        <div class="fh5co-copy">
+          <div class="fh5co-copy-inner">
+            <h2>Custom Page (404)</h2>
+            <h3>Include your own content</h3>
+          </div>
+        </div>
+      </a>
+  </div>
 </div>
 </div> <!-- END gallery-section -->
 <div id="section-credits" data-section="credits" class="multisection-section body-section body-block light-bg-section">
@@ -324,110 +334,118 @@ The theme is designed to be more desktop and mobile-friendly, and designed and t
   
 <div id="section-contributors" data-section="contributors" class="team-section body-subsection body-block notitle-section">
 
-<div class="container center-container">
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+<div class="container-xxl">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Placeholder person" src="static/images/placeholder_person.png?h=ee24ffd9" class="img-responsive">
-        <a href="https://freehtml5.co/" class="card-link-title">
-          <h3>FreeHTML5.co</h3>
-        </a>
-        <h4>Original Template Creator</h4>
-        <p>Created the original "Icon" plain HTML template, on which Hugo-Icon was based.</p>
+        <div class="card-body">
+          <a href="https://freehtml5.co/">
+            <h3 class="card-title">FreeHTML5.co</h3>
+          </a>
+          <h4>Original Template Creator</h4>
+          <p class="card-text">
+            <p>Created the original "Icon" plain HTML template, on which Hugo-Icon was based.</p>
 
-        <ul class="social">
-          <li><a href="https://freehtml5.co/" aria-label="Website"><i class="icon-globe2"></i></a></li>
-          <li><a href="https://www.facebook.com/fh5co/" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
-          <li><a href="https://twitter.com/fh5co" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-        </ul>
+          </p>
+          <ul class="social">
+            <li><a href="https://freehtml5.co/" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            <li><a href="https://www.facebook.com/fh5co/" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com/fh5co" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Placeholder person" src="static/images/placeholder_person.png?h=ee24ffd9" class="img-responsive">
-        <h3>Steve Lane</h3>
-        <h4>Hugo-Icon Theme Creator</h4>
-        <p>Ported the "Icon" template to Hugo and converted it into a jinja-templated theme.</p>
+        <div class="card-body">
+          <h3 class="card-title">Steve Lane</h3>
+          <h4>Hugo-Icon Theme Creator</h4>
+          <p class="card-text">
+            <p>Ported the "Icon" template to Hugo and converted it into a jinja-templated theme.</p>
 
-        <ul class="social">
-          <li><a href="https://gtown-ds.netlify.com/" aria-label="Website"><i class="icon-globe2"></i></a></li>
-          <li><a href="https://twitter.com/stephenelane" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-          <li><a href="https://github.com/SteveLane" aria-label="Github"><i class="icon-github"></i></a></li>
-        </ul>
+          </p>
+          <ul class="social">
+            <li><a href="https://gtown-ds.netlify.com/" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            <li><a href="https://twitter.com/stephenelane" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://github.com/SteveLane" aria-label="Github"><i class="icon-github"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Daniel Althviz Moré photo" src="dalthviz@512.jpg" class="img-responsive" srcset="dalthviz@512.jpg 1x, dalthviz@1024.jpg 2x">
-        <h3>Daniel Althviz Moré</h3>
-        <h4>Lektor-Icon Theme Porter</h4>
-        <p>Ported the Hugo-Icon theme to Lektor, revamping it and adding new features and styling in the process.
+        <div class="card-body">
+          <h3 class="card-title">Daniel Althviz Moré</h3>
+          <h4>Lektor-Icon Theme Porter</h4>
+          <p class="card-text">
+            <p>Ported the Hugo-Icon theme to Lektor, revamping it and adding new features and styling in the process.
 Also helped create the original blog templates.</p>
 
-        <ul class="social">
-          <li><a href="https://dalthviz.github.io/" aria-label="Website"><i class="icon-globe2"></i></a></li>
-          <li><a href="https://github.com/dalthviz" aria-label="Github"><i class="icon-github"></i></a></li>
-        </ul>
+          </p>
+          <ul class="social">
+            <li><a href="https://dalthviz.github.io/" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            <li><a href="https://github.com/dalthviz" aria-label="Github"><i class="icon-github"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Spyder Team photo" src="static/images/spyder-logo.svg" class="img-responsive">
-        <a href="https://www.spyder-ide.org/" class="card-link-title">
-          <h3>Spyder Team</h3>
-        </a>
-        <h4>Theme Maintainers</h4>
-        <p>Has taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.</p>
+        <div class="card-body">
+          <a href="https://www.spyder-ide.org/">
+            <h3 class="card-title">Spyder Team</h3>
+          </a>
+          <h4>Theme Maintainers</h4>
+          <p class="card-text">
+            <p>Has taken primary responsibility for maintaining and enhancing the theme further, in particular to support our use of it on the official Spyder website.</p>
 
-        <ul class="social">
-          <li><a href="https://www.spyder-ide.org/" aria-label="Website"><i class="icon-globe2"></i></a></li>
-          <li><a href="https://www.facebook.com/SpyderIDE/" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
-          <li><a href="https://twitter.com/spyder_ide" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
-          <li><a href="https://github.com/spyder-ide/spyder" aria-label="Github"><i class="icon-github"></i></a></li>
-        </ul>
+          </p>
+          <ul class="social">
+            <li><a href="https://www.spyder-ide.org/" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            <li><a href="https://www.facebook.com/SpyderIDE/" aria-label="Facebook"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://twitter.com/spyder_ide" aria-label="Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://github.com/spyder-ide/spyder" aria-label="Github"><i class="icon-github"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Placeholder person" src="static/images/placeholder_person.png?h=ee24ffd9" class="img-responsive">
-        <a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt" class="card-link-title">
-          <h3>Third Party Assets</h3>
-        </a>
-        <h4>JS Libs, Icon Fonts and Styles</h4>
-        <p>Lektor-Icon includes a number of icon font glyphs, third-party styles and Javascript libraries in the final product. Check out NOTICE.txt for more.</p>
+        <div class="card-body">
+          <a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt">
+            <h3 class="card-title">Third Party Assets</h3>
+          </a>
+          <h4>JS Libs, Icon Fonts and Styles</h4>
+          <p class="card-text">
+            <p>Lektor-Icon includes a number of icon font glyphs, third-party styles and Javascript libraries in the final product. Check out NOTICE.txt for more.</p>
 
-        <ul class="social">
-          <li><a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt" aria-label="Website"><i class="icon-globe2"></i></a></li>
-          <li><a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt" aria-label="Github"><i class="icon-github"></i></a></li>
-        </ul>
+          </p>
+          <ul class="social">
+            <li><a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt" aria-label="Website"><i class="icon-globe2"></i></a></li>
+            <li><a href="https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt" aria-label="Github"><i class="icon-github"></i></a></li>
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
-  </div>
-  <div class="col-md-4 card-outer center-inner">
-    <div class="card person transparent-bg">
-      <div class="card-inner">
+    <div class="col">
+      <div class="card h-100 card-item person transparent-bg">
         <img alt="Placeholder person" src="static/images/placeholder_person.png?h=ee24ffd9" class="img-responsive">
-        <h3>You!</h3>
-        <h4>Community Contributors</h4>
-        <p>Lektor-Icon welcomes your help in making this theme better for everyone. Anyone can submit a PR or participate in development!</p>
+        <div class="card-body">
+          <h3 class="card-title">You!</h3>
+          <h4>Community Contributors</h4>
+          <p class="card-text">
+            <p>Lektor-Icon welcomes your help in making this theme better for everyone. Anyone can submit a PR or participate in development!</p>
 
-        <ul class="social">
-        </ul>
+          </p>
+          <ul class="social">
+          </ul>
+        </div>
       </div>
-      <div class="card-spacer"></div>
     </div>
   </div>
 </div>
@@ -450,9 +468,11 @@ Also helped create the original blog templates.</p>
   </div>
   
 <div class="row">
-  <a id="donate-button" href="https://opencollective.com/spyder/" class="center content-button image-button">
-    <img alt="Action Button" src="collective.svg" class="center">
-  </a>
+  <div class="col">
+    <a id="donate-button" href="https://opencollective.com/spyder/" class="center content-button image-button">
+      <img alt="Action Button" src="collective.svg" class="center">
+    </a>
+  </div>
 </div>
 </div> <!-- END content-section -->
 
@@ -496,7 +516,7 @@ Also helped create the original blog templates.</p>
 <!-- Waypoints -->
 <script src="static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
 <!-- Main JS -->
-<script src="static/js/main.js?h=8d911085" type="application/javascript" charset="UTF-8"></script>
+<script src="static/js/main.js?h=996d9217" type="application/javascript" charset="UTF-8"></script>
 <!-- jQuery Easing -->
 <script src="static/js/jquery.easing.min.js?h=ce3bb198" type="application/javascript" charset="UTF-8"></script>
 <!-- Stellar Parallax -->
@@ -506,7 +526,7 @@ Also helped create the original blog templates.</p>
 <script src="static/js/magnific-popup-options.js?h=4c9bdaf7" type="application/javascript" charset="UTF-8"></script>
 <script>var mailchimpButtonEnabled = false;</script>
 <!-- Main JS -->
-<script src="static/js/main-singlelayout.js?h=ec414a8c" type="application/javascript" charset="UTF-8"></script>
+<script src="static/js/main-singlelayout.js?h=7790c312" type="application/javascript" charset="UTF-8"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
 </body>
 </html>
