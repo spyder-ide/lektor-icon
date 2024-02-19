@@ -560,11 +560,8 @@ img {
 }
 
 .body-section {
-  display: block;
   padding-bottom: 4em;
   padding-top: 3em;
-  position: relative;
-  z-index: 99;
 }
 
 .body-subsection {
