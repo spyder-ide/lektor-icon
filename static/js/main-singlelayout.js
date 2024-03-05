@@ -21,11 +21,16 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
   "use strict";
 
   const heroHeight = function () {
+    const headerHeight = $(".js-sticky").outerHeight();
     if ($(window).outerWidth() > 768) {
-      $(".js-fullheight-home").css("height", "100dvh");
+      $(".js-fullheight-home").css(
+        "height",
+        `calc(100dvh - ${headerHeight}px)`
+      );
     } else {
-      $(".js-fullheight-home").css("height", "50dvh");
+      $(".js-fullheight-home").css("height", `50dvh - ${headerHeight}px)`);
     }
+    $(".hero-section").css("margin-top", `${headerHeight}px`);
   };
 
   const setHeroHeight = function () {
