@@ -30,6 +30,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
       $(".hero-section").css("margin-top", `${headerHeight}px`);
     } else {
       $(".js-fullheight-home").css("height", "50dvh");
+      $(".hero-section").css("margin-top", "0px");
     }
   };
 
