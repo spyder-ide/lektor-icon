@@ -15,22 +15,22 @@
   {%- if this.hero_image %}
   {%- set is_svg = this.hero_image.split('.')[-1].lower() in ['svg', 'svgz'] %}
   {%- if is_svg or this.hero_no_downscale %}
-  .hero-section {
+  .hero-bg {
     background-image: url("{{ this.hero_image | url }}")
   }
   {%- else %}
   {%- set hero_img_file = this.attachments.get(this.hero_image) %}
   {%- if hero_img_file.thumbnail %}
-  .hero-section {
+  .hero-bg {
     background-image: url("{{ hero_img_file.thumbnail(width=1920) | url }}")
   }
   @media ((min-device-width: 1921px) or ((min-device-width: 1281px) and (min-resolution: 102dpi)) or ((min-device-width: 961px) and (min-resolution: 152dpi))) {
-    .hero-section {
+    .hero-bg {
       background-image: url("{{ hero_img_file.thumbnail(width=3840) | url }}")
     }
   }
   @media ((max-device-width: 768px) and (((max-resolution: 100dpi) and (max-device-height: 1400px)) or ((max-device-height: 1050px) and (max-resolution: 150dpi)) or (max-device-height: 700px))) {
-    .hero-section {
+    .hero-bg {
       background-image: url("{{ hero_img_file.thumbnail(width=(hero_img_file.width * 700 / hero_img_file.height)) | url }}")
     }
   }
@@ -65,23 +65,26 @@
 {%- block body %}
 
 {%- if this.hero_image %}
-<div id="section-home" class="hero-section" data-section="home">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-lg-2 g-4 justify-content-center justify-content-lg-start">
-      <div class="col">
-        <div class="fh5co-copy">
-          <div class="js-fullheight-home fh5co-copy-inner">
-            {%- if this.hero_title %}
-            <h1>{{ this.hero_title }}</h1>
-            {%- endif %}
-            {%- if this.hero_description %}
-            <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h2>
-            {%- endif %}
+<div id="section-home" class="hero-section parallax-group" data-section="home">
+  <div class="parallax-layer parallax-layer-base">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-lg-2 g-0 justify-content-center justify-content-lg-start">
+        <div class="col">
+          <div class="fh5co-copy">
+            <div class="js-fullheight-home fh5co-copy-inner">
+              {%- if this.hero_title %}
+              <h1>{{ this.hero_title }}</h1>
+              {%- endif %}
+              {%- if this.hero_description %}
+              <h2>{{ this.hero_description | replace('<p>', '') | replace('</p>', '') | safe | trim }}</h2>
+              {%- endif %}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="hero-bg parallax-layer parallax-layer-back"></div>
 </div> <!-- END hero-section -->
 {%- endif %}
 

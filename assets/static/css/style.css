@@ -19,7 +19,6 @@
 
 :root {
   --main-font: "Raleway", "DejaVu Sans", "Open Sans", "Liberation Sans", helvetica, arial, sans-serif;
-
   scroll-behavior: smooth;
 }
 
@@ -28,7 +27,6 @@ html {
   background-color: var(--theme-bg-color, #fff);
   box-sizing: border-box;
   font-size: 18px;
-  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 480px) {
@@ -237,27 +235,45 @@ img {
   position: relative;
 }
 
-.fh5co-page {
-  overflow-x: hidden;
-  position: relative;
-  z-index: 1;
+#fh5co-container {
+  background: #fff;
+  background: var(--theme-bg-color, #fff);
+  height: 100vh;
+  overflow: hidden auto;
+  scroll-behavior: smooth;
+  perspective: 300px;
 }
 
-.hero-section {
+.parallax-group {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.parallax-layer-base {
+  transform: translateZ(0);
+  z-index: 3;
+}
+
+.parallax-layer-back {
+  transform: translateZ(-300px) scale(2.01);
+  z-index: 2;
+}
+
+.hero-bg {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* box-shadow: inset -1px -11px 21px -15px rgb(0 0 0 / 75%); */
-  min-height: 50vh;
   position: relative;
-  transform: translateZ(-1px) scale(2);
-  z-index: -2;
+  height: 100dvh;
 }
 
 .hero-section .fh5co-copy {
   height: 100%;
-  width: 100%;
 }
 
 .hero-section .fh5co-copy-inner {
@@ -1312,15 +1328,6 @@ img {
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
-}
-
-#fh5co-container {
-  background: #fff;
-  background: var(--theme-bg-color, #fff);
-  height: 100vh;
-  overflow: hidden scroll;
-  perspective: 1px;
-  transform-style: preserve-3d;
 }
 
 #fh5co-offcanvas,
