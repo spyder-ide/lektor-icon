@@ -1085,6 +1085,14 @@ img {
   box-shadow: 0 0 20px 0 rgb(0.4 0.4 0.4 / 30%);
 }
 
+.gallery-section {
+  padding-bottom: 0;
+}
+
+.gallery-section .container-xxl {
+  max-width: 100%;
+}
+
 .gallery-section .fh5co-gallery-header {
   margin-bottom: 1.5em;
 }
