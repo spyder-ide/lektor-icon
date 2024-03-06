@@ -19,6 +19,7 @@
 
 :root {
   --main-font: "Raleway", "DejaVu Sans", "Open Sans", "Liberation Sans", helvetica, arial, sans-serif;
+
   scroll-behavior: smooth;
 }
 
@@ -240,8 +241,8 @@ img {
   background: var(--theme-bg-color, #fff);
   height: 100vh;
   overflow: hidden auto;
-  scroll-behavior: smooth;
   perspective: 300px;
+  scroll-behavior: smooth;
 }
 
 .parallax-group {
@@ -250,8 +251,8 @@ img {
 }
 
 .parallax-layer {
-  position: absolute;
   inset: 0;
+  position: absolute;
 }
 
 .parallax-layer-base {
@@ -268,8 +269,8 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   position: relative;
-  height: 100dvh;
 }
 
 .hero-section .fh5co-copy {

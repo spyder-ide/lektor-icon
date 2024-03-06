@@ -22,9 +22,9 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   const heroHeight = function () {
     if ($(window).outerWidth() > 768) {
-      $(".js-fullheight-home, .hero-section").css("height", "100dvh");
+      $(".js-fullheight-home, .hero-section").css("height", "100vh");
     } else {
-      $(".js-fullheight-home, .hero-section").css("height", "50dvh");
+      $(".js-fullheight-home, .hero-section").css("height", "50vh");
     }
   };
 
