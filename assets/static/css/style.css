@@ -20,10 +20,6 @@
 :root {
   --main-font: "Raleway", "DejaVu Sans", "Open Sans", "Liberation Sans", helvetica, arial, sans-serif;
 
-  scroll-behavior: smooth;
-}
-
-html {
   background-color: #fff;
   background-color: var(--theme-bg-color, #fff);
   box-sizing: border-box;
@@ -32,13 +28,13 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-  html {
+  :root {
     font-size: 0.95em;
   }
 }
 
 @media screen and (max-width: 360px) {
-  html {
+  :root {
     font-size: 0.9em;
   }
 }
@@ -251,7 +247,6 @@ img {
   /* box-shadow: inset -1px -11px 21px -15px rgb(0 0 0 / 75%); */
   min-height: 50vh;
   position: relative;
-  transform: translateZ(-1px) scale(2);
   z-index: -2;
 }
 
