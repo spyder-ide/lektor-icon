@@ -80,7 +80,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
         if (direction === "down") {
           $section
             .css({
-              position: "sticky",
+              position: "fixed",
               top: 0,
               width: "100%",
               "z-index": 99999,
