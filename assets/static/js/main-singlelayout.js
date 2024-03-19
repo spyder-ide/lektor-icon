@@ -36,7 +36,8 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   const setHeroHeight = function () {
     heroHeight();
-    $(window).bind("resize", heroHeight);
+    $(window).on("load", heroHeight);
+    $(window).on("resize", heroHeight);
   };
 
   // Loading animation
@@ -171,16 +172,12 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
     loaderPage();
     fh5coTabs();
     parallax();
+    setHeroHeight();
     scrolledWindow();
     clickMenu();
     navigationSection();
     if (mailchimpButtonEnabled) {
       setMailchimpEvent();
     }
-  });
-
-  // Document when all assets are fully loaded
-  $(window).bind("load", function () {
-    setHeroHeight();
   });
 })();
