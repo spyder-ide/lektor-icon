@@ -169,10 +169,10 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   // Document on DOM ready
   $(function () {
+    setHeroHeight();
     loaderPage();
     fh5coTabs();
     parallax();
-    setHeroHeight();
     scrolledWindow();
     clickMenu();
     navigationSection();
