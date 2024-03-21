@@ -36,6 +36,7 @@ https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt
 
   const setHeroHeight = function () {
     heroHeight();
+    $(window).on("load", heroHeight);
     $(window).on("resize", heroHeight);
   };
 
